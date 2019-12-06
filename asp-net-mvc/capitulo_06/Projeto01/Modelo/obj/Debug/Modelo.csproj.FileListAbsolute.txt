@@ -1,0 +1,10 @@
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_05\Projeto01\Modelo\bin\Debug\Modelo.dll
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_05\Projeto01\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_05\Projeto01\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_05\Projeto01\Modelo\obj\Debug\Modelo.dll
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_05\Projeto01\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_06\Projeto01\Modelo\bin\Debug\Modelo.dll
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_06\Projeto01\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_06\Projeto01\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_06\Projeto01\Modelo\obj\Debug\Modelo.dll
+C:\Users\Everton\Documents\GitHub\csharp\book-aspnet\projects\capitulo_06\Projeto01\Modelo\obj\Debug\Modelo.pdb

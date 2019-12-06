@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Http400</title>
+</head>
+<body>
+    <div class="container error-404">
+        <h1>400</h1>
+        <h2>Houston, temos um problema.</h2>
+        <p>
+            Sua solicitação é inválida. Verifique o endereço informado no navegador e tente novamente.
+            <br /><br />
+            @HttpContext.Current.Session["ErrorException"].ToString().Substring(0, 400)
+        </p>
+        <p>
+            <a href='@Url.Action("Index", "Home")'>
+                Retornar ao início
+            </a>
+            <br>
+        </p>
+    </div>
+</body>
+</html>

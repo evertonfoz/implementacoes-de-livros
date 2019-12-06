@@ -1,0 +1,59 @@
+﻿@model Modelo.Carrinho.Carrinho
+
+@using (Ajax.BeginForm("CreateCarrinho", "Carrinho", new { area = "Carrinho" }, new AjaxOptions
+{
+    HttpMethod = "POST",
+    InsertionMode = InsertionMode.Replace,
+    OnFailure = "OnFailureModal",
+    OnSuccess = "OnSuccessCreateCarrinho"
+},
+new { id = "formCarrinhoCliente", name = "formCarrinhoCliente", data_success_function="OnSuccessCreateCarrinho" } ))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Registro de uma NOVA VENDA
+        </div>
+        <div class="panel-body">
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="col-md-1">
+                    <div class="form-group">
+                        @Html.Label("Id")
+                        @Html.TextBox("idcliente", "", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="form-group">
+                        @Html.Label("Cliente para pesquisar ")
+                        @Html.TextBox("nomecliente", "",
+                                        new
+                                        {
+                                            @class = "form-control autocomplete-with-update-field",
+                                            data_updatefield = "idcliente",
+                                            data_url = Url.Action("GetClientesPorNome", "Clientes", new { Area = "Cadastros" })
+                                        })
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        @Html.Label("Data")
+                        @Html.TextBoxFor(model => model.Data, "{0:d}", new { @class = "form-control datepicker" })
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Criar Pedido" class="btn btn-success" />
+        </div>
+        <div class="panel-footer panel-info">
+            <div class="col-md-offset-2 col-md-5">
+                <!--<input type="submit" value="Adicionar Fabricante" class="btn btn-danger" />-->
+            </div>
+            <div class="col-md-5">
+                @Html.ActionLink("Retornar para a listagem de FABRICANTES", "Index", null, new { @class = "btn btn-warning" })
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+}

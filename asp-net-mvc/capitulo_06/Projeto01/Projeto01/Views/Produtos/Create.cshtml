@@ -1,0 +1,45 @@
+﻿@model Modelo.Cadastros.Produto
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Registrando um NOVO PRODUTO";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Registro de um NOVO PRODUTO
+        </div>
+        <div class="panel-body">
+            @Html.Partial("~/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
+        </div>
+        <div class="panel-footer panel-info">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Adicionar Produto" class="btn btn-danger" />
+                @Html.ActionLink("Retornar para a listagem de PRODUTOS", "Index", null, new { @class = "btn btn-warning" })
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+}
+
+@section styles{
+    <link href="~/Scripts/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet" />
+}
+
+
+@section ScriptPage {
+    <script src="~/Scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script src="~/Scripts/datepicker-pt-BR.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').removeClass("active");
+            $('#liProdutos').addClass("active");
+            //$("#datepicker").datepicker();
+        });
+    </script>
+}

@@ -1,0 +1,112 @@
+﻿@model Modelo.Carrinho.Carrinho
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet">
+    <!--        <link href="@Url.Content("~/Scripts/jquery-ui-1.11.4.customAC/jquery-ui.css")" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="page-header bg-success">
+                <div>
+                    <h1>Desenvolvimento em ASP.NET MVC <small class="text-danger">Carrinho de compras</small></h1>
+                </div>
+                <div style="text-align:right;">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-6 bg-success">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 bg-success">
+                        <div class="col-xs-1 col-md-1 bg-success">
+                            Id
+                        </div>
+                        <div class="col-xs-9 col-md-9 bg-success">
+                            Cliente
+                        </div>
+                        <div class="col-xs-2 col-md-2 bg-success">
+                            Data
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 bg-success">
+                        <div class="col-xs-1 col-md-1 bg-success">
+                            @Html.DisplayFor(modelItem => Model.CarrinhoId)
+                        </div>
+                        <div class="col-xs-9 col-md-9 bg-success">
+                            @Html.DisplayFor(modelItem => Model.Cliente.Nome)
+                        </div>
+                        <div class="col-xs-2 col-md-2 bg-success">
+                            @Html.DisplayFor(modelItem => Model.Data)
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                @Html.Label("Id")
+                                @Html.TextBox("idproduto", "", new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                @Html.Label("Produto para pesquisar ")
+                                @Html.TextBox("nomeproduto", "",
+                                        new
+                                        {
+                                            @class = "form-control autocomplete-with-update-field",
+                                            data_updatefield = "idproduto",
+                                            data_url = Url.Action("GetProdutosPorNome", "Produtos", new { Area = "Cadastros" })
+                                        })
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                @Html.Label("Quantidade")
+                                @Html.TextBox("quantidade", "", new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6 bg-success">
+                <div class="col-xs-12 col-md-12 bg-success">
+                    <div id="novaVenda">
+
+                    </div>
+                    <div id="vendaCriada">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <small>Carrinho de compra</small>
+        </div>
+    </div>
+    <script src="@Url.Content("~/Scripts/jquery-1.10.2.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.10.2.js")"></script>
+    <!--        <script src="@Url.Content("~/Scripts/jquery-ui-1.11.4.customAC/external/jquery/jquery.js")"></script>
+            <script src="@Url.Content("~/Scripts/jquery-ui-1.11.4.customAC/jquery-ui.js")"></script> -->
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
+    <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/scripts/DataTables/jquery.dataTables.js")"></script>
+    <script src="@Url.Content("~/scripts/DataTables/dataTables.bootstrap.js")"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
