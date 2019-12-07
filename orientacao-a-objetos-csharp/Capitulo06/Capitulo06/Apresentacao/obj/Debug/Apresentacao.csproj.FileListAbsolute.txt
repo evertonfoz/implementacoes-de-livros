@@ -1,0 +1,15 @@
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\obj\Debug\Apresentacao.DisciplinaForm.resources
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Modelo.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Servico.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Persistencia.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Modelo.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Servico.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\bin\Debug\Persistencia.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Apresentacao\obj\Debug\Apresentacao.pdb

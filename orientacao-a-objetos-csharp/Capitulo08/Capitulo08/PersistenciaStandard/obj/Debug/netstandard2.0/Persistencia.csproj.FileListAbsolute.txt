@@ -1,0 +1,12 @@
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\bin\Debug\netstandard2.0\Persistencia.deps.json
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\bin\Debug\netstandard2.0\Persistencia.dll
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\bin\Debug\netstandard2.0\Persistencia.pdb
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\bin\Debug\netstandard2.0\Modelo.dll
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\bin\Debug\netstandard2.0\Modelo.pdb
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\obj\Debug\netstandard2.0\Persistencia.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\obj\Debug\netstandard2.0\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\obj\Debug\netstandard2.0\Persistencia.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\obj\Debug\netstandard2.0\Persistencia.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\obj\Debug\netstandard2.0\Persistencia.csproj.CopyComplete
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\obj\Debug\netstandard2.0\Persistencia.dll
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\PersistenciaStandard\obj\Debug\netstandard2.0\Persistencia.pdb

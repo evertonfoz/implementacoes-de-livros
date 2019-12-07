@@ -1,0 +1,6 @@
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo02\PrimeiroProjeto\bin\Debug\PrimeiroProjeto.exe.config
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo02\PrimeiroProjeto\bin\Debug\PrimeiroProjeto.exe
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo02\PrimeiroProjeto\bin\Debug\PrimeiroProjeto.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo02\PrimeiroProjeto\obj\Debug\PrimeiroProjeto.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo02\PrimeiroProjeto\obj\Debug\PrimeiroProjeto.exe
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo02\PrimeiroProjeto\obj\Debug\PrimeiroProjeto.pdb

@@ -1,0 +1,6 @@
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo03\SegundoProjeto\bin\Debug\SegundoProjeto.exe.config
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo03\SegundoProjeto\bin\Debug\SegundoProjeto.exe
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo03\SegundoProjeto\bin\Debug\SegundoProjeto.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo03\SegundoProjeto\obj\Debug\SegundoProjeto.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo03\SegundoProjeto\obj\Debug\SegundoProjeto.exe
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo03\SegundoProjeto\obj\Debug\SegundoProjeto.pdb

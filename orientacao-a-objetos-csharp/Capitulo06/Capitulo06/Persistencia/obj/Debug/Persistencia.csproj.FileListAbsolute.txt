@@ -1,0 +1,7 @@
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Persistencia\bin\Debug\Modelo.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Persistencia\bin\Debug\Modelo.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Persistencia\obj\Debug\Persistencia.pdb

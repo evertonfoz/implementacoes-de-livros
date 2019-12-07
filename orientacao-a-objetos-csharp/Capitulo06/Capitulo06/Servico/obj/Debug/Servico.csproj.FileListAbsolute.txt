@@ -1,0 +1,9 @@
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\bin\Debug\Servico.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\bin\Debug\Servico.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\bin\Debug\Modelo.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\bin\Debug\Persistencia.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\bin\Debug\Modelo.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\bin\Debug\Persistencia.pdb
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\obj\Debug\Servico.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\obj\Debug\Servico.dll
+C:\Users\Everton\Dropbox\Livros\OO com C#\Implementações\Capitulo06\Capitulo06\Servico\obj\Debug\Servico.pdb

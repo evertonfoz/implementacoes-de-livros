@@ -1,0 +1,11 @@
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\bin\Debug\netcoreapp2.1\ComplementarDois_Circulo.deps.json
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\bin\Debug\netcoreapp2.1\ComplementarDois_Circulo.runtimeconfig.json
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\bin\Debug\netcoreapp2.1\ComplementarDois_Circulo.runtimeconfig.dev.json
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\bin\Debug\netcoreapp2.1\ComplementarDois_Circulo.dll
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\bin\Debug\netcoreapp2.1\ComplementarDois_Circulo.pdb
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\obj\Debug\netcoreapp2.1\ComplementarDois_Circulo.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\obj\Debug\netcoreapp2.1\ComplementarDois_Circulo.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\obj\Debug\netcoreapp2.1\ComplementarDois_Circulo.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\obj\Debug\netcoreapp2.1\ComplementarDois_Circulo.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\obj\Debug\netcoreapp2.1\ComplementarDois_Circulo.dll
+C:\Users\Everton\Documents\GitHub\ooc6\Capitulo02-Revisao01\ComplementarDois_Circulo\obj\Debug\netcoreapp2.1\ComplementarDois_Circulo.pdb
