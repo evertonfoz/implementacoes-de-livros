@@ -1,0 +1,1 @@
+O conteúdo deste repositório é a implementação do livro "ASP.NET MVC5 - Crie aplicações web na plataforma Microsoft®", disponível em https://www.casadocodigo.com.br/products/livro-aspnet-mvc5?_pos=8&_sid=a26082ad0&_ss=r
