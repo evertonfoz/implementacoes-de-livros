@@ -1,0 +1,13 @@
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\bin\Debug\WPFLINQIntroProject.exe.config
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\bin\Debug\WPFLINQIntroProject.exe
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\bin\Debug\WPFLINQIntroProject.pdb
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\WPFLINQIntroProject.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\MainWindow.baml
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\MainWindow.g.cs
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\App.g.cs
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\WPFLINQIntroProject_MarkupCompile.cache
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\WPFLINQIntroProject.g.resources
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\WPFLINQIntroProject.Properties.Resources.resources
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\WPFLINQIntroProject.csproj.GenerateResource.Cache
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\WPFLINQIntroProject.exe
+C:\Users\Everton\Dropbox\Livros\Windows Forms\Capítulo 07\LINQSolution\WPFLINQIntroProject\obj\Debug\WPFLINQIntroProject.pdb

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdadeAlunosMatriculados", "IdadeAlunosMatriculados\IdadeAlunosMatriculados.csproj", "{45A1E10E-252A-4DD5-97C3-1707D9A9FB8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PesoIdeal", "PesoIdeal\PesoIdeal.csproj", "{0BAF0498-2894-403C-BEDE-F9061887188B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemaSalario", "ProblemaSalario\ProblemaSalario.csproj", "{FB6E0618-5212-4AEF-A345-CD7D50ED1913}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45A1E10E-252A-4DD5-97C3-1707D9A9FB8B}.Debug|x86.ActiveCfg = Debug|x86
+		{45A1E10E-252A-4DD5-97C3-1707D9A9FB8B}.Debug|x86.Build.0 = Debug|x86
+		{45A1E10E-252A-4DD5-97C3-1707D9A9FB8B}.Release|x86.ActiveCfg = Release|x86
+		{45A1E10E-252A-4DD5-97C3-1707D9A9FB8B}.Release|x86.Build.0 = Release|x86
+		{0BAF0498-2894-403C-BEDE-F9061887188B}.Debug|x86.ActiveCfg = Debug|x86
+		{0BAF0498-2894-403C-BEDE-F9061887188B}.Debug|x86.Build.0 = Debug|x86
+		{0BAF0498-2894-403C-BEDE-F9061887188B}.Release|x86.ActiveCfg = Release|x86
+		{0BAF0498-2894-403C-BEDE-F9061887188B}.Release|x86.Build.0 = Release|x86
+		{FB6E0618-5212-4AEF-A345-CD7D50ED1913}.Debug|x86.ActiveCfg = Debug|x86
+		{FB6E0618-5212-4AEF-A345-CD7D50ED1913}.Debug|x86.Build.0 = Debug|x86
+		{FB6E0618-5212-4AEF-A345-CD7D50ED1913}.Release|x86.ActiveCfg = Release|x86
+		{FB6E0618-5212-4AEF-A345-CD7D50ED1913}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

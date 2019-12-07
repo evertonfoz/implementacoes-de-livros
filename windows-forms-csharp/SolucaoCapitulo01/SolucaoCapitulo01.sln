@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestoDaDivisao", "RestoDaDivisao\RestoDaDivisao.csproj", "{CBF91631-69E6-40CE-A7F4-7F853C4DFC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GastoEmRestaurante", "GastoEmRestaurante\GastoEmRestaurante.csproj", "{1DFE1077-1C15-478A-9D6F-576C5289941F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrocaDeValores", "TrocaDeValores\TrocaDeValores.csproj", "{22023CDD-B671-4703-9B5E-34DCDEC4A5AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBF91631-69E6-40CE-A7F4-7F853C4DFC22}.Debug|x86.ActiveCfg = Debug|x86
+		{CBF91631-69E6-40CE-A7F4-7F853C4DFC22}.Debug|x86.Build.0 = Debug|x86
+		{CBF91631-69E6-40CE-A7F4-7F853C4DFC22}.Release|x86.ActiveCfg = Release|x86
+		{CBF91631-69E6-40CE-A7F4-7F853C4DFC22}.Release|x86.Build.0 = Release|x86
+		{1DFE1077-1C15-478A-9D6F-576C5289941F}.Debug|x86.ActiveCfg = Debug|x86
+		{1DFE1077-1C15-478A-9D6F-576C5289941F}.Debug|x86.Build.0 = Debug|x86
+		{1DFE1077-1C15-478A-9D6F-576C5289941F}.Release|x86.ActiveCfg = Release|x86
+		{1DFE1077-1C15-478A-9D6F-576C5289941F}.Release|x86.Build.0 = Release|x86
+		{22023CDD-B671-4703-9B5E-34DCDEC4A5AE}.Debug|x86.ActiveCfg = Debug|x86
+		{22023CDD-B671-4703-9B5E-34DCDEC4A5AE}.Debug|x86.Build.0 = Debug|x86
+		{22023CDD-B671-4703-9B5E-34DCDEC4A5AE}.Release|x86.ActiveCfg = Release|x86
+		{22023CDD-B671-4703-9B5E-34DCDEC4A5AE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
