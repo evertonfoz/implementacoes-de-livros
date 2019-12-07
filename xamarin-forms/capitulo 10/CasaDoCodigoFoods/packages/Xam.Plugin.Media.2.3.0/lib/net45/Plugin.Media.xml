@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Media</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Media.CrossMedia">
+            <summary>
+            Cross platform Media implemenations
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.CrossMedia.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="T:Plugin.Media.MediaImplementation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsCameraAvailable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsPickPhotoSupported">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsPickVideoSupported">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsTakePhotoSupported">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsTakeVideoSupported">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.Initialize">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.PickPhotoAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.PickVideoAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.TakePhotoAsync(Plugin.Media.Abstractions.StoreCameraMediaOptions)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.TakeVideoAsync(Plugin.Media.Abstractions.StoreVideoOptions)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

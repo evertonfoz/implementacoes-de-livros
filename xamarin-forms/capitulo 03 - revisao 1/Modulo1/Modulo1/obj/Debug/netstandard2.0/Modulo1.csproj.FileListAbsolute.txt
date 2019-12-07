@@ -1,0 +1,23 @@
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.csprojAssemblyReference.cache
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.csproj.CoreCompileInputs.cache
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.AssemblyInfoInputs.cache
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.AssemblyInfo.cs
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/bin/Debug/netstandard2.0/Modulo1.deps.json
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/bin/Debug/netstandard2.0/Modulo1.dll
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/bin/Debug/netstandard2.0/Modulo1.pdb
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.dll
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.pdb
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\bin\Debug\netstandard2.0\Modulo1.deps.json
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\bin\Debug\netstandard2.0\Modulo1.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\bin\Debug\netstandard2.0\Modulo1.pdb
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\Modulo1.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\Modulo1.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\Modulo1.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\Modulo1.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 03 - revisao 1\Modulo1\Modulo1\obj\Debug\netstandard2.0\Modulo1.pdb

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modulo1.Pages.Pedidos.PedidosNewPage"
+             Title="Registrando um pedido"
+             BackgroundColor="#cceeff">
+    <!-- Criação do Layout principal para a página de inserção de pedido -->
+    <StackLayout VerticalOptions="FillAndExpand" Padding="0">
+        <Grid Padding="5,10,5,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Layout relacionado aos dados do cliente.-->
+            <StackLayout Padding="0" Grid.Row="0" Grid.Column="0">
+                <StackLayout HeightRequest="1" BackgroundColor="Black" Padding="0"/>
+                <Grid Padding="5,10,5,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" x:Name="idCliente" Grid.Row="0" Grid.Column="0" WidthRequest="0"/>
+                    <Label Text="Selecione o Cliente" x:Name="nomeCliente" Grid.Row="0" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapLookForClientes" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text=">" HorizontalOptions="End" Grid.Row="0" Grid.Column="2" BackgroundColor="Gray">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapLookForClientes" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+                <StackLayout HeightRequest="1" BackgroundColor="Black" Padding="0"/>
+            </StackLayout>
+
+            <!-- Layout com informações de data e hora da abertura do pedido -->
+            <StackLayout Padding="0" Grid.Row="1" Grid.Column="0">
+                <Label Text="" x:Name="lblDataEHoraAbertura" HorizontalOptions="Center"/>
+                <StackLayout HeightRequest="1" BackgroundColor="Black" Padding="0"/>
+            </StackLayout>
+
+            <!-- Layout relacionado aos dados do item de cardápio que será inserido -->
+            <StackLayout Padding="0" Grid.Row="2" Grid.Column="0">
+                <Grid Padding="5,10,5,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="80*"/>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="" x:Name="idItem" Grid.Row="0" Grid.Column="0" WidthRequest="0"/>
+                    <Entry Placeholder="Quantidade" PlaceholderColor="Gray" x:Name="quantidadeItem" Grid.Row="0" Grid.Column="0" Text="1"
+                 HorizontalTextAlignment="End"/>
+                    <Label Text="Selecione o item" x:Name="nomeItem" Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapLookForItens" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text=">" HorizontalOptions="End" Grid.Row="0" Grid.Column="2" BackgroundColor="Gray" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapLookForItens" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <StackLayout Grid.Row="1" Grid.Column="0" Padding="0" Grid.ColumnSpan="3" HorizontalOptions="Center">
+                        <Button Text="Inserir item no pedido" x:Name="BtnInserirItem" Image="icone_new.png"/>
+                    </StackLayout>
+                </Grid>
+                <StackLayout HeightRequest="1" BackgroundColor="Black" Padding="0"/>
+            </StackLayout>
+
+            <!-- Layout com ListView exibindo todos os itens inseridos do pedido -->
+            <StackLayout Padding="0" Grid.Row="3" Grid.Column="0">
+                <ListView x:Name="lvItens" HasUnevenRows="True" BackgroundColor="#cceeff">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding ItemCardapio.Nome}" TextColor="Blue" FontSize="Large"/>
+                                    <Label Text="{Binding ItemCardapio.TipoItemCardapio.Nome}" TextColor="Black" FontSize="Small"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <!-- Layout final com total do pedido e botão para registrar o pedido -->
+            <StackLayout Grid.Row="4" Grid.Column="0" Padding="0">
+                <Grid Padding="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="60*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Total: R$ 0,00" VerticalOptions="Center" x:Name="lblTotalPedido" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Font="Small"/>
+                    <Button Text="Registrar Pedido" x:Name="BtnRegistrarPedido" Image="icone_registrar.png" Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

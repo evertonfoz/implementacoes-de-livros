@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modulo1.Pages.Clientes.ClientesMapPage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             Title="Localização cliente"
+             BackgroundColor="#ffd9b3">
+  <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Padding="10, 20, 10, 10">
+    <maps:Map x:Name="MyMap"
+        IsShowingUser="true"
+        MapType="Street"
+        />
+  </StackLayout>
+</ContentPage>

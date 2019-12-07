@@ -1,0 +1,18 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\folderpath.1.1.0\lib\wpa81\folderpath.abstractions.dll" HashGuid="18110f60-515a-3dac-cb16-4f91e5438bae" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\folderpath.1.1.0\lib\wpa81\folderpath.dll" HashGuid="631b19a5-1426-da74-42c9-8cd77fe00c2a" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\modulo1\modulo1\bin\debug\modulo1.dll" HashGuid="130b5902-2005-aa90-dca3-97e9bfc68fa5" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\pclspecialfolder.1.1.0\lib\wpa81\pclspecialfolder.abstractions.dll" HashGuid="f18edf48-434b-f06e-ce18-51c1f30ea0b7" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\pclspecialfolder.1.1.0\lib\wpa81\pclspecialfolder.dll" HashGuid="8d59d844-4f00-f105-79e3-aedc16152b18" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\pclstorage.1.0.2\lib\portable-win8+wpa81\pclstorage.abstractions.dll" HashGuid="736550c0-daf7-fc43-5e2e-a9023a3ecf57" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\pclstorage.1.0.2\lib\portable-win8+wpa81\pclstorage.dll" HashGuid="b3c72855-4fce-2ada-bc0f-5135882cc5d5" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\xam.plugin.media.2.3.0\lib\wpa81\plugin.media.abstractions.dll" HashGuid="ae244c5d-fb0b-f3fb-6b48-a0782f8af3ef" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\xam.plugin.media.2.3.0\lib\wpa81\plugin.media.dll" HashGuid="193a8c7a-2bc5-360b-9096-0135d06e6134" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\xamarin.forms.2.0.0.6482\lib\wpa81\xamarin.forms.core.dll" HashGuid="c8a30eb8-5ae8-352d-b94f-7c913a7557ba" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\xamarin.forms.2.0.0.6482\lib\wpa81\xamarin.forms.platform.dll" HashGuid="d9389e38-8a39-bed5-406b-7a34fe4704ea" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\xamarin.forms.2.0.0.6482\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="dbd728c2-e21b-4125-2be0-f7931b605baa" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\xamarin.forms.2.0.0.6482\lib\wpa81\xamarin.forms.platform.winrt.phone.dll" HashGuid="f7f417b9-5b4a-9692-10d4-bb874feaa2e9" />
+    <ReferenceAssembly PathName="c:\users\everton\documents\github\xamarin-casa-do-codigo\capitulo 05\casadocodigofoods\packages\xamarin.forms.2.0.0.6482\lib\wpa81\xamarin.forms.xaml.dll" HashGuid="2828b56a-3245-7d15-6650-dfb4f30cfa91" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

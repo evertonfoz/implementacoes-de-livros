@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Media</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Media.CrossMedia">
+            <summary>
+            Cross platform Media implemenations
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.CrossMedia.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="T:Plugin.Media.MediaFileExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.MediaFileExtensions.GetMediaFileExtraAsync(Android.Content.Intent,Android.Content.Context)">
+            <summary>
+            
+            </summary>
+            <param name="self"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Media.MediaImplementation">
+            <summary>
+            Implementation for Feature
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.#ctor">
+            <summary>
+            Implementation
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsCameraAvailable">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsTakePhotoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsPickPhotoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsTakeVideoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsPickVideoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.GetPickPhotoUI">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.GetTakePhotoUI(Plugin.Media.Abstractions.StoreCameraMediaOptions)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.GetPickVideoUI">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.GetTakeVideoUI(Plugin.Media.Abstractions.StoreVideoOptions)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.PickPhotoAsync">
+            <summary>
+            Picks a photo from the default gallery
+            </summary>
+            <returns>Media file or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.TakePhotoAsync(Plugin.Media.Abstractions.StoreCameraMediaOptions)">
+            <summary>
+            Take a photo async with specified options
+            </summary>
+            <param name="options">Camera Media Options</param>
+            <returns>Media file of photo or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.PickVideoAsync">
+            <summary>
+            Picks a video from the default gallery
+            </summary>
+            <returns>Media file of video or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.TakeVideoAsync(Plugin.Media.Abstractions.StoreVideoOptions)">
+            <summary>
+            Take a video with specified options
+            </summary>
+            <param name="options">Video Media Options</param>
+            <returns>Media file of new video or null if canceled</returns>
+        </member>
+        <member name="T:Plugin.Media.MediaPickerActivity">
+            <summary>
+            Picker
+            </summary>
+        </member>
+        <member name="F:Plugin.Media.MediaPickerActivity.path">
+            <summary>
+            The user's destination path.
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.MediaPickerActivity.OnSaveInstanceState(Android.OS.Bundle)">
+            <summary>
+            OnSaved
+            </summary>
+            <param name="outState"></param>
+        </member>
+        <member name="M:Plugin.Media.MediaPickerActivity.OnCreate(Android.OS.Bundle)">
+            <summary>
+            OnCreate
+            </summary>
+            <param name="savedInstanceState"></param>
+        </member>
+        <member name="M:Plugin.Media.MediaPickerActivity.OnActivityResult(System.Int32,Android.App.Result,Android.Content.Intent)">
+            <summary>
+            OnActivity Result
+            </summary>
+            <param name="requestCode"></param>
+            <param name="resultCode"></param>
+            <param name="data"></param>
+        </member>
+    </members>
+</doc>

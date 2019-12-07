@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="Droid/Modulo1.Droid.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Modulo1/Pages/Garcons/GarconsNewPage.cs">
+    <Files>
+      <File FileName="Modulo1/Modulo1.cs" Line="10" Column="42" />
+      <File FileName="Modulo1/Pages/MenuPage.cs" Line="20" Column="1" />
+      <File FileName="Modulo1/Pages/Garcons/GarconsPage.cs" Line="12" Column="5" />
+      <File FileName="Modulo1/Pages/Garcons/GarconsListPage.cs" Line="15" Column="32" />
+      <File FileName="Modulo1/Pages/Garcons/GarconsNewPage.cs" Line="19" Column="2" />
+      <File FileName="Modulo1/Pages/Garcons/MyPage.xaml" Line="6" Column="39" />
+      <File FileName="Modulo1/Pages/Garcons/MyPage.xaml.cs" Line="13" Column="44" />
+      <File FileName="Modulo1/Pages/Garcons/EmptyClass.cs" Line="12" Column="39" />
+      <File FileName="Modulo1/obj/Debug/Modulo1.Pages.Garcons.MyPage.xaml.g.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Modulo1.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Modulo1.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1F784228-2DFD-4AEC-922C-1C421D4D78C9" />
+</Properties>

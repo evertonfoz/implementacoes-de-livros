@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.casadocodigo.Capitulo05" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+	<application android:label="CC Foods" android:icon="@mipmap/cc2929">
+		<provider android:name="android.support.v4.content.FileProvider" android:authorities="com.casadocodigo.Capitulo05.fileprovider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+		</provider>
+	</application>
+</manifest>

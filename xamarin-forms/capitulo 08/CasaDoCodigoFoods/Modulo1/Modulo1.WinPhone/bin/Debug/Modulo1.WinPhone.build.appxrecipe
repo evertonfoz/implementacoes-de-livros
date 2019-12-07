@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>EVERTON-DELL</Machine>
+    <WindowsUser>Everton</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>b2538f01-902e-4e5d-9168-d1116363ba7c</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Everton</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\obj\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\bin\Debug\CC Foods.exe">
+      <PackagePath>CC Foods.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\FolderPath.1.1.0\lib\wpa81\FolderPath.Abstractions.dll">
+      <PackagePath>FolderPath.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\FolderPath.1.1.0\lib\wpa81\FolderPath.dll">
+      <PackagePath>FolderPath.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1\bin\Debug\Modulo1.dll">
+      <PackagePath>Modulo1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\PCLSpecialFolder.1.1.0\lib\wpa81\PCLSpecialFolder.Abstractions.dll">
+      <PackagePath>PCLSpecialFolder.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\PCLSpecialFolder.1.1.0\lib\wpa81\PCLSpecialFolder.dll">
+      <PackagePath>PCLSpecialFolder.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\PCLStorage.1.0.2\lib\portable-win8+wpa81\PCLStorage.Abstractions.dll">
+      <PackagePath>PCLStorage.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\PCLStorage.1.0.2\lib\portable-win8+wpa81\PCLStorage.dll">
+      <PackagePath>PCLStorage.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xam.Plugin.Media.2.3.0\lib\wpa81\Plugin.Media.Abstractions.dll">
+      <PackagePath>Plugin.Media.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xam.Plugin.Media.2.3.0\lib\wpa81\Plugin.Media.dll">
+      <PackagePath>Plugin.Media.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Core.dll">
+      <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.dll">
+      <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT.dll">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone.dll">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Xaml.dll">
+      <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\Assets\SmallLogo.scale-240x.png">
+      <PackagePath>Assets\SmallLogo.scale-240x.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\Assets\SplashScreen.scalex-240.png">
+      <PackagePath>Assets\SplashScreen.scalex-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\bebidas.png">
+      <PackagePath>bebidas.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\carnes.png">
+      <PackagePath>carnes.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_1.png">
+      <PackagePath>garcon_1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_10.png">
+      <PackagePath>garcon_10.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_2.png">
+      <PackagePath>garcon_2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_3.png">
+      <PackagePath>garcon_3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_4.png">
+      <PackagePath>garcon_4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_5.png">
+      <PackagePath>garcon_5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_6.png">
+      <PackagePath>garcon_6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_7.png">
+      <PackagePath>garcon_7.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_8.png">
+      <PackagePath>garcon_8.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\garcon_9.png">
+      <PackagePath>garcon_9.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_entregador.png">
+      <PackagePath>icone_entregador.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_entregadores.png">
+      <PackagePath>icone_entregadores.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_garcon.png">
+      <PackagePath>icone_garcon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_garcons.png">
+      <PackagePath>icone_garcons.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_list.png">
+      <PackagePath>icone_list.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_new.png">
+      <PackagePath>icone_new.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_tipoitemcardapio.png">
+      <PackagePath>icone_tipoitemcardapio.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\icone_tipositenscardapio.png">
+      <PackagePath>icone_tipositenscardapio.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\pizzas.png">
+      <PackagePath>pizzas.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\saladas.png">
+      <PackagePath>saladas.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\sanduiches.png">
+      <PackagePath>sanduiches.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\sobremesas.png">
+      <PackagePath>sobremesas.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\bin\Debug\CC Foods.xr.xml">
+      <PackagePath>CC Foods.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT\FormsTextBox.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\FormsTextBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT\PageControl.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\PageControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT\StepperControl.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\StepperControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\PhoneResources.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\PhoneResources.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\Resources.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\Resources.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\SearchBox.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\SearchBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\packages\Xamarin.Forms.2.0.0.6482\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\Xamarin.Forms.Platform.WinRT.Phone.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\Xamarin.Forms.Platform.WinRT.Phone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 05\CasaDoCodigoFoods\Modulo1\Modulo1.WinPhone\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modulo1.Pages.Entregadores.EntregadoresNewPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="Center">
+                <Grid Padding="5,10,5,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0" Grid.Column="0" OutlineColor="Black" BackgroundColor="Yellow" HasShadow="True" Padding="5,5,5,5">
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="icone_entregador.png" Grid.Row="0" Grid.Column="0"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Novo Entregador" Font="18" TextColor="Blue" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                <Label Grid.Row="0" Grid.Column="2" Text="Id" HorizontalOptions="End" Font="Bold, 18" TextColor="Blue" x:Name="identregador" VerticalOptions="Center"/>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- 5. Definição do FRAME e GRID que receberá os dados informados 
+        pelo usuário -->
+                    <Frame Grid.Row="1" Grid.Column="0" OutlineColor="Black" HasShadow="True" Padding="5,5,5,5">
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Entry Placeholder="Nome do Entregador" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="0" x:Name="nome"/>
+                                <Entry Placeholder="Telefone do Entregador" PlaceholderColor="Gray" Grid.Row="1" Grid.Column="0" x:Name="telefone" Keyboard="Telephone"/>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- 6. Frame e Grid que hospedarão os botões de ação para o formulário
+        de entrada de dados para inserção do novo Entregador -->
+                    <Frame Grid.Row="2" Grid.Column="0"  OutlineColor="Black" HasShadow="True" Padding="5,5,5,5">
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Row="0" Grid.Column="0" Text="Gravar" Clicked="BtnGravarClick"/>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

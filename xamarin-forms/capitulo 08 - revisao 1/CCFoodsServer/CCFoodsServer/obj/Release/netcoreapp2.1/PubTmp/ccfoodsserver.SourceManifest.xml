@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="c:\xamarin2e\capitulo 07 - revisao 1\ccfoodsserver\ccfoodsserver\obj\Release\netcoreapp2.1\PubTmp\Out\" />
+  <dbfullsql path="c:\xamarin2e\capitulo 07 - revisao 1\ccfoodsserver\ccfoodsserver\obj\Release\netcoreapp2.1\PubTmp\EFSQLScripts\CCFoodsServer.Persistencia.CCFoodsContext.sql" />
+</sitemanifest>

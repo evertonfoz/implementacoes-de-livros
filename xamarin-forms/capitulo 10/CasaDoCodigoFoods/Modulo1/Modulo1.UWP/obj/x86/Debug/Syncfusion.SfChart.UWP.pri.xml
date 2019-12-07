@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Syncfusion.SfChart.UWP" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Syncfusion.SfChart.UWP">
+				<NamedResource name="Syncfusion.SfChart.UWP.xr.xml" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Syncfusion.SfChart.UWP.xr.xml">
+					<Candidate type="Path">
+						<Value>Syncfusion.SfChart.UWP\Syncfusion.SfChart.UWP.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="3D">
+					<ResourceMapSubtree name="ChartArea">
+						<ResourceMapSubtree name="Themes">
+							<NamedResource name="SfChart3D.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/3D/ChartArea/Themes/SfChart3D.xbf">
+								<Candidate type="EmbeddedData">
+									<Base64Value>[Embedded Binary Data]</Base64Value>
+								</Candidate>
+							</NamedResource>
+						</ResourceMapSubtree>
+					</ResourceMapSubtree>
+					<ResourceMapSubtree name="ChartSeries">
+						<ResourceMapSubtree name="Themes">
+							<NamedResource name="ChartSeries.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/3D/ChartSeries/Themes/ChartSeries.xbf">
+								<Candidate type="EmbeddedData">
+									<Base64Value>[Embedded Binary Data]</Base64Value>
+								</Candidate>
+							</NamedResource>
+						</ResourceMapSubtree>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="ChartArea">
+					<ResourceMapSubtree name="Themes">
+						<NamedResource name="ChartArea.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/ChartArea/Themes/ChartArea.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="ChartAxis">
+					<ResourceMapSubtree name="Themes">
+						<NamedResource name="ChartAxis.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/ChartAxis/Themes/ChartAxis.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="ChartSeries">
+					<ResourceMapSubtree name="Themes">
+						<NamedResource name="ChartSeries.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/ChartSeries/Themes/ChartSeries.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Controls">
+					<ResourceMapSubtree name="Themes">
+						<NamedResource name="ChartToolBar.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Controls/Themes/ChartToolBar.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="ResizableScrollBar.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Controls/Themes/ResizableScrollBar.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="Resizer.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Controls/Themes/Resizer.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="SfRangeNavigator.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Controls/Themes/SfRangeNavigator.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Properties">
+					<NamedResource name="Syncfusion.SfChart.UWP_2015.rd.xml" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Properties/Syncfusion.SfChart.UWP_2015.rd.xml">
+						<Candidate type="Path">
+							<Value>Syncfusion.SfChart.UWP\Properties\Syncfusion.SfChart.UWP_2015.rd.xml</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Sparkline">
+					<ResourceMapSubtree name="Themes">
+						<NamedResource name="Sparkline.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Sparkline/Themes/Sparkline.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.Common.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Themes/Generic.Common.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.Legend.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Themes/Generic.Legend.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.Symbol.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Themes/Generic.Symbol.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="generic.xbf" uri="ms-resource://Syncfusion.SfChart.UWP/Files/Syncfusion.SfChart.UWP/Themes/generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

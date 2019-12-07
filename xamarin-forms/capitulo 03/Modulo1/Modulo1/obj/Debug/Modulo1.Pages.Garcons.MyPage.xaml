@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Modulo1.MyPage">
+	<ContentPage.Content>
+		<ListView HasUnevenRows="true" ItemsSource="{Binding .}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="100"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="70*"/>
+								<ColumnDefinition Width="30*"/>
+							</Grid.ColumnDefinitions>
+							<StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Blue">
+								<Label Text="{Binding Mensagem}" TextColor="White" />
+							</StackLayout>
+							<Label Grid.Row="1" Grid.Column="0" TextColor="Black" Text="{Binding Nome}"/>
+							<Label Grid.Row="1" Grid.Column="1" TextColor="Black" Text="{Binding Sobrenome}"/>
+						</Grid>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

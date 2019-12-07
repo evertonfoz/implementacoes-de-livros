@@ -1,0 +1,131 @@
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.iOS.exe
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.iOS.pdb
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.pdb
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ca\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\cs\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\da\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\de\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\el\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\es\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\fi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\fr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\he\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\hi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\hr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\hu\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\id\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\it\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ja\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ko\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ms\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\nb\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\nl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\pl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\pt-BR\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\pt\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ro\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ru\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\sk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\sv\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\th\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\tr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\uk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\vi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.dll
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.pdb
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.csprojAssemblyReference.cache
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.csproj.CoreCompileInputs.cache
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.csproj.CopyComplete
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.exe
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.pdb
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.dll.mdb
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\icone_garcons.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\icone_list.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\icone_new.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_1.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_2.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_3.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_4.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_5.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_6.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_7.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_8.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_9.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\garcon_10.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\icone_entregador.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\icone_entregadores.png
+C:\Xamarin2E\capitulo04\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\icone_garcon.png
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.iOS.exe
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.iOS.pdb
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ca\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\cs\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\da\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\de\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\el\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\es\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\fi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\fr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\he\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\hi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\hr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\hu\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\id\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\it\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ja\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ko\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ms\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\nb\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\nl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\pl\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\pt-BR\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\pt\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ro\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\ru\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\sk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\sv\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\th\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\tr\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\uk\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\vi\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.dll
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\bin\iPhoneSimulator\Debug\Modulo1.pdb
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.csproj.CopyComplete
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.exe
+C:\Users\Everton\Documents\GitHub\xamarin-casa-do-codigo\capitulo 04 - revisao 1\CasaDoCodigoFoods\Modulo1\Modulo1.iOS\obj\iPhoneSimulator\Debug\Modulo1.iOS.pdb

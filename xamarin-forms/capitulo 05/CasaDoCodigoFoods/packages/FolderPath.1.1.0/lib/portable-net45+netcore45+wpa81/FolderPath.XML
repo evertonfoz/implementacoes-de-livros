@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FolderPath</name>
+    </assembly>
+    <members>
+        <member name="T:PCLStorage.FolderPath">
+            <summary>
+            Cross platform FolderPath implemenations
+            </summary>
+        </member>
+        <member name="P:PCLStorage.FolderPath.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+    </members>
+</doc>

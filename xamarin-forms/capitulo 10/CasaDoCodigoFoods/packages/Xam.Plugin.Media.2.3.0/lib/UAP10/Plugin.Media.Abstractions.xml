@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Media.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Media.Abstractions.IMedia">
+            <summary>
+            Interface for Media
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.IMedia.Initialize">
+            <summary>
+            Initialize all camera components
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.IMedia.IsCameraAvailable">
+            <summary>
+            Gets if a camera is available on the device
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.IMedia.IsTakePhotoSupported">
+            <summary>
+            Gets if ability to take photos supported on the device
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.IMedia.IsPickPhotoSupported">
+            <summary>
+            Gets if the ability to pick photo is supported on the device
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.IMedia.IsTakeVideoSupported">
+            <summary>
+            Gets if ability to take video is supported on the device
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.IMedia.IsPickVideoSupported">
+            <summary>
+            Gets if the ability to pick a video is supported on the device
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.IMedia.PickPhotoAsync">
+            <summary>
+            Picks a photo from the default gallery
+            </summary>
+            <returns>Media file or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.IMedia.TakePhotoAsync(Plugin.Media.Abstractions.StoreCameraMediaOptions)">
+            <summary>
+            Take a photo async with specified options
+            </summary>
+            <param name="options">Camera Media Options</param>
+            <returns>Media file of photo or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.IMedia.PickVideoAsync">
+            <summary>
+            Picks a video from the default gallery
+            </summary>
+            <returns>Media file of video or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.IMedia.TakeVideoAsync(Plugin.Media.Abstractions.StoreVideoOptions)">
+            <summary>
+            Take a video with specified options
+            </summary>
+            <param name="options">Video Media Options</param>
+            <returns>Media file of new video or null if canceled</returns>
+        </member>
+        <member name="T:Plugin.Media.Abstractions.MediaExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.MediaExtensions.VerifyOptions(Plugin.Media.Abstractions.StoreMediaOptions)">
+            <summary>
+            
+            </summary>
+            <param name="self"></param>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.MediaExtensions.GetFilePath(Plugin.Media.Abstractions.StoreMediaOptions,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="self"></param>
+            <param name="rootPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.MediaExtensions.GetUniqueFilepath(Plugin.Media.Abstractions.StoreMediaOptions,System.String,System.Func{System.String,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <param name="self"></param>
+            <param name="rootPath"></param>
+            <param name="checkExists"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Media.Abstractions.MediaFile">
+            <summary>
+            Media file representations
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.MediaFile.#ctor(System.String,System.Func{System.IO.Stream},System.Boolean,System.Action{System.Boolean},System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="path"></param>
+            <param name="streamGetter"></param>
+            <param name="deletePathOnDispose"></param>
+            <param name="dispose"></param>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.MediaFile.Path">
+            <summary>
+            Path to file
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.MediaFile.AlbumPath">
+            <summary>
+            Path to file
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.MediaFile.GetStream">
+            <summary>
+            Get stream if available
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.MediaFile.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.MediaFile.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.MediaFileNotFoundException.Path">
+            <summary>
+            Path
+            </summary>
+        </member>
+        <member name="T:Plugin.Media.Abstractions.StoreMediaOptions">
+            <summary>
+            Media Options
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.StoreMediaOptions.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.StoreMediaOptions.Directory">
+            <summary>
+            Directory name
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.StoreMediaOptions.Name">
+            <summary>
+            File name
+            </summary>
+        </member>
+        <member name="T:Plugin.Media.Abstractions.CameraDevice">
+            <summary>
+            Camera device
+            </summary>
+        </member>
+        <member name="F:Plugin.Media.Abstractions.CameraDevice.Rear">
+            <summary>
+            Back of device
+            </summary>
+        </member>
+        <member name="F:Plugin.Media.Abstractions.CameraDevice.Front">
+            <summary>
+            Front facing of device
+            </summary>
+        </member>
+        <member name="T:Plugin.Media.Abstractions.StoreCameraMediaOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.StoreCameraMediaOptions.DefaultCamera">
+            <summary>
+            Default camera
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Plugin.Media.Abstractions.StoreCameraMediaOptions.SaveToAlbum" -->
+        <member name="T:Plugin.Media.Abstractions.VideoQuality">
+            <summary>
+            Video quality
+            </summary>
+        </member>
+        <member name="F:Plugin.Media.Abstractions.VideoQuality.Low">
+            <summary>
+            Low
+            </summary>
+        </member>
+        <member name="F:Plugin.Media.Abstractions.VideoQuality.Medium">
+            <summary>
+            Medium
+            </summary>
+        </member>
+        <member name="F:Plugin.Media.Abstractions.VideoQuality.High">
+            <summary>
+            High
+            </summary>
+        </member>
+        <member name="T:Plugin.Media.Abstractions.StoreVideoOptions">
+            <summary>
+            Store Video options
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.Abstractions.StoreVideoOptions.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.StoreVideoOptions.DesiredLength">
+            <summary>
+            Desired Length
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.Abstractions.StoreVideoOptions.Quality">
+            <summary>
+            Desired Quality
+            </summary>
+        </member>
+    </members>
+</doc>

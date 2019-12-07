@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="CC_Foods.CC_Foods">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28" />
+	<application android:label="CC Foods" android:name="CC Foods" android:icon="@drawable/icon"></application>
+</manifest>

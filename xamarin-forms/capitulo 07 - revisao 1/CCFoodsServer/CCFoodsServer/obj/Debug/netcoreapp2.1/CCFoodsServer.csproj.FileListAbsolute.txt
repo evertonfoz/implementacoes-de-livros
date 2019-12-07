@@ -1,0 +1,14 @@
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\bin\Debug\netcoreapp2.1\CCFoodsServer.deps.json
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\bin\Debug\netcoreapp2.1\CCFoodsServer.runtimeconfig.json
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\bin\Debug\netcoreapp2.1\CCFoodsServer.runtimeconfig.dev.json
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\bin\Debug\netcoreapp2.1\CCFoodsServer.dll
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.csprojAssemblyReference.cache
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.csproj.CoreCompileInputs.cache
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.RazorAssemblyInfo.cache
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.RazorAssemblyInfo.cs
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.AssemblyInfoInputs.cache
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.AssemblyInfo.cs
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.RazorTargetAssemblyInfo.cache
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\bin\Debug\netcoreapp2.1\CCFoodsServer.pdb
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.dll
+C:\Xamarin2E\capitulo 07 - revisao 1\CCFoodsServer\CCFoodsServer\obj\Debug\netcoreapp2.1\CCFoodsServer.pdb

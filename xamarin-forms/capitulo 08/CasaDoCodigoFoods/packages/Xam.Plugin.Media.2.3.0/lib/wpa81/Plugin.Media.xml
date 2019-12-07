@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Media</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Media.CrossMedia">
+            <summary>
+            Cross platform Media implemenations
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.CrossMedia.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="T:Plugin.Media.MediaImplementation">
+            <summary>
+            Implementation for Media
+            </summary>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.#ctor">
+            <summary>
+            Implementation
+            </summary>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsCameraAvailable">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsTakePhotoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsPickPhotoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsTakeVideoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="P:Plugin.Media.MediaImplementation.IsPickVideoSupported">
+            <inheritdoc/>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.TakePhotoAsync(Plugin.Media.Abstractions.StoreCameraMediaOptions)">
+            <summary>
+            Take a photo async with specified options
+            </summary>
+            <param name="options">Camera Media Options</param>
+            <returns>Media file of photo or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.PickPhotoAsync">
+            <summary>
+            Picks a photo from the default gallery
+            </summary>
+            <returns>Media file or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.TakeVideoAsync(Plugin.Media.Abstractions.StoreVideoOptions)">
+            <summary>
+            Take a video with specified options
+            </summary>
+            <param name="options">Video Media Options</param>
+            <returns>Media file of new video or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.PickVideoAsync">
+            <summary>
+            Picks a video from the default gallery
+            </summary>
+            <returns>Media file of video or null if canceled</returns>
+        </member>
+        <member name="M:Plugin.Media.MediaImplementation.OnFilesPicked(Windows.ApplicationModel.Activation.IActivatedEventArgs)">
+            <summary>
+            OnFilesPicked
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:DMX.Helper.CameraCaptureUI.#ctor">
+            <summary>
+            Navigates to the CameraCaptureUIPage in a new Frame and show the control
+            </summary>
+        </member>
+        <member name="M:DMX.Helper.CameraCaptureUI.CaptureFileAsync(DMX.Helper.CameraCaptureUIMode,Plugin.Media.Abstractions.StoreCameraMediaOptions)">
+            <summary>
+            This method takes a picture. 
+            Right now the parameter is not evaluated.
+            </summary>
+            <param name="mode"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DMX.Helper.CameraCaptureUI.IsStopped">
+            <summary>
+            This is a loop which waits async until the flag has been set.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DMX.Helper.CameraCaptureUIPage">
+            <summary>
+            An empty page that can be used on its own or navigated to within a Frame.
+            </summary>
+        </member>
+        <member name="P:DMX.Helper.CameraCaptureUIPage.MyCCUCtrl">
+            <summary>
+            Invoked when this page is about to be displayed in a Frame.
+            </summary>
+            <param name="e">Event data that describes how this page was reached.
+            This parameter is typically used to configure the page.</param>   
+        </member>
+    </members>
+</doc>
