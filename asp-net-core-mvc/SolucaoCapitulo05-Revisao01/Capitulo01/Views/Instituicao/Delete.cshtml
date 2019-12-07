@@ -1,0 +1,32 @@
+﻿@model Modelo.Cadastros.Instituicao
+
+@{
+    Layout = "_LayoutIES";
+}
+
+@section Styles {
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+              asp-fallback-href="~/lib/font-awesome/css/font-awesome.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+    </environment>
+}
+
+
+
+<div class="card-block">
+    <div class="card-header text-white bg-secondary text-center h1">Exibindo uma instituição existente</div>
+
+    @{await Html.RenderPartialAsync("~/Views/Instituicao/_PartialDetailsContentCard.cshtml", Model); }
+
+    <div class="card-footer bg-info text-center text-white">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="InstituicaoID" />
+            <input type="submit" value="Remover Instituição" class="btn btn-light" />
+            <a asp-action="Index" class="btn btn-info">Retornar à listagem de instituições</a>
+        </form>
+    </div>
+</div>

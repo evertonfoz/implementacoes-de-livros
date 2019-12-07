@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Modelo.Cadastros.Departamento>
+@{
+    Layout = "_LayoutIES";
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/lib/datatables/media/css/jquery.dataTables.min.css" />
+}
+
+@if (@TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+<div class="card-block">
+    <div class="card-header text-white bg-primary text-center h1">Departamentos Registrados</div>
+    <div class="card-body">
+        <table id="tabela_departamentos">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Instituicao.Nome)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Instituicao.Nome)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.DepartamentoID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.DepartamentoID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.DepartamentoID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer bg-success text-center">
+        <a asp-action="Create" class="btn-success">Criar um novo departamento</a>
+    </div>
+</div>
+
+
+@section ScriptPage {
+    <script type="text/javascript" src="~/lib/datatables/media/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tabela_departamentos').DataTable({
+                "order": [[1, "asc"]]
+            });
+        });
+    </script>
+}

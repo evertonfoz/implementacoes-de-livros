@@ -1,0 +1,22 @@
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.deps.json
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.runtimeconfig.json
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.runtimeconfig.dev.json
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.dll
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.pdb
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.csprojResolveAssemblyReference.cache
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.csproj.CoreCompileInputs.cache
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.AssemblyInfo.cs
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.dll
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.pdb
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.AssemblyInfoInputs.cache
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.deps.json
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.runtimeconfig.json
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.runtimeconfig.dev.json
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.dll
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\bin\Debug\netcoreapp1.1\Capitulo01.pdb
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.csprojAssemblyReference.cache
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.csproj.CoreCompileInputs.cache
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.AssemblyInfoInputs.cache
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.AssemblyInfo.cs
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.dll
+C:\Users\evert\Documents\GitHub\asp-net-core-mvc-casa-do-codigo\SolucaoCapitulo01\Capitulo01\obj\Debug\netcoreapp1.1\Capitulo01.pdb

@@ -1,0 +1,30 @@
+﻿@model Modelo.Cadastros.Departamento
+
+<div class="card-body">
+    <div class="form-group">
+        <label asp-for="DepartamentoID" class="control-label"></label>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="fa fa-key" aria-hidden="true"></i>
+            </span>
+            <input asp-for="DepartamentoID" class="form-control" disabled="disabled" />
+        </div>
+        <label asp-for="Nome" class="control-label"></label>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </span>
+            <input asp-for="Nome" class="form-control" disabled="disabled" />
+        </div>
+        <label asp-for="Instituicao.Nome" class="control-label"></label>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </span>
+            <input asp-for="Instituicao.Nome" class="form-control" disabled="disabled" />
+        </div>
+    </div>
+</div>

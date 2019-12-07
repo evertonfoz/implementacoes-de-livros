@@ -1,0 +1,117 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<Capitulo02.Models.Infra.UsuarioDaAplicacao> SignInManager
+@inject Microsoft.AspNetCore.Identity.UserManager<Capitulo02.Models.Infra.UsuarioDaAplicacao> UserManager
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewBag.Title</title>
+    <environment include="Development">
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /> *@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+        </environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        </environment>
+
+        @RenderSection("Styles", required: false)
+    </head>
+<body>
+    <nav class="navbar fixed-top navbar-light bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="~/images/casa-do-codigo_2x.png" width="30" height="30" alt="">
+            ASP.NET Core MVC
+        </a>
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+            <div class="col-12">&nbsp;</div>
+            <div class="col-12">&nbsp;</div>
+        </div>
+
+        <div class="row" style="text-align:right;">
+            <div class="col-6"></div>
+            <div class="col-6">
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <div>Olá @UserManager.GetUserName(User), seja bem-vindo(a) / @Html.ActionLink("Logout", "Sair", "Infra", new { area = "" })</div>
+               }
+                else
+                {
+                    <a class="nav-item nav-link" asp-area="" asp-controller="Infra" asp-action="Acessar">
+                        Informar usuário/senha para acessar
+                    </a>
+                }
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <nav class="nav flex-column">
+                        <a class="nav-item nav-link" asp-area="Cadastros" asp-controller="Instituicao" asp-action="Index">
+                            <img src="~/images/university.png" width="30" height="30" alt="">
+                            Instituições
+                        </a>
+                        <a class="nav-item nav-link" asp-area="Cadastros" asp-controller="Departamento" asp-action="Index">
+                            <img src="~/images/department.png" width="30" height="30" alt="">
+                            Departamentos
+                        </a>
+                        <a class="nav-item nav-link" asp-area="Discente" asp-controller="Academico" asp-action="Index">
+                            <img src="~/images/academic.png" width="30" height="30" alt="">
+                            Acadêmicos
+                        </a>
+                    </nav>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-12">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <nav class="navbar" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">Everton Coimbra de Araújo</a>
+    </nav>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+        @*<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>*@
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>*@
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1">
+        </script>
+    </environment>
+
+    @RenderSection("ScriptPage", required: false)
+</body>
+
+
+
+</html>

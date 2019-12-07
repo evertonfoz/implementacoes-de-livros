@@ -1,0 +1,44 @@
+﻿@model Modelo.Cadastros.Departamento
+@{
+    Layout = "_LayoutIES";
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+}
+
+<div class="card-block">
+    <div class="card-header text-white bg-secondary text-center h1">Exibindo uma departamento para remoção</div>
+
+    @Html.Partial("~/Views/Departamento/_PartialDetailsContentCard.cshtml", Model)
+
+    <div class="card-footer bg-info text-center text-white">
+        <a asp-action="Index" class="btn btn-danger">Retornar à listagem de Departamentos</a>
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalConfirmationDelete">
+            Remover Departamento
+        </button>
+    </div>
+</div>
+
+<div class="modal fade" id="modalConfirmationDelete" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModal">Remoção de Departamento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Confirma a exclusão do departamento @Model.Nome.ToUpper() ??</p>
+            </div>
+            <div class="modal-footer">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="DepartamentoID" />
+                    <input type="submit" value="Remover Departamento" class="btn btn-primary" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

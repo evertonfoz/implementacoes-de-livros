@@ -1,0 +1,43 @@
+﻿@model Modelo.Cadastros.Instituicao
+
+<div class="card-body">
+    <div class="row">
+        <div class="col-8">
+            <div class="form-group">
+                <label asp-for="InstituicaoID" class="control-label"></label>
+                <br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-key" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input asp-for="InstituicaoID" class="form-control" disabled="disabled" />
+                </div>
+                <label asp-for="Nome" class="control-label"></label>
+                <br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input asp-for="Nome" class="form-control" disabled="disabled" />
+                </div>
+                <label asp-for="Endereco" class="control-label"></label>
+                <br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input asp-for="Endereco" class="form-control" disabled="disabled" />
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            @{await Html.RenderPartialAsync("~/Areas/Cadastros/Views/Instituicao/_ComDepartamentos.cshtml", Model.Departamentos.ToList()); }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\bin\Debug\netcoreapp2.0\Persistencia.deps.json
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\bin\Debug\netcoreapp2.0\Persistencia.dll
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\bin\Debug\netcoreapp2.0\Persistencia.pdb
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\bin\Debug\netcoreapp2.0\Modelo.dll
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\bin\Debug\netcoreapp2.0\Modelo.pdb
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\obj\Debug\netcoreapp2.0\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\obj\Debug\netcoreapp2.0\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\obj\Debug\netcoreapp2.0\Persistencia.AssemblyInfoInputs.cache
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\obj\Debug\netcoreapp2.0\Persistencia.AssemblyInfo.cs
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\obj\Debug\netcoreapp2.0\Persistencia.dll
+C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Persistencia\obj\Debug\netcoreapp2.0\Persistencia.pdb

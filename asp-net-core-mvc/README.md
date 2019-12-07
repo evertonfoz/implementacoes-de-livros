@@ -1,0 +1,1 @@
+O conteúdo deste repositório é a implementação do livro "ASP.NET Core MVC - Aplicações modernas em conjunto com o Entity Framework", disponível em https://www.casadocodigo.com.br/products/livro-aspnet-core-mvc
