@@ -1,0 +1,7 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "capitulo07",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

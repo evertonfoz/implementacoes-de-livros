@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  <form class="form" [formGroup]="validationsForm" (ngSubmit)="login(validationsForm.value)">
+    <ion-item>
+        <ion-label  position="floating" color="primary">Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+     
+    <div>
+      <ng-container *ngFor="let validation of validationMessages.email">
+        <div class="validation-errors" *ngIf="validationsForm.get('email').hasError(validation.type) && (validationsForm.get('email').dirty || validationsForm.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+   
+    <ion-item>
+      <ion-label  position="floating" color="primary">Password</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validationMessages.password">
+        <div class="error-message" *ngIf="validationsForm.get('password').hasError(validation.type) && (validationsForm.get('password').dirty || validationsForm.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+  
+    <div style="text-align: center" padding>
+      <ion-button  class="submit-btn" type="submit"  [disabled]="!validationsForm.valid">Acessar</ion-button>
+    </div>
+
+    <div style="text-align: center">
+      <label class="validation-errors">{{errorMessage}}</label>
+    </div>
+  </form>
+  <p style="text-align: center">
+    Não tem conta ainda? <a (click)="goToRegistrarPage()">Crie uma conta</a>
+  </p>
+</ion-content>

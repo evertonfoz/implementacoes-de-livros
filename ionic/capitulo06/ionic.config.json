@@ -1,0 +1,8 @@
+{
+  "name": "capitulo06",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

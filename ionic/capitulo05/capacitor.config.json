@@ -1,0 +1,7 @@
+{
+  "appId": "br.com.casadocodigoionic",
+  "appName": "Capitulo05",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

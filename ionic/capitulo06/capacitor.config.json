@@ -1,0 +1,7 @@
+{
+  "appId": "br.com.casadocodigoionic",
+  "appName": "IonicCC",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
