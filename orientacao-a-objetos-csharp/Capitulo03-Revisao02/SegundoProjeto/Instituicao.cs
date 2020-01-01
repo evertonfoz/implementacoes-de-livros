@@ -3,7 +3,7 @@
     class Instituicao
     {
         public string Nome { get; set; }
-        public string Endereco { get; set; }
+        public Endereco Endereco { get; set; }
 
         public Departamento[] Departamentos { get; } = new Departamento[10];
 
@@ -18,6 +18,11 @@
         public int ObterQuantidadeDepartamentos()
         {
             return quantidadeDepartamentos;
+        }
+        
+        public Departamento DepartamentoPorIndice(int indice)
+        {
+            return Departamentos[indice];
         }
     }
 }

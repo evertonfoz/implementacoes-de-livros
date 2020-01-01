@@ -6,13 +6,24 @@ namespace SegundoProjeto
     {
         static void Main(string[] args)
         {
-            var iesUTFPR = new Instituicao();
-            iesUTFPR.Nome = "UTFPR";
-            iesUTFPR.Endereco = "Medianeira";
+            var iesUTFPR = new Instituicao()
+            {
+                Nome = "UTFPR",
+                Endereco = new Endereco()
+                {
+                    Rua = "Brasil",
+                    Numero = "1000"
+                }
+            };
 
-            var iesCC = new Instituicao();
-            iesCC.Nome = "Casa do Código";
-            iesCC.Endereco = "São Paulo";
+            var iesCC = new Instituicao()
+            {
+                Nome = "Casa do Código",
+                Endereco = new Endereco()
+                {
+                    Bairro = "Liberdade"
+                }
+            };
 
             var dptoEnsino = new Departamento();
             dptoEnsino.Nome = "Computação";
