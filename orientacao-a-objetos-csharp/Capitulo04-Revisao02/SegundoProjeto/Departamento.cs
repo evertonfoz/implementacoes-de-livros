@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace SegundoProjeto
 {
@@ -29,6 +30,9 @@ namespace SegundoProjeto
                 Cursos.RemoveAt(0);
             }
         }
-``
+public Curso ObterCursoPorNome(string nome)
+        {
+            return Cursos.Where<Curso>(n => n.Nome.Equals(nome)).FirstOrDefault();
+        }
     }
 }
