@@ -1,0 +1,11 @@
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\bin\Debug\netcoreapp3.1\Strategy.exe
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\bin\Debug\netcoreapp3.1\Strategy.deps.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\bin\Debug\netcoreapp3.1\Strategy.runtimeconfig.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\bin\Debug\netcoreapp3.1\Strategy.runtimeconfig.dev.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\bin\Debug\netcoreapp3.1\Strategy.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\bin\Debug\netcoreapp3.1\Strategy.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\obj\Debug\netcoreapp3.1\Strategy.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\obj\Debug\netcoreapp3.1\Strategy.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\obj\Debug\netcoreapp3.1\Strategy.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\obj\Debug\netcoreapp3.1\Strategy.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo08-Revisao03\Strategy\obj\Debug\netcoreapp3.1\Strategy.pdb
