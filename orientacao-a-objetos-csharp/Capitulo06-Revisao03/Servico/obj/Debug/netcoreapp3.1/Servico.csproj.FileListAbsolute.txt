@@ -1,0 +1,13 @@
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\bin\Debug\netcoreapp3.1\Servico.deps.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\bin\Debug\netcoreapp3.1\Servico.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\bin\Debug\netcoreapp3.1\Servico.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\bin\Debug\netcoreapp3.1\Modelo.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\bin\Debug\netcoreapp3.1\Persistencia.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\bin\Debug\netcoreapp3.1\Modelo.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\bin\Debug\netcoreapp3.1\Persistencia.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\obj\Debug\netcoreapp3.1\Servico.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\obj\Debug\netcoreapp3.1\Servico.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\obj\Debug\netcoreapp3.1\Servico.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\obj\Debug\netcoreapp3.1\Servico.csproj.CopyComplete
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\obj\Debug\netcoreapp3.1\Servico.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo06-Revisao03\Servico\obj\Debug\netcoreapp3.1\Servico.pdb

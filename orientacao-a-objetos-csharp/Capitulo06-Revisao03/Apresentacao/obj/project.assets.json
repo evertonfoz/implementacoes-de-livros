@@ -1,11 +1,68 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Modelo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Modelo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modelo.dll": {}
+        }
+      },
+      "Persistencia/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Modelo": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Persistencia.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Persistencia.dll": {}
+        }
+      },
+      "Servico/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Modelo": "1.0.0",
+          "Persistencia": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Servico.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Servico.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Modelo/1.0.0": {
+      "type": "project",
+      "path": "../Modelo/Modelo.csproj",
+      "msbuildProject": "../Modelo/Modelo.csproj"
+    },
+    "Persistencia/1.0.0": {
+      "type": "project",
+      "path": "../Persistencia/Persistencia.csproj",
+      "msbuildProject": "../Persistencia/Persistencia.csproj"
+    },
+    "Servico/1.0.0": {
+      "type": "project",
+      "path": "../Servico/Servico.csproj",
+      "msbuildProject": "../Servico/Servico.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Modelo >= 1.0.0",
+      "Servico >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Everton\\.nuget\\packages\\": {},
@@ -39,7 +96,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj"
+            },
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Servico\\Servico.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Servico\\Servico.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

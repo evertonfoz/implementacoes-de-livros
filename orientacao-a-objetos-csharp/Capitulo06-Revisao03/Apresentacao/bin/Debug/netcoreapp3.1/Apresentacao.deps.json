@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Apresentacao/1.0.0": {
+        "dependencies": {
+          "Modelo": "1.0.0",
+          "Servico": "1.0.0"
+        },
+        "runtime": {
+          "Apresentacao.dll": {}
+        }
+      },
+      "Modelo/1.0.0": {
+        "runtime": {
+          "Modelo.dll": {}
+        }
+      },
+      "Persistencia/1.0.0": {
+        "dependencies": {
+          "Modelo": "1.0.0"
+        },
+        "runtime": {
+          "Persistencia.dll": {}
+        }
+      },
+      "Servico/1.0.0": {
+        "dependencies": {
+          "Modelo": "1.0.0",
+          "Persistencia": "1.0.0"
+        },
+        "runtime": {
+          "Servico.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Apresentacao/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modelo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Persistencia/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Servico/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
