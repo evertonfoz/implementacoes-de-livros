@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Servico\\Servico.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Servico\\Servico.csproj",
       "projectName": "Servico",
-      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Servico\\Servico.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Servico\\Servico.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Servico\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Servico\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -78,11 +78,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj": {
-              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Modelo\\Modelo.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Modelo\\Modelo.csproj"
             },
-            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Persistencia\\Persistencia.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Persistencia\\Persistencia.csproj"
             }
           }
         }

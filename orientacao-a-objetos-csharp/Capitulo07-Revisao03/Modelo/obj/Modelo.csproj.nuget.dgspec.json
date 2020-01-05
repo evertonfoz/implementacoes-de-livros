@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj": {}
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Modelo\\Modelo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj": {
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Modelo\\Modelo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj",
+        "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Modelo\\Modelo.csproj",
         "projectName": "Modelo",
-        "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\Modelo.csproj",
+        "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Modelo\\Modelo.csproj",
         "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo06-Revisao03\\Modelo\\obj\\",
+        "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\orientacao-a-objetos-csharp\\Capitulo07-Revisao03\\Modelo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
