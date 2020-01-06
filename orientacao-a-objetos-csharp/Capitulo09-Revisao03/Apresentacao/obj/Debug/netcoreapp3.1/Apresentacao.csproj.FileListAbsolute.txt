@@ -45,3 +45,4 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo09-Revisao03\Apresentacao\obj\Debug\netcoreapp3.1\Apresentacao.csproj.CopyComplete
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo09-Revisao03\Apresentacao\obj\Debug\netcoreapp3.1\Apresentacao.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo09-Revisao03\Apresentacao\obj\Debug\netcoreapp3.1\Apresentacao.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\orientacao-a-objetos-csharp\Capitulo09-Revisao03\Apresentacao\obj\Debug\netcoreapp3.1\Apresentacao.FormDisciplinas.resources
