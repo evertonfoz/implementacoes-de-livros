@@ -1,0 +1,37 @@
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe.config
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.exe
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.pdb
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.pdb
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csprojResolveAssemblyReference.cache
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.CalculoDePesoIdeal.resources
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.Properties.Resources.resources
+C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csproj.GenerateResource.Cache
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe.config
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.exe
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.pdb
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.pdb
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csprojResolveAssemblyReference.cache
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.CalculoDePesoIdeal.resources
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.Properties.Resources.resources
+C:\Users\everton\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csproj.GenerateResource.Cache
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe.config
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.pdb
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csprojResolveAssemblyReference.cache
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.CalculoDePesoIdeal.resources
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.Properties.Resources.resources
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csproj.GenerateResource.Cache
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csproj.CoreCompileInputs.cache
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.exe
+C:\Users\evert\Dropbox\Livros\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe.config
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.CalculoDePesoIdeal.resources
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.Properties.Resources.resources
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\PesoIdeal.csproj.GenerateResource.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.exe
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo02-Revisão 03\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.pdb
