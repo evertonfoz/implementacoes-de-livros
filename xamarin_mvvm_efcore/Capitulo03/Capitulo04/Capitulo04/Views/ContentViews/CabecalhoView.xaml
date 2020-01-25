@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo04.Views.ContentViews.CabecalhoView">
+  <ContentView.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="logo.png" VerticalOptions="Start" HeightRequest="64"/>
+                <StackLayout  VerticalOptions="Center">
+                    <Label Text="Meu Calhambeque">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS">30</On>
+                                <On Platform="Android, UWP">15</On>
+                            </OnPlatform>
+                        </Label.FontSize>
+                    </Label>
+                    <Label Text="App desenvolvido para livro de Xamarin">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS">15</On>
+                                <On Platform="Android, UWP">8</On>
+                            </OnPlatform>
+                        </Label.FontSize>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+            <BoxView BackgroundColor="Black" HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

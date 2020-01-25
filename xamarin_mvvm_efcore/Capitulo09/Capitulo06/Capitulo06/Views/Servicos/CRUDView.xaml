@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo06.Views.Servicos.CRUDView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Dados do serviço">
+                        <EntryCell Label="Nome:" Text="{Binding Nome}"></EntryCell>
+                        <EntryCell Label="Valor:" Text="{Binding Valor}" Keyboard="Numeric" HorizontalTextAlignment="End"></EntryCell>
+                        <ViewCell>
+                            <Button Text="Gravar Alterações" FontAttributes="Bold" VerticalOptions="End" Command="{Binding GravarCommand}"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

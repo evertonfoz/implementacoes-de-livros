@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo04.Views.TabbedPageView"
+             xmlns:pages="clr-namespace:Capitulo04.Views;assembly=Capitulo04">
+    <ContentPage Title="Serviços" Icon="tab_servicos">
+        <Grid Padding="20, 50, 10, 20" BackgroundColor="#FFFACD">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="logo.png" VerticalOptions="Start" Grid.Column="0" Grid.Row="0"/>
+            <StackLayout Grid.Column="1" Grid.Row="0">
+                <Label Text="Meu Calhambeque">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">30</On>
+                            <On Platform="Android, UWP">15</On>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+                <Label Text="App desenvolvido para livro de Xamarin" Grid.Column="1" Grid.Row="1">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">15</On>
+                            <On Platform="Android, UWP">8</On>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+            </StackLayout>
+            <BoxView BackgroundColor="Black" HorizontalOptions="FillAndExpand" HeightRequest="2" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0, 0, 0, 20"/>
+            <Entry Placeholder="Digite o nome do serviço" Grid.Row="2" 
+                   Grid.ColumnSpan="2" Grid.Column="0" VerticalOptions="Start"/>
+            <Entry Placeholder="Digite o valor para o serviço" Grid.Row="3" 
+                   Grid.ColumnSpan="2" Grid.Column="0" VerticalOptions="Start"/>
+
+            <Button Text="Confirmar dados"  Grid.Row="4" 
+                   Grid.ColumnSpan="2" Grid.Column="0" 
+                   BackgroundColor="#96d1ff"/>
+
+        </Grid>
+    </ContentPage>
+    <pages:ContentPageView Icon="tab_clientes"/>
+</TabbedPage>

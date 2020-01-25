@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo04.Views.ContentPageView"
+             Title="Clientes" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="Red">
+    <ContentPage.Content>
+        <ScrollView>
+            <!--<StackLayout Padding="20, 50, 10, 10" BackgroundColor="#FFFACD" HorizontalOptions="FillAndExpand">-->
+            <StackLayout Padding="20, 5, 10, 10" BackgroundColor="#FFFACD" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <!--<Image Source="logo.png" VerticalOptions="Start" HeightRequest="64">-->
+                    <Image Source="logo.png" VerticalOptions="Start">
+                        <Image.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS">64</On>
+                                <On Platform="Android">50</On>
+                            </OnPlatform>
+                        </Image.HeightRequest>
+                    </Image>
+                    <StackLayout  VerticalOptions="Center">
+                        <Label Text="Meu Calhambeque">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="iOS">30</On>
+                                    <On Platform="Android">15</On>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+                        <Label Text="App desenvolvido para livro de Xamarin">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <On Platform="iOS">15</On>
+                                    <On Platform="Android">8</On>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+                <BoxView BackgroundColor="Black" HorizontalOptions="FillAndExpand" HeightRequest="2"/>
+                <StackLayout Spacing="{StaticResource SpacingStackLayout}" Padding="0, 5, 0, 0" HorizontalOptions="FillAndExpand">
+                    <!--<Label Text="Nome">
+                        <Label.Style x:Key="MyButtonStyle" TargetType="{x:Type Label}">
+                            <Setter Property="FontSize" Value="{StaticResource LabelFontSize}" />
+                        </Label.Style>
+                    </Label>>-->
+                    <Label Text="Nome" FontSize="{StaticResource LabelFontSize}"/>
+                    <Entry FontSize="{StaticResource EntryFontSize}"/>
+                    <!--<Label Text="Telefone" FontSize="Medium"/>-->
+                    <Label Text="Telefone" FontSize="{StaticResource LabelFontSize}"/>
+                    <Entry Keyboard="Telephone" FontSize="{StaticResource EntryFontSize}"/>
+                    <!--<Label Text="Endereço" FontSize="Medium"/>-->
+                    <Label Text="Endereço" FontSize="{StaticResource LabelFontSize}"/>
+                    <Editor FontSize="{StaticResource EntryFontSize}" HeightRequest="{StaticResource HeightEditor}"/>
+                    <Label HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Informe os dados acima e clique no " />
+                                    <Span Text="botão" FontSize="22" FontAttributes="Bold" />
+                                    <Span Text=" abaixo" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button Text="Confirmar dados" BackgroundColor="#96d1ff"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

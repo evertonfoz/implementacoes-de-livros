@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo06.Views.Pecas.ListagemView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:conv="clr-namespace:Capitulo06.Converters;assembly=Capitulo06"
+             Title="Peças">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="plus.png" Command="{Binding NovoCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:ImagemPecaConverter x:Key="imagemConverter"/>
+            <conv:BooleanNegadoConverter x:Key="booleanNegadoConverter"/>
+            <conv:ImagemCarregadaConverter x:Key="imagemCarregadaConverter"/>
+            <conv:ImagemNaoCarregadaConverter x:Key="imagemNaoCarregadaConverter"/>
+            <conv:PecaNaoSincronizadaConverter x:Key="colorConvert"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+                <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding Pecas}" x:Name="listView" Margin="0,10,0,0" HasUnevenRows="True" SelectedItem="{Binding PecaSelecionada}" IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding Sincronizando}">
+                    <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell BindingContextChanged="OnBindingContextChanged">
+                            <ViewCell.ContextActions>
+                                <MenuItem Command="{Binding Path=BindingContext.EliminarCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}" Text="Remover" IsDestructive="True" />
+                                <MenuItem Command="{Binding Path=BindingContext.SincronizarCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}" Text="Sincronizar" />
+                            </ViewCell.ContextActions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Padding="5" HeightRequest="60" VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Label IsVisible="False" x:Name="CaminhoImagem" Text="{Binding CaminhoImagem}" />
+                                    <StackLayout Grid.Column="0" Grid.Row="0" IsVisible="{Binding ImagemEmBytes, Converter={StaticResource imagemNaoCarregadaConverter}, ConverterParameter={x:Reference Name=CaminhoImagem}}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                        <ActivityIndicator IsRunning="True"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="0" Grid.Row="0" IsVisible="{Binding ImagemEmBytes, Converter={StaticResource imagemCarregadaConverter}, ConverterParameter={x:Reference Name=CaminhoImagem}}">
+                                        <Image Source="{Binding ImagemEmBytes, Converter={StaticResource imagemConverter}, ConverterParameter={x:Reference Name=CaminhoImagem}}" Grid.Column="0" Grid.Row="0" HeightRequest="50" />
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout Padding="10" Grid.Column="1" Grid.Row="0">
+                                    <Label Text="{Binding Nome}" FontSize="18" FontAttributes="Bold" TextColor="{Binding Sincronizado, Converter={StaticResource colorConvert}}"/>
+                                    <Label Text="{Binding ValorFormatado}" FontSize="14" TextColor="{Binding Sincronizado, Converter={StaticResource colorConvert}}"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

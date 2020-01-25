@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="entry_background">#faf8cd</color>
+  <color name="entry_border">#050505</color>
+</resources>

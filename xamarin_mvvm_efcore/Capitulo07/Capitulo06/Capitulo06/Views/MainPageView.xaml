@@ -1,0 +1,11 @@
+﻿<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo06.Views.MainPageView"
+             xmlns:masterPage="clr-namespace:Capitulo06.Views"
+             xmlns:detailPage="clr-namespace:Capitulo06.Views.Clientes">
+    <MasterDetailPage.Master>
+        <masterPage:MasterPageView x:Name="masterPage" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

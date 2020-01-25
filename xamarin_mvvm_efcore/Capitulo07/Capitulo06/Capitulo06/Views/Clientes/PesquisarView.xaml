@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo06.Views.Clientes.PesquisarView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             Title="Pesquisa por cliente">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,20,5,0">
+            <SearchBar x:Name="searchBar" HeightRequest="25" Placeholder="Digite o nome do cliente..." TextColor="Black" SearchCommand="{Binding PesquisarCommand}" SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"/>
+            <ListView x:Name="lvClientes" HasUnevenRows="True" ItemsSource="{Binding ClientesEncontrados}" SelectedItem="{Binding ClienteLocalizadoSelecionado}" Margin="10, 5, 0, 0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding ClienteID}" TextColor="Blue" IsVisible="False"/>
+                                <Label Text="{Binding Nome}" TextColor="Blue" FontSize="Large"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

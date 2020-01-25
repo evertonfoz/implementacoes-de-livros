@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Capitulo06.Views.Login.LoginView"
+             xmlns:local="clr-namespace:Capitulo06.Controls;assembly=Capitulo06"
+             Title="Acesso à aplicação">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Orientation="Vertical">
+                <Grid HorizontalOptions="FillAndExpand" Padding="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" Orientation="Vertical">
+                        <Image Source="logo.png" HeightRequest="55" WidthRequest="55"/>
+                        <Label Text="Meu Calhambeque" TextColor="Blue" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Text="Livro Xamarin - CC" TextColor="Blue" FontSize="Small" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <local:LoginEntry Placeholder="nome do usuário" Text="{Binding Nome}" Grid.Column="0" Grid.Row="1" BorderColorOnFocus="Red" BorderColorLostFocus="Black"/>
+                    <Entry Placeholder="senha de acesso" Text="{Binding Senha}" IsPassword="true" Grid.Column="0" Grid.Row="2" />
+                    <Button Text="Acessar" HorizontalOptions="Center" Command="{Binding LoginCommand}" Grid.Column="0" Grid.Row="3"/>
+                </Grid>
+                <ActivityIndicator IsRunning="{Binding Autenticando}" Color="Black" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
