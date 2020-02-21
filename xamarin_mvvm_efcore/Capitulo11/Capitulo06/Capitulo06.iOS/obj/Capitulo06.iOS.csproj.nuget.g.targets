@@ -4,6 +4,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)xamarin.forms\3.4.0.1029999\build\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\3.4.0.1029999\build\Xamarin.Forms.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.forms\4.4.0.991537\build\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\4.4.0.991537\build\Xamarin.Forms.targets')" />
   </ImportGroup>
 </Project>

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "84366eacbaa0299e8d6e8cf07295c35bfc103319"
+    "signature": ""
   },
   "compilationOptions": {},
   "targets": {
@@ -15,7 +15,7 @@
           "Xam.Plugin.Media": "4.0.1.5",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.4.0.1029999"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "runtime": {
           "Capitulo06.dll": {}
@@ -724,7 +724,7 @@
       },
       "Xam.Plugins.Forms.ImageCircle/3.0.0.5": {
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1029999"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "runtime": {
           "lib/netstandard2.0/ImageCircle.Forms.Plugin.dll": {
@@ -744,19 +744,19 @@
           }
         }
       },
-      "Xamarin.Forms/3.4.0.1029999": {
+      "Xamarin.Forms/4.4.0.991537": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "fileVersion": "4.4.0.459"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.4.0.459"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "fileVersion": "4.4.0.459"
           }
         }
       },
@@ -1277,12 +1277,12 @@
       "path": "xamarin.essentials/1.0.1",
       "hashPath": "xamarin.essentials.1.0.1.nupkg.sha512"
     },
-    "Xamarin.Forms/3.4.0.1029999": {
+    "Xamarin.Forms/4.4.0.991537": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qupCyyDo1x3c0BfroaTOhkc6wjeBXQnRLkUhvlgfVmZAcBjSEOaPRsa5/HWShtnkgqnySrkwzYEu3N0dG0pn7Q==",
-      "path": "xamarin.forms/3.4.0.1029999",
-      "hashPath": "xamarin.forms.3.4.0.1029999.nupkg.sha512"
+      "sha512": "sha512-ZoOvfinSUma4gbXe/0mp6Uk/NTliFLkOwV9qLe/TW2VwSlBEhoiok99gr4esZVU+RwCPEqnsgmtlWFSMNzn2iw==",
+      "path": "xamarin.forms/4.4.0.991537",
+      "hashPath": "xamarin.forms.4.4.0.991537.nupkg.sha512"
     },
     "IDPropertiesEF/1.0.0": {
       "type": "project",

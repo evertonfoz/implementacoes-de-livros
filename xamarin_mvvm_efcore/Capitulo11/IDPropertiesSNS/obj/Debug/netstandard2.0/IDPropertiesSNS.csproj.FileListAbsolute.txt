@@ -43,3 +43,12 @@ C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.AssemblyInfo.cs
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.dll
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\bin\Debug\netstandard2.0\IDPropertiesSNS.deps.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\bin\Debug\netstandard2.0\IDPropertiesSNS.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\bin\Debug\netstandard2.0\IDPropertiesSNS.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo11\IDPropertiesSNS\obj\Debug\netstandard2.0\IDPropertiesSNS.pdb

@@ -4047,11 +4047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo11\\OficinaModels\\OficinaModels.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11\\OficinaModels\\OficinaModels.csproj",
       "projectName": "OficinaModels",
-      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo11\\OficinaModels\\OficinaModels.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11\\OficinaModels\\OficinaModels.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo11\\OficinaModels\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11\\OficinaModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -4072,8 +4072,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo11\\IDPropertiesEF\\IDPropertiesEF.csproj": {
-              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo11\\IDPropertiesEF\\IDPropertiesEF.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11\\IDPropertiesEF\\IDPropertiesEF.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11\\IDPropertiesEF\\IDPropertiesEF.csproj"
             }
           }
         }
@@ -4104,7 +4104,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200-preview-014883\\RuntimeIdentifierGraph.json"
       }
     }
   }
