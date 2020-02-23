@@ -1,0 +1,13 @@
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.exe
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.deps.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.dev.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\windows-forms-csharp\SolucaoCapitulo09-Revisao03\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.genruntimeconfig.cache
