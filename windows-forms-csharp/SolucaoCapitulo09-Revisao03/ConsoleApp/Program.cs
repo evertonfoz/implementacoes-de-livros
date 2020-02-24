@@ -7,17 +7,35 @@ namespace ConsoleApp
 	{
 		static void Main(string[] args)
 		{
-			IList al = new ArrayList();
-			al.Add(1000);
-			al.Add("Olá UTFPR");
-			al.Add(3000);
+			Stack stack = new Stack();
+			stack.Push("Forró");
+			stack.Push("Samba");
+			stack.Push("Bolero");
+			stack.Push("Tango");
 
-			Console.WriteLine(al.Contains(1000)); // True
-													 
+			stack.Pop();
+
+			foreach (Object obj in stack)
+			{
+				Console.WriteLine(obj);
+			}
+
+			Console.WriteLine(); Console.WriteLine();
+
+			Console.WriteLine("Número de elementos na pilha " + stack.Count);
+			Console.WriteLine("A pilha contém 'Tango'? " + stack.Contains("Tango"));
+			Console.ReadKey();
 			//IList al = new ArrayList();
-													 //al.Add(1000);
-													 //al.Add(2000);
-													 //al.Add(3000);
+			//al.Add(1000);
+			//al.Add("Olá UTFPR");
+			//al.Add(3000);
+
+			//Console.WriteLine(al.Contains(1000)); // True
+
+			//IList al = new ArrayList();
+			//al.Add(1000);
+			//al.Add(2000);
+			//al.Add(3000);
 
 			//al.RemoveAt(1); //Remove o segundo elemento da lista
 
