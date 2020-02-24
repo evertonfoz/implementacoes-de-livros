@@ -7,24 +7,25 @@ namespace ConsoleApp
 	{
 		static void Main(string[] args)
 		{
-			Stack stack = new Stack();
-			stack.Push("Forró");
-			stack.Push("Samba");
-			stack.Push("Bolero");
-			stack.Push("Tango");
 
-			stack.Pop();
+			//Stack stack = new Stack();
+			//stack.Push("Forró");
+			//stack.Push("Samba");
+			//stack.Push("Bolero");
+			//stack.Push("Tango");
 
-			foreach (Object obj in stack)
-			{
-				Console.WriteLine(obj);
-			}
+			//stack.Pop();
 
-			Console.WriteLine(); Console.WriteLine();
+			//foreach (Object obj in stack)
+			//{
+			//	Console.WriteLine(obj);
+			//}
 
-			Console.WriteLine("Número de elementos na pilha " + stack.Count);
-			Console.WriteLine("A pilha contém 'Tango'? " + stack.Contains("Tango"));
-			Console.ReadKey();
+			//Console.WriteLine(); Console.WriteLine();
+
+			//Console.WriteLine("Número de elementos na pilha " + stack.Count);
+			//Console.WriteLine("A pilha contém 'Tango'? " + stack.Contains("Tango"));
+			//Console.ReadKey();
 			//IList al = new ArrayList();
 			//al.Add(1000);
 			//al.Add("Olá UTFPR");
