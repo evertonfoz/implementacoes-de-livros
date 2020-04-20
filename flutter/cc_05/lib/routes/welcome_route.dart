@@ -1,3 +1,5 @@
+import 'package:cc04/routes/home_route.dart';
+import 'package:cc04/shared_preferences/app_preferences.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeRoute extends StatefulWidget {
@@ -6,6 +8,8 @@ class WelcomeRoute extends StatefulWidget {
 }
 
 class _WelcomeRouteState extends State<WelcomeRoute> {
+  bool _checkBoxIsChecked = false;
+
   @override
   void initState() {
     super.initState();
@@ -45,17 +49,29 @@ class _WelcomeRouteState extends State<WelcomeRoute> {
                       width: 5,
                     ),
                     Checkbox(
-                      value: true,
+                      value: this._checkBoxIsChecked,
+                      onChanged: (status) {
+                        setState(() {
+                          this._checkBoxIsChecked = status;
+                        });
+                      },
                     ),
                   ],
                 ),
                 SizedBox(
                   width: 10,
                 ),
-                const RaisedButton(
-                  onPressed: null,
-                  child:
-                      Text('Disabled Button', style: TextStyle(fontSize: 20)),
+                RaisedButton(
+                  onPressed: () async {
+                    AppPreferences.setWelcomeRead(
+                        status: this._checkBoxIsChecked);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeRoute()),
+                    );
+                  },
+                  child: Text('Avançar', style: TextStyle(fontSize: 20)),
                 )
               ],
             ),

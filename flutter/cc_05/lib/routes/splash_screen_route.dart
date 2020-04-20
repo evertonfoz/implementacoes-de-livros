@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:cc04/routes/home_route.dart';
+import 'package:cc04/shared_preferences/app_preferences.dart';
 import 'package:flutter/material.dart';
 import '../widgets/circular_image_widget.dart';
 import 'welcome_route.dart';
@@ -14,10 +16,11 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => WelcomeRoute()),
-      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        AppPreferences.getWelcomeRead().then((status) async {
+          await _whereToNavigate(welcomeRead: status);
+        });
+      });
     });
   }
 
@@ -50,5 +53,16 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
         ),
       ],
     );
+  }
+
+  _whereToNavigate({@required bool welcomeRead}) {
+    if (welcomeRead)
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomeRoute()));
+    else
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => WelcomeRoute()),
+      );
   }
 }
