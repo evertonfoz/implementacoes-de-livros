@@ -51,7 +51,8 @@ class DrawerControllerWidget extends StatelessWidget {
                     ),
             ),
             (this.topBody != null || this.leftBody != null)
-                ? Positioned(
+                ? AnimatedPositioned(
+                    duration: Duration(seconds: 1),
                     top: this.topBody != null ? this.topBody : null,
                     left: this.leftBody != null ? this.leftBody : null,
                     child: (body == null) ? Container() : body,

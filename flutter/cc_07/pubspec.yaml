@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^0.1.2
   shared_preferences: ^0.5.6+3
+  flutter_bloc: ^4.0.0
 
 dev_dependencies:
 
