@@ -11,6 +11,25 @@ class DrawerRoute extends StatefulWidget {
 }
 
 class _DrawerRouteState extends State<DrawerRoute> {
+  bool _drawerIsOpen = false;
+
+  double _topBody() {
+    return MediaQuery.of(context).size.height - 105;
+  }
+
+  double _leftBody() {
+    if (!_drawerIsOpen)
+      return MediaQuery.of(context).size.width - 105;
+    else
+      return 5;
+  }
+
+  _handleDrawer(bool drawerIsOpen) {
+    setState(() {
+      this._drawerIsOpen = drawerIsOpen;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return DrawerControllerWidget(
@@ -25,8 +44,8 @@ class _DrawerRouteState extends State<DrawerRoute> {
           ),
         ],
       ),
-      topBody: MediaQuery.of(context).size.height - 105,
-      leftBody: MediaQuery.of(context).size.width - 105,
+      topBody: _topBody(),
+      leftBody: _leftBody(),
       body: CircularImageWidget(
         imageProvider: AssetImage('assets/images/splashscreen.png'),
         width: 100,
@@ -42,6 +61,7 @@ class _DrawerRouteState extends State<DrawerRoute> {
           ],
         ),
       ),
+      callbackFunction: _handleDrawer,
     );
   }
 }
