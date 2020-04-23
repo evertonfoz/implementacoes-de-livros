@@ -1,8 +1,16 @@
+import 'package:cc04/drawer/blocs/drawer_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'routes/splash_screen_route.dart';
 
-void main() => runApp(ForcaApp());
+void main() => runApp(
+      MultiBlocProvider(providers: [
+        BlocProvider<DrawerOpenStateBloc>(
+          create: (BuildContext context) => DrawerOpenStateBloc(),
+        ),
+      ], child: ForcaApp()),
+    );
 
 class ForcaApp extends StatelessWidget {
   @override

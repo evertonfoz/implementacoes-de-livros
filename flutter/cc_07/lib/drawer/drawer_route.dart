@@ -17,17 +17,25 @@ class _DrawerRouteState extends State<DrawerRoute> {
     return MediaQuery.of(context).size.height - 105;
   }
 
-  double _leftBody() {
-    if (!_drawerIsOpen)
-      return MediaQuery.of(context).size.width - 105;
-    else
-      return 5;
+//  double _leftBody() {
+//    if (!_drawerIsOpen)
+//      return MediaQuery.of(context).size.width - 105;
+//    else
+//      return 5;
+//  }
+
+//  _handleDrawer(bool drawerIsOpen) {
+//    setState(() {
+//      this._drawerIsOpen = drawerIsOpen;
+//    });
+//  }
+
+  double _leftBodyOpen() {
+    return 5;
   }
 
-  _handleDrawer(bool drawerIsOpen) {
-    setState(() {
-      this._drawerIsOpen = drawerIsOpen;
-    });
+  double _leftBodyClose() {
+    return MediaQuery.of(context).size.width - 105;
   }
 
   @override
@@ -45,7 +53,7 @@ class _DrawerRouteState extends State<DrawerRoute> {
         ],
       ),
       topBody: _topBody(),
-      leftBody: _leftBody(),
+//      leftBody: _leftBody(),
       body: CircularImageWidget(
         imageProvider: AssetImage('assets/images/splashscreen.png'),
         width: 100,
@@ -61,7 +69,9 @@ class _DrawerRouteState extends State<DrawerRoute> {
           ],
         ),
       ),
-      callbackFunction: _handleDrawer,
+//      callbackFunction: _handleDrawer,
+      leftBodyOpen: _leftBodyOpen(),
+      leftBodyClose: _leftBodyClose(),
     );
   }
 }
