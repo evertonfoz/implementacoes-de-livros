@@ -1,8 +1,10 @@
+import 'package:cc04/app_constants/router_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/listview/palavras_listview_bloc.dart';
 import 'mixin/palavras_listview_mixin.dart';
+import 'widgets/bottom_loader_widget.dart';
 import 'widgets/palavras_listtile_widget.dart';
 
 class PalavrasListViewRoute extends StatefulWidget {
@@ -19,13 +21,19 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
   @override
   void initState() {
     super.initState();
-    _scrollController.addListener(onScroll);
     _palavrasListViewBloc = BlocProvider.of<PalavrasListViewBloc>(context);
+    _scrollController.addListener(
+      () => onScroll(
+          palavrasListViewBloc: _palavrasListViewBloc,
+          scrollController: _scrollController,
+          scrollThreshold: _scrollThreshold),
+    );
   }
 
   @override
   void dispose() {
     _scrollController.dispose();
+    _palavrasListViewBloc.add(PalavrasListViewBlocEventResetFetch());
     super.dispose();
   }
 
@@ -52,15 +60,51 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
           return ListView.builder(
             controller: _scrollController,
             padding: EdgeInsets.only(top: 10),
-            itemCount: state.palavras.length,
+            itemCount: state.hasReachedMax
+                ? state.palavras.length
+                : state.palavras.length + 1,
             itemBuilder: (BuildContext context, int index) {
-              return PalavrasListTileWidget(
-                title: state.palavras[index].palavra,
-                trailing: Icon(Icons.keyboard_arrow_right),
-              );
+              return (index >= state.palavras.length)
+                  ? BottomLoaderWidget()
+                  : Dismissible(
+                      key: Key(state.palavras[index].palavraID),
+                      confirmDismiss: (direction) async {
+                        return await confirmDismiss(
+                            context: context,
+                            palavra: state.palavras[index].palavra,
+                            palavraID: state.palavras[index].palavraID);
+                      },
+                      onDismissed: (direction) async {
+                        await dismissedComplete(
+                            context: context,
+                            palavraID: state.palavras[index].palavraID,
+                            palavra: state.palavras[index].palavra);
+
+                        _palavrasListViewBloc.add(
+                          PalavrasListViewBlocEventConfirmDismiss(
+                              indexOfDismissible: index),
+                        );
+                      },
+                      background: Container(
+                        color: Colors.red,
+                      ),
+                      child: InkWell(
+                        onLongPress: () {
+                          Navigator.of(context).pushNamed(kPalavrasCRUDRoute,
+                              arguments: state.palavras[index]);
+                        },
+                        child: PalavrasListTileWidget(
+                          title: state.palavras[index].palavra,
+                          trailing: Icon(Icons.keyboard_arrow_right),
+                        ),
+                      ),
+                    );
             },
           );
         }
+
+        if (state is PalavrasListViewBlocUninitialized)
+          _palavrasListViewBloc.add(PalavrasListViewBlocEventFetch());
 
         return Center(
           child: CircularProgressIndicator(),

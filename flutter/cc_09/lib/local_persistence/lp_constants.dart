@@ -1,4 +1,4 @@
-const kDatabaseName = "jogodaforca.db";
+const kDatabaseName = "jogodaforca5.db";
 const kDatabaseVersion = 1;
 const kPalavrasTableName = "palavras";
 const kPalavraPalavraID = 'palavraID';

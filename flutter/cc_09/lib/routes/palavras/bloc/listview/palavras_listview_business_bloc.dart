@@ -51,8 +51,19 @@ class PalavrasListViewBloc
   Stream<PalavrasListViewBlocState> mapEventToState(
       PalavrasListViewBlocEvent event) async* {
     final currentState = state;
+
+    if (event is PalavrasListViewBlocEventConfirmDismiss &&
+        currentState is PalavrasListViewLoaded) {
+      currentState.palavras.removeAt(event.indexOfDismissible);
+      yield PalavrasListViewLoaded(
+          palavras: currentState.palavras,
+          hasReachedMax: currentState.hasReachedMax);
+      return;
+    }
+
     if (event is PalavrasListViewBlocEventResetFetch) {
       yield PalavrasListViewBlocUninitialized();
+
       return;
     }
 
@@ -62,7 +73,8 @@ class PalavrasListViewBloc
         if (currentState is PalavrasListViewBlocUninitialized) {
           final palavras = await _fetchPalavras(0, 20);
           yield PalavrasListViewLoaded(
-              palavras: palavras, hasReachedMax: false);
+              palavras: palavras,
+              hasReachedMax: (palavras.length >= 20) ? false : true);
           return;
         }
         if (currentState is PalavrasListViewLoaded) {

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cc04/local_persistence/daos/palavra_dao.dart';
 import 'package:cc04/mixins/widgets_mixin.dart';
 import 'package:cc04/widgets/container_iluminado_widget.dart';
@@ -13,6 +15,10 @@ import 'bloc/crud/palavras_crud_form_event.dart';
 import 'bloc/crud/palavras_crud_form_state.dart';
 
 class PalavrasCRUDRoute extends StatefulWidget {
+  final PalavraModel palavraModel;
+
+  const PalavrasCRUDRoute({this.palavraModel});
+
   @override
   _PalavrasCRUDRouteState createState() => _PalavrasCRUDRouteState();
 }
@@ -123,9 +129,11 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
                 child: BlocBuilder<PalavrasCrudFormBloc, PalavrasCrudFormState>(
                     builder: (context, formState) {
                   if (formState.formularioEnviadoComSucesso) {
-                    _palavraController.clear();
-                    _ajudaController.clear();
-                    this._palavrasCrudFormBloc.add(FormReset());
+                    Timer(Duration(seconds: 4), () {
+                      _palavraController.clear();
+                      _ajudaController.clear();
+                      this._palavrasCrudFormBloc.add(FormReset());
+                    });
                   }
                   return _form(formState);
                 }),

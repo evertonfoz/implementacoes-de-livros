@@ -38,7 +38,7 @@ class SQFLiteDataBase {
   Future _onCreateDb(Database database, int version) async {
     await database.execute("CREATE TABLE palavras ("
         "palavraID TEXT PRIMARY KEY,"
-        "palavra TEXT,"
+        "palavra TEXT COLLATE NOCASE,"
         "ajuda TEXT"
         ")");
   }

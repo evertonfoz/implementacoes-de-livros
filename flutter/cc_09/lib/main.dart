@@ -34,7 +34,7 @@ class ForcaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 //    PalavraDAO palavraDAO = PalavraDAO();
-//    for (int i = 0; i < 30; i++) {
+//    for (int i = 0; i < 20; i++) {
 //      var random = Random();
 //      var palavra = random.nextInt(1000).toString();
 //      palavraDAO.insert(
