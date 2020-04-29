@@ -34,6 +34,10 @@ class DrawerBodyContentApp extends StatelessWidget {
               ListTileAppWidget(
                 titleText: 'Palavras existentes',
                 subtitleText: 'Vamos ver as que já temos?',
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).pushNamed(kPalavrasAllRoute);
+                },
               ),
             ],
           ),
