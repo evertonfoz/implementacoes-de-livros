@@ -13,6 +13,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/crud/palavras_crud_form_bloc.dart';
 import 'bloc/crud/palavras_crud_form_event.dart';
 import 'bloc/crud/palavras_crud_form_state.dart';
+import 'bloc/listview/palavras_listview_bloc.dart';
 
 class PalavrasCRUDRoute extends StatefulWidget {
   final PalavraModel palavraModel;
@@ -31,20 +32,26 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
   final FocusNode _ajudaFocus = FocusNode();
 
   PalavrasCrudFormBloc _palavrasCrudFormBloc;
+  PalavrasListViewBloc _palavrasListViewBloc;
   BuildContext _buildContext;
 
   @override
   void initState() {
     super.initState();
     this._palavrasCrudFormBloc = BlocProvider.of<PalavrasCrudFormBloc>(context);
+    _palavrasListViewBloc = BlocProvider.of<PalavrasListViewBloc>(context);
     this._palavraController.addListener(_onPalavraChanged);
     this._ajudaController.addListener(_onAjudaChanged);
+    if (widget.palavraModel != null) {
+      _initializeTextControllers();
+    }
   }
 
   @override
   void dispose() {
     this._palavraController.dispose();
     this._ajudaController.dispose();
+    _palavrasListViewBloc.add(PalavrasListViewBlocEventFetch());
     super.dispose();
   }
 
@@ -103,11 +110,14 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
   void _onSubmitPressed() async {
     PalavraDAO palavraDAO = PalavraDAO();
     PalavraModel palavraModel = PalavraModel(
+        palavraID: (widget.palavraModel == null)
+            ? null
+            : widget.palavraModel.palavraID,
         palavra: this._palavraController.text,
         ajuda: this._ajudaController.text);
 
     try {
-      await palavraDAO.insert(palavraModel: palavraModel);
+      await palavraDAO.update(palavraModel: palavraModel);
       _palavrasCrudFormBloc.add(FormSuccessSubmitted());
     } catch (e) {
       rethrow;
@@ -156,7 +166,9 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
       appBar: AppBar(
         backgroundColor: Colors.grey[600],
         title: Text(
-          'Registro de Palavras',
+          widget.palavraModel == null
+              ? 'Registro de Palavras'
+              : 'Alteração de uma palavra',
         ),
       ),
       body: SafeArea(
@@ -169,26 +181,14 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
     );
   }
 
-  _successDialog() async {
-    await showDialog(
-      barrierDismissible: false,
-      context: context,
-      child: InformationAlertDialogWidget(
-        title: 'Tudo certo',
-        message: 'Os dados informados foram registrados com sucesso.',
-        actions: [
-          ActionsFlatButtonToAlertDialogWidget(
-            messageButton: 'OK',
-            isDefaultAction: true,
-          ),
-        ],
-      ),
-    );
-  }
-
   _resetForm() {
     _palavraController.clear();
     _ajudaController.clear();
     this._palavrasCrudFormBloc.add(FormReset());
+  }
+
+  _initializeTextControllers() {
+    this._palavraController.text = widget.palavraModel.palavra;
+    this._ajudaController.text = widget.palavraModel.ajuda;
   }
 }

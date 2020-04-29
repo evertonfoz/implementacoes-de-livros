@@ -66,4 +66,27 @@ class PalavraDAO {
       rethrow;
     }
   }
+
+  Future<String> update({@required PalavraModel palavraModel}) async {
+    String result;
+    try {
+      if (palavraModel.palavraID == null) {
+        String result = await insert(palavraModel: palavraModel);
+        return result;
+      }
+
+      Database lpDatabase = await SQFLiteDataBase.instance.database;
+
+      var recordsAffected = await lpDatabase.update(
+          kPalavrasTableName, palavraModel.toJson(),
+          where: "$kPalavraPalavraID = ?", whereArgs: [palavraModel.palavraID]);
+      if (recordsAffected == 0)
+        result = null;
+      else
+        result = recordsAffected.toString();
+    } catch (exception) {
+      rethrow;
+    }
+    return result;
+  }
 }

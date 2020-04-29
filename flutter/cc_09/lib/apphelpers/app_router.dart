@@ -7,7 +7,12 @@ class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case kPalavrasCRUDRoute:
-        return MaterialPageRoute(builder: (_) => PalavrasCRUDRoute());
+        return MaterialPageRoute(
+          builder: (_) => PalavrasCRUDRoute(
+            palavraModel:
+                settings.arguments != null ? settings.arguments : null,
+          ),
+        );
       case kPalavrasAllRoute:
         return MaterialPageRoute(builder: (_) => PalavrasListViewRoute());
       default:

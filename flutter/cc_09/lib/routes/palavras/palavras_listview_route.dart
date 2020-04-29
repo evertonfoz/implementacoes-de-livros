@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cc04/app_constants/router_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,7 +23,8 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
   @override
   void initState() {
     super.initState();
-    _palavrasListViewBloc = BlocProvider.of<PalavrasListViewBloc>(context);
+    _palavrasListViewBloc = BlocProvider.of<PalavrasListViewBloc>(context)
+      ..add(PalavrasListViewBlocEventFetch());
     _scrollController.addListener(
       () => onScroll(
           palavrasListViewBloc: _palavrasListViewBloc,
@@ -89,9 +92,21 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
                         color: Colors.red,
                       ),
                       child: InkWell(
-                        onLongPress: () {
-                          Navigator.of(context).pushNamed(kPalavrasCRUDRoute,
+                        onLongPress: () async {
+                          _palavrasListViewBloc
+                              .add(PalavrasListViewBlocEventResetFetch());
+
+                          await Navigator.of(context).pushNamed(
+                              kPalavrasCRUDRoute,
                               arguments: state.palavras[index]);
+
+                          _palavrasListViewBloc =
+                              BlocProvider.of<PalavrasListViewBloc>(context)
+                                ..add(PalavrasListViewBlocEventFetch());
+//                          Timer(Duration(seconds: 5), () => print('ok'));
+//                          _palavrasListViewBloc
+//                              .add(PalavrasListViewBlocEventFetch());
+//                          Timer(Duration(seconds: 5), () => print('ok'));
                         },
                         child: PalavrasListTileWidget(
                           title: state.palavras[index].palavra,

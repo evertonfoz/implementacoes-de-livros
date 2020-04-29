@@ -6,29 +6,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'apphelpers/app_router.dart';
+import 'apphelpers/simple_bloc_delegate.dart';
 import 'local_persistence/daos/palavra_dao.dart';
 import 'models/palavra_model.dart';
 import 'routes/palavras/bloc/listview/palavras_listview_bloc.dart';
 import 'routes/splash_screen_route.dart';
 
-void main() => runApp(
-      MultiBlocProvider(
-        providers: [
-          BlocProvider<DrawerOpenStateBloc>(
-            create: (BuildContext context) => DrawerOpenStateBloc(),
-          ),
-          BlocProvider<PalavrasCrudFormBloc>(
-            create: (BuildContext context) => PalavrasCrudFormBloc(),
-          ),
-          BlocProvider<PalavrasListViewBloc>(
-            create: (BuildContext context) =>
-                PalavrasListViewBloc(palavraDAO: PalavraDAO())
-                  ..add(PalavrasListViewBlocEventFetch()),
-          ),
-        ],
-        child: ForcaApp(),
-      ),
-    );
+void main() {
+  BlocSupervisor.delegate = SimpleBlocDelegate();
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<DrawerOpenStateBloc>(
+          create: (BuildContext context) => DrawerOpenStateBloc(),
+        ),
+        BlocProvider<PalavrasCrudFormBloc>(
+          create: (BuildContext context) => PalavrasCrudFormBloc(),
+        ),
+        BlocProvider<PalavrasListViewBloc>(
+          create: (BuildContext context) =>
+              PalavrasListViewBloc(palavraDAO: PalavraDAO()),
+        ),
+      ],
+      child: ForcaApp(),
+    ),
+  );
+}
 
 class ForcaApp extends StatelessWidget {
   @override
