@@ -1,6 +1,9 @@
 import 'package:cc04/mixins/widgets_mixin.dart';
 import 'package:cc04/widgets/container_iluminado_widget.dart';
+import 'package:cc04/widgets/dialogs/actions_flatbutton_to_alertdialog_widget.dart';
+import 'package:cc04/widgets/dialogs/information_alert_dialog_widget.dart';
 import 'package:cc04/widgets/dialogs/success_dialog_widget.dart';
+import 'package:cc04/widgets/raisedbutton_with_snackbar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -76,9 +79,13 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
           SizedBox(
             height: 20,
           ),
-          RaisedButton(
-            onPressed: formState.isFormValid ? _onSubmitPressed : null,
-            child: Text('Gravar'),
+          RaisedButtonWithSnackbarWidget(
+            onPressedVisible: formState.isFormValid,
+            buttonText: 'Gravar',
+            textToSnackBar:
+                'Os dados informados foram registrados com sucesso.',
+            onButtonPressed: _onSubmitPressed,
+            onStackBarClosed: _resetForm,
           ),
         ],
       ),
@@ -103,14 +110,11 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
                 padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
                 child: BlocBuilder<PalavrasCrudFormBloc, PalavrasCrudFormState>(
                     builder: (context, formState) {
-                  if (formState.formularioEnviadoComSucesso)
-                    return SuccessDialogWidget(
-                      onDismissed: () {
-                        _palavraController.clear();
-                        _ajudaController.clear();
-                        this._palavrasCrudFormBloc.add(FormReset());
-                      },
-                    );
+                  if (formState.formularioEnviadoComSucesso) {
+                    _palavraController.clear();
+                    _ajudaController.clear();
+                    this._palavrasCrudFormBloc.add(FormReset());
+                  }
                   return _form(formState);
                 }),
               ),
@@ -143,5 +147,28 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
         ),
       ),
     );
+  }
+
+  _successDialog() async {
+    await showDialog(
+      barrierDismissible: false,
+      context: context,
+      child: InformationAlertDialogWidget(
+        title: 'Tudo certo',
+        message: 'Os dados informados foram registrados com sucesso.',
+        actions: [
+          ActionsFlatButtonToAlertDialogWidget(
+            messageButton: 'OK',
+            isDefaultAction: true,
+          ),
+        ],
+      ),
+    );
+  }
+
+  _resetForm() {
+    _palavraController.clear();
+    _ajudaController.clear();
+    this._palavrasCrudFormBloc.add(FormReset());
   }
 }
