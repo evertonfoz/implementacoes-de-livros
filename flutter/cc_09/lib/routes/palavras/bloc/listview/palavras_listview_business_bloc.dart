@@ -63,7 +63,6 @@ class PalavrasListViewBloc
 
     if (event is PalavrasListViewBlocEventResetFetch) {
       yield PalavrasListViewBlocUninitialized();
-
       return;
     }
 

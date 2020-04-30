@@ -6,14 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'apphelpers/app_router.dart';
-import 'apphelpers/simple_bloc_delegate.dart';
 import 'local_persistence/daos/palavra_dao.dart';
 import 'models/palavra_model.dart';
 import 'routes/palavras/bloc/listview/palavras_listview_bloc.dart';
 import 'routes/splash_screen_route.dart';
 
 void main() {
-  BlocSupervisor.delegate = SimpleBlocDelegate();
+//  BlocSupervisor.delegate = SimpleBlocDelegate();
   runApp(
     MultiBlocProvider(
       providers: [
@@ -36,15 +35,15 @@ void main() {
 class ForcaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-//    PalavraDAO palavraDAO = PalavraDAO();
-//    for (int i = 0; i < 20; i++) {
-//      var random = Random();
-//      var palavra = random.nextInt(1000).toString();
-//      palavraDAO.insert(
-//          palavraModel: PalavraModel(
-//              palavra: 'Palavra $palavra',
-//              ajuda: 'Ajuda para palavra $palavra'));
-//    }
+   PalavraDAO palavraDAO = PalavraDAO();
+  //  for (int i = 0; i < 20; i++) {
+  //    var random = Random();
+  //    var palavra = random.nextInt(1000).toString();
+  //    palavraDAO.insert(
+  //        palavraModel: PalavraModel(
+  //            palavra: 'Palavra $palavra',
+  //            ajuda: 'Ajuda para palavra $palavra'));
+  //  }
 
     return MaterialApp(
       onGenerateRoute: AppRouter.generateRoute,

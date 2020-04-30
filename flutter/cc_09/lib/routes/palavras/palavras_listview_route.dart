@@ -18,6 +18,11 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
     with PalavrasListViewMixim {
   final _scrollController = ScrollController();
   final _scrollThreshold = 200.0;
+  final double _listTileHeight = 70;
+
+  String _palavraIDSelected;
+  String _palavraIDOfTileToDestaque;
+
   PalavrasListViewBloc _palavrasListViewBloc;
 
   @override
@@ -60,6 +65,23 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
             return centerText(text: 'Nenhuma palavra registrada ainda.');
           }
 
+          Future.delayed(Duration(milliseconds: 500)).then((onValue) {
+            if (this._scrollController.hasClients) {
+              for (int i = 0; i < state.palavras.length; i++) {
+                if (state.palavras[i].palavraID == this._palavraIDSelected) {
+                  _scrollController.animateTo(i * _listTileHeight,
+                      duration: new Duration(seconds: 2), curve: Curves.ease);
+                  setState(() {
+                    _palavraIDOfTileToDestaque = this._palavraIDSelected;
+                  });
+                  this._palavraIDSelected = null;
+                }
+              }
+              if (this._palavraIDSelected != null)
+                _palavrasListViewBloc.add(PalavrasListViewBlocEventFetch());
+            }
+          });
+
           return ListView.builder(
             controller: _scrollController,
             padding: EdgeInsets.only(top: 10),
@@ -93,24 +115,25 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
                       ),
                       child: InkWell(
                         onLongPress: () async {
-                          _palavrasListViewBloc
-                              .add(PalavrasListViewBlocEventResetFetch());
+                          _palavraIDSelected = state.palavras[index].palavraID;
 
                           await Navigator.of(context).pushNamed(
                               kPalavrasCRUDRoute,
                               arguments: state.palavras[index]);
 
-                          _palavrasListViewBloc =
-                              BlocProvider.of<PalavrasListViewBloc>(context)
-                                ..add(PalavrasListViewBlocEventFetch());
-//                          Timer(Duration(seconds: 5), () => print('ok'));
-//                          _palavrasListViewBloc
-//                              .add(PalavrasListViewBlocEventFetch());
-//                          Timer(Duration(seconds: 5), () => print('ok'));
+                          Timer(Duration(milliseconds: 100), () {
+                            _palavrasListViewBloc
+                                .add(PalavrasListViewBlocEventResetFetch());
+                          });
                         },
                         child: PalavrasListTileWidget(
                           title: state.palavras[index].palavra,
                           trailing: Icon(Icons.keyboard_arrow_right),
+                          listTileHeight: _listTileHeight,
+                          color: (_palavraIDOfTileToDestaque ==
+                                  state.palavras[index].palavraID)
+                              ? Colors.grey[300]
+                              : Colors.transparent,
                         ),
                       ),
                     );
