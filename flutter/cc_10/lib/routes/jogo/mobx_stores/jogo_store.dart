@@ -18,10 +18,15 @@ abstract class _JogoStore with Store {
   @observable
   String ajudaPalavraParaAdivinhar;
 
+  @observable
+  String palavraAdivinhadaFormatada = '';
+
   @action
   _registrarPalavraParaAdivinhar({String palavra, String ajuda}) {
     this.palavraParaAdivinhar = palavra.toUpperCase();
     this.ajudaPalavraParaAdivinhar = ajuda;
+    this.palavraAdivinhada = _transformarPalavraParaAdivinhar();
+    this.palavraAdivinhadaFormatada = _palavraAdivinhadaFormatada();
   }
 
   Future<List<PalavraModel>> _carregarPalavras() async {
@@ -57,6 +62,14 @@ abstract class _JogoStore with Store {
         palavraFormatada = palavraFormatada + '_';
       else
         palavraFormatada = palavraFormatada + ' ';
+    }
+    return palavraFormatada;
+  }
+
+  _palavraAdivinhadaFormatada() {
+    String palavraFormatada = '';
+    for (int i = 0; i < this.palavraAdivinhada.length; i++) {
+      palavraFormatada = palavraFormatada + this.palavraAdivinhada[i] + ' ';
     }
     return palavraFormatada;
   }

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import 'mobx_stores/jogo_store.dart';
+import 'mobx_stores/teclado_store.dart';
+import 'widgets/letra_teclado_jogo_widget.dart';
 
 class JogoRoute extends StatefulWidget {
   @override
@@ -12,6 +14,7 @@ class JogoRoute extends StatefulWidget {
 
 class _JogoRouteState extends State<JogoRoute> with JogoMixin {
   JogoStore _jogoStore;
+
 //  List<ReactionDisposer> _reactionDisposers;
 //  bool _jogoIniciado = false;
 //  String _ajudaParaPalavra = '';
@@ -20,6 +23,14 @@ class _JogoRouteState extends State<JogoRoute> with JogoMixin {
   void initState() {
     super.initState();
     _jogoStore = getIt.get<JogoStore>();
+
+    for (int i = 0; i < letrasParaTeclado.length; i++) {
+      widgetsDeLetrasDoTeclado.add(
+        LetraTecladoJogoWidget(
+          letra: this.letrasParaTeclado[i],
+        ),
+      );
+    }
   }
 
   @override
@@ -60,16 +71,15 @@ class _JogoRouteState extends State<JogoRoute> with JogoMixin {
               children: <Widget>[
                 titulo(),
                 botaoParaSorteioDePalavra(
-                  onPressed: () => this
-                      ._jogoStore
-                      .registrarPalavraParaAdivinhar(
-                          palavra: 'teste', ajuda: 'ajuda para teste'),
+                  onPressed: () =>
+                      this._jogoStore.selecionarPalavraParaAdivinhar(),
                 ),
-                palavraParaAdivinhar(palavra: '_____ _____ _ _____'),
+                palavraParaAdivinhar(
+                    palavra: this._jogoStore.palavraAdivinhadaFormatada),
                 ajudaParaAdivinharAPalavra(
                     ajuda: this._jogoStore.ajudaPalavraParaAdivinhar),
                 animacaoDaForca(animacao: 'idle'),
-                letrasParaSeleccao(letras: 'ABCDEFGHIJKLMNOPQRSTUWXYZ'),
+                exibirTecladoParaJogo(letras: this.widgetsDeLetrasDoTeclado),
               ],
             );
           },
