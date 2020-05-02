@@ -49,6 +49,19 @@ mixin _$JogoStore on _JogoStore, Store {
         name: '${_$ajudaPalavraParaAdivinharAtom.name}_set');
   }
 
+  final _$_JogoStoreActionController = ActionController(name: '_JogoStore');
+
+  @override
+  dynamic _registrarPalavraParaAdivinhar({String palavra, String ajuda}) {
+    final _$actionInfo = _$_JogoStoreActionController.startAction();
+    try {
+      return super
+          ._registrarPalavraParaAdivinhar(palavra: palavra, ajuda: ajuda);
+    } finally {
+      _$_JogoStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
   @override
   String toString() {
     final string =

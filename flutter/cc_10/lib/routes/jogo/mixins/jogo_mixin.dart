@@ -22,7 +22,7 @@ mixin JogoMixin {
     );
   }
 
-  botaoParaSorteioDePalavra() {
+  botaoParaSorteioDePalavra({@required Function onPressed}) {
     return Container(
       padding: const EdgeInsets.only(bottom: 5.0),
       height: 50,
@@ -42,7 +42,7 @@ mixin JogoMixin {
       child: FlatButton(
         child: Text('Pressione para sortear uma palavra'),
         color: Colors.blue[200],
-        onPressed: () {},
+        onPressed: onPressed,
       ),
     );
   }
@@ -91,5 +91,17 @@ mixin JogoMixin {
         children: textsParaLetras,
       ),
     );
+  }
+
+  ajudaParaAdivinharAPalavra({String ajuda}) {
+    return (ajuda != null)
+        ? _text(
+            text: ajuda,
+            edgeInsets: const EdgeInsets.only(
+              top: 10.0,
+              bottom: 15,
+            ),
+          )
+        : Container();
   }
 }

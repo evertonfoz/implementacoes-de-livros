@@ -1,5 +1,9 @@
+import 'package:cc04/functions/getit_function.dart';
 import 'package:cc04/routes/jogo/mixins/jogo_mixin.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+
+import 'mobx_stores/jogo_store.dart';
 
 class JogoRoute extends StatefulWidget {
   @override
@@ -7,19 +11,68 @@ class JogoRoute extends StatefulWidget {
 }
 
 class _JogoRouteState extends State<JogoRoute> with JogoMixin {
+  JogoStore _jogoStore;
+//  List<ReactionDisposer> _reactionDisposers;
+//  bool _jogoIniciado = false;
+//  String _ajudaParaPalavra = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _jogoStore = getIt.get<JogoStore>();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+//    _reactionDisposers ??= [
+//      reaction(
+//        (_) => _jogoStore.palavraParaAdivinhar,
+//        (String palavra) => print('nova palavra: $palavra'),
+//      ),
+//      reaction(
+//        (_) => _jogoStore.ajudaPalavraParaAdivinhar,
+//        (String ajuda) {
+//          print('nova ajuda: $ajuda');
+//          setState(() {
+//            this._jogoIniciado = !this._jogoIniciado;
+//            this._ajudaParaPalavra = ajuda;
+//          });
+//        },
+//      ),
+//    ];
+  }
+
+  @override
+  void dispose() {
+//    _reactionDisposers.forEach((d) => d());
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            titulo(),
-            botaoParaSorteioDePalavra(),
-            palavraParaAdivinhar(palavra: '_ _ _ _ _ _ _ _ _ _'),
-            animacaoDaForca(animacao: 'idle'),
-            letrasParaSeleccao(letras: 'ABCDEFGHIJKLMNOPQRSTUWXYZ'),
-          ],
+        child: Observer(
+          builder: (_) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                titulo(),
+                botaoParaSorteioDePalavra(
+                  onPressed: () => this
+                      ._jogoStore
+                      .registrarPalavraParaAdivinhar(
+                          palavra: 'teste', ajuda: 'ajuda para teste'),
+                ),
+                palavraParaAdivinhar(palavra: '_____ _____ _ _____'),
+                ajudaParaAdivinharAPalavra(
+                    ajuda: this._jogoStore.ajudaPalavraParaAdivinhar),
+                animacaoDaForca(animacao: 'idle'),
+                letrasParaSeleccao(letras: 'ABCDEFGHIJKLMNOPQRSTUWXYZ'),
+              ],
+            );
+          },
         ),
       ),
     );

@@ -1,18 +1,18 @@
-import 'dart:math';
-
 import 'package:cc04/routes/palavras/bloc/crud/palavras_crud_form_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'apphelpers/app_router.dart';
 import 'drawer/blocs/drawer_bloc.dart';
+import 'functions/getit_function.dart';
 import 'local_persistence/daos/palavra_dao.dart';
-import 'models/palavra_model.dart';
+import 'routes/jogo/mobx_stores/jogo_store.dart';
 import 'routes/palavras/bloc/listview/palavras_listview_bloc.dart';
 import 'routes/splash_screen_route.dart';
 
 void main() {
 //  BlocSupervisor.delegate = SimpleBlocDelegate();
+  getIt.registerSingleton<JogoStore>(JogoStore());
   runApp(
     MultiBlocProvider(
       providers: [
