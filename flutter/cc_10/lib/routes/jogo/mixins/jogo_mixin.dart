@@ -1,5 +1,3 @@
-import 'package:cc04/routes/jogo/widgets/letra_teclado_jogo_widget.dart';
-import 'package:cc04/routes/jogo/widgets/teclado_jogo_widget.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
@@ -72,25 +70,25 @@ mixin JogoMixin {
     );
   }
 
-  exibirTecladoParaJogo({List<LetraTecladoJogoWidget> letras}) {
-    List<Widget> textsParaLetras = List<Widget>();
-
-    for (int i = 0; i < letras.length; i++) {
-      textsParaLetras.add(
-        InkWell(
-          child: letras[i],
-          onTap: () => print('Letra ${letras[i].letra} foi pressionada'),
-        ),
-      );
-    }
-
-    return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10.0),
-      child: TecladoJogoWidget(
-        textsParaLetras: textsParaLetras,
-      ),
-    );
-  }
+//  exibirTecladoParaJogo({List<LetraTecladoJogoWidget> letras}) {
+//    List<Widget> textsParaLetras = List<Widget>();
+//
+//    for (int i = 0; i < letras.length; i++) {
+//      textsParaLetras.add(
+//        InkWell(
+//          child: letras[i],
+//          onTap: () => print('Letra ${letras[i].letra} foi pressionada'),
+//        ),
+//      );
+//    }
+//
+//    return Padding(
+//      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10.0),
+//      child: TecladoJogoWidget(
+//        textsParaLetras: textsParaLetras,
+//      ),
+//    );
+//  }
 
   ajudaParaAdivinharAPalavra({String ajuda}) {
     return (ajuda != null)

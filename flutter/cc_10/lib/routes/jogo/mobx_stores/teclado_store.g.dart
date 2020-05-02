@@ -43,6 +43,16 @@ mixin _$TecladoStore on _TecladoStore, Store {
   }
 
   @override
+  dynamic letraPressionada({int indiceDaLetra}) {
+    final _$actionInfo = _$_TecladoStoreActionController.startAction();
+    try {
+      return super.letraPressionada(indiceDaLetra: indiceDaLetra);
+    } finally {
+      _$_TecladoStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     final string =
         'widgetsDeLetrasDoTeclado: ${widgetsDeLetrasDoTeclado.toString()}';

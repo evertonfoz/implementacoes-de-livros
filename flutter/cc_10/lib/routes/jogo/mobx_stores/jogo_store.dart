@@ -11,6 +11,10 @@ class JogoStore = _JogoStore with _$JogoStore;
 abstract class _JogoStore with Store {
   List<PalavraModel> _palavrasRegistradas = [];
   String palavraAdivinhada = '';
+  int quantidadeErros = 0;
+
+  @observable
+  String animacaoFlare = 'idle';
 
   @observable
   String palavraParaAdivinhar;
@@ -53,6 +57,7 @@ abstract class _JogoStore with Store {
         palavra: palavraSelecionada.palavra, ajuda: palavraSelecionada.ajuda);
 
     this._palavrasRegistradas.removeAt(indiceSorteado);
+    this.animacaoFlare = 'inicio';
   }
 
   _transformarPalavraParaAdivinhar() {
@@ -72,5 +77,36 @@ abstract class _JogoStore with Store {
       palavraFormatada = palavraFormatada + this.palavraAdivinhada[i] + ' ';
     }
     return palavraFormatada;
+  }
+
+  @action
+  verificarExistenciaDaLetraNaPalavraParaAdivinhar({String letra}) {
+    int indexOfWord = this.palavraParaAdivinhar.indexOf(letra, 0);
+    if (indexOfWord < 0) {
+      return;
+    }
+
+    while (indexOfWord >= 0) {
+      this.palavraAdivinhada =
+          this.palavraAdivinhada.replaceFirst('_', letra, indexOfWord);
+
+      indexOfWord = this.palavraParaAdivinhar.indexOf(letra, (indexOfWord + 1));
+    }
+
+    this.palavraAdivinhadaFormatada = _palavraAdivinhadaFormatada();
+  }
+
+  @action
+  registrarErro() {
+    quantidadeErros++;
+    if (this.quantidadeErros == 1)
+      this.animacaoFlare = 'cadeira';
+    else if (this.quantidadeErros == 2)
+      this.animacaoFlare = 'corpo';
+    else if (this.quantidadeErros == 3)
+      this.animacaoFlare = 'cabeca';
+    else if (this.quantidadeErros == 4)
+      this.animacaoFlare = 'balanco';
+    else if (this.quantidadeErros == 5) this.animacaoFlare = 'enforcamento';
   }
 }

@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import 'mobx_stores/jogo_store.dart';
-import 'mobx_stores/teclado_store.dart';
-import 'widgets/letra_teclado_jogo_widget.dart';
+import 'widgets/teclado_jogo_widget.dart';
 
 class JogoRoute extends StatefulWidget {
   @override
@@ -23,14 +22,6 @@ class _JogoRouteState extends State<JogoRoute> with JogoMixin {
   void initState() {
     super.initState();
     _jogoStore = getIt.get<JogoStore>();
-
-    for (int i = 0; i < letrasParaTeclado.length; i++) {
-      widgetsDeLetrasDoTeclado.add(
-        LetraTecladoJogoWidget(
-          letra: this.letrasParaTeclado[i],
-        ),
-      );
-    }
   }
 
   @override
@@ -78,8 +69,8 @@ class _JogoRouteState extends State<JogoRoute> with JogoMixin {
                     palavra: this._jogoStore.palavraAdivinhadaFormatada),
                 ajudaParaAdivinharAPalavra(
                     ajuda: this._jogoStore.ajudaPalavraParaAdivinhar),
-                animacaoDaForca(animacao: 'idle'),
-                exibirTecladoParaJogo(letras: this.widgetsDeLetrasDoTeclado),
+                animacaoDaForca(animacao: this._jogoStore.animacaoFlare),
+                TecladoJogoWidget(),
               ],
             );
           },

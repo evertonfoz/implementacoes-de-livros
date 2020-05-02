@@ -20,3 +20,13 @@ abstract class _TecladoStore with Store {
       );
     }
   }
+
+  @action
+  letraPressionada({int indiceDaLetra}) {
+    widgetsDeLetrasDoTeclado[indiceDaLetra] =
+        widgetsDeLetrasDoTeclado[indiceDaLetra].copyWith(
+      letra: widgetsDeLetrasDoTeclado[indiceDaLetra].letra,
+      foiUtilizada: true,
+    );
+  }
+}
