@@ -42,6 +42,8 @@ class _TecladoJogoWidgetState extends State<TecladoJogoWidget> {
         InkWell(
           onTap: (!_tecladoStore.widgetsDeLetrasDoTeclado[i].foiUtilizada)
               ? () {
+                  if (_jogoStore.animacaoFlare == 'enforcamento') return;
+
                   _tecladoStore.letraPressionada(indiceDaLetra: i);
                   _jogoStore.verificarExistenciaDaLetraNaPalavraParaAdivinhar(
                       letra: _tecladoStore.widgetsDeLetrasDoTeclado[i].letra);

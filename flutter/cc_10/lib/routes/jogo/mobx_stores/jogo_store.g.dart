@@ -9,6 +9,40 @@ part of 'jogo_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$JogoStore on _JogoStore, Store {
+  final _$ganhouAtom = Atom(name: '_JogoStore.ganhou');
+
+  @override
+  bool get ganhou {
+    _$ganhouAtom.context.enforceReadPolicy(_$ganhouAtom);
+    _$ganhouAtom.reportObserved();
+    return super.ganhou;
+  }
+
+  @override
+  set ganhou(bool value) {
+    _$ganhouAtom.context.conditionallyRunInAction(() {
+      super.ganhou = value;
+      _$ganhouAtom.reportChanged();
+    }, _$ganhouAtom, name: '${_$ganhouAtom.name}_set');
+  }
+
+  final _$perdeuAtom = Atom(name: '_JogoStore.perdeu');
+
+  @override
+  bool get perdeu {
+    _$perdeuAtom.context.enforceReadPolicy(_$perdeuAtom);
+    _$perdeuAtom.reportObserved();
+    return super.perdeu;
+  }
+
+  @override
+  set perdeu(bool value) {
+    _$perdeuAtom.context.conditionallyRunInAction(() {
+      super.perdeu = value;
+      _$perdeuAtom.reportChanged();
+    }, _$perdeuAtom, name: '${_$perdeuAtom.name}_set');
+  }
+
   final _$animacaoFlareAtom = Atom(name: '_JogoStore.animacaoFlare');
 
   @override
@@ -123,7 +157,7 @@ mixin _$JogoStore on _JogoStore, Store {
   @override
   String toString() {
     final string =
-        'animacaoFlare: ${animacaoFlare.toString()},palavraParaAdivinhar: ${palavraParaAdivinhar.toString()},ajudaPalavraParaAdivinhar: ${ajudaPalavraParaAdivinhar.toString()},palavraAdivinhadaFormatada: ${palavraAdivinhadaFormatada.toString()}';
+        'ganhou: ${ganhou.toString()},perdeu: ${perdeu.toString()},animacaoFlare: ${animacaoFlare.toString()},palavraParaAdivinhar: ${palavraParaAdivinhar.toString()},ajudaPalavraParaAdivinhar: ${ajudaPalavraParaAdivinhar.toString()},palavraAdivinhadaFormatada: ${palavraAdivinhadaFormatada.toString()}';
     return '{$string}';
   }
 }

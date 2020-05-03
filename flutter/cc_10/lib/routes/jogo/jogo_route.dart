@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import 'mobx_stores/jogo_store.dart';
+import 'widgets/jogo_terminou_widget.dart';
 import 'widgets/teclado_jogo_widget.dart';
 
 class JogoRoute extends StatefulWidget {
@@ -57,25 +58,63 @@ class _JogoRouteState extends State<JogoRoute> with JogoMixin {
       body: SafeArea(
         child: Observer(
           builder: (_) {
+            if (this._jogoStore.ganhou) {
+              return JogoTerminouWidget(
+                urlImagem: "assets/images/jogo/vitoria.jpg",
+                mensagem: 'Parabéns pela vitória. Já retornaremos ao jogo.',
+              );
+            } else if (this._jogoStore.perdeu) {
+              return JogoTerminouWidget(
+                urlImagem: "assets/images/jogo/derrota.jpg",
+                mensagem: 'Que pena, você perdeu, mas já retornaremos ao jogo.',
+              );
+            }
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                titulo(),
-                botaoParaSorteioDePalavra(
-                  onPressed: () =>
-                      this._jogoStore.selecionarPalavraParaAdivinhar(),
+                Visibility(
+                  visible: this._jogoStore.palavraAdivinhadaFormatada.isEmpty,
+                  child: titulo(),
                 ),
-                palavraParaAdivinhar(
-                    palavra: this._jogoStore.palavraAdivinhadaFormatada),
-                ajudaParaAdivinharAPalavra(
-                    ajuda: this._jogoStore.ajudaPalavraParaAdivinhar),
+                Visibility(
+                  visible: this._jogoStore.palavraAdivinhadaFormatada.isEmpty,
+                  child: botaoParaSorteioDePalavra(
+                    onPressed: () =>
+                        this._jogoStore.selecionarPalavraParaAdivinhar(),
+                  ),
+                ),
+                Visibility(
+                  visible:
+                      this._jogoStore.palavraAdivinhadaFormatada.isNotEmpty,
+                  child: palavraParaAdivinhar(
+                      palavra: this._jogoStore.palavraAdivinhadaFormatada),
+                ),
+                Visibility(
+                  visible:
+                      this._jogoStore.palavraAdivinhadaFormatada.isNotEmpty,
+                  child: ajudaParaAdivinharAPalavra(
+                      ajuda: this._jogoStore.ajudaPalavraParaAdivinhar),
+                ),
                 animacaoDaForca(animacao: this._jogoStore.animacaoFlare),
-                TecladoJogoWidget(),
+                Visibility(
+                  visible:
+                      this._jogoStore.palavraAdivinhadaFormatada.isNotEmpty,
+                  child: TecladoJogoWidget(),
+                ),
               ],
             );
           },
         ),
       ),
+      floatingActionButton: Observer(builder: (_) {
+        return Visibility(
+          visible: this._jogoStore.palavraAdivinhadaFormatada.isEmpty,
+          child: FloatingActionButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Icon(Icons.arrow_back),
+          ),
+        );
+      }),
     );
   }
 }

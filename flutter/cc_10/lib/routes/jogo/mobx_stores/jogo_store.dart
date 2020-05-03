@@ -6,12 +6,22 @@ import 'package:mobx/mobx.dart';
 
 part 'jogo_store.g.dart';
 
+/// flutter packages pub run build_runner build
+/// flutter packages pub run build_runner build --delete-conflicting-outputs
+/// flutter packages pub run build_runner watch
+
 class JogoStore = _JogoStore with _$JogoStore;
 
 abstract class _JogoStore with Store {
   List<PalavraModel> _palavrasRegistradas = [];
   String palavraAdivinhada = '';
   int quantidadeErros = 0;
+
+  @observable
+  bool ganhou = false;
+
+  @observable
+  bool perdeu = false;
 
   @observable
   String animacaoFlare = 'idle';
@@ -83,6 +93,7 @@ abstract class _JogoStore with Store {
   verificarExistenciaDaLetraNaPalavraParaAdivinhar({String letra}) {
     int indexOfWord = this.palavraParaAdivinhar.indexOf(letra, 0);
     if (indexOfWord < 0) {
+      registrarErro();
       return;
     }
 
@@ -94,6 +105,7 @@ abstract class _JogoStore with Store {
     }
 
     this.palavraAdivinhadaFormatada = _palavraAdivinhadaFormatada();
+    if (this.palavraAdivinhada.indexOf('_', 0) < 0) this.ganhou = true;
   }
 
   @action
@@ -107,6 +119,11 @@ abstract class _JogoStore with Store {
       this.animacaoFlare = 'cabeca';
     else if (this.quantidadeErros == 4)
       this.animacaoFlare = 'balanco';
-    else if (this.quantidadeErros == 5) this.animacaoFlare = 'enforcamento';
+    else if (this.quantidadeErros == 5) {
+      this.animacaoFlare = 'enforcamento';
+      Future.delayed(Duration(seconds: 5)).then((_) {
+        this.perdeu = true;
+      });
+    }
   }
 }

@@ -1,5 +1,9 @@
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:flare_flutter/flare_cache_builder.dart';
+import 'package:flare_flutter/provider/asset_flare.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 mixin JogoMixin {
   titulo() {
@@ -61,12 +65,29 @@ mixin JogoMixin {
 
   animacaoDaForca({String animacao}) {
     return Expanded(
-      child: FlareActor(
-        "assets/flare/forca_casa_do_codigo.flr",
-        alignment: Alignment.center,
-        fit: BoxFit.contain,
-        animation: animacao,
-      ),
+      child: FlareCacheBuilder([
+        AssetFlare(
+            bundle: rootBundle, name: 'assets/flare/forca_casa_do_codigo.flr')
+      ], builder: (BuildContext context, bool isWarm) {
+        return !isWarm
+            ? Center(
+                child: Container(
+                  child: Text(
+                    "Carregando animação...",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 40,
+                    ),
+                  ),
+                ),
+              )
+            : FlareActor(
+                "assets/flare/forca_casa_do_codigo.flr",
+                alignment: Alignment.center,
+                fit: BoxFit.contain,
+                animation: animacao,
+              );
+      }),
     );
   }
 
