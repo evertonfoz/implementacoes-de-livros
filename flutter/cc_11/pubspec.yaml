@@ -31,10 +31,16 @@ dev_dependencies:
   json_serializable: ^3.3.0
   mobx_codegen: ^1.0.3
   flutter_native_splash: ^0.1.9
+  flutter_launcher_icons: ^0.7.5
 
 flutter_native_splash:
   image: assets/images/launchscreen.png
   color: "336699"
+
+flutter_icons:
+  image_path: "assets/images/launchscreen.png"
+  android: true
+  ios: true
 
 flutter:
   uses-material-design: true

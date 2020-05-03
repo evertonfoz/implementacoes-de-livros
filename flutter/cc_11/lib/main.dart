@@ -1,5 +1,6 @@
 import 'package:cc04/routes/palavras/bloc/crud/palavras_crud_form_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'apphelpers/app_router.dart';
@@ -12,6 +13,10 @@ import 'routes/splash_screen_route.dart';
 
 void main() {
 //  BlocSupervisor.delegate = SimpleBlocDelegate();
+//  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
+
   getIt.registerSingleton<JogoStore>(JogoStore());
   runApp(
     MultiBlocProvider(
