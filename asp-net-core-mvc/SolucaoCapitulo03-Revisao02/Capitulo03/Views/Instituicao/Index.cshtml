@@ -13,6 +13,14 @@
     </environment>
 }
 
+@if (@TempData["Message"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+
 <div class="card-block">
     <div class="card-header text-white bg-primary text-center h1">Instituições Registradas</div>
     <div class="card-body">
