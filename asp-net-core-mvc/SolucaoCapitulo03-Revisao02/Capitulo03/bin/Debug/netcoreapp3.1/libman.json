@@ -26,6 +26,10 @@
     {
       "library": "datatables@1.10.20",
       "destination": "wwwroot/lib/datatables/"
+    },
+    {
+      "library": "font-awesome@5.13.0",
+      "destination": "wwwroot/lib/font-awesome/"
     }
   ]
 }

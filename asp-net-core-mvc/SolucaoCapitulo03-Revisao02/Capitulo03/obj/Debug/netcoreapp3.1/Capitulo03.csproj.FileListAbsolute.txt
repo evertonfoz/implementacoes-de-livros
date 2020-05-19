@@ -144,3 +144,7 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo03-Revisao02\Capitulo03\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo03-Revisao02\Capitulo03\obj\Debug\netcoreapp3.1\Capitulo03.csproj.CoreCompileInputs.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo03-Revisao02\Capitulo03\obj\Debug\netcoreapp3.1\Capitulo03.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo03-Revisao02\Capitulo03\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Create.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo03-Revisao02\Capitulo03\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Edit.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo03-Revisao02\Capitulo03\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Details.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo03-Revisao02\Capitulo03\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Delete.cshtml.g.cs
