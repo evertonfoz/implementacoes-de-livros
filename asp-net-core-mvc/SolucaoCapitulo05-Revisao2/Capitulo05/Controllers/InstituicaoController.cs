@@ -38,6 +38,10 @@ namespace Capitulo05.Controllers
         {
             return await ObterVisaoInstituicaoPorId(id);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -103,6 +107,15 @@ namespace Capitulo05.Controllers
             }
 
             return View(instituicao);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(long? id)
+        {
+            var instituicao = await instituicaoDAL.EliminarInstituicaoPorId((long)id);
+            TempData["Message"] = "Instituição " + instituicao.Nome.ToUpper() + " foi removida";
+            return RedirectToAction(nameof(Index));
         }
 
         private async Task<bool> InstituicaoExists(long? id)
