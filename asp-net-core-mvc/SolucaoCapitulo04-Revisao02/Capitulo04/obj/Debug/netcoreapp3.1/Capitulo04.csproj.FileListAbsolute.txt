@@ -274,3 +274,10 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Capitulo04.csproj.CoreCompileInputs.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Capitulo04.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Create.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Edit.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Details.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Delete.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Details.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Index.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo04-Revisao02\Capitulo04\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\_ComDepartamentos.cshtml.g.cs
