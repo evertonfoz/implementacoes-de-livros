@@ -1,4 +1,3 @@
-C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\libman.json
@@ -20,6 +19,7 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
@@ -127,6 +127,8 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.TagHelpers.input.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.TagHelpers.output.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.RazorCoreGenerate.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Create.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Index.cshtml.g.cs
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\Create.cshtml.g.cs
@@ -150,3 +152,8 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.pdb
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.genruntimeconfig.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Edit.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Details.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Delete.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Instituicao\_PartialDetailsContentCard.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo05-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\_PartialDetailsContentCard.cshtml.g.cs

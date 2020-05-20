@@ -1,4 +1,5 @@
-﻿@model Modelo.Cadastros.Instituicao
+﻿@model Modelo.Cadastros.Departamento
+
 @{
     Layout = "_LayoutIES";
 }
@@ -15,12 +16,12 @@
 }
 
 <div class="card-block">
-    <div class="card-header text-white bg-secondary text-center h1">Exibindo uma instituição existente</div>
-    
-    @{await Html.RenderPartialAsync("~/Views/Instituicao/_PartialDetailsContentCard.cshtml", Model); }
+    <div class="card-header text-white bg-secondary text-center h1">Exibindo uma departamento existente</div>
+
+    @{await Html.RenderPartialAsync("~/Views/Departamento/_PartialDetailsContentCard.cshtml", Model); }
 
     <div class="card-footer bg-info text-center text-white">
-        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.InstituicaoID">Alterar</a> |
-        <a asp-action="Index" class="btn btn-warning">Retornar à listagem de instituições</a>
+        <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.DepartamentoID">Alterar</a> |
+        <a asp-action="Index" class="btn btn-warning">Retornar à listagem de departamentos</a>
     </div>
 </div>
