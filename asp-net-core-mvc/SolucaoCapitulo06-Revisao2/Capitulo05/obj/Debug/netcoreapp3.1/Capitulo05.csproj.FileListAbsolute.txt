@@ -317,3 +317,5 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo06-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.dll
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo06-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.pdb
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo06-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.genruntimeconfig.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo06-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Academico\Index.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo06-Revisao2\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Academico\Create.cshtml.g.cs

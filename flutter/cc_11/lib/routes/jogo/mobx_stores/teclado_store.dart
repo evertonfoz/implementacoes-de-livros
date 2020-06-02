@@ -6,10 +6,7 @@ part 'teclado_store.g.dart';
 class TecladoStore = _TecladoStore with _$TecladoStore;
 
 abstract class _TecladoStore with Store {
-  @observable
-  ObservableList<LetraTecladoJogoWidget> widgetsDeLetrasDoTeclado =
-      ObservableList<LetraTecladoJogoWidget>();
-
+v
   @action
   inicializarTeclado({String letrasParaTeclado}) {
     for (int i = 0; i < letrasParaTeclado.length; i++) {
