@@ -20,4 +20,11 @@
     <ProjectReference Include="..\Modelo\Modelo.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Cadastros\Data\" />
+    <Folder Include="Areas\Cadastros\Models\" />
+    <Folder Include="Areas\Discente\Data\" />
+    <Folder Include="Areas\Discente\Models\" />
+  </ItemGroup>
+
 </Project>
