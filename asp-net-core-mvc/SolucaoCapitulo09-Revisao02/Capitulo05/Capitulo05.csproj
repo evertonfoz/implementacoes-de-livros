@@ -26,6 +26,7 @@
     <Folder Include="Areas\Cadastros\Models\" />
     <Folder Include="Areas\Discente\Data\" />
     <Folder Include="Areas\Discente\Models\" />
+    <Folder Include="Areas\Docente\Data\" />
   </ItemGroup>
 
 </Project>

@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Modelo.Docente
 {
-    class Professor
+    public class Professor
     {
+        public long? ProfessorID { get; set; }
+        public string Nome { get; set; }
+
+        public virtual ICollection<CursoProfessor> CursosProfessores { get; set; }
     }
 }
