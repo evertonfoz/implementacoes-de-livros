@@ -658,3 +658,4 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Infra\Acessar.cshtml.g.cs
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Infra\RegistrarNovoUsuario.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Erro404.cshtml.g.cs
