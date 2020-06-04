@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
       <PrivateAssets>all</PrivateAssets>
@@ -21,15 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
-    <Folder Include="Areas\Cadastros\Controllers\" />
     <Folder Include="Areas\Cadastros\Data\" />
     <Folder Include="Areas\Cadastros\Models\" />
-    <Folder Include="Areas\Cadastros\Views\" />
-    <Folder Include="Areas\Discente\Controllers\" />
     <Folder Include="Areas\Discente\Data\" />
     <Folder Include="Areas\Discente\Models\" />
-    <Folder Include="Areas\Discente\Views\" />
   </ItemGroup>
 
 </Project>

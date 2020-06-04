@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Capitulo05.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Capitulo05.Controllers
 {

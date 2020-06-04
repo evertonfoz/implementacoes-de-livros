@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Areas.Cadastros.Capitulo05.Controllers
 {
+    [Area("Cadastros")]
     public class DepartamentoController : Controller
     {
         private readonly IESContext _context;

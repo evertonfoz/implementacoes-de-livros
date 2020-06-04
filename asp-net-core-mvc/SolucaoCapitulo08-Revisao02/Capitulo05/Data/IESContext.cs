@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Capitulo05.Models.Infra;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Modelo.Cadastros;
 using Modelo.Discente;
 
 namespace Capitulo05.Data
 {
-    public class IESContext : DbContext
+    public class IESContext : IdentityDbContext<UsuarioDaAplicacao>
     {
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Instituicao> Instituicoes { get; set; }

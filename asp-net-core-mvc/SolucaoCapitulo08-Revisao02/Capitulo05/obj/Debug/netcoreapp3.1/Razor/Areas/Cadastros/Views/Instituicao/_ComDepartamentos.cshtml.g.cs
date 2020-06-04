@@ -12,7 +12,22 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\Areas\Cadastros\Views\_ViewImports.cshtml"
+using Capitulo05;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\Areas\Cadastros\Views\_ViewImports.cshtml"
+using Capitulo05.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"88ae2bddfb62ab92aac8f795c417125a7e5e3736", @"/Areas/Cadastros/Views/Instituicao/_ComDepartamentos.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f2baa29f665f06c550adfb2023487627cf46dfe", @"/Areas/Cadastros/Views/_ViewImports.cshtml")]
     public class Areas_Cadastros_Views_Instituicao__ComDepartamentos : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Modelo.Cadastros.Departamento>>
     {
         #pragma warning disable 1998

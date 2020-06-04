@@ -608,8 +608,6 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.csprojAssemblyReference.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.AssemblyInfoInputs.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.AssemblyInfo.cs
-C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.csproj.CoreCompileInputs.cache
-C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.RazorAssemblyInfo.cache
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.RazorAssemblyInfo.cs
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.TagHelpers.input.cache
@@ -649,3 +647,14 @@ C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\Solu
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Areas\Discente\Views\Academico\Details.cshtml.g.cs
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Areas\Discente\Views\Academico\Edit.cshtml.g.cs
 C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Areas\Discente\Views\Academico\Index.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Areas\Cadastros\Views\_ViewImports.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Areas\Discente\Views\_ViewImports.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Capitulo05.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Infra\Acessar.cshtml.g.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\asp-net-core-mvc\SolucaoCapitulo08-Revisao02\Capitulo05\obj\Debug\netcoreapp3.1\Razor\Views\Infra\RegistrarNovoUsuario.cshtml.g.cs
