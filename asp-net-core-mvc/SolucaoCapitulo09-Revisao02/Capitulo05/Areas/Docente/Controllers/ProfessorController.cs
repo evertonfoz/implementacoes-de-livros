@@ -2,9 +2,12 @@
 using Capitulo05.Data;
 using Capitulo05.Data.DAL.Cadastros;
 using Capitulo05.Data.DAL.Docente;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Modelo.Cadastros;
 using Modelo.Docente;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -62,6 +65,7 @@ namespace Capitulo05.Areas.Docente.Controllers
             else
             {
                 cursoDAL.RegistrarProfessor((long)model.CursoID, (long)model.ProfessorID);
+                RegistrarProfessorNaSessao((long)model.CursoID, (long)model.ProfessorID);
 
                 PrepararViewBags(instituicaoDAL.ObterInstituicoesClassificadasPorNome().ToList(),
                     departamentoDAL.ObterDepartamentosPorInstituicao((long)model.InstituicaoID).ToList(),
@@ -70,5 +74,49 @@ namespace Capitulo05.Areas.Docente.Controllers
             }
             return View(model);
         }
+
+        public JsonResult ObterDepartamentosPorInstituicao(long actionID)
+        {
+            var departamentos = departamentoDAL.ObterDepartamentosPorInstituicao(actionID).ToList();
+            return Json(new SelectList(departamentos, "DepartamentoID", "Nome"));
+        }
+
+        public JsonResult ObterCursosPorDepartamento(long actionID)
+        {
+            var cursos = cursoDAL.ObterCursosPorDepartamento(actionID).ToList();
+            return Json(new SelectList(cursos, "CursoID", "Nome"));
+        }
+
+        public JsonResult ObterProfessoresForaDoCurso(long actionID)
+        {
+            var professores = cursoDAL.ObterProfessoresForaDoCurso(actionID).ToList();
+            return Json(new SelectList(professores, "ProfessorID", "Nome"));
+        }
+
+        public void RegistrarProfessorNaSessao(long cursoID, long professorID)
+        {
+            var cursoProfessor = new CursoProfessor() { ProfessorID = professorID, CursoID = cursoID };
+            List<CursoProfessor> cursosProfessor = new List<CursoProfessor>();
+            string cursosProfessoresSession = HttpContext.Session.GetString("cursosProfessores");
+            if (cursosProfessoresSession != null)
+            {
+                cursosProfessor = JsonConvert.DeserializeObject<List<CursoProfessor>>(cursosProfessoresSession);
+            }
+            cursosProfessor.Add(cursoProfessor);
+
+            HttpContext.Session.SetString("cursosProfessores", JsonConvert.SerializeObject(cursosProfessor));
+        }
+
+        public IActionResult VerificarUltimosRegistros()
+        {
+            List<CursoProfessor> cursosProfessor = new List<CursoProfessor>();
+            string cursosProfessoresSession = HttpContext.Session.GetString("cursosProfessores");
+            if (cursosProfessoresSession != null)
+            {
+                cursosProfessor = JsonConvert.DeserializeObject<List<CursoProfessor>>(cursosProfessoresSession);
+            }
+            return View(cursosProfessor);
+        }
+
     }
 }
