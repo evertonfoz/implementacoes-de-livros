@@ -1,2 +1,0 @@
-Everton;100
-Gabriel;200
