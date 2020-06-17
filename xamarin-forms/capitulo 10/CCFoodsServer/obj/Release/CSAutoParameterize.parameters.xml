@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="CCFoods_CS-Web.config Connection String" description="CCFoods_CS Connection String used in web.config by the application to access the database." defaultValue="Data Source=EVERTON-DELL\SQLEXPRESS;Initial Catalog=ccfoods_db3;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Everton\\Documents\\GitHub\\xamarin-casa-do-codigo\\capitulo\ 07\\CCFoodsServer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CCFoods_CS']/@connectionString" />
-  </parameter>
-</parameters>
