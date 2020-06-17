@@ -1,9 +1,0 @@
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\bin\Debug\netcoreapp2.0\Modelo.deps.json
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\bin\Debug\netcoreapp2.0\Modelo.dll
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\bin\Debug\netcoreapp2.0\Modelo.pdb
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\obj\Debug\netcoreapp2.0\Modelo.csprojResolveAssemblyReference.cache
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\obj\Debug\netcoreapp2.0\Modelo.csproj.CoreCompileInputs.cache
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\obj\Debug\netcoreapp2.0\Modelo.AssemblyInfoInputs.cache
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\obj\Debug\netcoreapp2.0\Modelo.AssemblyInfo.cs
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\obj\Debug\netcoreapp2.0\Modelo.dll
-C:\Users\evert\Dropbox\Livros\ASP_NET Core MVC\Implementações\SolucaoCapitulo05\Modelo\obj\Debug\netcoreapp2.0\Modelo.pdb

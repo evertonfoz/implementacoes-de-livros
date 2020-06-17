@@ -1,9 +1,0 @@
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe.config
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.exe
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\bin\Debug\FormPesoIdeal.pdb
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.csprojResolveAssemblyReference.cache
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.Form1.resources
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.Properties.Resources.resources
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.csproj.GenerateResource.Cache
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.exe
-C:\Users\Everton\Documents\Livros\Atuais\Windows Forms\Capítulo 02\SolucaoCapitulo02\FormPesoIdeal\obj\Debug\FormPesoIdeal.pdb
