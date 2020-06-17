@@ -1,1 +1,0 @@
-enum DrawerControllerEvent { open, close }
