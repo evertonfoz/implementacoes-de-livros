@@ -1,9 +1,0 @@
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\bin\Debug\netstandard2.0\Modelo.deps.json
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\bin\Debug\netstandard2.0\Modelo.dll
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\bin\Debug\netstandard2.0\Modelo.pdb
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\obj\Debug\netstandard2.0\Modelo.csproj.CoreCompileInputs.cache
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\obj\Debug\netstandard2.0\Modelo.AssemblyInfoInputs.cache
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\obj\Debug\netstandard2.0\Modelo.AssemblyInfo.cs
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\obj\Debug\netstandard2.0\Modelo.dll
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\obj\Debug\netstandard2.0\Modelo.pdb
-C:\Users\Everton\Documents\GitHub\ooc6\Capitulo08\Capitulo08\ModeloStandard\obj\Debug\netstandard2.0\Modelo.csprojAssemblyReference.cache
