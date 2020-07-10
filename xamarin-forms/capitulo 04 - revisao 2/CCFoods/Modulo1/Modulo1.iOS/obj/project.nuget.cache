@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BG50qcPALJv9SrHSFrxL20Lagv0cgfYi3VnYrlEHzb08Xe9iuENdsAg4pgVYPEjy4rGeU6NMUhfOOaHgGiP8cQ==",
+  "success": true,
+  "projectFilePath": "C:\\Temp\\capitulo 04 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}

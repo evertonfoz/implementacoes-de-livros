@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "KsgqU0h84i12bcrmBEJ31CPFV8Geii8iC0gmRDtangjgp/MpdZp/Wx6tQC9a6uJtzP+0OHEUxtZXN4ILLA8AMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 03 - revisao 1\\Modulo1\\Modulo1\\Modulo1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms\\3.1.0.697729\\xamarin.forms.3.1.0.697729.nupkg.sha512"
+  ],
+  "logs": []
+}

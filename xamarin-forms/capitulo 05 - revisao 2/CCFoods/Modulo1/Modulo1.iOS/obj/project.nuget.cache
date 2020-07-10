@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "3Fo/HsuXfiAzBu05k7AKJ+GoE33mI0YYt78TTdno3GfI9t5OgHTW98gsilF7gchJZ6RZ53fcGJ/6xQ0y3+stSg==",
+  "success": true,
+  "projectFilePath": "C:\\Temp\\capitulo 05 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms\\4.7.0.968\\xamarin.forms.4.7.0.968.nupkg.sha512"
+  ],
+  "logs": []
+}

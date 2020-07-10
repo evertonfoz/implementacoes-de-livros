@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "dVR4NplcKcBkQWxxFSwh7agAdmG+LEVdwT6zSDGQCUWvujUCxvmO+iAUh0JHCXSFguu0vn3KhzIYg+gzT5Wgtw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\plugin.permissions\\3.0.0.12\\plugin.permissions.3.0.0.12.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xam.plugin.media\\4.0.1.5\\xam.plugin.media.4.0.1.5.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms\\3.3.0.967583\\xamarin.forms.3.3.0.967583.nupkg.sha512"
+  ],
+  "logs": []
+}

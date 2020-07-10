@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Modulo1.Paginas.TiposItensCardapio.TiposItensCardapioListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout  Padding="5, 20, 5, 20">
+                <Label Text="Tipos de Itens Cardápio" VerticalOptions="Center" Font="25" HorizontalOptions="Center"/>
+            </StackLayout>
+            <ListView x:Name="lvTiposItensCardapio" RowHeight="60">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnAlterarClick" CommandParameter="{Binding .}" Text="Alterar" />
+                                <MenuItem Clicked="OnRemoverClick" CommandParameter="{Binding .}" Text="Remover" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                            <StackLayout Padding="5, 0, 5, 0" Orientation="Horizontal">
+                                <Image Source="{Binding CaminhoArquivoFoto}"/>
+                                <Label Text="{Binding Nome}" TextColor="Blue" FontSize="Large" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

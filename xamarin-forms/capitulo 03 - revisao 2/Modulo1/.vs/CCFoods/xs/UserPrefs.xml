@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{FB99288E-B37E-4C9B-815B-3F18D115EA9F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Modulo1/App.xaml.cs">
+    <Files>
+      <File FileName="Modulo1/App.xaml.cs" Line="14" Column="59" />
+      <File FileName="Modulo1.Android/Resources/Resource.designer.cs" Line="461" Column="64" />
+      <File FileName="Modulo1.Android/Resources/AboutResources.txt" Line="1" Column="1" />
+      <File FileName="Modulo1/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="Modulo1/Pages/Garcons/GarconsNewPage.cs" Line="1" Column="1" />
+      <File FileName="Modulo1/Pages/Garcons/GarconsPage.cs" Line="18" Column="16" />
+      <File FileName="Modulo1.iOS/Main.cs" Line="12" Column="1" />
+      <File FileName="Modulo1/Pages/MenuPage.cs" Line="20" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CCFoods" expanded="True">
+            <Node name="Modulo1" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Garcons" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="Modulo1.iOS" expanded="True" selected="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Modulo1.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.ItemProperties.Modulo1.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.857300AE-A6D2-40AD-80EF-797E1B3EFFF6" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

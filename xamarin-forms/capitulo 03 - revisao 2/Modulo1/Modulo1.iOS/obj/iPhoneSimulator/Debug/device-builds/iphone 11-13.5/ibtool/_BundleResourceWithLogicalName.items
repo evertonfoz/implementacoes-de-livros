@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/LaunchScreen.storyboardc/X5k-f2-b5h-view-yd7-JS-zBw.nib">
+      <InterfaceDefinition>Resources/LaunchScreen.storyboard</InterfaceDefinition>
+      <LogicalName>LaunchScreen.storyboardc/X5k-f2-b5h-view-yd7-JS-zBw.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/LaunchScreen.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/LaunchScreen.storyboardc/UIViewController-X5k-f2-b5h.nib">
+      <InterfaceDefinition>Resources/LaunchScreen.storyboard</InterfaceDefinition>
+      <LogicalName>LaunchScreen.storyboardc/UIViewController-X5k-f2-b5h.nib</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/LaunchScreen.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/LaunchScreen.storyboardc/Info.plist">
+      <InterfaceDefinition>Resources/LaunchScreen.storyboard</InterfaceDefinition>
+      <LogicalName>LaunchScreen.storyboardc/Info.plist</LogicalName>
+      <Optimize>false</Optimize>
+      <OriginalItemSpec>obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.5/ibtool/LaunchScreen.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+  </ItemGroup>
+</Project>

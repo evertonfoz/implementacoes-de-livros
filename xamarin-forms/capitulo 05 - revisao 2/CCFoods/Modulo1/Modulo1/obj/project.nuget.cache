@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "XCAmyRAa7rtdxB7QWcgeduy5pC+p19CPVaPGrP6x83yy33FmCNm/lNSn4WuwEVyf2sZCEic5a4JB+lB59G/P3w==",
+  "success": true,
+  "projectFilePath": "C:\\Temp\\capitulo 05 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms\\4.7.0.968\\xamarin.forms.4.7.0.968.nupkg.sha512"
+  ],
+  "logs": []
+}

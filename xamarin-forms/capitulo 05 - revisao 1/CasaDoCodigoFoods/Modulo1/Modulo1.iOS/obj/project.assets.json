@@ -857,11 +857,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin-casa-do-codigo\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
       "projectName": "Modulo1.iOS",
-      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin-casa-do-codigo\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin-casa-do-codigo\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -882,8 +882,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Everton\\Documents\\GitHub\\xamarin-casa-do-codigo\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
-              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin-casa-do-codigo\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 05 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
             }
           }
         }

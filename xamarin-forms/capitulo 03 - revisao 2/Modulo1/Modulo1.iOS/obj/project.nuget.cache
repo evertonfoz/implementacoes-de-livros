@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "bfgp/VpoawYKmSfcRpF8T2YmPcuBZpdGY9Fu0Ax9K/vEdkxqwidhMaNjdYyyN27P3ezLIb8hEh0RwQxIo5Rm3w==",
+  "success": true,
+  "projectFilePath": "/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1.iOS/Modulo1.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/evertoncoimbradearaujo/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/evertoncoimbradearaujo/.nuget/packages/xamarin.essentials/1.3.1/xamarin.essentials.1.3.1.nupkg.sha512",
+    "/Users/evertoncoimbradearaujo/.nuget/packages/xamarin.forms/4.5.0.495/xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}

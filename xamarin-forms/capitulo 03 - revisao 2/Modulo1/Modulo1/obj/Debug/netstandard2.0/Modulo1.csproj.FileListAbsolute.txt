@@ -1,0 +1,14 @@
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/bin/Debug/netstandard2.0/Modulo1.deps.json
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/bin/Debug/netstandard2.0/Modulo1.dll
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/bin/Debug/netstandard2.0/ref/Modulo1.dll
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/bin/Debug/netstandard2.0/Modulo1.pdb
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.AssemblyInfoInputs.cache
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.AssemblyInfo.cs
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.csproj.CoreCompileInputs.cache
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.dll
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/ref/Modulo1.dll
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.pdb
+/Users/evertoncoimbradearaujo/Projects/Modulo1/Modulo1/obj/Debug/netstandard2.0/Modulo1.csprojAssemblyReference.cache
