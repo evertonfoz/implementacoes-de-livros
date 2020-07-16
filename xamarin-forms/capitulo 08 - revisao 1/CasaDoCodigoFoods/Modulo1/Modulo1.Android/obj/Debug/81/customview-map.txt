@@ -1,0 +1,15 @@
+adaptive-icon;obj\Debug\81\res\mipmap-anydpi-v26\icon.xml
+adaptive-icon;obj\Debug\81\res\mipmap-anydpi-v26\icon_round.xml
+android.support.design.widget.TabLayout;obj\Debug\81\res\layout\tabbar.xml
+android.support.v7.widget.Toolbar;obj\Debug\81\res\layout\toolbar.xml
+background;obj\Debug\81\res\mipmap-anydpi-v26\icon.xml
+background;obj\Debug\81\res\mipmap-anydpi-v26\icon_round.xml
+color;obj\Debug\81\res\values\colors.xml
+external-files-path;obj\Debug\81\res\xml\file_paths.xml
+foreground;obj\Debug\81\res\mipmap-anydpi-v26\icon.xml
+foreground;obj\Debug\81\res\mipmap-anydpi-v26\icon_round.xml
+item;obj\Debug\81\res\values\styles.xml
+paths;obj\Debug\81\res\xml\file_paths.xml
+resources;obj\Debug\81\res\values\colors.xml
+resources;obj\Debug\81\res\values\styles.xml
+style;obj\Debug\81\res\values\styles.xml

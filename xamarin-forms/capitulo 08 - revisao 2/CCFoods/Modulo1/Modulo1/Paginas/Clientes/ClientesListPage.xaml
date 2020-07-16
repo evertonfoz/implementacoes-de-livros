@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Modulo1.Paginas.Clientes.ClientesListPage"
+             Title="Relação de clientes"
+             BackgroundColor="#e6ffe6">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.Padding HorizontalOptions="FillAndExpand">
+                    <OnPlatform x:TypeArguments="Thickness" iOS="5, 10, 5, 10" Android="5, 10, 5, 10"/>
+                </Grid.Padding>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <ListView Grid.Row="0" Grid.Column="0" x:Name="lvClientes" BackgroundColor="#e6ffe6" HasUnevenRows="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate BackgroundColor="#e6ffe6">
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="OnAlterarClick" CommandParameter="{Binding .}" Text="Alterar" />
+                                    <MenuItem Clicked="OnRemoverClick" CommandParameter="{Binding .}" Text="Remover" IsDestructive="True" />
+                                </ViewCell.ContextActions>
+                                <Grid Padding="5, 5, 20, 5">
+                                    <Grid.RowDefinitions >
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding Nome}" TextColor="Blue" FontSize="Large" Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding Telefone}" TextColor="Green" FontSize="Small" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackLayout Grid.Row="1" Grid.Column="0" Padding="0" BackgroundColor="#ff8c1a">
+                    <Button Text="Inserir novo cliente" x:Name="BtnNovoItem" Image="icone_new.png"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

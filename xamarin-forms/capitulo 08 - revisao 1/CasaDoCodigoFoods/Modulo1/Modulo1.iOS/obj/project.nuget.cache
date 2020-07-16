@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "X9WX/3QW3sVKr38PMt1J5bC+btgmPTdnqBeL4Ow9KylmcT31YeR11ejFJnnCWhUXip61crbgWDM2Cl5ZMWs7/w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\plugin.permissions\\3.0.0.12\\plugin.permissions.3.0.0.12.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlite-net-pcl\\1.5.231\\sqlite-net-pcl.1.5.231.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.11\\sqlitepclraw.bundle_green.1.1.11.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlitepclraw.core\\1.1.11\\sqlitepclraw.core.1.1.11.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlitepclraw.provider.sqlite3.ios_unified\\1.1.11\\sqlitepclraw.provider.sqlite3.ios_unified.1.1.11.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xam.plugin.media\\4.0.1.5\\xam.plugin.media.4.0.1.5.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms\\3.4.0.1008975\\xamarin.forms.3.4.0.1008975.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms.maps\\3.4.0.1008975\\xamarin.forms.maps.3.4.0.1008975.nupkg.sha512"
+  ],
+  "logs": []
+}

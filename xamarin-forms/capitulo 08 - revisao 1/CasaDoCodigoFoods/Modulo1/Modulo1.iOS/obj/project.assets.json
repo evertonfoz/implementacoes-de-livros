@@ -1395,21 +1395,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Everton\\.nuget\\packages\\": {}
+    "C:\\Users\\Everton\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Xamarin2E\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
       "projectName": "Modulo1.iOS",
-      "projectPath": "C:\\Xamarin2E\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Xamarin2E\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
         "C:\\Users\\Everton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1421,8 +1426,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Xamarin2E\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
-              "projectPath": "C:\\Xamarin2E\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 08 - revisao 1\\CasaDoCodigoFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
             }
           }
         }
