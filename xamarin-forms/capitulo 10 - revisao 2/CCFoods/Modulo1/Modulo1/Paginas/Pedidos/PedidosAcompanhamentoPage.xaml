@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Modulo1.Paginas.Pedidos.PedidosAcompanhamentoPage"
+             Title="Localização do entregador"
+             BackgroundColor="#ffd9b3">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Padding="0">
+            <maps:Map x:Name="MyMap" IsShowingUser="true" MapType="Street" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

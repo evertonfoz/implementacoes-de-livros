@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:ep="clr-namespace:Modulo1.Paginas.Entregadores;assembly=Modulo1"
+             x:Class="Modulo1.Paginas.Entregadores.EntregadoresPage">
+    <TabbedPage.Children>
+        <ep:EntregadoresListPage Title="Listagem" Icon="icone_list.png" x:Name="listagem"/>
+        <ep:EntregadoresNewPage Title="Inserir Novo" Icon="icone_new.png" x:Name="inserir"/>
+    </TabbedPage.Children>
+</TabbedPage>

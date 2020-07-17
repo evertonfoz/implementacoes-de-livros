@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+9qvCFEEiEupaiMH9ipVYAAAAAACAAAAAAAQZgAAAAEAACAAAADjiHDhodkCcoAnrBUiWnfzq/nhfmR7fLImeK8pFPOZKgAAAAAOgAAAAAIAACAAAAAHj70fgy5Gl2ETHWk7oCkxGQB6H8ZfG8nUU4cIroWvWoAAAACHCZD71NwlqAdH20NmgjGUzsvgnLJivSz7I6xFJQJeuooYPKU7dIM+jLpld2Kv90uqspLN1FwHEucdBbPPE1SXFBiBNruAqc9J4y6GNFpfwTNp2htjflsaZBxB34CO6wREuA80lcqfv0qI4mupMpd7lJ0jv6bwP2bJ6RyIPk9seUAAAACSI8IH+Y24NRqEUaIajU41Yxtnv0RMLbos554jmroDxDOUZjITnO4DsEvc16g5Z0Xm6XC+zi9q2PwhvwgT4yvP</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CCFoods_CS">
+      <Value>Data Source=tcp:dbserverserverapi.database.windows.net,1433%3bInitial Catalog=Db_ServerAPI%3bUser Id=everton%40dbserverserverapi%3bPassword=claire%401967</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="ServerAPI.Persistencia.CCFoodsContext">
+      <Value>Data Source=tcp:dbserverserverapi.database.windows.net,1433%3bInitial Catalog=Db_ServerAPI%3bUser Id=everton%40dbserverserverapi%3bPassword=claire%401967</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
