@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Modulo1.Paginas.MenuPage"
+             Title="Menu de Opções">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Button Text="Garçons" 
+            Image="icone_garcons.png" 
+            Clicked="GarconsOnClicked"/>
+            <Button Text="Entregadores" 
+            Image="icone_entregadores.png" 
+            Clicked="EntregadoresOnClicked"/>
+            <Button Text="Tipos de Itens" 
+                    Image="icone_tipoitemcardapio.png" 
+                    Clicked="TiposItensCardapioOnClicked"/>
+            <Button Text="Itens de Cardápio" Image="icone_itenscardapio.png" Clicked="ItensCardapioOnClicked"/>
+            <Button Text="Configurações" Image="icone_settings.png" Clicked="ConfiguracoesOnClicked"/>
+            <Button Text="Clientes" Image="icone_clientes.png" Clicked="ClientesOnClicked"/>
+            <Button Text="Pedidos" Image="icone_pedidos.png" Clicked="PedidosOnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

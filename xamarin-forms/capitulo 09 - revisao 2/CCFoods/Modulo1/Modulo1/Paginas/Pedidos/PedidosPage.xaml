@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Modulo1.Paginas.Pedidos.PedidosPage"
+             Title="Relação de pedidos"
+             BackgroundColor="#e6ffe6">
+    <ContentPage.Content>
+        <!-- Layout inicial para a página -->
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Layout que apresenta o estado dos pedidos que estão sendo exibidos no ListView.
+     Este Label terá seu valor alterado de acordo com o filtro estabelecido pelos
+     botões que estão na sequência -->
+                <StackLayout Grid.Row="0" Grid.Column="0" Padding="0" BackgroundColor="#99ff33">
+                    <Label Text="Todos os pedidos" TextColor="Blue" FontSize="Large" x:Name="tituloConsulta" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <!-- Layout com coleção de botões para aplicação de filtros nos pedidos registrado.
+     Note a existência de imagens para cada um deles e que a interação com eles se
+     dá por meio de Gestures -->
+                <StackLayout Grid.Row="1" Grid.Column="0" Padding="0" BackgroundColor="#99ff33">
+                    <Grid>
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="pedidos_todos.png" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTappedTodos" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <Image Source="pedidos_abertos.png" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTappedAbertos" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <Image Source="pedidos_producao.png" HorizontalOptions="Center" Grid.Row="0" Grid.Column="2" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTappedEmProducao" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <Image Source="pedidos_ementrega.png" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTappedEmEntrega" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <Image Source="pedidos_fechados.png" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTappedFechados" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </StackLayout>
+
+                <!-- Layout para o ListView. As interações são dadas pelo Tapped nos itens e 
+     pelas ContextActions definidas, as quais alterarão o estado do pedido.
+     O Tapped no item abrirá o mapa para visualização da rota.-->
+                <StackLayout Grid.Row="2" Grid.Column="0" Padding="0, 0, 0, 0" BackgroundColor="#99ff33">
+                    <ListView x:Name="lvClientes" BackgroundColor="#e6ffe6" HasUnevenRows="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemTapped="OnItemTapped">
+                        <ListView.ItemTemplate BackgroundColor="#e6ffe6" >
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Clicked="OnProduzirClick" CommandParameter="{Binding .}" Text="Produzir"  />
+                                        <MenuItem Clicked="OnEntregarClick" CommandParameter="{Binding .}" Text="Entregar" />
+                                        <MenuItem Clicked="OnFecharClick" CommandParameter="{Binding .}" Text="Fechar" />
+                                        <MenuItem Clicked="OnVerificarRotaClick" CommandParameter="{Binding .}" Text="Rota" />
+                                    </ViewCell.ContextActions>
+                                    <Grid Padding="5, 5, 20, 5">
+                                        <Grid.RowDefinitions >
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70*"/>
+                                            <ColumnDefinition Width="30*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding Cliente.Nome}" TextColor="Blue" FontSize="Large" Grid.Row="0" Grid.Column="0" />
+                                        <Label Text="{Binding PedidoId}" TextColor="Red" FontSize="Small" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+                                        <Label Text="{Binding Cliente.Telefone}" TextColor="Green" FontSize="Small" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding Situacao}" TextColor="Red" FontSize="Small" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+                <!-- Layout com botão responsável pela abertura da página de inserção de um 
+     novo pedido-->
+                <StackLayout Grid.Row="3" Grid.Column="0" Padding="0" BackgroundColor="#99ff33">
+                    <Button Text="Inserir novo pedido" x:Name="BtnNovoPedido" Image="icone_new.png"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
