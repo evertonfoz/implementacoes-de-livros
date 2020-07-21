@@ -15,13 +15,13 @@ class PalavrasListViewRoute extends StatefulWidget {
 }
 
 class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
-    with PalavrasListViewMixim {
+    with PalavrasListViewMixin {
   final _scrollController = ScrollController();
   final _scrollThreshold = 200.0;
   final double _listTileHeight = 70;
 
   String _palavraIDSelected;
-  String _palavraIDOfTileToDestaque;
+  String _palavraIDOfTileToHighlight;
 
   PalavrasListViewBloc _palavrasListViewBloc;
 
@@ -72,7 +72,7 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
                   _scrollController.animateTo(i * _listTileHeight,
                       duration: new Duration(seconds: 2), curve: Curves.ease);
                   setState(() {
-                    _palavraIDOfTileToDestaque = this._palavraIDSelected;
+                    _palavraIDOfTileToHighlight = this._palavraIDSelected;
                   });
                   this._palavraIDSelected = null;
                 }
@@ -130,7 +130,7 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute>
                           title: state.palavras[index].palavra,
                           trailing: Icon(Icons.keyboard_arrow_right),
                           listTileHeight: _listTileHeight,
-                          color: (_palavraIDOfTileToDestaque ==
+                          color: (_palavraIDOfTileToHighlight ==
                                   state.palavras[index].palavraID)
                               ? Colors.grey[300]
                               : Colors.transparent,

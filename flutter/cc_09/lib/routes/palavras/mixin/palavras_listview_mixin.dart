@@ -4,7 +4,7 @@ import 'package:dialog_information_to_specific_platform/dialog_information_to_sp
 import 'package:dialog_information_to_specific_platform/flat_buttons/actions_flatbutton_to_alert_dialog.dart';
 import 'package:flutter/material.dart';
 
-mixin PalavrasListViewMixim {
+mixin PalavrasListViewMixin {
   centerText({String text}) {
     return Center(child: Text(text));
   }
