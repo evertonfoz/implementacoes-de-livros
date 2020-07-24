@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yhTN/gmXR6MA3+r75Af8oiNyVkvcbgSDlQ6M7eMJvZPs9ZPsWwt3TlsK1h7w/BcbWbHlQhJzY/ujwHXHEcEyfQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo03\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms\\3.4.0.1009999\\xamarin.forms.3.4.0.1009999.nupkg.sha512"
+  ],
+  "logs": []
+}

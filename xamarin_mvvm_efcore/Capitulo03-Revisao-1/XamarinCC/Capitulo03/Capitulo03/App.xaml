@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Capitulo03.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="LabelFontSize" x:TypeArguments="x:Double" iOS="12" Android="12" />
+            <OnPlatform x:Key="SpacingStackLayout" x:TypeArguments="x:Double" iOS="6" Android="2" />
+            <OnPlatform x:Key="EntryFontSize" x:TypeArguments="x:Double" iOS="12" Android="10" />
+            <OnPlatform x:Key="HeightEditor" x:TypeArguments="x:Double" iOS="80" Android="45" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
