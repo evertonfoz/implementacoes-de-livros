@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zaPGzx48V/5q0uCe6+ALZ3Wv0Vmcx1YCJH7nS/9V7c8GZToUSDZFLT58OXi5N8TSf4O/kcVF3+gSOHPsrAZMZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04\\Capitulo05\\Capitulo05.iOS\\Capitulo05.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\xamarin.forms\\3.4.0.1009999\\xamarin.forms.3.4.0.1009999.nupkg.sha512"
+  ],
+  "logs": []
+}

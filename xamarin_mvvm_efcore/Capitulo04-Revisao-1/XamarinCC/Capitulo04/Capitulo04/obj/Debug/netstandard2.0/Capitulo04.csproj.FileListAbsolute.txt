@@ -1,0 +1,15 @@
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\bin\Debug\netstandard2.0\Capitulo04.deps.json
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\bin\Debug\netstandard2.0\Capitulo04.dll
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\bin\Debug\netstandard2.0\ref\Capitulo04.dll
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\bin\Debug\netstandard2.0\Capitulo04.pdb
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Capitulo04.csprojAssemblyReference.cache
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Views\Servicos\ListagemView.xaml.g.cs
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Capitulo04.AssemblyInfoInputs.cache
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Capitulo04.AssemblyInfo.cs
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Capitulo04.csproj.CoreCompileInputs.cache
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Capitulo04.dll
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\ref\Capitulo04.dll
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Capitulo04.pdb
+C:\Temp\Capitulo04-Revisao-1\XamarinCC\Capitulo04\Capitulo04\obj\Debug\netstandard2.0\Views\Servicos\CRUDView.xaml.g.cs
