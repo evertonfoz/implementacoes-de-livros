@@ -33,6 +33,7 @@ namespace Capitulo06.Views.Clientes
                 await viewModel.AtualizarClientesAsync();
             });
 
+
             if (listView.SelectedItem != null)
                 listView.SelectedItem = null;
 

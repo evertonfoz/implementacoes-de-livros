@@ -2568,11 +2568,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\IDPropertiesEF\\IDPropertiesEF.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\IDPropertiesEF\\IDPropertiesEF.csproj",
       "projectName": "IDPropertiesEF",
-      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\IDPropertiesEF\\IDPropertiesEF.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\IDPropertiesEF\\IDPropertiesEF.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\IDPropertiesEF\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\IDPropertiesEF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -2625,7 +2625,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

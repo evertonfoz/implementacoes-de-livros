@@ -1,0 +1,9 @@
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\bin\Debug\netstandard2.0\IDPropertiesEF.deps.json
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\bin\Debug\netstandard2.0\IDPropertiesEF.dll
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\bin\Debug\netstandard2.0\IDPropertiesEF.pdb
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\obj\Debug\netstandard2.0\IDPropertiesEF.csprojAssemblyReference.cache
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\obj\Debug\netstandard2.0\IDPropertiesEF.AssemblyInfoInputs.cache
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\obj\Debug\netstandard2.0\IDPropertiesEF.AssemblyInfo.cs
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\obj\Debug\netstandard2.0\IDPropertiesEF.dll
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\obj\Debug\netstandard2.0\IDPropertiesEF.pdb
+C:\Temp\Capitulo05-Revisao-1\XamarinCC\IDPropertiesEF\obj\Debug\netstandard2.0\IDPropertiesEF.csproj.CoreCompileInputs.cache

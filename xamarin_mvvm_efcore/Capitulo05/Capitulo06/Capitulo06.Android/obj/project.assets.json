@@ -3740,11 +3740,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06.Android\\Capitulo06.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06.Android\\Capitulo06.Android.csproj",
       "projectName": "Capitulo06.Android",
-      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06.Android\\Capitulo06.Android.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06.Android\\Capitulo06.Android.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06.Android\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3765,11 +3765,11 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj": {
-              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj"
             },
-            "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Interfaces\\Interfaces.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Interfaces\\Interfaces.csproj"
             }
           }
         }

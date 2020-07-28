@@ -4302,11 +4302,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj",
       "projectName": "Capitulo06",
-      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\Capitulo06.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\Capitulo06\\Capitulo06\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -4327,8 +4327,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\SQLiteEF\\SQLiteEF.csproj": {
-              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\xamarin_mvvm_efcore\\Capitulo05\\SQLiteEF\\SQLiteEF.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\SQLiteEF\\SQLiteEF.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05\\SQLiteEF\\SQLiteEF.csproj"
             }
           }
         }
@@ -4367,7 +4367,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
