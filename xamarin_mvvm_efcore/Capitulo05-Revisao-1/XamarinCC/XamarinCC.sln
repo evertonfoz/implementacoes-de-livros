@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLiteEF", "SQLiteEF\SQLite
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{D1CCECC7-57AA-4979-B276-5D01578358C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDPropertiesEF", "IDPropertiesEF\IDPropertiesEF.csproj", "{D9FCF865-A92C-4870-970F-E8567F099D24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDPropertiesEF", "IDPropertiesEF\IDPropertiesEF.csproj", "{D9FCF865-A92C-4870-970F-E8567F099D24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OficinaModels", "OficinaModels\OficinaModels.csproj", "{9F1FF40D-22FC-4299-8F09-D7A449C29AFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OficinaModels", "OficinaModels\OficinaModels.csproj", "{9F1FF40D-22FC-4299-8F09-D7A449C29AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capitulo05Migrations", "Capitulo05Migrations\Capitulo05Migrations.csproj", "{A924AB25-6CA7-413E-886E-80EA969A4B3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,18 @@ Global
 		{9F1FF40D-22FC-4299-8F09-D7A449C29AFE}.Release|iPhone.Build.0 = Release|Any CPU
 		{9F1FF40D-22FC-4299-8F09-D7A449C29AFE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{9F1FF40D-22FC-4299-8F09-D7A449C29AFE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Release|iPhone.Build.0 = Release|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{A924AB25-6CA7-413E-886E-80EA969A4B3E}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

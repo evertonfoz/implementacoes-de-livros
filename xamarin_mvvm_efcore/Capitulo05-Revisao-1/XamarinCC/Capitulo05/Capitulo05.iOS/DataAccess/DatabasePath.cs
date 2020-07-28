@@ -10,7 +10,7 @@ namespace Capitulo05.iOS.DataAccess
     {
         public string GetDbPath()
         {
-            var caminhoCompleto = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "..", "Library", "Oficina.db1");
+            var caminhoCompleto = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "..", "Library", "Oficina.db");
             return caminhoCompleto;
         }
     }

@@ -13,7 +13,8 @@ namespace CasaDoCodigo.DataAccess
         private DatabaseContext()
         {
             //this.Database.EnsureDeleted();
-            this.Database.EnsureCreated();
+            //this.Database.EnsureCreated();
+            this.Database.Migrate();
         }
 
         public static DatabaseContext GetContext(string dbPath)
