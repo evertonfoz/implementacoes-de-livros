@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Capitulo05.Views.Atendimentos.CRUDView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="Fill" Margin="5, 5, 0, 0" Padding="10, 10, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Cliente:" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" FontAttributes="Bold"/>
+                <Label Text="{Binding ClienteNome}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" TextColor="Blue"/>
+                <Image Source="consultar.png" HeightRequest="38" WidthRequest="38" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" IsVisible="{Binding HabilitaAlteracao}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PesquisarCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Dados do Atendimento" >
+                        <EntryCell Label="Veículo:" Text="{Binding Veiculo}" IsEnabled="{Binding HabilitaAlteracao}"></EntryCell>
+                        <ViewCell>
+                            <Grid HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Margin="5, 3, 0, 0" Padding="10, 0, 0, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="Chegada:" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0"/>
+                                <DatePicker VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" Date="{Binding DataChegada}" Grid.Column="1" Grid.Row="0" IsEnabled="{Binding HabilitaAlteracao}">
+                                    <DatePicker.Format >dd/MM/yyyy</DatePicker.Format>
+                                </DatePicker>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Margin="5, 3, 0, 0" Padding="10, 0, 0, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TimePicker VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" Time="{Binding HoraChegada}" Grid.Column="1" Grid.Row="0" IsEnabled="{Binding HabilitaAlteracao}">
+                                    <TimePicker.Format>HH:mm</TimePicker.Format>
+                                </TimePicker>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <Grid HorizontalOptions="Fill" Margin="5, 3, 0, 0" Padding="10, 0, 0, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="Previsão:" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="0"/>
+                                <DatePicker VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" Date="{Binding DataPrometida}" Grid.Column="1" Grid.Row="0" IsEnabled="{Binding HabilitaAlteracao}">
+                                    <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
+                                </DatePicker>
+                            </Grid>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <Grid HorizontalOptions="Fill" Margin="5, 3, 0, 0" Padding="10, 0, 0, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TimePicker VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" Time="{Binding HoraPrometida}" Grid.Column="1" Grid.Row="0" IsEnabled="{Binding HabilitaAlteracao}">
+                                    <TimePicker.Format>HH:mm</TimePicker.Format>
+                                </TimePicker>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Margin="5, 3, 0, 0" Padding="10, 5, 0, 0">
+                                <Label Text="{Binding EntregaVeiculo}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <Button Text="Gravar Alterações" FontAttributes="Bold" VerticalOptions="End" Command="{Binding GravarCommand}" IsVisible="{Binding HabilitaAlteracao}"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

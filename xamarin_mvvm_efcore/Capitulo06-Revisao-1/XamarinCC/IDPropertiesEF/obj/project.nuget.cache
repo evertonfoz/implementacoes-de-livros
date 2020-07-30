@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7svOS/5ZscubR+0JLJq9XMVjYnb86PUNBFWQLiahQb1dsHAQhQHSgwkew2H9BUrZ9+TAhfL5bv6JZ8qtmTx7Pw==",
+  "success": true,
+  "projectFilePath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\IDPropertiesEF\\IDPropertiesEF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

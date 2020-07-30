@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "3Ba0gVr7p42gG9Dd0KSqgXM0tGkYqQ5DbJlHOE+2hOqckwqJKA6BKPv0QVXjHquNsbmnEQZgV4QM9/rO3WARYw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06\\IDPropertiesSNS\\IDPropertiesSNS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlite-net-standard\\1.5.1\\sqlite-net-standard.1.5.1.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.5\\sqlitepclraw.bundle_green.1.1.5.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\sqlitepclraw.core\\1.1.5\\sqlitepclraw.core.1.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

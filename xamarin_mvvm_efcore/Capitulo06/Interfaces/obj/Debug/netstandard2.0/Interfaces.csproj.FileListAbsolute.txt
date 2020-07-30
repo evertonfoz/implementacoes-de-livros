@@ -34,3 +34,12 @@ C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfo.cs
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.dll
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\bin\Debug\netstandard2.0\Interfaces.deps.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\bin\Debug\netstandard2.0\Interfaces.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\bin\Debug\netstandard2.0\Interfaces.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\Interfaces\obj\Debug\netstandard2.0\Interfaces.pdb

@@ -24,7 +24,6 @@ namespace Capitulo06.Views.Clientes
             BindingContext = viewModel;
             ClienteSelecionado = null;
         }
-
         protected override void OnAppearing()
         {
             base.OnAppearing();

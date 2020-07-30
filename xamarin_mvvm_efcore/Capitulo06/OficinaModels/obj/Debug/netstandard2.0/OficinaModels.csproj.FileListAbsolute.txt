@@ -48,3 +48,15 @@ C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\OficinaModels\o
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.csproj.CopyComplete
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.dll
 C:\Users\Everton\Documents\GitHub\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\bin\Debug\netstandard2.0\OficinaModels.deps.json
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\bin\Debug\netstandard2.0\OficinaModels.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\bin\Debug\netstandard2.0\OficinaModels.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\bin\Debug\netstandard2.0\IDPropertiesEF.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\bin\Debug\netstandard2.0\IDPropertiesEF.pdb
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.csprojAssemblyReference.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.AssemblyInfoInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.AssemblyInfo.cs
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.csproj.CoreCompileInputs.cache
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.csproj.CopyComplete
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.dll
+C:\Users\Everton\Documents\GitHub\implementacoes-de-livros\xamarin_mvvm_efcore\Capitulo06\OficinaModels\obj\Debug\netstandard2.0\OficinaModels.pdb
