@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2qEIjz2GRgMLrq6JynNR0K7BbOGIN8AvVmBe3R+BkxT66uacUP1T3qlgn0RBsPzJ32Dp3nGSAr14sB045AOH0Q==",
+  "success": true,
+  "projectFilePath": "C:\\Temp\\Capitulo07-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

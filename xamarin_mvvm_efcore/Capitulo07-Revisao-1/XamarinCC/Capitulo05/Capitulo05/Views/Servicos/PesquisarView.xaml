@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Capitulo05.Views.Servicos.PesquisarView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             Title="Pesquisa por serviço">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5,20,5,0">
+            <SearchBar x:Name="searchBar" HeightRequest="25" Placeholder="Digite o nome do serviço..." TextColor="Black" SearchCommand="{Binding PesquisarCommand}" SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"/>
+            <ListView x:Name="lvServicos" HasUnevenRows="True" ItemsSource="{Binding ServicosEncontrados}" SelectedItem="{Binding ServicoLocalizadoSelecionado}" Margin="10, 5, 0, 0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding ServicoID}" TextColor="Blue" IsVisible="False"/>
+                                <Label Text="{Binding Nome}" TextColor="Blue" FontSize="Large"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
