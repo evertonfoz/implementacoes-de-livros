@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FO5AFV5NHOKSb9hVIbMaLBQuAgYO/M9NrWBvFmz1sr/IjK5+W92PybVpU1HiD29ECgUkL2Z338KSraNin+bsxw==",
+  "dgSpecHash": "egheREteFzELC3nhziyhLLfgOWFUsNNtiqbpIBqj0OiwX3TqH+dn3auTfWs75xx2GNVhxGaa10B0VMmfL1aixg==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\Capitulo03.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\Capitulo03.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",

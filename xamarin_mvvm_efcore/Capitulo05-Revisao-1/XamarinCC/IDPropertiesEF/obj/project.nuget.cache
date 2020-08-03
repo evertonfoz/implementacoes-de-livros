@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NWX5IDJzk1ipQdfVL5/a4UivrkuA/MRYUyiwmpbN44A82p0CveyHm5WFSyJlWmhZf95NcFRBoUSwD96ASXtNbw==",
+  "dgSpecHash": "bcNA6k8skAwO87AVfMK2bqid6DLkeAXCoY/JlnhmUDNHwGE5PE9bWqlaMnNb4B54h3e2ds56qqi+10USEDCT3Q==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo05-Revisao-1\\XamarinCC\\IDPropertiesEF\\IDPropertiesEF.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05-Revisao-1\\XamarinCC\\IDPropertiesEF\\IDPropertiesEF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aB0dEKUQUJd2kI9UcHb2WAErAxG38pFdmg9g3s0fQhzGHhpjoE18PpG3/sbSMCQ1VEL3xb1qGJbDi379xL+rsA==",
+  "dgSpecHash": "G4SGv/fDxSlgm3gebkSbS5pdvc5txGcP89I2TKyHc5A1TUw3rjM58tC+8YhgD+gjdAd+jtQ+vP5I000D+qqptQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo05-Revisao-1\\XamarinCC\\Capitulo05\\Capitulo05.iOS\\Capitulo05.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05-Revisao-1\\XamarinCC\\Capitulo05\\Capitulo05.iOS\\Capitulo05.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

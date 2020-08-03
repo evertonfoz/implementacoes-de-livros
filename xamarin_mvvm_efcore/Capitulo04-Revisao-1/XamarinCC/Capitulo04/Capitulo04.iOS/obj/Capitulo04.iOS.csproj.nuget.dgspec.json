@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj": {}
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj": {
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj",
         "projectName": "Capitulo04.iOS",
-        "projectPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj",
+        "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj",
         "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj": {
-                "projectPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj"
+              "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj": {
+                "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj": {
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj",
+        "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj",
         "projectName": "Capitulo04",
-        "projectPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj",
+        "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj",
         "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\obj\\",
+        "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -1975,11 +1975,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\Capitulo04.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\Capitulo04.Android.csproj",
       "projectName": "Capitulo04.Android",
-      "projectPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\Capitulo04.Android.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\Capitulo04.Android.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2000,8 +2000,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj": {
-              "projectPath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04\\Capitulo04.csproj"
             }
           }
         }

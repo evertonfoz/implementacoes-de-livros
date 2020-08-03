@@ -303,11 +303,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj",
       "projectName": "OficinaModels",
-      "projectPath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -328,8 +328,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\IDPropertiesEF\\IDPropertiesEF.csproj": {
-              "projectPath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\IDPropertiesEF\\IDPropertiesEF.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\IDPropertiesEF\\IDPropertiesEF.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\IDPropertiesEF\\IDPropertiesEF.csproj"
             }
           }
         }

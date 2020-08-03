@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DcWAzVArqfiX9oF6SIHpsphuWMb4ASqxrEzjlJQUiUvb0rtw8bk1BgEGBiBeOPuGoBNHvDqpaGiHDy/uh0OG5A==",
+  "dgSpecHash": "Zx78E65kekfaxST2fvvyUK3eciv+uewjlgp0rpGVdw78ubjSLRX0myiok7pgpYfsyzLfx53DJbs7GENKp6uNLQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\Capitulo04.Android.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.Android\\Capitulo04.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",

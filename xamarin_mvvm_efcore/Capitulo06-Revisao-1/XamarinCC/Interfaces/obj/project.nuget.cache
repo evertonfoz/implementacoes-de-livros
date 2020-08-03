@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ky69yeWekIAkVx3+LihjA6YYbcgUiUEcLD4QjSyHpcr7ZOGlQuZu5yJd8RpalnNqIxxVLRe2o8hZ5/3AzCouLA==",
+  "dgSpecHash": "7i0vpCb+Vo/o9Bf+BONGM8pYsLqZw0EaeUdqUQbS0UkqUlnaqWNegpDOxlpXhW0teItLdTNcvF6XZL0G4AadaA==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\Interfaces\\Interfaces.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\Interfaces\\Interfaces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

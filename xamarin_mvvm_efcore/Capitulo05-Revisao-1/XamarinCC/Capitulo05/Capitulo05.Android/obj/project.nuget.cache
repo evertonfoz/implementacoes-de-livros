@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d+yFaHvNnKutq2twv6JD+x2qQRaiAHs2GMHN224TncEJt+MW4ILYtvrY68eWCROXl6vlz1e1IL2W7pChvbKYwQ==",
+  "dgSpecHash": "FbGrB9ud8x628dB6s3oAZS9O0JgSu1TBsAMuoHDaTq0mBoq7F0pI3GzwcKBRh5+DNWErntCgUiZ0nEMFmvDWPQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo05-Revisao-1\\XamarinCC\\Capitulo05\\Capitulo05.Android\\Capitulo05.Android.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05-Revisao-1\\XamarinCC\\Capitulo05\\Capitulo05.Android\\Capitulo05.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RBYR0sVg7d2SEamBHecfTkxNpPIp2MLd1Za1fJCJN6GF00KmRFqxm+87+WzUlfyVGKBvqS851sY+q/m4WWuYcQ==",
+  "dgSpecHash": "rKL1UIGhj4qE6/4tk7uP8ZMhJgq89g+t2hl+ZOO6Qx/q9/TFwm5bcHOYPsfuWCViZBHTiBFj/DYvOB5YckOJlQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo04-Revisao-1\\XamarinCC\\Capitulo04\\Capitulo04.iOS\\Capitulo04.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",

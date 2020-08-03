@@ -1234,11 +1234,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
       "projectName": "Capitulo05Migrations",
-      "projectPath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\Capitulo05Migrations\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\Capitulo05Migrations\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1259,8 +1259,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj": {
-              "projectPath": "C:\\Temp\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo06-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj"
             }
           }
         }

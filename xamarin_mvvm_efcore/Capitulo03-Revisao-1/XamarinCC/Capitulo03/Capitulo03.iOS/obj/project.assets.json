@@ -1126,11 +1126,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\Capitulo03.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\Capitulo03.iOS.csproj",
       "projectName": "Capitulo03.iOS",
-      "projectPath": "C:\\Temp\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\Capitulo03.iOS.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\Capitulo03.iOS.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1151,8 +1151,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Temp\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03\\Capitulo03.csproj": {
-              "projectPath": "C:\\Temp\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03\\Capitulo03.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03\\Capitulo03.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo03-Revisao-1\\XamarinCC\\Capitulo03\\Capitulo03\\Capitulo03.csproj"
             }
           }
         }

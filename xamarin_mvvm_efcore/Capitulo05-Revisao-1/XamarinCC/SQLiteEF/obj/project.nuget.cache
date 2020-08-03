@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J8jJ4xtFZKzzcmC3QZDaOWKo0MXGgrVCW08IkXRAa0etogTIzjfnKiER17ExfFd44ki8iTpok1bF+p5ssNhqyA==",
+  "dgSpecHash": "2MiR9VKCoZfRRkna2i1Z50VbDFCPovni/DSpHlUg8TfojGYTR/7dcXlFiX8H7FuHN2WUgzVzt+5a3E0CPm1peA==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo05-Revisao-1\\XamarinCC\\SQLiteEF\\SQLiteEF.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05-Revisao-1\\XamarinCC\\SQLiteEF\\SQLiteEF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

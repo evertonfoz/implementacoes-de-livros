@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ngXFCpDKXSbTXZfVkJItYcqIvaywvVlZyjRWzMnTDMv/LFH866c6bH1yywB39KwyqHfQfAuZE7ywEnufEQ2lbQ==",
+  "dgSpecHash": "oLY6CJ+x4Wa3vyZOKv0fy6N9ksJibHnFOAzDvWOEoXnAO3PkrUpF/TDapnJgY7vBeRTDdfZL1Rs2pcCN5wgbFQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo05-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo05-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
