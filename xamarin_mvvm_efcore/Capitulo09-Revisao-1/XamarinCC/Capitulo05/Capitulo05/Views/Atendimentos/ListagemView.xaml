@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Capitulo05.Views.Atendimentos.ListagemView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             Title="Atendimentos"
+             xmlns:conv="clr-namespace:Capitulo05.Converters;assembly=Capitulo05">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="plus.png" Command="{Binding NovoCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:AtendimentoFinalizadoColor x:Key="colorConvert"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10, 0, 0, 0" VerticalOptions="FillAndExpand">
+            <ListView x:Name="listView" HasUnevenRows="True" ItemsSource="{Binding Atendimentos}" SelectedItem="{Binding AtendimentoSelecionado}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" BackgroundColor="{Binding EstaFinalizado, Converter={StaticResource colorConvert}}">
+                                <Label Text="{Binding Veiculo}" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding Cliente.Nome}" FontSize="14"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

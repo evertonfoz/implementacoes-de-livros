@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Capitulo05.Views.Atendimentos.ServicosListagemView"
+             Title="Serviços Atendimento"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="plus.png" Command="{Binding NovoCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ListView x:Name="listView" HasUnevenRows="True" ItemsSource="{Binding ItensAtendimento}" SelectedItem="{Binding ServicoSelecionado}">
+            <ListView.Footer>
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <BoxView HeightRequest="10" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
+                    <Label Text="{Binding SubTotalItens, StringFormat='SubTotal: {0:C2}'}" FontSize="14" FontFamily="Courier" HorizontalTextAlignment="End"/>
+                </StackLayout>
+            </ListView.Footer>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell BindingContextChanged="OnBindingContextChanged">
+                        <ViewCell.ContextActions>
+                            <MenuItem Command="{Binding Path=BindingContext.EliminarItemCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}" Text="Remover" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="10" Orientation="Vertical">
+                            <Label Text="{Binding Servico.Nome}" FontSize="18" FontAttributes="Bold"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20*"/>
+                                    <ColumnDefinition Width="10*"/>
+                                    <ColumnDefinition Width="30*"/>
+                                    <ColumnDefinition Width="10*"/>
+                                    <ColumnDefinition Width="30*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding Quantidade}" Grid.Column="0" FontSize="14" FontFamily="Courier" HorizontalTextAlignment="End"/>
+                                <Label Text="*" FontSize="14" Grid.Column="1" FontFamily="Courier"/>
+                                <Label Text="{Binding Valor, StringFormat='{0:C2}'}" Grid.Column="2" FontSize="14" FontFamily="Courier" HorizontalTextAlignment="End"/>
+                                <Label Text="=" FontSize="14" Grid.Column="3" FontFamily="Courier"/>
+                                <Label Text="{Binding SubTotal, StringFormat='{0:C2}'}" Grid.Column="4" FontSize="14" FontFamily="Courier" HorizontalTextAlignment="End"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
