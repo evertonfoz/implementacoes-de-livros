@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CrAXDAoEpaFQpfFM5Gsn8Cta7KAkGwvk9iu0MZIGjLzt8ich8E8etTHLKHCBSlmznTiwEI6UiygxJ+EoNF0ymA==",
+  "dgSpecHash": "MRpHV0/mRv27TVJyOF4p01YZCtUhUVqksibKI/KxLMwMqytG8Yfqhu6L91kLgEwUSRKxx9HYBkj5lyZI9iVyOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11\\SQLiteEF\\SQLiteEF.csproj",
   "expectedPackageFiles": [

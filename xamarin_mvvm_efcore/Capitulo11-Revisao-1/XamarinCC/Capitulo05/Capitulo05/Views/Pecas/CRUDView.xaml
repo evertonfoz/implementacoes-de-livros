@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Capitulo05.Views.Pecas.CRUDView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:conv="clr-namespace:Capitulo05.Converters;assembly=Capitulo05"
+             ios:Page.UseSafeArea="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary>
+                <conv:ImagemPecaConverter x:Key="imagemConverter"/>
+                <conv:BooleanNegadoConverter x:Key="booleanNegadoConverter"/>
+            </ResourceDictionary>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="5" HeightRequest="150" VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Margin="10" IsVisible="{Binding CarregandoImagem}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <ActivityIndicator IsRunning="True" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <Label IsVisible="False" x:Name="CaminhoImagem" Text="{Binding CaminhoImagem}" />
+                    <StackLayout Margin="10" HeightRequest="150" IsVisible="{Binding CarregandoImagem, Converter={StaticResource booleanNegadoConverter}}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <Image Source="{Binding ImagemEmBytes, Converter={StaticResource imagemConverter}, ConverterParameter={x:Reference Name=CaminhoImagem}}" HeightRequest="150"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+                <TableView Intent="Form">
+                    <TableRoot>
+                        <TableSection Title="Dados da peça">
+                            <EntryCell Label="Nome:" Text="{Binding Nome}"/>
+                            <EntryCell Label="Valor:" Text="{Binding Valor}" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                            <ViewCell>
+                                <ActivityIndicator IsRunning="{Binding Atualizando}" Color="Black" />
+                            </ViewCell>
+                            <ViewCell>
+                                <Grid HorizontalOptions="Fill">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50*"/>
+                                        <ColumnDefinition Width="50*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Text="Álbum" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0" Command="{Binding AlbumCommand}"/>
+                                    <Button Text="Gravar" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0" Command="{Binding GravarCommand}"/>
+                                </Grid>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
