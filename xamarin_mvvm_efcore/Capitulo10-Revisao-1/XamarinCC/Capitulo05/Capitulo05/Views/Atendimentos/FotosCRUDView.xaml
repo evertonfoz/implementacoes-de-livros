@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Capitulo05.Views.Atendimentos.FotosCRUDView">
+    <ContentPage.Resources>
+        <StyleSheet Source="../../Styles/fotoscrud.css"/>
+        <OnPlatform x:TypeArguments="Color" Android="Black" iOS="White" x:Key="buttonTextColor" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image x:Name="fotoCarro" Source="consultar.png" Margin="10"/>
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Label Text="Observações" StyleClass="header" />
+                        <StackLayout BackgroundColor="Black" Padding="1">
+                            <Editor Text="{Binding Observacoes}" />
+                        </StackLayout>
+                    <Grid HorizontalOptions="Fill" Margin="5, 5, 0, 0" Padding="10, 10, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="33*"/>
+                            <ColumnDefinition Width="34*"/>
+                            <ColumnDefinition Width="33*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Button Text="Câmera" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0" Command="{Binding CameraCommand}" TextColor="{StaticResource buttonTextColor}"/>
+                        <Button Text="Álbum" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0" Command="{Binding AlbumCommand}" TextColor="{StaticResource buttonTextColor}"/>
+                        <Button Text="Gravar" HorizontalOptions="Center" Grid.Column="2" Grid.Row="0" Command="{Binding GravarFotoCommand}" StyleId="botaoGravar"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

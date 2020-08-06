@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5iOaYSe7P6t6dBLcGsOu0CFe1wmmxXXlEP4yqs7+tILnzGF1+m9duFhzuAa9iolGSV1vGRcQc3j6F16a5pI6LQ==",
+  "dgSpecHash": "lz+QwRPYjVCuFs0l6Zy0hlt9fCjvOM20yNTpPz3shP8MVlcwGjRwtNK6tNET3Outn0SUZVoPZtXaYzfQ8oAgDg==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\capitulo 07 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

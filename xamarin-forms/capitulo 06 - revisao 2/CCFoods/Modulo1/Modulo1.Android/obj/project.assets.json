@@ -2336,11 +2336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\Modulo1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\Modulo1.Android.csproj",
       "projectName": "Modulo1.Android",
-      "projectPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\Modulo1.Android.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\Modulo1.Android.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2361,8 +2361,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
-              "projectPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
             }
           }
         }

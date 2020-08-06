@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj": {}
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj": {
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
         "projectName": "Modulo1.iOS",
-        "projectPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+        "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
         "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
-                "projectPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
+              "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
+                "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj",
+        "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj",
         "projectName": "Modulo1",
-        "projectPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj",
+        "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\Modulo1.csproj",
         "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\obj\\",
+        "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -153,7 +153,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

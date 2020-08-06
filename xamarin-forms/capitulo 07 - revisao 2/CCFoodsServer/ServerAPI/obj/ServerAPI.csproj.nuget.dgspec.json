@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj": {}
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj": {
+    "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj",
         "projectName": "ServerAPI",
-        "projectPath": "C:\\Temp\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj",
+        "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj",
         "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\obj\\",
+        "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

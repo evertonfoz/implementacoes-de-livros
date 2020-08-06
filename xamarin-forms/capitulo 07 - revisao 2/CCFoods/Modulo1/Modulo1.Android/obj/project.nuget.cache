@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "awTACTYb1OgGlsxgA6FYFBcXjJu/jgybwa9F6Wgx+Pw/wXnUEGb30tIORmP+cPbkD0viNHsh3RI732NBlra8Bg==",
+  "dgSpecHash": "YSSifZfIZjepAHQeb1jdadUeK7oOZhDLiHkewu8mYK8KVOdK2CC4ZQ8i0tytkeg8YcO8ps+gJ4bIOuniUAHJhA==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\capitulo 07 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\Modulo1.Android.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoods\\Modulo1\\Modulo1.Android\\Modulo1.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\plugin.currentactivity\\2.1.0.4\\plugin.currentactivity.2.1.0.4.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KrM3LR54jRqOvtXNt7W8IqBt/QkWQwzRbNqfZehOb9MWO/esMOxKH8P58GhavR68Foxo5pHgEd55PiE/XoljAA==",
+  "dgSpecHash": "o8mi3G3IhJYVhNchv7UHjHgHzMb9mPLBMTshXB+Ydld5ElUzaopOWgYhifhV18kOSUHTA8fm9rFUzXo7KpwRVg==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 07 - revisao 2\\CCFoodsServer\\ServerAPI\\ServerAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

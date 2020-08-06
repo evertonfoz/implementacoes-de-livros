@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/msP1WDlLZafVXe6fElpl2eWIuK8u9S+1O+qjuYu3qg34/kRBOIz9q9RLjx1ghgpZDV5gTmdOuon0+BAL+1MLg==",
+  "dgSpecHash": "7xFLKTPn1JU6uYpaeJ+R6exNJvngJT8Z9355eR4KOcM1SnMQJiW15tfVYztmqeb+552zDjvst4rD0JSaDRdwRA==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin-forms\\capitulo 06 - revisao 2\\CCFoods\\Modulo1\\Modulo1.iOS\\Modulo1.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
