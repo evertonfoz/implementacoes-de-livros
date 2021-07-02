@@ -1518,11 +1518,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\SQLiteEF\\SQLiteEF.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\SQLiteEF\\SQLiteEF.csproj",
       "projectName": "SQLiteEF",
-      "projectPath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\SQLiteEF\\SQLiteEF.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\SQLiteEF\\SQLiteEF.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\SQLiteEF\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\SQLiteEF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1542,12 +1542,13 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\Interfaces\\Interfaces.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\Interfaces\\Interfaces.csproj"
             },
-            "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj": {
-              "projectPath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj"
             }
           }
         }
@@ -1560,6 +1561,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -1586,7 +1588,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1234,11 +1234,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
+      "projectUniqueName": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
       "projectName": "Capitulo05Migrations",
-      "projectPath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
+      "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
       "packagesPath": "C:\\Users\\Everton\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\obj\\",
+      "outputPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1258,9 +1258,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj": {
-              "projectPath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj"
+            "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj": {
+              "projectPath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\OficinaModels\\OficinaModels.csproj"
             }
           }
         }
@@ -1273,6 +1274,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.Data.Sqlite.Core": {
             "target": "Package",
@@ -1313,12 +1315,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FNLilVfFnNX4sXnkLdH7kQDzl6PIp9n4Dc3RjT+1F7TK8QUuGWV9+zwZ568sE3mNz3ZD1XXqccPyU664v4pq2A==",
+  "dgSpecHash": "OgJZ+Cx+tqFpq1pUOUobk+vt4ubvYMNOZQQCVjnL+rtZdPLMvkTvobvA7t0pxPdCEEBKAB2HLu2N7Izp/2JZvQ==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
+  "projectFilePath": "C:\\Users\\Everton\\Documents\\GitHub\\implementacoes-de-livros\\xamarin_mvvm_efcore\\Capitulo11-Revisao-1\\XamarinCC\\Capitulo05Migrations\\Capitulo05Migrations.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
@@ -37,7 +37,8 @@
     "C:\\Users\\Everton\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\Everton\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\Everton\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+    "C:\\Users\\Everton\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\Everton\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
