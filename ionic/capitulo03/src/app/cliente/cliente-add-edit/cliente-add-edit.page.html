@@ -7,24 +7,34 @@
 </ion-header>
 
 <ion-content padding-top>
-  <ion-item lines="none">
-    <ion-label position="floating">Nome</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+  <form (ngSubmit)="submit()">
+    <ion-item lines="none">
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="nome" name="nome" type="text"></ion-input>
+    </ion-item>
 
-  <ion-label position="stacked">Email</ion-label>
-  <ion-input type="email" placeholder="Email"></ion-input>
+    <ion-item lines="none">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="text"></ion-input>
+    </ion-item>
 
-  <ion-label position="stacked">Telefone</ion-label>
-  <ion-input type="tel" placeholder="Telefone"></ion-input>
+    <ion-item lines="none">
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input [(ngModel)]="telefone" name="telefone" type="text"></ion-input>
+    </ion-item>
 
-  <ion-label position="stacked">Renda</ion-label>
-  <ion-input type="number" placeholder="Renda" text-right></ion-input>
+    <ion-item lines="none">
+      <ion-label position="floating">Renda</ion-label>
+      <ion-input [(ngModel)]="renda" name="renda" type="text"></ion-input>
+    </ion-item>
 
-  <ion-label position="stacked">Nascimento</ion-label>
-  <ion-input type="text" placeholder="Nascimento"></ion-input>
+    <ion-item lines="none">
+      <ion-label position="floating">Nascimento</ion-label>
+      <ion-input [(ngModel)]="nascimento" name="nascimento" type="text"></ion-input>
+    </ion-item>
 
-  <ion-button shape="round" color="primary" expand="block" padding>
-    Confirmar
-  </ion-button>
+    <ion-button shape="round" color="primary" expand="block" padding type="submit">
+      Confirmar
+    </ion-button>
+  </form>
 </ion-content>

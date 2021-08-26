@@ -3,3 +3,12 @@ ion-input.has-focus {
     border-radius: 10%;
     border: 1px solid black;
 }
+
+ion-item {
+    --inner-padding-end: 3px;
+    color: var(--ion-color-primary);
+}
+
+ion-input {
+    color: black;
+}
