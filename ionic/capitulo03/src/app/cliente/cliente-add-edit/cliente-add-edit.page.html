@@ -7,34 +7,53 @@
 </ion-header>
 
 <ion-content padding-top>
-  <form (ngSubmit)="submit()">
+  <form #form="ngForm" [formGroup]="clienteForm" (submit)="submit()">
     <ion-item lines="none">
       <ion-label position="floating">Nome</ion-label>
-      <ion-input [(ngModel)]="nome" name="nome" type="text"></ion-input>
+      <ion-input formControlName="nome" type="text"
+        [class.invalid]="!clienteForm.controls['nome'].valid && clienteForm.controls['nome'].touched"></ion-input>
+      <!-- <small class="error-message"
+        *ngIf="(clienteForm.get('nome').errors?.required || clienteForm.get('nome').errors?.minlength ||  clienteForm.get('nome').errors?.maxlength) &&  form.submitted">
+        Informe o nome (3 a 50 caracteres)
+      </small> -->
     </ion-item>
-
     <ion-item lines="none">
       <ion-label position="floating">Email</ion-label>
-      <ion-input [(ngModel)]="email" name="email" type="text"></ion-input>
+      <ion-input formControlName="email" type="email"></ion-input>
+      <!-- <small class="error-message"
+        *ngIf="clienteForm.get('email').errors?.required || clienteForm.get('email').errors?.email">
+        Informe um email válido
+      </small> -->
     </ion-item>
-
     <ion-item lines="none">
       <ion-label position="floating">Telefone</ion-label>
-      <ion-input [(ngModel)]="telefone" name="telefone" type="text"></ion-input>
+      <ion-input formControlName="telefone" type="tel"></ion-input>
+      <!-- <small class="error-message"
+        *ngIf="clienteForm.get('telefone').errors?.required && (form.submitted || clienteForm.get('telefone').touched)">
+        Informe o telefone
+      </small> -->
     </ion-item>
-
     <ion-item lines="none">
       <ion-label position="floating">Renda</ion-label>
-      <ion-input [(ngModel)]="renda" name="renda" type="text"></ion-input>
+      <ion-input formControlName="renda" type="number"></ion-input>
+      <!-- <small class="error-message"
+        *ngIf="clienteForm.get('renda').errors?.required || clienteForm.get('renda').errors?.min ">
+        Informe uma renda positiva
+      </small> -->
     </ion-item>
-
     <ion-item lines="none">
       <ion-label position="floating">Nascimento</ion-label>
-      <ion-input [(ngModel)]="nascimento" name="nascimento" type="text"></ion-input>
+      <ion-input formControlName="nascimento" type="text"></ion-input>
+      <!-- <small class="error-message" *ngIf="clienteForm.get('nascimento').errors?.required">
+        Informe uma data de nascimento
+      </small> -->
     </ion-item>
-
     <ion-button shape="round" color="primary" expand="block" padding type="submit">
       Confirmar
     </ion-button>
   </form>
+  <ion-label *ngIf="hasErrors">
+    Erro
+    {{ errorMessage }}
+  </ion-label>
 </ion-content>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,8 +13,9 @@ import { ClienteAddEditPage } from './cliente-add-edit.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ClienteAddEditPageRoutingModule
+    ClienteAddEditPageRoutingModule,
+    ReactiveFormsModule,
   ],
   declarations: [ClienteAddEditPage]
 })
-export class ClienteAddEditPageModule {}
+export class ClienteAddEditPageModule { }
