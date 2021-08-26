@@ -1,7 +1,10 @@
 {
   "name": "capitulo03",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular"
 }

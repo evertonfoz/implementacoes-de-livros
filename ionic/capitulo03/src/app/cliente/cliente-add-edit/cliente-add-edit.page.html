@@ -8,6 +8,18 @@
 
 <ion-content padding-top>
   <form #form="ngForm" [formGroup]="clienteForm" (submit)="submit()">
+    <div>
+      <ng-container *ngFor="let validation of validationMessages.nome">
+        <div *ngIf="clienteForm.get('nome').hasError(validation.type)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+      <ng-container *ngFor="let validation of validationMessages.renda">
+        <div *ngIf="clienteForm.get('renda').hasError(validation.type)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
     <ion-item lines="none">
       <ion-label position="floating">Nome</ion-label>
       <ion-input formControlName="nome" type="text"
@@ -42,8 +54,10 @@
       </small> -->
     </ion-item>
     <ion-item lines="none">
-      <ion-label position="floating">Nascimento</ion-label>
-      <ion-input formControlName="nascimento" type="text"></ion-input>
+      <ion-label position="stacked">Nascimento</ion-label>
+      <ion-datetime formControlName="nascimento" displayFormat="DD/MM/YYYY" min="1967" max="2021-10-31">
+        <ion-item lines="none" (click)="selecionarData()"></ion-item>
+      </ion-datetime>
       <!-- <small class="error-message" *ngIf="clienteForm.get('nascimento').errors?.required">
         Informe uma data de nascimento
       </small> -->
@@ -52,8 +66,9 @@
       Confirmar
     </ion-button>
   </form>
-  <ion-label *ngIf="hasErrors">
-    Erro
-    {{ errorMessage }}
-  </ion-label>
+  <!-- <ion-list *ngIf="hasErrors" class="errors-summary">
+    <ion-label *ngFor="let errorMessage of errorsMessage" class="errors-summary">
+      {{errorMessage}}<br />
+    </ion-label>
+  </ion-list> -->
 </ion-content>
