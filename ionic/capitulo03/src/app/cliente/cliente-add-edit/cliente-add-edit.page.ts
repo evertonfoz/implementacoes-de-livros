@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
-import { Platform } from '@ionic/angular';
+import { AlertController, Platform, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cliente-add-edit',
@@ -12,8 +12,8 @@ export class ClienteAddEditPage implements OnInit {
 
   cliente = {};
   clienteForm: FormGroup;
-  // hasErrors = false;
-  // errorsMessage: string[];
+  hasErrors = false;
+  errorsMessage: string[];
 
   validationMessages = {
     nome: [
@@ -26,7 +26,11 @@ export class ClienteAddEditPage implements OnInit {
     ]
   };
 
-  constructor(private formBuilder: FormBuilder, private datePicker: DatePicker, private platform: Platform,) {
+  constructor(private formBuilder: FormBuilder,
+    private datePicker: DatePicker,
+    private platform: Platform,
+    private alertCtrl: AlertController,
+    private toastCtrl: ToastController) {
   }
 
   get isBrowserPlatform(): boolean {
@@ -46,15 +50,23 @@ export class ClienteAddEditPage implements OnInit {
     });
   }
 
+  // async submit() {
+  //   this.errorsMessage = [];
+  //   if (this.clienteForm.get('nome').hasError('required')) {
+  //     this.errorsMessage.push('Nome é obrigatório');
+  //   }
+  //   if (this.clienteForm.get('email').hasError('required')) {
+  //     this.errorsMessage.push('Email é obrigatório');
+  //   }
+  //   this.hasErrors = this.errorsMessage.length > 0;
+
+  //   if (!this.hasErrors) {
+  //     await this.presentAlert('Sucesso', 'Gravação bem sucedida', 'Os dados do cliente foram gravados', ['Ok']);
+  //   }
+  // }
+
   async submit() {
-    // this.errorsMessage = [];
-    // if (this.clienteForm.get('nome').hasError('required')) {
-    //   this.errorsMessage.push('Nome é obrigatório');
-    // }
-    // if (this.clienteForm.get('email').hasError('required')) {
-    //   this.errorsMessage.push('Email é obrigatório');
-    // }
-    // this.hasErrors = this.errorsMessage.length > 0;
+    await this.presentToast('Gravação bem sucedida', 3000, 'top');
   }
 
   selecionarData() {
@@ -76,4 +88,22 @@ export class ClienteAddEditPage implements OnInit {
     });
   }
 
+  async presentAlert(header: string, subHeader: string, message: string, buttons: string[]) {
+    const alert = await this.alertCtrl.create({
+      header,
+      subHeader,
+      message,
+      buttons
+    });
+    await alert.present();
+  }
+
+  async presentToast(message: string, duration: number, position: 'top' | 'bottom') {
+    const toast = await this.toastCtrl.create({
+      message,
+      duration,
+      position
+    });
+    toast.present();
+  }
 }
