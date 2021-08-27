@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-cliente-add-edit',
@@ -25,7 +26,14 @@ export class ClienteAddEditPage implements OnInit {
     ]
   };
 
-  constructor(private formBuilder: FormBuilder, private datePicker: DatePicker) {
+  constructor(private formBuilder: FormBuilder, private datePicker: DatePicker, private platform: Platform,) {
+  }
+
+  get isBrowserPlatform(): boolean {
+    if (this.platform.is('cordova')) {
+      return false;
+    }
+    return true;
   }
 
   ngOnInit() {
@@ -34,7 +42,7 @@ export class ClienteAddEditPage implements OnInit {
       email: ['', Validators.compose([Validators.required, Validators.email])],
       telefone: ['', Validators.required],
       renda: ['0', Validators.compose([Validators.required, Validators.min(0)])],
-      nascimento: [{ value: '', disabled: true }, Validators.required]
+      nascimento: [{ value: '', disabled: !this.isBrowserPlatform }, Validators.required]
     });
   }
 
@@ -50,16 +58,22 @@ export class ClienteAddEditPage implements OnInit {
   }
 
   selecionarData() {
-    this.datePicker.show({
-      date: new Date(),
-      mode: 'date',
-      locale: 'pt-br',
-      doneButtonLabel: 'Confirmar',
-      cancelButtonLabel: 'Cancelar'
-    })
-      .then(
-        data => this.clienteForm.controls.nascimento.setValue(data.toISOString())
-      );
+    this.platform.ready().then(() => {
+      if (this.platform.is('cordova')) {
+        this.datePicker.show({
+          date: new Date(),
+          mode: 'date',
+          locale: 'pt-br',
+          doneButtonLabel: 'Confirmar',
+          cancelButtonLabel: 'Cancelar'
+        })
+          .then(
+            data => this.clienteForm.controls.nascimento.setValue(data.toISOString())
+          );
+      } else {
+        // instruções para execução no navegador
+      }
+    });
   }
 
 }
