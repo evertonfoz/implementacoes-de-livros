@@ -1,17 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonList } from '@ionic/angular';
+import { TipoServico } from 'src/app/models/tipo-servico.model';
+import { TipoServicosService } from 'src/app/services/tipo-servicos.service';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
     templateUrl: './tipo-servicos-listagem.page.html'
 })
 export class TipoServicosListagemPage implements OnInit {
 
-    public tiposServicos = [
-        { id: 1, nome: 'Alinhamento', valor: 12.34 },
-        { id: 2, nome: 'Balanceamento', valor: 56.78 },
-        { id: 3, nome: 'Revisão freios', valor: 90.12 },
-        { id: 4, nome: 'Suspensão', valor: 34.56 }
-    ];
+    public tiposServicos;
+    @ViewChild('slidingList') slidingList: IonList;
+
+    constructor(
+        private tipoServicoService: TipoServicosService,
+        private toastService: ToastService
+    ) { }
 
     ngOnInit(): void {
+        this.tiposServicos = this.tipoServicoService.getAll();
+    }
+
+    async removerTipoServico(tipoServico: TipoServico) {
+        this.tipoServicoService.remove(tipoServico);
+        this.toastService.presentToast('Tipo de serviço removido', 3000, 'top');
+        await this.slidingList.closeSlidingItems();
     }
 }
