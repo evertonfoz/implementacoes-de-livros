@@ -4,5 +4,14 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding-left padding-top>
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let tipoServico of tiposServicos">
+            <ion-label>
+                <h2>{{tipoServico.nome}}</h2>
+                <p style="text-align:right">R$ {{tipoServico.valor}}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
+<ion-content>

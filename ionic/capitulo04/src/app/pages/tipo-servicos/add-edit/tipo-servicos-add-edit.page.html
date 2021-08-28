@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Tipos de serviços</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item-divider color="light">
+        <ion-grid no-padding>
+            <ion-row no-padding>
+                <ion-col col-3 align-self-center>
+                    <ion-img style="width: 50px; height: 50px;" src="assets/imgs/tab_servicos.png"></ion-img>
+                </ion-col>
+                <ion-col col-9 align-self-center style="font-size: 20px">
+                    <ion-label style="font-size: 30px">Dados do serviço</ion-label>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item-divider>
+    <ion-item>{{tipoServico.nome}}</ion-item>
+    <ion-item>
+        <span item-end>R$ {{tipoServico.valor}}</span>
+    </ion-item>
+</ion-content>
