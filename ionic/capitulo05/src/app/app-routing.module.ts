@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./pages/tipo-servicos/listagem/tipo-servicos-listagem.module').then(m => m.TipoServicosListagemPageModule)
+    loadChildren: () => import('./pages/pecas/add-edit/pecas-add-edit.module').then(m => m.PecasAddEditPageModule)
   },
   {
     path: 'add-edit/:id',
