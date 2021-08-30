@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Guid } from 'guid-typescript';
 import { ToastService } from 'src/app/services/toast.service';
+import { PecasService } from 'src/app/services/pecas.service';
 
 @Component({
     templateUrl: './pecas-add-edit.page.html'
@@ -17,6 +18,7 @@ export class PecasAddEditPage implements OnInit {
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private toastService: ToastService,
+        private pecasService: PecasService
     ) { }
 
     iniciarEdicao() {
@@ -28,14 +30,15 @@ export class PecasAddEditPage implements OnInit {
         this.modoDeEdicao = false;
     }
 
-    submit() {
-        // Atualizar/Inserir objeto de maneira persistida
+    async submit() {
+        await this.pecasService.update(this.pecasForm.value);
+        this.peca = this.pecasForm.value;
         this.toastService.presentToast('Gravação bem sucedida', 3000, 'top');
         this.modoDeEdicao = false;
         // Navegar para a página principal
     }
 
-    ngOnInit() {
+    async ngOnInit() {
         const id = this.route.snapshot.paramMap.get('id');
 
         if (id && Guid.isGuid(id)) {
