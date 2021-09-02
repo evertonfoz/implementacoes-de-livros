@@ -20,8 +20,11 @@ registerLocaleData(localePt, 'pt-BR');
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot()],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy, LOCALE_ID, useValue: 'pt-BR' }],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    SQLite
+  ],
   bootstrap: [AppComponent],
-  SQLite
 })
 export class AppModule { }
