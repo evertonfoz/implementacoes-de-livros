@@ -20,39 +20,40 @@
             </ion-row>
         </ion-grid>
     </ion-item-divider>
+    <ng-container *ngIf="pecasForm">
+        <form [formGroup]="pecasForm" (submit)="submit()">
+            <ion-item lines="none" [disabled]="!modoDeEdicao">
+                <ion-label position="floating" class="label-input-title">Nome</ion-label>
+                <ion-input formControlName="nome" type="text" style="margin-left: 3%;"></ion-input>
+            </ion-item>
 
-    <form [formGroup]="pecasForm" (submit)="submit()">
-        <ion-item lines="none" [disabled]="!modoDeEdicao">
-            <ion-label position="floating" class="label-input-title">Nome</ion-label>
-            <ion-input formControlName="nome" type="text" style="margin-left: 3%;"></ion-input>
-        </ion-item>
+            <ion-item lines="none" [disabled]="!modoDeEdicao">
+                <ion-label position="floating" class="label-input-title">Valor</ion-label>
+                <ion-input text-right formControlName="valor" type="number"></ion-input>
+            </ion-item>
 
-        <ion-item lines="none" [disabled]="!modoDeEdicao">
-            <ion-label position="floating" class="label-input-title">Valor</ion-label>
-            <ion-input text-right formControlName="valor" type="number"></ion-input>
-        </ion-item>
+            <ion-button *ngIf="!modoDeEdicao" shape="round" color="primary" expand="block" padding
+                (click)="iniciarEdicao()">
+                Alterar dados
+            </ion-button>
+            <div *ngIf="modoDeEdicao" no-padding>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-6>
+                            <ion-button shape="round" color="success" size="small" padding type="submit" expand="block">
+                                Gravar
+                            </ion-button>
+                        </ion-col>
 
-        <ion-button *ngIf="!modoDeEdicao" shape="round" color="primary" expand="block" padding
-            (click)="iniciarEdicao()">
-            Alterar dados
-        </ion-button>
-        <div *ngIf="modoDeEdicao" no-padding>
-            <ion-grid>
-                <ion-row>
-                    <ion-col col-6>
-                        <ion-button shape="round" color="success" size="small" padding type="submit" expand="block">
-                            Gravar
-                        </ion-button>
-                    </ion-col>
-
-                    <ion-col col-6>
-                        <ion-button shape="round" color="warning" size="small" padding (click)="cancelarEdicao()"
-                            expand="block">
-                            Cancelar
-                        </ion-button>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-        </div>
-    </form>
+                        <ion-col col-6>
+                            <ion-button shape="round" color="warning" size="small" padding (click)="cancelarEdicao()"
+                                expand="block">
+                                Cancelar
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </form>
+    </ng-container>
 </ion-content>
