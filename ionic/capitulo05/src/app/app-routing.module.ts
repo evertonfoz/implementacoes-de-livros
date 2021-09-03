@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/pecas/listagem/pecas-listagem.module').then(m => m.PecasListagemPageModule)
+    loadChildren: () => import('./pages/ordensdeservico/listagem/ordensdeservico-listagem.module').then(m => m.OrdensDeServicoListagemPageModule)
   },
   {
-    path: 'add-edit/:id',
-    loadChildren: () => import('./pages/pecas/add-edit/pecas-add-edit.module').then(m => m.PecasAddEditPageModule)
+    path: 'pecas',
+    loadChildren: () => import('./pages/pecas/listagem/pecas-listagem.module').then(m => m.PecasListagemPageModule)
   },
   {
     path: 'add-edit/:id',

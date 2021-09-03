@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
+import { DatabaseService } from './services/database.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +9,17 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private storage: Storage) { }
+  constructor(private storage: Storage,
+    private databaseService: DatabaseService,
+    private platform: Platform,) { }
 
   async ngOnInit() {
-    // If using a custom driver:
-    // await this.storage.defineDriver(MyCustomDriver)
     await this.storage.create();
+  }
+
+  async initializeApp() {
+    this.platform.ready().then(async () => {
+      await this.databaseService.createDatabase();
+    });
   }
 }
