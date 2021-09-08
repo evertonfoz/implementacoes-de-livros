@@ -4,12 +4,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'cliente-add-edit',
     pathMatch: 'full'
+  },
+  {
+    path: 'cliente-add-edit',
+    loadChildren: () => import('./cliente/cliente-add-edit/cliente-add-edit.module').then(m => m.ClienteAddEditPageModule)
   },
 ];
 

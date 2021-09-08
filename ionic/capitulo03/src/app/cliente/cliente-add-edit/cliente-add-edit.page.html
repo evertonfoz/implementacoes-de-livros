@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registro de CLIENTES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding-top>
+  <ion-item lines="none">
+    <ion-label position="floating">Nome:</ion-label>
+    <ion-input #inputNome type="text"></ion-input>
+  </ion-item>
+  <ion-input ref-inputEmail type="email"></ion-input>>
+  <ion-input type="tel" placeholder="Telefone"></ion-input>
+  <ion-input type="number" placeholder="Renda" text-right></ion-input>
+  <ion-input type="text" placeholder="Nascimento"></ion-input>
+  <ion-button shape="round" color="primary" expand="block" padding (click)="submit(inputNome, inputEmail)">
+    Confirmar
+  </ion-button>
+</ion-content>
