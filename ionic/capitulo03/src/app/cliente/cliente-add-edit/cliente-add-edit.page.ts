@@ -1,7 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
-import { Platform } from '@ionic/angular';
+import { Platform, ToastController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cliente-add-edit',
@@ -11,8 +12,8 @@ import { Platform } from '@ionic/angular';
 export class ClienteAddEditPage implements OnInit {
 
   clienteForm: FormGroup;
-  // hasErrors = false;
-  // errorsMessage: string[];
+  hasErrors = false;
+  errorsMessage: string[];
 
   validationMessages = {
     nome: [
@@ -22,10 +23,20 @@ export class ClienteAddEditPage implements OnInit {
     ],
     renda: [
       { type: 'min', message: 'Renda precisa ser positiva' }
-    ]
+    ],
+    nascimento: [{ value: '', disabled: !this.isBrowserPlatform }, Validators.required]
   };
 
-  constructor(private formBuilder: FormBuilder, private datePicker: DatePicker, private platform: Platform,) { }
+  get isBrowserPlatform(): boolean {
+    if (this.platform.is('capacitor')) {
+      return false;
+    }
+    return true;
+  }
+
+  constructor(private formBuilder: FormBuilder, private datePicker: DatePicker,
+    private platform: Platform, private alertCtrl: AlertController,
+    private toastCtrl: ToastController) { }
 
   ngOnInit() {
     this.clienteForm = this.formBuilder.group({
@@ -37,7 +48,8 @@ export class ClienteAddEditPage implements OnInit {
     });
   }
 
-  submit() {
+  async submit() {
+    await this.presentToast('Gravação bem sucedida', 3000, 'top');
     // this.errorsMessage = [];
     // if (this.clienteForm.get('nome').hasError('required')) {
     //   this.errorsMessage.push('Nome é obrigatório');
@@ -46,11 +58,15 @@ export class ClienteAddEditPage implements OnInit {
     //   this.errorsMessage.push('Email é obrigatório');
     // }
     // this.hasErrors = this.errorsMessage.length > 0;
+
+    // if (!this.hasErrors) {
+    //   await this.presentAlert('Sucesso', 'Gravação bem sucedida', 'Os dados do cliente foram gravados', ['Ok']);
+    // }
   }
 
   selecionarData() {
     this.platform.ready().then(() => {
-      if (this.platform.is('cordova')) {
+      if (this.platform.is('capacitor')) {
         this.datePicker.show({
           date: new Date(),
           mode: 'date',
@@ -65,5 +81,24 @@ export class ClienteAddEditPage implements OnInit {
         // instruções para execução no navegador
       }
     });
+  }
+
+  async presentAlert(header: string, subHeader: string, message: string, buttons: string[]) {
+    const alert = await this.alertCtrl.create({
+      header,
+      subHeader,
+      message,
+      buttons
+    });
+    await alert.present();
+  }
+
+  async presentToast(message: string, duration: number, position: 'top' | 'bottom') {
+    const toast = await this.toastCtrl.create({
+      message,
+      duration,
+      position
+    });
+    toast.present();
   }
 }
