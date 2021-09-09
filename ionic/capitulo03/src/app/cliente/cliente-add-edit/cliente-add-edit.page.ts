@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DatePicker } from '@ionic-native/date-picker/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-cliente-add-edit',
@@ -9,10 +11,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ClienteAddEditPage implements OnInit {
 
   clienteForm: FormGroup;
-  hasErrors = false;
-  errorsMessage: string[];
+  // hasErrors = false;
+  // errorsMessage: string[];
 
-  constructor(private formBuilder: FormBuilder) { }
+  validationMessages = {
+    nome: [
+      { type: 'required', message: 'Nome é obrigatório' },
+      { type: 'minlength', message: 'Nome deve ter ao menos 3 caracteres' },
+      { type: 'maxlength', message: 'Nome não pode ter mais que 50 caracteres' }
+    ],
+    renda: [
+      { type: 'min', message: 'Renda precisa ser positiva' }
+    ]
+  };
+
+  constructor(private formBuilder: FormBuilder, private datePicker: DatePicker, private platform: Platform,) { }
 
   ngOnInit() {
     this.clienteForm = this.formBuilder.group({
@@ -20,18 +33,37 @@ export class ClienteAddEditPage implements OnInit {
       email: ['', Validators.compose([Validators.required, Validators.email])],
       telefone: ['', Validators.required],
       renda: ['0', Validators.compose([Validators.required, Validators.min(0)])],
-      nascimento: ['', Validators.required]
+      nascimento: [{ value: '', disabled: true }, Validators.required]
     });
   }
 
   submit() {
-    this.errorsMessage = [];
-    if (this.clienteForm.get('nome').hasError('required')) {
-      this.errorsMessage.push('Nome é obrigatório');
-    }
-    if (this.clienteForm.get('email').hasError('required')) {
-      this.errorsMessage.push('Email é obrigatório');
-    }
-    this.hasErrors = this.errorsMessage.length > 0;
+    // this.errorsMessage = [];
+    // if (this.clienteForm.get('nome').hasError('required')) {
+    //   this.errorsMessage.push('Nome é obrigatório');
+    // }
+    // if (this.clienteForm.get('email').hasError('required')) {
+    //   this.errorsMessage.push('Email é obrigatório');
+    // }
+    // this.hasErrors = this.errorsMessage.length > 0;
+  }
+
+  selecionarData() {
+    this.platform.ready().then(() => {
+      if (this.platform.is('cordova')) {
+        this.datePicker.show({
+          date: new Date(),
+          mode: 'date',
+          locale: 'pt-br',
+          doneButtonLabel: 'Confirmar',
+          cancelButtonLabel: 'Cancelar'
+        })
+          .then(
+            data => this.clienteForm.controls.nascimento.setValue(data.toISOString())
+          );
+      } else {
+        // instruções para execução no navegador
+      }
+    });
   }
 }
