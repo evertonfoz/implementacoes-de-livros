@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tipo-servicos-listagem</ion-title>
+    <ion-title>Tipos de serviços</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let tipoServico of tiposServicos" routerLink='/tipo-servicos-add-edit/{{tipoServico.id}}'>
+      <ion-label>
+        <h2>{{tipoServico.nome}}</h2>
+        <p style="text-align:right">R$ {{tipoServico.valor}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
