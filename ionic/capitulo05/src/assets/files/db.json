@@ -1,0 +1,42 @@
+{
+    "database": "product-db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+        {
+            "name": "vendors",
+            "schema": [
+                {
+                    "column": "id",
+                    "value": "INTEGER PRIMARY KEY NOT NULL"
+                },
+                {
+                    "column": "company_name",
+                    "value": "TEXT NOT NULL"
+                },
+                {
+                    "column": "company_info",
+                    "value": "TEXT NOT NULL"
+                }
+            ],
+            "values": [
+                [
+                    1,
+                    "Dois",
+                    "Três"
+                ],
+                [
+                    4,
+                    "Cinco",
+                    "Seis"
+                ],
+                [
+                    7,
+                    "Oito",
+                    "Nove"
+                ]
+            ]
+        }
+    ]
+}
