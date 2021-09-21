@@ -82,7 +82,7 @@ export class DatabaseService {
                     await Storage.set({ key: DB_SETUP_KEY, value: '1' });
 
                     if (!update) {
-                        await CapacitorSQLite.createSyncTable({});
+                        await CapacitorSQLite.createSyncTable({ database: this.dbName });
                     } else {
                         await CapacitorSQLite.setSyncDate({ syncdate: '' + new Date().getTime() });
                     }
