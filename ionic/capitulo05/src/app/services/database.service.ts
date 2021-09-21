@@ -80,6 +80,14 @@ export class DatabaseService {
                     await Storage.set({ key: DB_NAME_KEY, value: this.dbName });
                     await CapacitorSQLite.importFromJson({ jsonstring });
                     await Storage.set({ key: DB_SETUP_KEY, value: '1' });
+
+                    if (!update) {
+                        await CapacitorSQLite.createSyncTable({});
+                    } else {
+                        await CapacitorSQLite.setSyncDate({ syncdate: '' + new Date().getTime() });
+                    }
+
+                    this.dbReady.next(true);
                 }
             });
 
