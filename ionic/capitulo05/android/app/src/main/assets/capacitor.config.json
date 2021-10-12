@@ -2,5 +2,8 @@
 	"appId": "io.ionic.starter",
 	"appName": "capitulo05",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "http://192.168.100.47:8100"
+	}
 }
