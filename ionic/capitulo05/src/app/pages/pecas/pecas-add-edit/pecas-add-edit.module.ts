@@ -13,8 +13,8 @@ import { PecasAddEditPage } from './pecas-add-edit.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    PecasAddEditPageRoutingModule,
     ReactiveFormsModule,
-    PecasAddEditPageRoutingModule
   ],
   declarations: [PecasAddEditPage]
 })

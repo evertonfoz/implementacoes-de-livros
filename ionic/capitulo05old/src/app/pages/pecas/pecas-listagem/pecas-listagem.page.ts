@@ -55,6 +55,7 @@ export class PecasListagemPage implements OnInit {
 
   async runTest(): Promise<void> {
     try {
+      console.log('RUN TEST');
       let result: any = await this._sqlite.echo("Hello World from Jeep");
       console.log(`from echo: ${result.value}`);
       let db: SQLiteDBConnection;
