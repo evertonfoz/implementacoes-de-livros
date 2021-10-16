@@ -9,11 +9,15 @@ import { DatabaseService } from './services/database.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  private initPlugin: boolean;
+
   constructor(
     private storage: Storage,
     private platform: Platform,
     private sqlite: DatabaseService,
-  ) { }
+  ) {
+    this.initializeApp();
+  }
 
   async ngOnInit() {
     await this.storage.create();
@@ -21,54 +25,26 @@ export class AppComponent {
 
   async initializeApp() {
     this.platform.ready().then(async () => {
-      this.detail.setExistingConnection(false);
-      // this.detail.setExportJson(false);
       this.sqlite.initializePlugin().then(async (ret) => {
-        console.log('Vai abrir');
-        this.sqlite.sqlitePlugin.open({ database: 'oficina' });
-        console.log('abriu');
-        let db: SQLiteDBConnection;
-        if ((await this.sqlite.isConnection("oficina")).result) {
-          db = await this.sqlite.retrieveConnection("oficina");
-        } else {
-          console.log('não rolou');
-        }
-        this.initPlugin = ret;
-        const p: string = this.sqlite.platform;
-        console.log(`plaform ${p}`);
-
         try {
-          //   console.log(`going to create a connection`)
-          //   const db1 = await this
-          //   const db = await this.sqlite.createConnection("oficina", false, "no-encryption", 1);
-          //   console.log(`db ${JSON.stringify(db)}`)
-          //   await db.open();
-          //   console.log(`after db.open`)
-          //   let query = `
-          //   CREATE TABLE IF NOT EXISTS ordensdeservico (
-          //           ordemdeservicoid TEXT primary key NOT NULL,
-          //               clienteid TEXT NOT NULL,
-          //               veiculo TEXT NOT NULL,
-          //               dataehoraentrada DATETIME NOT NULL,
-          //               dataehoratermino DATETIME,
-          //               dataehoraentrega DATETIME
-          //             );
-          //   `
-          //   console.log(`query ${query}`)
+          const db = await this.sqlite.createConnection("oficina", false, "no-encryption", 1);
+          console.log(`Após criação da conexão com a base de dados ${JSON.stringify(db)}`);
 
-          //   const res: any = await db.execute(query);
-          //   console.log(`res: ${JSON.stringify(res)}`)
+          await db.open();
+          console.log(`Após abertura da base de dados`)
 
-          //   await db.close();
-          //   console.log(`after db.close`)
+          this.initPlugin = ret;
+
+          await db.close();
+          console.log(`Após o fechamento da base de dados`)
         } catch (err) {
-          console.log(`Error: ${err}`);
+          console.log(`Ocorreu o erro: ${err}`);
           this.initPlugin = false;
         }
 
 
-        console.log(">>>> in App  this.initPlugin " + this.initPlugin)
+        console.log('Status da inicialização do plugin: ' + this.initPlugin);
       });
     });
-
   }
+}
