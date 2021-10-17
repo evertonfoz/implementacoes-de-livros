@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { SQLiteDBConnection } from '@capacitor-community/sqlite';
+import { CapacitorSQLite, SQLiteDBConnection } from '@capacitor-community/sqlite';
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { DatabaseService } from './services/database.service';
+import { createSchema } from './services/database.statements';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   constructor(
     private storage: Storage,
     private platform: Platform,
-    private sqlite: DatabaseService,
+    private databaseService: DatabaseService,
   ) {
     this.initializeApp();
   }
@@ -26,34 +27,27 @@ export class AppComponent {
 
   async initializeApp() {
     this.platform.ready().then(async () => {
-      this.sqlite.initializePlugin().then(async (ret) => {
+      this.databaseService.initializePlugin().then(async (ret) => {
         try {
-          let db: SQLiteDBConnection;
-          // let isDatabase = (await this.sqlite.isDatabase('oficina10')).result;
-          console.log((await this.sqlite.isDatabase('oficina')).result);
-          console.log(await this.sqlite.openConnection('oficina'));
-          // if (!isDatabase) {
-          //   const db = await this.sqlite.createConnection("oficina", false, "no-encryption", 1);
-          //   console.log(`Após criação da conexão com a base de dados ${JSON.stringify(db)}`);
-          // } else {
-          //   if ((await this.sqlite.isConnection("oficina")).result) {
-          //     db = await this.sqlite.retrieveConnection("oficina");
-          //   } else {
-          //     console.log('não rolou');
-          //   }
-          // }
+          const db = await this.databaseService.createConnection("oficina", false, "no-encryption", 1);
+          console.log(`Após criação da conexão com a base de dados ${JSON.stringify(db)}`);
 
+          await db.open();
+          console.log(`Após abertura da base de dados`)
 
+          // create tables in db
+          let createSchemma: any = await db.execute(createSchema);
+          if (createSchemma.changes.changes < 0) {
+            return Promise.reject(new Error("Erro na criação das tabelas"));
+          }
+          console.log(`criação das tabelas: ${JSON.stringify(createSchemma)}`)
 
-          // await db.open();
-          // console.log(`Após abertura da base de dados`)
+          this.initPlugin = ret;
 
-          // this.initPlugin = ret;
-
-          // await db.close();
-          // console.log(`Após o fechamento da base de dados`)
+          await db.close();
+          console.log(`Após o fechamento da base de dados`)
         } catch (err) {
-          console.log(`Ocorreu o erro: ${err}`);
+          console.log(`Error: ${err}`);
           this.initPlugin = false;
         }
 

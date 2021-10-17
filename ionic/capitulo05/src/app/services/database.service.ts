@@ -6,7 +6,7 @@ import { Capacitor } from '@capacitor/core';
     providedIn: 'root'
 })
 export class DatabaseService {
-    sqlite: SQLiteConnection;
+    sqliteConnection: SQLiteConnection;
     platform: string;
     native: boolean = false;
     sqlitePlugin: any;
@@ -16,7 +16,7 @@ export class DatabaseService {
             this.platform = Capacitor.getPlatform();
             if (this.platform === 'ios' || this.platform === 'android') this.native = true;
             this.sqlitePlugin = CapacitorSQLite;
-            this.sqlite = new SQLiteConnection(this.sqlitePlugin);
+            this.sqliteConnection = new SQLiteConnection(this.sqlitePlugin);
             resolve(true);
         });
     }
@@ -24,9 +24,9 @@ export class DatabaseService {
     async createConnection(database: string, encrypted: boolean,
         mode: string, version: number
     ): Promise<SQLiteDBConnection> {
-        if (this.sqlite != null) {
+        if (this.sqliteConnection != null) {
             try {
-                const db: SQLiteDBConnection = await this.sqlite.createConnection(
+                const db: SQLiteDBConnection = await this.sqliteConnection.createConnection(
                     database, encrypted, mode, version);
                 if (db != null) {
                     return Promise.resolve(db);
@@ -42,9 +42,9 @@ export class DatabaseService {
     }
 
     async isDatabase(database: string): Promise<capSQLiteResult> {
-        if (this.sqlite != null) {
+        if (this.sqliteConnection != null) {
             try {
-                return Promise.resolve(await this.sqlite.isDatabase(database));
+                return Promise.resolve(await this.sqliteConnection.isDatabase(database));
             } catch (err) {
                 return Promise.reject(new Error(err));
             }
@@ -54,19 +54,19 @@ export class DatabaseService {
     }
 
     async openConnection(database: string): Promise<SQLiteDBConnection> {
-        if (this.sqlite != null) {
+        if (this.sqliteConnection != null) {
             try {
                 this.sqlitePlugin.open({ database: database });
                 console.log(`Abriu a conexão com ${database}`);
 
-                if ((await this.sqlite.isConnection(database)).result) {
-                    const db: SQLiteDBConnection = await this.sqlite.retrieveConnection(
-                        database);
-                    console.log(`Recuperou a conexão com ${database}`);
-                    return Promise.resolve(db);
-                } else {
-                    console.log(`${database} não é uma conexão`);
-                }
+                // if ((await this.sqlite.isConnection(database)).result) {
+                const db: SQLiteDBConnection = await this.sqliteConnection.retrieveConnection(
+                    database);
+                console.log(`Recuperou a conexão com ${database}`);
+                return Promise.resolve(db);
+                // } else {
+                //     console.log(`${database} não é uma conexão`);
+                // }
             } catch (err) {
                 return Promise.reject(new Error(err));
             }
@@ -75,28 +75,28 @@ export class DatabaseService {
         }
     }
 
-    // async isConnection(database: string): Promise<capSQLiteResult> {
-    //     if (this.sqlite != null) {
-    //         try {
-    //             return Promise.resolve(await this.sqlite.isConnection(database));
-    //         } catch (err) {
-    //             return Promise.reject(new Error(err));
-    //         }
-    //     } else {
-    //         return Promise.reject(new Error(`Nenhuma conexão disponível`));
-    //     }
-    // }
+    async isConnection(database: string): Promise<capSQLiteResult> {
+        if (this.sqliteConnection != null) {
+            try {
+                return Promise.resolve(await this.sqliteConnection.isConnection(database));
+            } catch (err) {
+                return Promise.reject(new Error(err));
+            }
+        } else {
+            return Promise.reject(new Error(`Nenhuma conexão disponível`));
+        }
+    }
 
-    // async retrieveConnection(database: string):
-    //     Promise<SQLiteDBConnection> {
-    //     if (this.sqlite != null) {
-    //         try {
-    //             return Promise.resolve(await this.sqlite.retrieveConnection(database));
-    //         } catch (err) {
-    //             return Promise.reject(new Error(err));
-    //         }
-    //     } else {
-    //         return Promise.reject(new Error(`no connection open for ${database}`));
-    //     }
-    // }
+    async retrieveConnection(database: string):
+        Promise<SQLiteDBConnection> {
+        if (this.sqliteConnection != null) {
+            try {
+                return Promise.resolve(await this.sqliteConnection.retrieveConnection(database));
+            } catch (err) {
+                return Promise.reject(new Error(err));
+            }
+        } else {
+            return Promise.reject(new Error(`no connection open for ${database}`));
+        }
+    }
 }
