@@ -3,18 +3,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
-    loadChildren: () => import('./pages/pecas/pecas-listagem/pecas-listagem.module').then(m => m.PecasListagemPageModule)
+    loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-listagem/ordensdeservico-listagem.module').then(m => m.OrdensdeservicoListagemPageModule)
   },
   {
     path: 'pecas-add-edit/:id',
     loadChildren: () => import('./pages/pecas/pecas-add-edit/pecas-add-edit.module').then(m => m.PecasAddEditPageModule)
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+
   {
     path: 'tipo-servicos-listagem',
     loadChildren: () => import('./pages/tipo-servicos/tipo-servicos-listagem/tipo-servicos-listagem.module').then(m => m.TipoServicosListagemPageModule)
@@ -33,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: 'ordensdeservico-listagem',
-    loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-listagem/ordensdeservico-listagem.module').then( m => m.OrdensdeservicoListagemPageModule)
+    loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-listagem/ordensdeservico-listagem.module').then(m => m.OrdensdeservicoListagemPageModule)
   },
 ];
 

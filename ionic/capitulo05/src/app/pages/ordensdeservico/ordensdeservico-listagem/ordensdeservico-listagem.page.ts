@@ -26,5 +26,4 @@ export class OrdensdeservicoListagemPage implements OnInit {
     const oss = await this.ordensdeservicoService.getAll();
     this.ordensDeServico = oss;
   }
-
 }

@@ -11,7 +11,7 @@ import { createSchema } from './services/database.statements';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  // private initPlugin: boolean;
+  private initPlugin: boolean;
 
   constructor(
     private storage: Storage,
@@ -26,14 +26,19 @@ export class AppComponent {
   }
 
   async initializeApp() {
+    console.log(`this.initPlugin = ${this.initPlugin}`);
+
     this.platform.ready().then(async () => {
       this.databaseService.initializePlugin().then(async (ret) => {
+        // console.log(`isConnection: ${(await await this.databaseService.retrieveConnection('oficina'))}`);
         try {
+          console.log('Chama createConnection');
           const db = await this.databaseService.createConnection("oficina", false, "no-encryption", 1);
+          this.initPlugin = true;
           // console.log(`Após criação da conexão com a base de dados ${JSON.stringify(db)}`);
         } catch (err) {
           console.log(`Error: ${err}`);
-          // this.initPlugin = false;
+          this.initPlugin = false;
         }
 
 

@@ -48,6 +48,7 @@ export class DatabaseService {
 
     private async createSchema(db: SQLiteDBConnection): Promise<void> {
         await db.open();
+        console.log('Abriu conexão');
         // console.log(`Após abertura da base de dados`)
 
         let createSchemma: any = await db.execute(createSchema);
@@ -57,12 +58,14 @@ export class DatabaseService {
         // console.log(`Após o fechamento da base de dados`)
 
         if (createSchemma.changes.changes < 0) {
+            console.log('Fechou if conexão');
             await db.close();
             return Promise.reject(new Error("Erro na criação das tabelas"));
         }
         // console.log(`criação das tabelas: ${JSON.stringify(createSchemma)}`);
 
         await db.close();
+        console.log('Fechou conexão');
         return Promise.resolve();
     }
 
@@ -94,7 +97,7 @@ export class DatabaseService {
     //             return Promise.reject(new Error(err));
     //         }
     //     } else {
-    //         return Promise.reject(new Error(`no connection open`));
+    //         return Promise.reject(new Error(`Sem conexão aberta`));
     //     }
     // }
 
