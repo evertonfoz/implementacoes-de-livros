@@ -11,7 +11,7 @@ import { createSchema } from './services/database.statements';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  private initPlugin: boolean;
+  // private initPlugin: boolean;
 
   constructor(
     private storage: Storage,
@@ -30,29 +30,14 @@ export class AppComponent {
       this.databaseService.initializePlugin().then(async (ret) => {
         try {
           const db = await this.databaseService.createConnection("oficina", false, "no-encryption", 1);
-          console.log(`Após criação da conexão com a base de dados ${JSON.stringify(db)}`);
-
-          await db.open();
-          console.log(`Após abertura da base de dados`)
-
-          // create tables in db
-          let createSchemma: any = await db.execute(createSchema);
-          if (createSchemma.changes.changes < 0) {
-            return Promise.reject(new Error("Erro na criação das tabelas"));
-          }
-          console.log(`criação das tabelas: ${JSON.stringify(createSchemma)}`)
-
-          this.initPlugin = ret;
-
-          await db.close();
-          console.log(`Após o fechamento da base de dados`)
+          // console.log(`Após criação da conexão com a base de dados ${JSON.stringify(db)}`);
         } catch (err) {
           console.log(`Error: ${err}`);
-          this.initPlugin = false;
+          // this.initPlugin = false;
         }
 
 
-        console.log('Status da inicialização do plugin: ' + this.initPlugin);
+        // console.log('Status da inicialização do plugin: ' + this.initPlugin);
       });
     });
   }

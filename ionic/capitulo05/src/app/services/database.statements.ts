@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS ordensdeservico (
     clienteid TEXT NOT NULL,
     veiculo TEXT NOT NULL,
     dataehoraentrada DATETIME NOT NULL,
-    dataehoratermino DATETIME, dataehoraentrega DATETIME
+    dataehoratermino DATETIME,
+    dataehoraentrega DATETIME
 );
 
 CREATE INDEX IF NOT EXISTS ordensdeservico_index_clienteid ON ordensdeservico (ordemdeservicoid);
