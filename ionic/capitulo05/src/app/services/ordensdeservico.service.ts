@@ -11,27 +11,21 @@ export class OrdensDeServicoService {
     ) { }
 
     public async getAll() {
-        try {
-            const db = await this.databaseService.getDatabase();
-            const sql = 'SELECT * FROM ordensdeservico';
-            try {
-                const data = await db.executeSql(sql, []);
-                if (data.rows.length > 0) {
-                    // tslint:disable-next-line:prefer-const
-                    let ordensdeservico: OrdemDeServico[] = [];
-                    for (let i = 0; i < data.rows.length; i++) {
-                        const ordemdeservico = data.rows.item(i);
-                        ordensdeservico.push(ordemdeservico);
-                    }
-                    return ordensdeservico;
-                } else {
-                    return [];
-                }
-            } catch (e) {
-                return console.error(e);
+        const db = await this.databaseService.retrieveConnection('oficina')
+        let returnQuery = await db.query("SELECT * FROM ordensdeservico;");
+
+        console.log(`db: ${db}`);
+
+        if (returnQuery.values.length > 0) {
+            let ordensdeservico: OrdemDeServico[] = [];
+            for (let i = 0; i < returnQuery.values.length; i++) {
+                const ordemdeservico = returnQuery.values[i];
+                console.log(`OS> ${ordemdeservico}`);
+                ordensdeservico.push(ordemdeservico);
             }
-        } catch (e) {
-            return console.error(e);
+            return ordensdeservico;
         }
+
+        return [];
     }
 }

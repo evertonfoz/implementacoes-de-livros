@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
+import { fn } from '@angular/compiler/src/output/output_ast';
+import { Injectable, SystemJsNgModuleLoader } from '@angular/core';
 import { CapacitorSQLite, capSQLiteResult, SQLiteConnection, SQLiteDBConnection } from '@capacitor-community/sqlite';
 import { Capacitor } from '@capacitor/core';
 import { Guid } from 'guid-typescript';
+// import { ConsoleReporter } from 'jasmine';
 import { createSchema } from './database.statements';
 
 @Injectable({
@@ -49,17 +51,18 @@ export class DatabaseService {
         // console.log(`Após abertura da base de dados`)
 
         let createSchemma: any = await db.execute(createSchema);
+
         await this.populateDatabase(db);
 
-        await db.close();
         // console.log(`Após o fechamento da base de dados`)
 
         if (createSchemma.changes.changes < 0) {
+            await db.close();
             return Promise.reject(new Error("Erro na criação das tabelas"));
         }
         // console.log(`criação das tabelas: ${JSON.stringify(createSchemma)}`);
 
-
+        await db.close();
         return Promise.resolve();
     }
 
@@ -83,6 +86,18 @@ export class DatabaseService {
         return Promise.resolve();
     }
 
+    // async isConnection(database: string): Promise<capSQLiteResult> {
+    //     if (this.sqliteConnection != null) {
+    //         try {
+    //             return Promise.resolve(await this.sqliteConnection.isConnection(database));
+    //         } catch (err) {
+    //             return Promise.reject(new Error(err));
+    //         }
+    //     } else {
+    //         return Promise.reject(new Error(`no connection open`));
+    //     }
+    // }
+
     async retrieveConnection(database: string):
         Promise<SQLiteDBConnection> {
         if (this.sqliteConnection != null) {
@@ -92,21 +107,9 @@ export class DatabaseService {
                 return Promise.reject(new Error(err));
             }
         } else {
-            return Promise.reject(new Error(`Nenhuma conexão para ${database}`));
+            return Promise.reject(new Error(`Sem conexão para ${database}`));
         }
     }
-
-    // async isConnection(database: string): Promise<capSQLiteResult> {
-    //     if (this.sqliteConnection != null) {
-    //         try {
-    //             return Promise.resolve(await this.sqliteConnection.isConnection(database));
-    //         } catch (err) {
-    //             return Promise.reject(new Error(err));
-    //         }
-    //     } else {
-    //         return Promise.reject(new Error(`Nenhuma conexão disponível`));
-    //     }
-    // }
 
 
     // async isDatabase(database: string): Promise<capSQLiteResult> {
@@ -117,7 +120,7 @@ export class DatabaseService {
     //             return Promise.reject(new Error(err));
     //         }
     //     } else {
-    //         return Promise.reject(new Error(`A base de dados ${database} não existe`));
+    //         return Promise.reject(new Error(`A base de dados ${ database } não existe`));
     //     }
     // }
 
@@ -125,21 +128,21 @@ export class DatabaseService {
     //     if (this.sqliteConnection != null) {
     //         try {
     //             this.sqlitePlugin.open({ database: database });
-    //             console.log(`Abriu a conexão com ${database}`);
+    //             console.log(`Abriu a conexão com ${ database } `);
 
     //             // if ((await this.sqlite.isConnection(database)).result) {
     //             const db: SQLiteDBConnection = await this.sqliteConnection.retrieveConnection(
     //                 database);
-    //             console.log(`Recuperou a conexão com ${database}`);
+    //             console.log(`Recuperou a conexão com ${ database } `);
     //             return Promise.resolve(db);
     //             // } else {
-    //             //     console.log(`${database} não é uma conexão`);
+    //             //     console.log(`${ database } não é uma conexão`);
     //             // }
     //         } catch (err) {
     //             return Promise.reject(new Error(err));
     //         }
     //     } else {
-    //         return Promise.reject(new Error(`Nenhuma conexão disponível para ${database}`));
+    //         return Promise.reject(new Error(`Nenhuma conexão disponível para ${ database } `));
     //     }
     // }
 }
