@@ -4,7 +4,7 @@ import { CapacitorSQLite, capSQLiteResult, SQLiteConnection, SQLiteDBConnection 
 import { Capacitor } from '@capacitor/core';
 import { Guid } from 'guid-typescript';
 // import { ConsoleReporter } from 'jasmine';
-import { createSchema } from './database.statements';
+import { createOrdensDeServicoTable } from './database.statements';
 
 @Injectable({
     providedIn: 'root'
@@ -51,7 +51,7 @@ export class DatabaseService {
         console.log('Abriu conexão');
         // console.log(`Após abertura da base de dados`)
 
-        let createSchemma: any = await db.execute(createSchema);
+        let createSchemma: any = await db.execute(createOrdensDeServicoTable);
 
         await this.populateDatabase(db);
 

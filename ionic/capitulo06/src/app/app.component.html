@@ -13,7 +13,7 @@
           </ion-item-divider>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of pages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
-              detail="false" [class.selected]="selectedIndex == i">
+              detail="false" [class.active-item]="selectedIndex == i">
               <ion-img [src]="p.icon" style="width: 32px; height: 32px;"></ion-img>
               <!-- <ion-icon slot="start" [ios]="p.icon'" [md]="p.icon-sharp'"></ion-icon> -->
               <ion-label>{{ p.title }}</ion-label>

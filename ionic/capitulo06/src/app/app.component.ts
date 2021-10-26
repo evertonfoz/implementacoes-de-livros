@@ -3,7 +3,7 @@ import { CapacitorSQLite, SQLiteDBConnection } from '@capacitor-community/sqlite
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { DatabaseService } from './services/database.service';
-import { createSchema } from './services/database.statements';
+import { createOrdensDeServicoTable } from './services/database.statements';
 
 @Component({
   selector: 'app-root',
