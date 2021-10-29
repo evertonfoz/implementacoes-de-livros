@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS ordensdeservico (
     veiculo TEXT NOT NULL,
     dataehoraentrada DATETIME NOT NULL,
     dataehoratermino DATETIME,
-    dataehoraentrega DATETIME
+    dataehoraentrega DATETIME,
+    FOREIGN KEY (clienteid) REFERENCES clientes (clienteid) ON DELETE CASCADE ON UPDATE NO ACTION
 );
 
 CREATE INDEX IF NOT EXISTS ordensdeservico_index_ordemdeservicoid ON ordensdeservico (ordemdeservicoid);

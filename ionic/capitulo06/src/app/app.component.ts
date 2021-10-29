@@ -49,6 +49,14 @@ export class AppComponent {
 
     this.platform.ready().then(async () => {
       this.databaseService.initializePlugin().then(async (ret) => {
+        // console.log(1);
+        // if (await this.databaseService.isDatabase('oficina') && await this.databaseService.isConnection('oficina')) {
+        //   console.log(2);
+        //   await this.databaseService.openConnection('oficina');
+        //   console.log(3);
+        // }
+        // console.log(4);
+
         // console.log(`isConnection: ${(await this.databaseService.retrieveConnection('oficina'))}`);
         try {
           console.log('Chama createConnection');
