@@ -29,8 +29,9 @@ export class DatabaseService {
         mode: string, version: number
     ): Promise<SQLiteDBConnection> {
         if (this.sqliteConnection != null) {
+            let db: SQLiteDBConnection;
             try {
-                const db: SQLiteDBConnection = await this.sqliteConnection.createConnection(
+                db = await this.sqliteConnection.createConnection(
                     database, encrypted, mode, version);
                 if (db != null) {
                     await this.createSchema(db);
@@ -48,25 +49,18 @@ export class DatabaseService {
 
     private async createSchema(db: SQLiteDBConnection): Promise<void> {
         await db.open();
-        console.log('Abriu conexão');
-        // console.log(`Após abertura da base de dados`)
 
         let createClienteSchemma: any = await db.execute(createClientesTable);
         let createOSSchemma: any = await db.execute(createOrdensDeServicoTable);
 
         await this.populateDatabase(db);
 
-        // console.log(`Após o fechamento da base de dados`)
-
         if (createOSSchemma.changes.changes < 0 || createClienteSchemma.changes.changes < 0) {
-            console.log('Fechou if conexão');
             await db.close();
             return Promise.reject(new Error("Erro na criação das tabelas"));
         }
-        // console.log(`criação das tabelas: ${JSON.stringify(createSchemma)}`);
 
         await db.close();
-        console.log('Fechou conexão');
         return Promise.resolve();
     }
 
@@ -80,30 +74,38 @@ export class DatabaseService {
     }
 
     private async populateClientes(db: SQLiteDBConnection, clienteID: String): Promise<void> {
+        // db.open();
+        console.log(1);
         let returnQuery = await db.query("select COUNT(clienteid) as qtdeClientes from clientes;");
-        // console.log(`returnQuery => ${returnQuery}`);
-        // console.log(`returnQuery.values.length => ${returnQuery.values.length}`);
-        // console.log(`returnQuery.values[0].qtdeOS => ${returnQuery.values[0].qtdeOS}`);
-
-        if (returnQuery.values[0].qtdeOS === 0) {
+        console.log(2);
+        if (returnQuery.values[0].qtdeClientes > 0) {
+            db.execute('DELETE FROM ordensdeservico;')
+            db.execute('DELETE FROM clientes;')
+        }
+        if (returnQuery.values[0].qtdeClientes === 0) {
+            console.log(3);
             let sqlcmd: string =
                 "INSERT INTO clientes (clienteid, nome, email, telefone, renda) VALUES (?,?,?,?,?)";
             let values: Array<any> = [clienteID, 'Ambrózio', 'ambrozio@casadocodigo.com.br', '91234-5668', 123];
 
-            let returnInsert = await db.run(sqlcmd, values);
+            let returnInsert = await db.run(sqlcmd, values,);
+            console.log(4);
             if (returnInsert.changes < 0) {
+                console.log(5);
+                // db.close();
                 return Promise.reject(new Error("Erro na inserção da clientes"));
             }
         }
 
+        // db.close();
+        console.log(6);
         return Promise.resolve();
     }
 
     private async populateOrdensDeServico(db: SQLiteDBConnection, clienteID: String): Promise<void> {
+        console.log('clienteID ' + clienteID);
+
         let returnQuery = await db.query("select COUNT(ordemdeservicoid) as qtdeOS from ordensdeservico;");
-        // console.log(`returnQuery => ${returnQuery}`);
-        // console.log(`returnQuery.values.length => ${returnQuery.values.length}`);
-        // console.log(`returnQuery.values[0].qtdeOS => ${returnQuery.values[0].qtdeOS}`);
 
         if (returnQuery.values[0].qtdeOS === 0) {
             let sqlcmd: string =
@@ -176,6 +178,21 @@ export class DatabaseService {
             }
         } else {
             return Promise.reject(new Error(`Nenhuma conexão disponível para ${database} `));
+        }
+    }
+
+    async deleteDatabase(db: SQLiteDBConnection): Promise<void> {
+        try {
+            let ret: any = await db.isExists();
+            if (ret.result) {
+                const dbName = db.getConnectionDBName();
+                await db.delete();
+                return Promise.resolve();
+            } else {
+                return Promise.resolve();
+            }
+        } catch (err) {
+            return Promise.reject(err);
         }
     }
 }

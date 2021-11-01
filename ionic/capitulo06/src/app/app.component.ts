@@ -49,20 +49,10 @@ export class AppComponent {
 
     this.platform.ready().then(async () => {
       this.databaseService.initializePlugin().then(async (ret) => {
-        // console.log(1);
-        // if (await this.databaseService.isDatabase('oficina') && await this.databaseService.isConnection('oficina')) {
-        //   console.log(2);
-        //   await this.databaseService.openConnection('oficina');
-        //   console.log(3);
-        // }
-        // console.log(4);
-
-        // console.log(`isConnection: ${(await this.databaseService.retrieveConnection('oficina'))}`);
         try {
           console.log('Chama createConnection');
           const db = await this.databaseService.createConnection("oficina", false, "no-encryption", 1);
           this.initPlugin = true;
-          // console.log(`Após criação da conexão com a base de dados ${JSON.stringify(db)}`);
         } catch (err) {
           console.log(`Error: ${err}`);
           this.initPlugin = false;
