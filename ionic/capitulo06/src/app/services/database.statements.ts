@@ -1,3 +1,5 @@
+export const databaseName: string = 'oficina';
+
 export const createOrdensDeServicoTable: string = `
 CREATE TABLE IF NOT EXISTS ordensdeservico (
     ordemdeservicoid TEXT primary key NOT NULL, 

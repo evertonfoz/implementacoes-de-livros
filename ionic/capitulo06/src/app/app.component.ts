@@ -3,7 +3,7 @@ import { CapacitorSQLite, SQLiteDBConnection } from '@capacitor-community/sqlite
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { DatabaseService } from './services/database.service';
-import { createOrdensDeServicoTable } from './services/database.statements';
+import { createOrdensDeServicoTable, databaseName } from './services/database.statements';
 
 @Component({
   selector: 'app-root',
@@ -45,13 +45,28 @@ export class AppComponent {
   }
 
   async initializeApp() {
-    console.log(`this.initPlugin = ${this.initPlugin}`);
+    // console.log(`this.initPlugin = ${this.initPlugin}`);
 
     this.platform.ready().then(async () => {
       this.databaseService.initializePlugin().then(async (ret) => {
         try {
-          console.log('Chama createConnection');
-          const db = await this.databaseService.createConnection("oficina", false, "no-encryption", 1);
+          // if (this.databaseService.isDatabase(databaseName)) {
+          //   console.log('Open Connection');
+          //   const db = await this.databaseService.retrieveConnection(databaseName);
+          //   // const db = await this.databaseService.openConnection(databaseName);
+          //   console.log('Abriu Connection');
+          // } else {
+          // console.log('Chama createConnection');
+          const db = await this.databaseService.createConnection(
+            databaseName, false, "no-encryption", 1);
+          // console.log(`db connection created ${JSON.stringify(db)}`);
+          // }
+
+          // const isDbOpen = (await db.isDBOpen()).result;
+          // console.log('isDBOpen ' + isDbOpen);
+          // if (isDbOpen) {
+          //   await db.close();
+          // }
           this.initPlugin = true;
         } catch (err) {
           console.log(`Error: ${err}`);

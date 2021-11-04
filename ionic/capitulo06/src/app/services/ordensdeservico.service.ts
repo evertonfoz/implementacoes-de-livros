@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 import { OrdemDeServico } from '../models/ordemdeservico.model';
 import { DatabaseService } from './database.service';
+import { databaseName } from './database.statements';
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class OrdensDeServicoService {
-    private initPlugin: boolean;
+    // private initPlugin: boolean;
 
     constructor(
         private databaseService: DatabaseService
-    ) {
-
-    }
+    ) { }
 
     // async initializeApp() {
     //     console.log(`this.initPlugin = ${this.initPlugin}`);
@@ -36,7 +35,11 @@ export class OrdensDeServicoService {
     // }
 
     public async getAll() {
-        const db = await this.databaseService.retrieveConnection('oficina')
+        console.log('Teste OrdensDeServicoService: ' + (this.databaseService.isConnection(databaseName).then(function (result) { console.log('result: ' + result.result) })));
+        console.log('getAll');
+        const db = await this.databaseService.retrieveConnection(databaseName);
+
+        console.log(`db connection created ${JSON.stringify(db)}`);
 
         db.open();
         console.log('Abriu conexão');
@@ -44,7 +47,7 @@ export class OrdensDeServicoService {
         db.close();
         console.log('Fechou conexão');
 
-        // console.log(`returnQuery: ${returnQuery}`);
+        console.log(`returnQuery: ${returnQuery}`);
 
         if (returnQuery.values.length > 0) {
             let ordensdeservico: OrdemDeServico[] = [];
