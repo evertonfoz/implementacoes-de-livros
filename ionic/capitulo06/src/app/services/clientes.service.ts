@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DatabaseService } from './database.service';
 import { Cliente } from '../models/cliente.model';
+import { databaseName } from './database.statements';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +12,7 @@ export class ClientesService {
     ) { }
 
     public async getAll() {
-        const db = await this.databaseService.retrieveConnection('oficina')
+        const db = await this.databaseService.retrieveConnection(databaseName);
 
         db.open();
         let returnQuery = await db.query("SELECT * FROM clientes ORDER BY nome");

@@ -10,7 +10,11 @@
 <ion-content padding-left padding-top>
   <ion-list #slidingList>
     <ion-item-sliding *ngFor="let ordemDeServico of ordensDeServico">
-      <ion-item>
+      <!-- routerDirection="root" [routerLink]="[p.url]" -->
+      <!-- <ion-item routerDirection="root" [routerLink]="[p.url]"
+        href='/ordensdeservico-add-edit/{{ordemDeServico.ordemdeservicoid}}'> -->
+      <ion-item routerDirection="forward"
+        [routerLink]="['/', 'ordensdeservico-add-edit', ordemDeServico.ordemdeservicoid]">
         <ion-label>
           <h2>{{ordemDeServico.veiculo}}</h2>
           <p style="text-align:right">Entrada: {{ordemDeServico.dataehoraentrada | date: 'dd/MM/yyyy'}}</p>
@@ -18,7 +22,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger">
+        <ion-item-option color="danger" (click)="removerAtendimento(ordemDeServico)">
           <ion-button color="danger" no-padding>
             <ion-icon name="trash"></ion-icon>
             Remover
@@ -30,7 +34,7 @@
 
 
   <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
-    <ion-fab-button href='ordensdeservico-add-edit/-1)'>
+    <ion-fab-button routerDirection="forward" [routerLink]="['/ordensdeservico-add-edit/-1']">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>

@@ -14,6 +14,9 @@ export class DatabaseService {
     platform: string;
     native: boolean = false;
     sqlitePlugin: any;
+    constructor() {
+        console.log('SERVICE CONSTRUCTOR');
+    }
 
     async initializePlugin(): Promise<boolean> {
         return new Promise(resolve => {
@@ -93,7 +96,11 @@ export class DatabaseService {
                 "INSERT INTO clientes (clienteid, nome, email, telefone, renda) VALUES (?,?,?,?,?)";
             let values: Array<any> = [clienteID, 'Ambrózio', 'ambrozio@casadocodigo.com.br', '91234-5668', 123];
 
-            let returnInsert = await db.run(sqlcmd, values,);
+            let returnInsert = await db.run(sqlcmd, values);
+
+            values = [Guid.create().toString(), 'Josbrézio', 'ambrozio@casadocodigo.com.br', '91234-5668', 123];
+
+            returnInsert = await db.run(sqlcmd, values,);
             if (returnInsert.changes < 0) {
                 // db.close();
                 return Promise.reject(new Error("Erro na inserção da clientes"));

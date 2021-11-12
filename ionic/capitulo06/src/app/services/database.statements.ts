@@ -1,4 +1,4 @@
-export const databaseName: string = 'oficina';
+export const databaseName: string = 'oficina16';
 
 export const createOrdensDeServicoTable: string = `
 CREATE TABLE IF NOT EXISTS ordensdeservico (

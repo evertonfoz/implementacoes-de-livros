@@ -22,12 +22,19 @@
   </ion-item-divider>
 
   <ng-container *ngIf="osForm">
-    <form [formGroup]="osForm">
+    <form [formGroup]="osForm" (submit)="submit()">
       <ion-item lines="none" [disabled]="!modoDeEdicao">
         <ion-label position="floating" class="label-input-title">Cliente</ion-label>
-        <ion-select placeholder="Selecione um cliente" formControlName="clienteid" style="margin-left: 3%;">
-          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.clienteid">{{cliente.nome}}
+        <ion-select placeholder="Selecione um cliente" name="clienteid" formControlName="clienteid"
+          style="margin-left: 3%;" [value]="ordemDeServico.clienteid">
+          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.clienteid">
+            <!-- `[selectedText]="cliente.clienteid===ordemDeServico.clienteid" `> -->
+            {{cliente.nome}}
           </ion-select-option>
+          <!-- <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.clienteid"
+            `[selected]="cliente.clienteid===ordemDeServico.clienteid" `>
+            {{cliente.nome}}
+          </ion-select-option> -->
         </ion-select>
       </ion-item>
 
@@ -47,20 +54,20 @@
         <ion-datetime style="margin-left: 3%;" formControlName="horaentrada" displayFormat="HH:mm"></ion-datetime>
       </ion-item>
 
-      <ion-button *ngIf="!modoDeEdicao" shape="round" color="primary" expand="block" padding>
+      <ion-button *ngIf="!modoDeEdicao" shape="round" color="primary" expand="block" padding (click)="iniciarEdicao()">
         Alterar dados
       </ion-button>
       <div *ngIf="modoDeEdicao" no-padding>
         <ion-grid>
           <ion-row>
             <ion-col col-6>
-              <ion-button shape="round" color="success" size="small" padding expand="block">
+              <ion-button shape="round" color="success" size="small" padding expand="block" type="submit">
                 Gravar
               </ion-button>
             </ion-col>
 
             <ion-col col-6>
-              <ion-button shape="round" color="warning" size="small" padding expand="block">
+              <ion-button shape="round" color="warning" size="small" padding expand="block" (click)="cancelarEdicao()">
                 Cancelar
               </ion-button>
             </ion-col>

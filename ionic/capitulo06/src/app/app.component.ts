@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { DatabaseService } from './services/database.service';
 import { createOrdensDeServicoTable, databaseName } from './services/database.statements';
+import { DetailService } from './services/detail.service';
 
 @Component({
   selector: 'app-root',
@@ -36,11 +37,16 @@ export class AppComponent {
     private storage: Storage,
     private platform: Platform,
     private databaseService: DatabaseService,
+    private detailConnectionService: DetailService
   ) {
+    console.log('CONSTRUCTOR');
     this.initializeApp();
   }
 
   async ngOnInit() {
+    console.log('NGONINIT');
+    // console.log('1 --> ' + this.detailConnectionService.getExistingConnection());
+
     await this.storage.create();
   }
 
@@ -59,6 +65,9 @@ export class AppComponent {
           // console.log('Chama createConnection');
           const db = await this.databaseService.createConnection(
             databaseName, false, "no-encryption", 1);
+          this.detailConnectionService.setExistingConnection(true);
+          console.log('2 --> ' + this.detailConnectionService.getExistingConnection());
+
           // console.log(`db connection created ${JSON.stringify(db)}`);
           // }
 

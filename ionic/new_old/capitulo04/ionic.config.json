@@ -1,7 +1,0 @@
-{
-  "name": "capitulo04",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
