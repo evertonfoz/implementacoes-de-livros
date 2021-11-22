@@ -1,17 +1,24 @@
-import { Injectable } from '@angular/core';
+import { ChangeDetectorRef, Injectable } from '@angular/core';
 import { Cliente } from '../models/cliente.model';
-import { getDatabase, push, ref } from 'firebase/database';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
+import { child, get, getDatabase, push, onValue, ref, query, orderByChild, DataSnapshot } from 'firebase/database';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ClientesService {
     constructor(
-    ) { }
+        private _fireStore: Firestore,
+    ) {
+    }
+
+
 
     async create(cliente: Cliente): Promise<void> {
         try {
-            const databaseReference = getDatabase();
+            const databaseReference = getDatabase(this._fireStore.app);
             cliente.nascimento = new Date(cliente.nascimento);
             push(ref(databaseReference, 'clientes/'), {
                 nome: cliente.nome,
@@ -20,10 +27,12 @@ export class ClientesService {
                 renda: cliente.renda,
                 nascimento: cliente.nascimento,
             });
+
         } catch (e) {
             console.error(e);
         }
     }
+
 
     // async get(cliente: Cliente): Promise<Cliente> {
     //     const databaseReference = ref(getDatabase());
@@ -83,25 +92,24 @@ export class ClientesService {
     //     return update(ref(db), updates);
     // }
 
-    // public async getAll() {
-    //     const db = await this.databaseService.retrieveConnection(databaseName);
+    async getAll(): Promise<Cliente[]> {
+        let clientes: Cliente[] = [];
+        const dbRef = ref(getDatabase(this._fireStore.app));
 
-    //     db.open();
-    //     let returnQuery = await db.query("SELECT * FROM clientes ORDER BY nome");
-    //     db.close();
+        let dataSnapshot: DataSnapshot;
+        dataSnapshot = await get(child(dbRef, 'clientes/'));
+        dataSnapshot.forEach((childSnapshot) => {
+            let cliente = <Cliente>{
+                clienteid: childSnapshot.key,
+                nome: childSnapshot.val().nome,
+                email: childSnapshot.val().email,
+                telefone: childSnapshot.val().telefone,
+                renda: childSnapshot.val().renda,
+                nascimento: childSnapshot.val().nascimento,
+            }
+            clientes.push(cliente);
+        });
 
-    //     // console.log(`returnQuery: ${returnQuery}`);
-
-    //     if (returnQuery.values.length > 0) {
-    //         let clientes: Cliente[] = [];
-    //         for (let i = 0; i < returnQuery.values.length; i++) {
-    //             const cliente = returnQuery.values[i];
-    //             // console.log(`OS> ${ordemdeservico}`);
-    //             clientes.push(cliente);
-    //         }
-    //         return clientes;
-    //     }
-
-    //     return [];
-    // }
+        return clientes;
+    }
 }

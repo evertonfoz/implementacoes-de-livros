@@ -32,38 +32,36 @@ export class OrdensDeServicoAddEditPage implements OnInit {
   }
 
   async ionViewWillEnter() {
-    // const id = this.route.snapshot.paramMap.get('id');
-    // console.log('id --> ' + id);
+    const id = this.route.snapshot.paramMap.get('id');
 
-    // const clientes = await this.clientesService.getAll();
-    // this.clientes = clientes;
+    const clientes: Cliente[] = await this.clientesService.getAll();
+    console.log('CLIENTE: ' + clientes[0].clienteid);
 
-    // const isIdEmptyGUID = Guid.parse(id).isEmpty();
-    // const isIdValidGUID = Guid.isGuid(id);
+    this.clientes = clientes;
 
-    // if (id && !isIdEmptyGUID && isIdValidGUID) {
-    //   this.ordemDeServico = await this.ordensDeServicoService.getById(id);
-    // } else {
-    //   this.ordemDeServico = {
-    //     ordemdeservicoid: Guid.createEmpty().toString(),
-    //     clienteid: Guid.createEmpty().toString(), veiculo: '', dataehoraentrada: new Date()
-    //   };
-    //   this.modoDeEdicao = true;
-    // }
+    const isIdEmptyGUID = Guid.parse(id).isEmpty();
+    const isIdValidGUID = Guid.isGuid(id);
 
-    // console.log('--> ' + this.ordemDeServico.clienteid);
-    // console.log('--> ' + this.ordemDeServico.veiculo);
+    if (id && !isIdEmptyGUID && isIdValidGUID) {
+      this.ordemDeServico = await this.ordensDeServicoService.getById(id);
+    } else {
+      this.ordemDeServico = {
+        ordemdeservicoid: Guid.createEmpty().toString(),
+        clienteid: Guid.createEmpty().toString(), veiculo: '', dataehoraentrada: new Date()
+      };
+      this.modoDeEdicao = true;
+    }
 
-    // this.osForm = this.formBuilder.group({
-    //   ordemdeservicoid: [this.ordemDeServico.ordemdeservicoid],
-    //   clienteid: [this.ordemDeServico.clienteid, Validators.required],
-    //   veiculo: [this.ordemDeServico.veiculo, Validators.required],
-    //   dataentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
-    //   horaentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
-    //   dataehoraentrada: ['']
-    // });
+    this.osForm = this.formBuilder.group({
+      ordemdeservicoid: [this.ordemDeServico.ordemdeservicoid],
+      clienteid: [this.ordemDeServico.clienteid, Validators.required],
+      veiculo: [this.ordemDeServico.veiculo, Validators.required],
+      dataentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
+      horaentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
+      dataehoraentrada: ['']
+    });
 
-    // this.ordemDeServico = this.osForm.value;
+    this.ordemDeServico = this.osForm.value;
   }
 
   // Método a ser invocado quando o botão de alterar dados for selecionado

@@ -15,16 +15,25 @@ import { DetailService } from './services/detail.service';
 // import { AngularFireModule } from '@angular/fire/compat'
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { firebaseConfig } from './credentials';
-
+import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from './credentials';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideFirestore(() => getFirestore()),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    // provideFirestore(() => getFirestore()),
+    provideFirestore(() => {
+      if (environment.useEmulators) {
+        const firestore = getFirestore();
+        connectFirestoreEmulator(firestore, 'localhost', 8080);
+        enableIndexedDbPersistence(firestore);
+        return firestore;
+      } else {
+        getFirestore();
+      }
+    }),
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,

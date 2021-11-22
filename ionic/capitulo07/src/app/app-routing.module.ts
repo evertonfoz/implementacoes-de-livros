@@ -20,8 +20,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-add-edit/ordensdeservico-add-edit.module').then(m => m.OrdensdeservicoAddEditPageModule)
   },
   {
-    path: 'clientes-add-edit.page',
+    path: 'clientes-add-edit/:id',
     loadChildren: () => import('./pages/clientes/clientes-add-edit/clientes-add-edit.module').then(m => m.ClientesAddEditPageModule)
+  },
+  {
+    path: 'clientes-listagem',
+    loadChildren: () => import('./pages/clientes/clientes-listagem/clientes-listagem.module').then(m => m.ClientesListagemPageModule)
   },
 ];
 

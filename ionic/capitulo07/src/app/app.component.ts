@@ -6,6 +6,7 @@ import { DatabaseService } from './services/database.service';
 import { createOrdensDeServicoTable, databaseName } from './services/database.statements';
 import { DetailService } from './services/detail.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -28,8 +29,8 @@ export class AppComponent {
     },
     {
       title: 'Clientes',
-      url: '/clientes',
-      icon: '/assets/imgs/tab_clientes.png'
+      url: '/clientes-add-edit',
+      icon: '/assets/imgs/icon_clientes.png'
     },
     {
       title: 'Atendimentos',

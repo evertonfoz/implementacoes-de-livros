@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/menu/(menucontent:clientes)"></ion-back-button>
+      <ion-back-button defaultHref="/dashboard"></ion-back-button>
     </ion-buttons>
     <ion-title>Clientes</ion-title>
   </ion-toolbar>
@@ -49,14 +49,14 @@
           max="2020-10-31"></ion-datetime>
       </ion-item>
 
-      <ion-button *ngIf="!modoDeEdicao" shape="round" color="primary" expand="block" padding type="submit">
+      <ion-button *ngIf="!modoDeEdicao" shape="round" color="primary" padding expand="block" type="submit">
         Gravar
       </ion-button>
       <div *ngIf="modoDeEdicao" no-padding>
         <ion-grid>
           <ion-row>
             <ion-col col-6>
-              <ion-button shape="round" color="success" size="small" padding expand="block">
+              <ion-button shape="round" color="success" size="small" padding expand="block" type="submit">
                 Gravar
               </ion-button>
             </ion-col>
