@@ -23,19 +23,21 @@
 
   <ng-container *ngIf="osForm">
     <form [formGroup]="osForm" (submit)="submit()">
-      <ion-item lines="none" [disabled]="!modoDeEdicao">
-        <ion-label position="floating" class="label-input-title">Cliente</ion-label>
-        <ion-select placeholder="Selecione um cliente" name="clienteid" formControlName="clienteid"
-          style="margin-left: 3%;" [value]="ordemDeServico.clienteid">
-          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.clienteid">
-            <!-- `[selectedText]="cliente.clienteid===ordemDeServico.clienteid" `> -->
-            {{cliente.nome}}
-          </ion-select-option>
-          <!-- <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.clienteid"
-            `[selected]="cliente.clienteid===ordemDeServico.clienteid" `>
-            {{cliente.nome}}
-          </ion-select-option> -->
-        </ion-select>
+      <ion-item lines="none" [disabled]="!modoDeEdicao" (click)="goToClientesSearch()">
+        <ion-label position="floating" class="label-input-title" style="margin-top: 10%;">Cliente</ion-label>
+        <ion-grid no-padding>
+          <ion-row no-padding>
+            <ion-col size="11" no-padding disabled="true">
+              <ion-input value={{nomeCliente}} type="text" style="margin-left: -8%;"></ion-input>
+            </ion-col>
+            <ion-col size="1" no-padding>
+              <!-- <ion-button (click)="goToClientesSearch()"> -->
+              <ion-button routerDirection="forward" [routerLink]="['/', 'clientes-search']">
+                <ion-icon slot="icon-only" name="search" size="small"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
 
       <ion-item lines="none" [disabled]="!modoDeEdicao">

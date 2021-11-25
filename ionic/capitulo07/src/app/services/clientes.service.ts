@@ -59,4 +59,15 @@ export class ClientesService {
         });
         return clientes;
     }
+
+    async getByNome(nome: string): Promise<Cliente[]> {
+        const clientes: Cliente[] = await this.getAll();
+
+        if (!nome) {
+            return clientes;
+        }
+
+        return clientes.filter(
+            cliente => cliente.nome.toLowerCase().startsWith(nome.toLowerCase()));
+    }
 }

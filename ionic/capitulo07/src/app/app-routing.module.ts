@@ -28,12 +28,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/clientes/clientes-listagem/clientes-listagem.module').then(m => m.ClientesListagemPageModule)
   },
   {
-    path: 'search',
-    loadChildren: () => import('./pages/clientes/search/search.module').then( m => m.SearchPageModule)
-  },
-  {
     path: 'clientes-search',
-    loadChildren: () => import('./pages/clientes/clientes-search/clientes-search.module').then( m => m.ClientesSearchPageModule)
+    loadChildren: () => import('./pages/clientes/clientes-search/clientes-search.module').then(m => m.ClientesSearchPageModule)
   },
 ];
 
