@@ -32,36 +32,36 @@ export class OrdensDeServicoAddEditPage implements OnInit {
   }
 
   async ionViewWillEnter() {
-    const id = this.route.snapshot.paramMap.get('id');
+    // const id = this.route.snapshot.paramMap.get('id');
 
-    const clientes: Cliente[] = await this.clientesService.getAll();
-    console.log('CLIENTE: ' + clientes[0].clienteid);
+    // const clientes: Cliente[] = await this.clientesService.getAll();
+    // console.log('CLIENTE: ' + clientes[0].clienteid);
 
-    this.clientes = clientes;
+    // this.clientes = clientes;
 
-    const isIdEmptyGUID = Guid.parse(id).isEmpty();
-    const isIdValidGUID = Guid.isGuid(id);
+    // const isIdEmptyGUID = Guid.parse(id).isEmpty();
+    // const isIdValidGUID = Guid.isGuid(id);
 
-    if (id && !isIdEmptyGUID && isIdValidGUID) {
-      this.ordemDeServico = await this.ordensDeServicoService.getById(id);
-    } else {
-      this.ordemDeServico = {
-        ordemdeservicoid: Guid.createEmpty().toString(),
-        clienteid: Guid.createEmpty().toString(), veiculo: '', dataehoraentrada: new Date()
-      };
-      this.modoDeEdicao = true;
-    }
+    // if (id && !isIdEmptyGUID && isIdValidGUID) {
+    //   this.ordemDeServico = await this.ordensDeServicoService.getById(id);
+    // } else {
+    //   this.ordemDeServico = {
+    //     ordemdeservicoid: Guid.createEmpty().toString(),
+    //     clienteid: Guid.createEmpty().toString(), veiculo: '', dataehoraentrada: new Date()
+    //   };
+    //   this.modoDeEdicao = true;
+    // }
 
-    this.osForm = this.formBuilder.group({
-      ordemdeservicoid: [this.ordemDeServico.ordemdeservicoid],
-      clienteid: [this.ordemDeServico.clienteid, Validators.required],
-      veiculo: [this.ordemDeServico.veiculo, Validators.required],
-      dataentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
-      horaentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
-      dataehoraentrada: ['']
-    });
+    // this.osForm = this.formBuilder.group({
+    //   ordemdeservicoid: [this.ordemDeServico.ordemdeservicoid],
+    //   clienteid: [this.ordemDeServico.clienteid, Validators.required],
+    //   veiculo: [this.ordemDeServico.veiculo, Validators.required],
+    //   dataentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
+    //   horaentrada: [this.ordemDeServico.dataehoraentrada.toISOString(), Validators.required],
+    //   dataehoraentrada: ['']
+    // });
 
-    this.ordemDeServico = this.osForm.value;
+    // this.ordemDeServico = this.osForm.value;
   }
 
   // Método a ser invocado quando o botão de alterar dados for selecionado
@@ -90,14 +90,14 @@ export class OrdensDeServicoAddEditPage implements OnInit {
     const dataEHora = new Date(dataString + ' ' + horaString);
 
     // Invocamos o serviço, enviando um objeto com os dados recebidos da visão    
-    this.ordemDeServico = await this.ordensDeServicoService.update(
-      {
-        ordemdeservicoid: this.osForm.controls.ordemdeservicoid.value,
-        clienteid: this.osForm.controls.clienteid.value,
-        veiculo: this.osForm.controls.veiculo.value,
-        dataehoraentrada: dataEHora,
-      }
-    );
+    // this.ordemDeServico = await this.ordensDeServicoService.update(
+    //   {
+    //     ordemdeservicoid: this.osForm.controls.ordemdeservicoid.value,
+    //     clienteid: this.osForm.controls.clienteid.value,
+    //     veiculo: this.osForm.controls.veiculo.value,
+    //     dataehoraentrada: dataEHora,
+    //   }
+    // );
 
     // Informamos o usuário do sucesso da operação e o redirecionamos para a listagem    
     this.toastService.presentToast('Gravação bem sucedida', 3000, 'top');

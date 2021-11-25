@@ -15,20 +15,32 @@ import { DetailService } from './services/detail.service';
 // import { AngularFireModule } from '@angular/fire/compat'
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, initializeFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from './credentials';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    //           const db = initializeFirestore(this._fireStore.app, { experimentalAutoDetectLongPolling: true });
+    // const clientesRef = collection(db, "clientes");
+
+    provideFirebaseApp(() => {
+      // let firebase = initializeApp(environment.firebaseConfig);
+      return initializeApp(environment.firebaseConfig);
+      // initializeFirestore(firebase, {
+      //   useFetchStreams: false,
+      //   experimentalForceLongPolling: true,
+      // } as any);
+      // return firebase;
+    }),
     // provideFirestore(() => getFirestore()),
     provideFirestore(() => {
       if (environment.useEmulators) {
         const firestore = getFirestore();
-        connectFirestoreEmulator(firestore, 'localhost', 8080);
+        // connectFirestoreEmulator(firestore, 'localhost', 8080);
         enableIndexedDbPersistence(firestore);
+
         return firestore;
       } else {
         getFirestore();

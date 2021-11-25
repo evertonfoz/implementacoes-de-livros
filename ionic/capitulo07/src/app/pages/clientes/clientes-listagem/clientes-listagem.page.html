@@ -9,7 +9,8 @@
 
 <ion-content padding-left padding-top>
   <ion-list #slidingList>
-    <ion-item-sliding *ngFor="let cliente of clientes | async">
+    <!-- <ion-item-sliding *ngFor="let cliente of clientes | async"> -->
+    <ion-item-sliding *ngFor="let cliente of clientes">
       <ion-item routerDirection="forward" [routerLink]="['/', 'clientes-add-edit', cliente.clienteid]">
         <ion-label>
           <h2>{{cliente.nome}}</h2>

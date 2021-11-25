@@ -29,7 +29,7 @@ export class AppComponent {
     },
     {
       title: 'Clientes',
-      url: '/clientes-add-edit',
+      url: '/clientes-listagem',
       icon: '/assets/imgs/icon_clientes.png'
     },
     {

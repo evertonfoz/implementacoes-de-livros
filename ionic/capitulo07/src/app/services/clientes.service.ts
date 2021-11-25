@@ -1,9 +1,8 @@
 import { ChangeDetectorRef, Injectable } from '@angular/core';
-import { Cliente } from '../models/cliente.model';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Cliente, clienteConverter } from '../models/cliente.model';
+import { Firestore, collection, getDocs, setDoc, doc, query, QuerySnapshot, onSnapshot, Query, orderBy, getDoc, deleteDoc } from '@angular/fire/firestore';
+import { getDatabase, ref, set } from 'firebase/database';
 
-import { child, get, getDatabase, push, onValue, ref, query, orderByChild, DataSnapshot } from 'firebase/database';
 
 @Injectable({
     providedIn: 'root'
@@ -14,102 +13,50 @@ export class ClientesService {
     ) {
     }
 
-
-
     async create(cliente: Cliente): Promise<void> {
         try {
-            const databaseReference = getDatabase(this._fireStore.app);
+            // const databaseReference = getDatabase(this._fireStore.app);
             cliente.nascimento = new Date(cliente.nascimento);
-            push(ref(databaseReference, 'clientes/'), {
+
+            const clientesRef = collection(this._fireStore, "clientes");
+
+            await setDoc(doc(clientesRef), {
                 nome: cliente.nome,
                 email: cliente.email,
                 telefone: cliente.telefone,
                 renda: cliente.renda,
                 nascimento: cliente.nascimento,
             });
-
         } catch (e) {
             console.error(e);
         }
     }
 
+    async getById(clienteId: string): Promise<Cliente> {
+        const q = doc(this._fireStore, "clientes", clienteId).withConverter(clienteConverter);
+        const querySnapshot = await getDoc(q);
 
-    // async get(cliente: Cliente): Promise<Cliente> {
-    //     const databaseReference = ref(getDatabase());
-    //     try {
-    //         get(child(databaseReference, 'clientes/')).then(res => {
-    //             // console.log(res.val());
-    //             const databaseReference = getDatabase();
-    //             const db = ref(databaseReference, 'clientes/');
-    //             onValue(db, (snapshot) => {
-    //                 const data = snapshot.val();
-    //                 console.log('data = ', data);
-    //             })
+        return querySnapshot.data();
+    }
 
-    //             var values = res.val();
-    //             for (let value in values) {
-    //                 var singleValue = values[value];
-    //                 let cliente = {
-    //                     clienteid: value,
-    //                     nome: singleValue.nome,
-    //                     email: singleValue.email,
-    //                     telefone: singleValue.telefone,
-    //                     renda: singleValue.renda,
-    //                     nascimento: singleValue.nascimento,
-    //                 }
-    //                 console.log(singleValue);
-    //             }
-    //         });
-    //         // await this.firestore.doc(`clientes/${cliente.clienteid}`).set(cliente);
-    //     } catch (e) {
-    //         console.error(e);
-    //     }
-    // }
+    async removeById(clienteId: string) {
+        await deleteDoc(doc(this._fireStore, "clientes", clienteId));
+    }
 
-    // remove(key: string) {
-    //     console.log('key = ', key);
-    //     const db = getDatabase();
-    //     const dataToBeRemoved = ref(db, 'clientes/' + key);
+    async update(cliente: Cliente) {
+        cliente.nascimento = new Date(cliente.nascimento);
 
-    //     return remove(dataToBeRemoved);
-    // }
-
-    // update(key: string) {
-    //     console.log('key = ', key);
-    //     const db = getDatabase();
-
-    //     const postData = {
-    //         nome: 'cliente.nome',
-    //         email: 'cliente.email',
-    //         telefone: 'cliente.telefone',
-    //         renda: 123,
-    //         nascimento: Date.now(),
-    //     }
-
-    //     const updates = {};
-    //     updates['clientes/' + key] = postData;
-
-    //     return update(ref(db), updates);
-    // }
+        await setDoc(doc(this._fireStore, "clientes", cliente.clienteid).
+            withConverter(clienteConverter), cliente);
+    }
 
     async getAll(): Promise<Cliente[]> {
-        let clientes: Cliente[] = [];
-        const dbRef = ref(getDatabase(this._fireStore.app));
-
-        let dataSnapshot: DataSnapshot;
-        dataSnapshot = await get(child(dbRef, 'clientes/'));
-        dataSnapshot.forEach((childSnapshot) => {
-            let cliente = <Cliente>{
-                clienteid: childSnapshot.key,
-                nome: childSnapshot.val().nome,
-                email: childSnapshot.val().email,
-                telefone: childSnapshot.val().telefone,
-                renda: childSnapshot.val().renda,
-                nascimento: childSnapshot.val().nascimento,
-            }
-            clientes.push(cliente);
+        const clientes: Cliente[] = [];
+        const q = query(collection(this._fireStore, "clientes"), orderBy("nome")).withConverter(clienteConverter);
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+            clientes.push(doc.data());
         });
-
         return clientes;
     }
 }
