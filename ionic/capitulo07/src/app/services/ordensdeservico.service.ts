@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { collection, doc, Firestore, getDocs, orderBy, query, setDoc } from '@angular/fire/firestore';
+import { collection, deleteDoc, doc, Firestore, getDoc, getDocs, orderBy, query, setDoc } from '@angular/fire/firestore';
 import { OrdemDeServico, ordemDeServicoConverter } from '../models/ordemdeservico.model';
 
 @Injectable({
@@ -13,6 +13,13 @@ export class OrdensDeServicoService {
         private _fireStore: Firestore,
     ) { }
 
+    async getById(clienteId: string): Promise<OrdemDeServico> {
+        const q = doc(this._fireStore, "ordensdeservico", clienteId).withConverter(ordemDeServicoConverter);
+        const querySnapshot = await getDoc(q);
+
+        return querySnapshot.data();
+    }
+
     public async getAll(): Promise<OrdemDeServico[]> {
         const ordensDeServico: OrdemDeServico[] = [];
         const q = query(collection(this._fireStore, "ordensdeservico"), orderBy("dataehoraentrada", "desc")).
@@ -24,24 +31,9 @@ export class OrdensDeServicoService {
         return ordensDeServico;
     }
 
-    // async create(cliente: Cliente): Promise<void> {
-    //     try {
-    //         // const databaseReference = getDatabase(this._fireStore.app);
-    //         cliente.nascimento = new Date(cliente.nascimento);
-
-    //         const clientesRef = collection(this._fireStore, "clientes");
-
-    //         await setDoc(doc(clientesRef), {
-    //             nome: cliente.nome,
-    //             email: cliente.email,
-    //             telefone: cliente.telefone,
-    //             renda: cliente.renda,
-    //             nascimento: cliente.nascimento,
-    //         });
-    //     } catch (e) {
-    //         console.error(e);
-    //     }
-    // }
+    async removeById(ordensDeServicoId: string) {
+        await deleteDoc(doc(this._fireStore, "ordensdeservico", ordensDeServicoId));
+    }
 
     async update(ordemDeServico: OrdemDeServico) {
         // console.log('---> ' + ordemDeServico.ordemdeservicoid);

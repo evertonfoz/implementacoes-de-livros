@@ -32,6 +32,20 @@ export class OrdensdeservicoListagemPage implements OnInit {
     this.ordensDeServico = await this.ordensdeservicoService.getAll();
   }
 
+  async removerAtendimento(ordemDeServico: OrdemDeServico) {
+    try {
+      const successFunction = async () => {
+        await this.ordensdeservicoService.removeById(ordemDeServico.ordemdeservicoid);
+        this.toastService.presentToast('Atendimento removido com sucesso', 3000, 'top');
+        this.slidingList.closeSlidingItems();
+        this.ordensDeServico = await this.ordensdeservicoService.getAll();
+      };
+      await this.alertService.presentConfirm('Remover Atendimento', 'Confirma remoção?', successFunction);
+    } catch (e) {
+      await this.alertService.presentAlert('Falha', 'Remoção não foi executada', e, ['Ok']);
+    }
+  }
+
   // async removerAtendimento(ordemdeservico: OrdemDeServico) {
   //   await this.ordensdeservicoService.removeById(ordemdeservico.ordemdeservicoid)
   //     .then(async () => {

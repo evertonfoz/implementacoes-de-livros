@@ -118,12 +118,14 @@ export class OrdensDeServicoAddEditPage implements OnInit {
 
   // Método a ser invocado quando o botão de cancelar alteração for selecionado
   cancelarEdicao() {
+    console.log(1);
     this.createUpdateFormGroup();
     this.modoDeEdicao = false;
   }
 
   // Método a ser invocado quando o botão de gravar for selecionado
   async submit() {
+    console.log(1);
     if (this.osForm.invalid || this.osForm.pending) {
       await this.alertService.presentAlert('Falha', 'Gravação não foi executada',
         'Verifique os dados informados para o atendimento', ['Ok']);
@@ -136,14 +138,13 @@ export class OrdensDeServicoAddEditPage implements OnInit {
     // if (this.ordemDeServico.ordemdeservicoid === '') {
     //   this.osForm.controls.ordemdeservicoid.setValue(this.firestoreService.createID());
     // }
+    console.log('==> ' + this.osForm.controls.horaentrada.value);
 
     const data = new Date(this.osForm.controls.dataentrada.value).toISOString();
-    const hora = new Date(this.osForm.controls.horaentrada.value).toISOString();
+    // const hora = new Date(this.osForm.controls.horaentrada.value).toString();
 
-    console.log('Data: ' + data.substring(0, 11));
-    console.log('Hora: ' + hora.substring(11, 22));
     this.osForm.controls.dataehoraentrada.setValue(
-      data.substring(0, 11) + hora.substring(11, 22)
+      data.substring(0, 11) + this.osForm.controls.horaentrada.value//hora.substring(11, 22)
     );
     // console.log('===> ' + this.osForm.controls.horaentrada.value);
 
