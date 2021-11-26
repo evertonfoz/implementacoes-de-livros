@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Cliente } from 'src/app/models/cliente.model';
 import { ClientesService } from 'src/app/services/clientes.service';
 import { Location } from '@angular/common';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   templateUrl: './clientes-search.page.html',
@@ -12,7 +13,8 @@ export class ClientesSearchPage implements OnInit {
 
   constructor(
     private clientesService: ClientesService,
-    public location: Location
+    public location: Location,
+    private searchService: SearchService,
   ) { }
 
   ngOnInit() {
@@ -27,6 +29,8 @@ export class ClientesSearchPage implements OnInit {
   }
 
   clientesClick(cliente: Cliente) {
+    this.searchService.publishSomeData(cliente);
     this.location.back();
   }
+
 }

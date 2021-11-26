@@ -9,7 +9,6 @@ export interface OrdemDeServico {
 export const ordemDeServicoConverter = {
     toFirestore: (ordemDeServico) => {
         return <OrdemDeServico>{
-            ordemdeservicoid: ordemDeServico.ordemdeservicoid,
             clienteid: ordemDeServico.clienteid,
             veiculo: ordemDeServico.veiculo,
             dataehoraentrada: ordemDeServico.dataehoraentrada,
