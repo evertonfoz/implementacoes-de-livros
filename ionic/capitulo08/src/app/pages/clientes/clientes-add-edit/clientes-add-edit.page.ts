@@ -13,6 +13,7 @@ import { Firestore } from '@angular/fire/firestore';
 import { getDatabase, onValue, ref } from 'firebase/database';
 import { Camera, CameraPhoto, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Directory, Filesystem } from '@capacitor/filesystem';
+import { PhotoService } from 'src/app/services/photo.service';
 
 @Component({
   templateUrl: './clientes-add-edit.page.html',
@@ -35,18 +36,10 @@ export class ClientesAddEditPage implements OnInit {
     private toastService: ToastService,
     private router: Router, private route: ActivatedRoute,
     private actionSheetController: ActionSheetController,
+    private photoService: PhotoService,
   ) {
   }
 
-  async obterFoto(sourceType: CameraSource) {
-    const capturedPhoto = await Camera.getPhoto({
-      resultType: CameraResultType.Uri,
-      source: sourceType,
-      quality: 100
-    });
-
-    const savedImageFile = await this.savePicture(capturedPhoto);
-  }
 
   // 1.0.6
   private async savePicture(cameraPhoto: CameraPhoto) {
@@ -93,13 +86,13 @@ export class ClientesAddEditPage implements OnInit {
         buttons: [{
           text: 'Da galeria de imagens',
           handler: () => {
-            this.obterFoto(CameraSource.Photos);
+            this.photoService.escolherFoto();
           }
         },
         {
           text: 'Utilizar a câmera',
           handler: () => {
-            this.obterFoto(CameraSource.Camera);
+            this.photoService.obterFoto();
           }
         },
         {

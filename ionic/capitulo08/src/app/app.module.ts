@@ -17,6 +17,7 @@ import { DetailService } from './services/detail.service';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, initializeFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from './credentials';
+// import { AndroidPermissions } from "@ionic-native/android-permissions/ngx";
 
 @NgModule({
   declarations: [AppComponent],
@@ -55,6 +56,7 @@ import { environment } from './credentials';
     DatabaseService,
     DetailService,
     FormBuilder,
+    // AndroidPermissions,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
