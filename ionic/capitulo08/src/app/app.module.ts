@@ -19,6 +19,7 @@ import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, ini
 import { environment } from './credentials';
 // import { AndroidPermissions } from "@ionic-native/android-permissions/ngx";
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

@@ -12,10 +12,23 @@
     <!-- <ion-item-sliding *ngFor="let cliente of clientes | async"> -->
     <ion-item-sliding *ngFor="let cliente of clientes">
       <ion-item routerDirection="forward" [routerLink]="['/', 'clientes-add-edit', cliente.clienteid]">
-        <ion-label>
-          <h2>{{cliente.nome}}</h2>
-          <p style="text-align:right">Telefone: {{cliente.telefone}}</p>
-        </ion-label>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="cliente.foto"></ion-img>
+        </ion-thumbnail>
+        <ion-grid>
+          <ion-row>
+            <ion-label>
+              <p style="font-size: larger; font-weight: bold;">{{cliente.nome}}</p>
+            </ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <ion-label>
+                <p style="font-weight: 400; text-align: right">Telefone: {{cliente.telefone}}</p>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
 
       <ion-item-options side="end">

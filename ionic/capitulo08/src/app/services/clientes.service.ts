@@ -21,13 +21,16 @@ export class ClientesService {
 
             const clientesRef = collection(this._fireStore, "clientes");
 
-            await setDoc(doc(clientesRef), {
-                nome: cliente.nome,
-                email: cliente.email,
-                telefone: cliente.telefone,
-                renda: cliente.renda,
-                nascimento: cliente.nascimento,
-            });
+            await setDoc(doc(clientesRef).
+                withConverter(clienteConverter), cliente);
+            // await setDoc(doc(clientesRef), {
+            //     nome: cliente.nome,
+            //     email: cliente.email,
+            //     telefone: cliente.telefone,
+            //     renda: cliente.renda,
+            //     nascimento: cliente.nascimento,
+            //     foto: cliente.foto
+            // });
         } catch (e) {
             console.error(e);
         }

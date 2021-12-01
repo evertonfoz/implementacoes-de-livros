@@ -26,7 +26,9 @@ export class ClientesAddEditPage implements OnInit {
   public clientesForm: FormGroup;
 
   public search: string;
-  public webPathToPhoto: string = 'assets/imgs/icon_clientes.png';
+  public caminhoParaFoto: string = 'assets/imgs/icon_clientes.png';
+  // public photoFilename: string = '';
+  // public pathToFilePhoto: string = '';
 
 
   constructor(
@@ -41,12 +43,6 @@ export class ClientesAddEditPage implements OnInit {
   ) {
   }
 
-
-  // 1.0.6
-
-
-
-
   async capturarFoto() {
     const actionSheet = await this.actionSheetController.create(
       {
@@ -55,8 +51,10 @@ export class ClientesAddEditPage implements OnInit {
           text: 'Da galeria de imagens',
           handler: async () => {
             await this.photoService.escolherFoto();
-            this.webPathToPhoto = Capacitor.convertFileSrc(this.photoService.webPathToPhoto);
-            console.log('this.webPathToPhoto ->' + this.webPathToPhoto);
+            this.caminhoParaFoto = Capacitor.convertFileSrc(this.photoService.caminhoParaFoto);
+            this.pathToFilePhoto = this.photoService.caminhoParaFoto;
+            this.photoFilename = this.photoService.nomeArquivoFoto;
+            console.log('this.webPathToPhoto ->' + this.caminhoParaFoto);
           }
         },
         {
@@ -64,8 +62,10 @@ export class ClientesAddEditPage implements OnInit {
           handler: async () => {
             await this.photoService.obterFoto();
 
-            this.webPathToPhoto = Capacitor.convertFileSrc(this.photoService.webPathToPhoto);
-            console.log('this.webPathToPhoto ->' + this.webPathToPhoto);
+            this.caminhoParaFoto = Capacitor.convertFileSrc(this.photoService.caminhoParaFoto);
+            this.pathToFilePhoto = this.photoService.caminhoParaFoto;
+            this.photoFilename = this.photoService.nomeArquivoFoto;
+            console.log('this.webPathToPhoto ->' + this.caminhoParaFoto);
           }
         },
         {
@@ -88,8 +88,13 @@ export class ClientesAddEditPage implements OnInit {
 
     if (id !== '-1') {
       this.cliente = await this.clientesService.getById(id);
+      this.caminhoParaFoto = this.cliente.caminhoParaFoto;
+      this.photoFilename = this.cliente.foto;
     } else {
-      this.cliente = { clienteid: '', nome: '', email: '', telefone: '', renda: 0.00, nascimento: new Date() };
+      this.cliente = {
+        clienteid: '', nome: '', email: '', telefone: '', renda: 0.00, nascimento: new Date(),
+        foto: this.photoFilename, caminhoParaFoto: this.caminhoParaFoto,
+      };
       this.modoDeEdicao = true;
     }
 
@@ -99,7 +104,9 @@ export class ClientesAddEditPage implements OnInit {
       email: [this.cliente.email, Validators.required],
       telefone: [this.cliente.telefone, Validators.required],
       renda: [this.cliente.renda, Validators.required],
-      nascimento: [this.cliente.nascimento.toISOString(), Validators.required]
+      nascimento: [this.cliente.nascimento.toISOString(), Validators.required],
+      foto: [this.cliente.foto],
+      caminhoParaFoto: [this.cliente.caminhoParaFoto]
     });
   }
 
@@ -118,6 +125,8 @@ export class ClientesAddEditPage implements OnInit {
     const loading = await this.loadingCtrl.create();
     await loading.present();
 
+    this.clientesForm.controls.foto.setValue(this.photoFilename);
+    this.clientesForm.controls.caminhoParaFoto.setValue(this.pathToFilePhoto);
     if (this.cliente.clienteid === '') {
       await this.clientesService.create(this.clientesForm.value);
     } else {

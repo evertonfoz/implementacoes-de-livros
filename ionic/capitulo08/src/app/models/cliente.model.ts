@@ -5,6 +5,8 @@ export interface Cliente {
     telefone: string;
     renda: number;
     nascimento: Date;
+    foto: string;
+    caminhoParaFoto: string;
 }
 
 
@@ -16,6 +18,8 @@ export const clienteConverter = {
             telefone: cliente.telefone,
             renda: cliente.renda,
             nascimento: cliente.nascimento,
+            foto: cliente.foto,
+            caminhoParaFoto: cliente.caminhoParaFoto,
         };
     },
     fromFirestore: (snapshot, options) => {
@@ -27,6 +31,8 @@ export const clienteConverter = {
             telefone: data.telefone,
             renda: data.renda,
             nascimento: data.nascimento.toDate(),
+            foto: data.foto,
+            caminhoParaFoto: data.caminhoParaFoto,
         }
     }
 };

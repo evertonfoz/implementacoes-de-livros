@@ -7,19 +7,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PhotoService {
-  public webPathToPhoto: string = '';
+  // public nomeArquivoFoto: string = '';
+  public caminhoParaFoto: string = '';
 
   constructor() { }
 
   async obterFoto() {
     const capturedPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
-      source: CameraSource.Camera,
+      source: CameraSource.Prompt,
       saveToGallery: true,
       quality: 100,
     });
 
-    this.webPathToPhoto = await this._savePicture(capturedPhoto.webPath);
+    await this._gravarFoto(capturedPhoto.webPath);
   }
 
   async escolherFoto() {
@@ -27,21 +28,17 @@ export class PhotoService {
       quality: 100, limit: 1
     });
 
-    this.webPathToPhoto = await this._savePicture(pickedPhoto.photos[0].webPath);
-    // console.log('pickedPhoto: ' + pickedPhoto.photos[0].webPath);
+    await this._gravarFoto(pickedPhoto.photos[0].webPath);
   }
 
-  private async _readAsBase64(webPath: string) {
-    console.log('readAsBase64: ' + webPath);
-    const response = await fetch(webPath);
-    console.log('response: ' + response);
+  private async _lerComoBase64(caminho: string) {
+    const response = await fetch(caminho);
     const blob = await response.blob();
-    console.log('blob: ' + blob);
 
-    return await this._convertBlobToBase64(blob) as string;
+    return await this._converterBlobParaBase64(blob) as string;
   }
 
-  _convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
+  _converterBlobParaBase64 = (blob: Blob) => new Promise((resolve, reject) => {
     const reader = new FileReader;
     reader.onerror = reject;
     reader.onload = () => {
@@ -57,19 +54,18 @@ export class PhotoService {
     return novoNomeArquivo;
   }
 
-  private async _savePicture(webPath: string) {
-    const fileName = this._criarNomeArquivoImagem();
-    const base64Data = await this._readAsBase64(webPath);
-    const savedFile = await Filesystem.writeFile({
-      path: fileName,
-      data: base64Data,
+  private async _gravarFoto(caminho: string) {
+    const nomeDoArquivo = this._criarNomeArquivoImagem();
+    const dadosEmBase64 = await this._lerComoBase64(caminho);
+
+    const arquivoGravado = await Filesystem.writeFile({
+      path: nomeDoArquivo,
+      data: dadosEmBase64,
       directory: Directory.Data
     });
 
-
-    console.log('savedFile.uri: ' + savedFile.uri);
-    return savedFile.uri;
-
+    // this.nomeArquivoFoto = nomeDoArquivo;
+    this.caminhoParaFoto = arquivoGravado.uri;
   }
 
 }
