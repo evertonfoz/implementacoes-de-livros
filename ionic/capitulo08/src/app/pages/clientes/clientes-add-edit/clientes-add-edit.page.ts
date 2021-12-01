@@ -14,6 +14,7 @@ import { getDatabase, onValue, ref } from 'firebase/database';
 import { Camera, CameraPhoto, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { PhotoService } from 'src/app/services/photo.service';
+import { Capacitor } from '@capacitor/core';
 
 @Component({
   templateUrl: './clientes-add-edit.page.html',
@@ -25,7 +26,7 @@ export class ClientesAddEditPage implements OnInit {
   public clientesForm: FormGroup;
 
   public search: string;
-
+  public webPathToPhoto: string = 'assets/imgs/icon_clientes.png';
 
 
   constructor(
@@ -42,42 +43,9 @@ export class ClientesAddEditPage implements OnInit {
 
 
   // 1.0.6
-  private async savePicture(cameraPhoto: CameraPhoto) {
-    // Convert photo to base64 format, required by Filesystem API to save
-    const base64Data = await this.readAsBase64(cameraPhoto);
 
-    // Write the file to the data directory
-    const fileName = new Date().getTime() + '.jpeg';
-    const savedFile = await Filesystem.writeFile({
-      path: fileName,
-      data: base64Data,
-      directory: Directory.Data
-    });
 
-    // Use webPath to display the new image instead of base64 since it's
-    // already loaded into memory
-    return {
-      filepath: fileName,
-      webviewPath: cameraPhoto.webPath
-    };
-  }
 
-  private async readAsBase64(cameraPhoto: CameraPhoto) {
-    // Fetch the photo, read as a blob, then convert to base64 format
-    const response = await fetch(cameraPhoto.webPath!);
-    const blob = await response.blob();
-
-    return await this.convertBlobToBase64(blob) as string;
-  }
-
-  convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
-    const reader = new FileReader;
-    reader.onerror = reject;
-    reader.onload = () => {
-      resolve(reader.result);
-    };
-    reader.readAsDataURL(blob);
-  });
 
   async capturarFoto() {
     const actionSheet = await this.actionSheetController.create(
@@ -85,14 +53,19 @@ export class ClientesAddEditPage implements OnInit {
         header: 'Capturar a foto do cliente',
         buttons: [{
           text: 'Da galeria de imagens',
-          handler: () => {
-            this.photoService.escolherFoto();
+          handler: async () => {
+            await this.photoService.escolherFoto();
+            this.webPathToPhoto = Capacitor.convertFileSrc(this.photoService.webPathToPhoto);
+            console.log('this.webPathToPhoto ->' + this.webPathToPhoto);
           }
         },
         {
           text: 'Utilizar a câmera',
-          handler: () => {
-            this.photoService.obterFoto();
+          handler: async () => {
+            await this.photoService.obterFoto();
+
+            this.webPathToPhoto = Capacitor.convertFileSrc(this.photoService.webPathToPhoto);
+            console.log('this.webPathToPhoto ->' + this.webPathToPhoto);
           }
         },
         {

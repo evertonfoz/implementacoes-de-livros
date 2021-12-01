@@ -7,19 +7,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PhotoService {
-  public webPathToPhoto: String = '';
+  public webPathToPhoto: string = '';
 
   constructor() { }
 
   async obterFoto() {
     const capturedPhoto = await Camera.getPhoto({
-      resultType: CameraResultType.Base64,
+      resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
       saveToGallery: true,
       quality: 100,
     });
 
-    this._savePicture(capturedPhoto.base64String);
+    this.webPathToPhoto = await this._savePicture(capturedPhoto.webPath);
   }
 
   async escolherFoto() {
@@ -27,9 +27,28 @@ export class PhotoService {
       quality: 100, limit: 1
     });
 
-    this.webPathToPhoto = pickedPhoto.photos[0].webPath;
+    this.webPathToPhoto = await this._savePicture(pickedPhoto.photos[0].webPath);
     // console.log('pickedPhoto: ' + pickedPhoto.photos[0].webPath);
   }
+
+  private async _readAsBase64(webPath: string) {
+    console.log('readAsBase64: ' + webPath);
+    const response = await fetch(webPath);
+    console.log('response: ' + response);
+    const blob = await response.blob();
+    console.log('blob: ' + blob);
+
+    return await this._convertBlobToBase64(blob) as string;
+  }
+
+  _convertBlobToBase64 = (blob: Blob) => new Promise((resolve, reject) => {
+    const reader = new FileReader;
+    reader.onerror = reject;
+    reader.onload = () => {
+      resolve(reader.result);
+    };
+    reader.readAsDataURL(blob);
+  });
 
   private _criarNomeArquivoImagem() {
     const d = new Date(),
@@ -38,8 +57,9 @@ export class PhotoService {
     return novoNomeArquivo;
   }
 
-  private async _savePicture(base64Data: string) {
+  private async _savePicture(webPath: string) {
     const fileName = this._criarNomeArquivoImagem();
+    const base64Data = await this._readAsBase64(webPath);
     const savedFile = await Filesystem.writeFile({
       path: fileName,
       data: base64Data,
@@ -47,7 +67,7 @@ export class PhotoService {
     });
 
 
-    // console.log('filename: ' + fileName + ', savedFile.uri: ' + savedFile.uri);
+    console.log('savedFile.uri: ' + savedFile.uri);
     return savedFile.uri;
 
   }
