@@ -31,6 +31,11 @@ export class PhotoService {
     await this._gravarFoto(pickedPhoto.photos[0].webPath);
   }
 
+  private async _lerComoBlob(caminho: string) {
+    const response = await fetch(caminho);
+    return await response.blob();
+  }
+
   private async _lerComoBase64(caminho: string) {
     const response = await fetch(caminho);
     const blob = await response.blob();

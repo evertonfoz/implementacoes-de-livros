@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Capacitor } from '@capacitor/core';
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { IonList } from '@ionic/angular';
 import { Cliente } from 'src/app/models/cliente.model';
@@ -30,38 +31,36 @@ export class ClientesListagemPage implements OnInit {
     this.clientes = await this.clientesService.getAll();
   }
 
+  caminhoFotoParaListagem(foto: string) {
+    console.log(foto);
+    if (foto != '') {
+      return Capacitor.convertFileSrc(foto);
+    } else {
+      return 'assets/imgs/icon_clientes.png';
+    }
+  }
+
   async removerCliente(cliente: Cliente) {
     try {
       const successFunction = async () => {
-        // this.clientesService.removeById(cliente.clienteid);
+        this.clientesService.removeById(cliente.clienteid);
 
-        const caminho: string = cliente.caminhoParaFoto.substr(0, cliente.caminhoParaFoto.lastIndexOf('/') + 1);
-        const nomeArquivo: string = cliente.caminhoParaFoto.substr(cliente.caminhoParaFoto.lastIndexOf('/') + 1, (cliente.caminhoParaFoto.length - caminho.length));
-        // const caminhoParaArquivo = this.file.dataDirectory + nomeArquivo;
-
-        // console.log('cliente.foto ' + cliente.foto);
-        // console.log('caminho ' + caminho);
-        console.log('nomeArquivo ' + nomeArquivo);
-        // console.log('caminhoParaArquivo ' + cliente.caminhoParaFoto);
-        // console.log('Directory.Data ' + Directory.Documents + ' - ' + nomeArquivo);
-
+        const caminho: string = cliente.foto.substr(0, cliente.foto.lastIndexOf('/') + 1);
+        const nomeArquivo: string = cliente.foto.substr(cliente.foto.lastIndexOf('/') + 1, (cliente.foto.length - caminho.length));
         try {
-          console.log(1);
-          await Filesystem.deleteFile({
-            path: nomeArquivo, //'1638380104139.jpg',
-            directory: Directory.Data,
-          });
-          console.log(2);
-          // await Filesystem.deleteFile({
-          //   path: nomeArquivo,
-          //   directory: Directory.Documents,
-          // });
-          // await this.file.removeFile(this.file.dataDirectory, nomeArquivo);
+          console.log(cliente.foto);
+          if (cliente.foto != '') {
+            await Filesystem.deleteFile({
+              path: nomeArquivo, //'1638380104139.jpg',
+              directory: Directory.Data,
+            });
+          }
           this.toastService.presentToast('Cliente removido com sucesso', 3000, 'top');
           this.slidingList.closeSlidingItems();
         } catch (e) {
           await this.alertService.presentAlert('Falha', 'Remoção do arquivo não foi executada', e, ['Ok']);
         }
+        this.clientes = await this.clientesService.getAll();
       };
       await this.alertService.presentConfirm('Remover Cliente', 'Confirma remoção?', successFunction);
     } catch (e) {

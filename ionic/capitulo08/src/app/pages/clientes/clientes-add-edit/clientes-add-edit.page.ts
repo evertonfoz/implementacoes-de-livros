@@ -52,9 +52,9 @@ export class ClientesAddEditPage implements OnInit {
           handler: async () => {
             await this.photoService.escolherFoto();
             this.caminhoParaFoto = Capacitor.convertFileSrc(this.photoService.caminhoParaFoto);
-            this.pathToFilePhoto = this.photoService.caminhoParaFoto;
-            this.photoFilename = this.photoService.nomeArquivoFoto;
-            console.log('this.webPathToPhoto ->' + this.caminhoParaFoto);
+            // this.pathToFilePhoto = this.photoService.caminhoParaFoto;
+            // this.photoFilename = this.photoService.nomeArquivoFoto;
+            // console.log('this.webPathToPhoto ->' + this.caminhoParaFoto);
           }
         },
         {
@@ -63,8 +63,8 @@ export class ClientesAddEditPage implements OnInit {
             await this.photoService.obterFoto();
 
             this.caminhoParaFoto = Capacitor.convertFileSrc(this.photoService.caminhoParaFoto);
-            this.pathToFilePhoto = this.photoService.caminhoParaFoto;
-            this.photoFilename = this.photoService.nomeArquivoFoto;
+            // this.pathToFilePhoto = this.photoService.caminhoParaFoto;
+            // this.photoFilename = this.photoService.nomeArquivoFoto;
             console.log('this.webPathToPhoto ->' + this.caminhoParaFoto);
           }
         },
@@ -88,12 +88,12 @@ export class ClientesAddEditPage implements OnInit {
 
     if (id !== '-1') {
       this.cliente = await this.clientesService.getById(id);
-      this.caminhoParaFoto = this.cliente.caminhoParaFoto;
-      this.photoFilename = this.cliente.foto;
+      this.caminhoParaFoto = this.cliente.foto;
+      // this.photoFilename = this.cliente.foto;
     } else {
       this.cliente = {
         clienteid: '', nome: '', email: '', telefone: '', renda: 0.00, nascimento: new Date(),
-        foto: this.photoFilename, caminhoParaFoto: this.caminhoParaFoto,
+        foto: this.caminhoParaFoto
       };
       this.modoDeEdicao = true;
     }
@@ -106,7 +106,7 @@ export class ClientesAddEditPage implements OnInit {
       renda: [this.cliente.renda, Validators.required],
       nascimento: [this.cliente.nascimento.toISOString(), Validators.required],
       foto: [this.cliente.foto],
-      caminhoParaFoto: [this.cliente.caminhoParaFoto]
+      // caminhoParaFoto: [this.cliente.caminhoParaFoto]
     });
   }
 
@@ -125,8 +125,12 @@ export class ClientesAddEditPage implements OnInit {
     const loading = await this.loadingCtrl.create();
     await loading.present();
 
-    this.clientesForm.controls.foto.setValue(this.photoFilename);
-    this.clientesForm.controls.caminhoParaFoto.setValue(this.pathToFilePhoto);
+    if (this.photoService.caminhoParaFoto != '') {
+      this.clientesForm.controls.foto.setValue(this.caminhoParaFoto);
+    } else {
+      this.clientesForm.controls.foto.setValue('');
+    }
+    // this.clientesForm.controls.caminhoParaFoto.setValue(this.pathToFilePhoto);
     if (this.cliente.clienteid === '') {
       await this.clientesService.create(this.clientesForm.value);
     } else {
