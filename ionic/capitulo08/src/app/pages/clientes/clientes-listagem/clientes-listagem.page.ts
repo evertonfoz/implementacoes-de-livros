@@ -32,7 +32,6 @@ export class ClientesListagemPage implements OnInit {
   }
 
   caminhoFotoParaListagem(foto: string) {
-    console.log(foto);
     if (foto != '') {
       return Capacitor.convertFileSrc(foto);
     } else {

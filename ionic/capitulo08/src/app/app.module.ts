@@ -15,9 +15,10 @@ import { DetailService } from './services/detail.service';
 // import { AngularFireModule } from '@angular/fire/compat'
 // import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, initializeFirestore, provideFirestore } from '@angular/fire/firestore';
+import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, initializeFirestore, provideFirestore, } from '@angular/fire/firestore';
 import { environment } from './credentials';
 // import { AndroidPermissions } from "@ionic-native/android-permissions/ngx";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 
 @NgModule({
@@ -26,7 +27,6 @@ import { environment } from './credentials';
   imports: [
     //           const db = initializeFirestore(this._fireStore.app, { experimentalAutoDetectLongPolling: true });
     // const clientesRef = collection(db, "clientes");
-
     provideFirebaseApp(() => {
       // let firebase = initializeApp(environment.firebaseConfig);
       return initializeApp(environment.firebaseConfig);
@@ -51,7 +51,8 @@ import { environment } from './credentials';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    IonicStorageModule.forRoot()
+
+    IonicStorageModule.forRoot(),
   ],
   providers: [
     DatabaseService,

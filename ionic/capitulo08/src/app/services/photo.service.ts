@@ -31,7 +31,7 @@ export class PhotoService {
     await this._gravarFoto(pickedPhoto.photos[0].webPath);
   }
 
-  private async _lerComoBlob(caminho: string) {
+  async lerComoBlob(caminho: string) {
     const response = await fetch(caminho);
     return await response.blob();
   }
@@ -43,7 +43,7 @@ export class PhotoService {
     return await this._converterBlobParaBase64(blob) as string;
   }
 
-  _converterBlobParaBase64 = (blob: Blob) => new Promise((resolve, reject) => {
+  private _converterBlobParaBase64 = (blob: Blob) => new Promise((resolve, reject) => {
     const reader = new FileReader;
     reader.onerror = reject;
     reader.onload = () => {

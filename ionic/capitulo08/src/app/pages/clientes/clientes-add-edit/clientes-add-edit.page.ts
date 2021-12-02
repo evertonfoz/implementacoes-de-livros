@@ -15,6 +15,9 @@ import { Camera, CameraPhoto, CameraResultType, CameraSource } from '@capacitor/
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { PhotoService } from 'src/app/services/photo.service';
 import { Capacitor } from '@capacitor/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { FirebaseStorage } from '@angular/fire/storage';
+import { getStorage, uploadBytes, ref as storageRef, StorageReference, getDownloadURL } from 'firebase/storage';
 
 @Component({
   templateUrl: './clientes-add-edit.page.html',
@@ -27,6 +30,7 @@ export class ClientesAddEditPage implements OnInit {
 
   public search: string;
   public caminhoParaFoto: string = 'assets/imgs/icon_clientes.png';
+  private uriArquivoImagem;
   // public photoFilename: string = '';
   // public pathToFilePhoto: string = '';
 
@@ -40,8 +44,30 @@ export class ClientesAddEditPage implements OnInit {
     private router: Router, private route: ActivatedRoute,
     private actionSheetController: ActionSheetController,
     private photoService: PhotoService,
+    // private storage: AngularFireStorage,
+    private _fireStore: Firestore,
   ) {
   }
+
+  async uploadFile() {
+    console.log('this.obterNomeDoArquivo() ' + this.obterNomeDoArquivo());
+    const storage: FirebaseStorage = getStorage(this._fireStore.app, this._fireStore.app.options.storageBucket);
+    const storageReference = storageRef(storage, "fotosClientes/" + this.obterNomeDoArquivo());
+
+    await uploadBytes(storageReference, await this.photoService.lerComoBlob(this.caminhoParaFoto));
+
+    return await getDownloadURL(storageReference);
+  }
+
+  obterNomeDoArquivo() {
+    // const caminho: string = this.photoService.caminhoParaFoto.substr(0, this.photoService.caminhoParaFoto.lastIndexOf('/') + 1);
+    // const nomeArquivo: string = this.photoService.caminhoParaFoto.substr(this.photoService.caminhoParaFoto.lastIndexOf('/') + 1);
+
+    // console.log('this.photoService.caminhoParaFoto ' + this.photoService.caminhoParaFoto);
+    // const caminho: string = this.photoService.caminhoParaFoto;
+    return this.photoService.caminhoParaFoto.substr(this.photoService.caminhoParaFoto.lastIndexOf('/') + 1);
+  }
+
 
   async capturarFoto() {
     const actionSheet = await this.actionSheetController.create(
@@ -52,9 +78,14 @@ export class ClientesAddEditPage implements OnInit {
           handler: async () => {
             await this.photoService.escolherFoto();
             this.caminhoParaFoto = Capacitor.convertFileSrc(this.photoService.caminhoParaFoto);
-            // this.pathToFilePhoto = this.photoService.caminhoParaFoto;
-            // this.photoFilename = this.photoService.nomeArquivoFoto;
-            // console.log('this.webPathToPhoto ->' + this.caminhoParaFoto);
+            const caminho: string = this.photoService.caminhoParaFoto.substr(0, this.photoService.caminhoParaFoto.lastIndexOf('/') + 1);
+            const nomeArquivo: string = this.photoService.caminhoParaFoto.substr(this.photoService.caminhoParaFoto.lastIndexOf('/') + 1);
+
+            // let caminhoCorrigido = this.photoService.caminhoParaFoto.substr(0, this.photoService.caminhoParaFoto.lastIndexOf('/') + 1);
+            // let nomeUtilizado = this.photoService.caminhoParaFoto.substr(this.photoService.caminhoParaFoto.lastIndexOf('/') + 1);
+
+            // console.log('1. ' + caminhoCorrigido);
+            // console.log('2. ' + nomeUtilizado);
           }
         },
         {
@@ -63,9 +94,6 @@ export class ClientesAddEditPage implements OnInit {
             await this.photoService.obterFoto();
 
             this.caminhoParaFoto = Capacitor.convertFileSrc(this.photoService.caminhoParaFoto);
-            // this.pathToFilePhoto = this.photoService.caminhoParaFoto;
-            // this.photoFilename = this.photoService.nomeArquivoFoto;
-            console.log('this.webPathToPhoto ->' + this.caminhoParaFoto);
           }
         },
         {
@@ -117,7 +145,7 @@ export class ClientesAddEditPage implements OnInit {
   async submit() {
     if (this.clientesForm.invalid || this.clientesForm.pending) {
       await this.alertService.presentAlert('Falha', 'Gravação não foi executada',
-        'Verifique os dados informados para o atendimento', ['Ok']);
+        'Verifique os dados informados para o cliente', ['Ok']);
       return;
     }
 
@@ -125,8 +153,11 @@ export class ClientesAddEditPage implements OnInit {
     const loading = await this.loadingCtrl.create();
     await loading.present();
 
+
+    const urlArquivoEnviado = await this.uploadFile();
+
     if (this.photoService.caminhoParaFoto != '') {
-      this.clientesForm.controls.foto.setValue(this.caminhoParaFoto);
+      this.clientesForm.controls.foto.setValue(this.photoService.caminhoParaFoto);
     } else {
       this.clientesForm.controls.foto.setValue('');
     }
