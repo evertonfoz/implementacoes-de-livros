@@ -44,15 +44,21 @@ export class ClientesListagemPage implements OnInit {
       const successFunction = async () => {
         this.clientesService.removeById(cliente.clienteid);
 
-        const caminho: string = cliente.foto.substr(0, cliente.foto.lastIndexOf('/') + 1);
-        const nomeArquivo: string = cliente.foto.substr(cliente.foto.lastIndexOf('/') + 1, (cliente.foto.length - caminho.length));
+
+        // const caminho: string = cliente.foto.substr(cliente.foto.lastIndexOf('/fotosClientes') + 1);
+        // const nomeArquivo: string = cliente.foto.substr(cliente.foto.lastIndexOf('/') + 1, (cliente.foto.length - caminho.length));
+
+        // console.log('cliente.foto: ' + cliente.foto);
+        // console.log('caminho: ' + caminho);
+        // console.log('nomeArquivo: ' + nomeArquivo);
+
         try {
-          console.log(cliente.foto);
           if (cliente.foto != '') {
-            await Filesystem.deleteFile({
-              path: nomeArquivo, //'1638380104139.jpg',
-              directory: Directory.Data,
-            });
+            await this.clientesService.removerImagem(cliente.nomeDaFoto);
+            // await Filesystem.deleteFile({
+            //   path: nomeArquivo, //'1638380104139.jpg',
+            //   directory: Directory.Data,
+            // });
           }
           this.toastService.presentToast('Cliente removido com sucesso', 3000, 'top');
           this.slidingList.closeSlidingItems();

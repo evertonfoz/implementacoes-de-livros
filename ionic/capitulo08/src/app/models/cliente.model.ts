@@ -6,7 +6,7 @@ export interface Cliente {
     renda: number;
     nascimento: Date;
     foto: string;
-    // caminhoParaFoto: string;
+    nomeDaFoto: string;
 }
 
 
@@ -19,7 +19,7 @@ export const clienteConverter = {
             renda: cliente.renda,
             nascimento: cliente.nascimento,
             foto: cliente.foto,
-            // caminhoParaFoto: cliente.caminhoParaFoto,
+            nomeDaFoto: cliente.nomeDaFoto,
         };
     },
     fromFirestore: (snapshot, options) => {
@@ -32,7 +32,7 @@ export const clienteConverter = {
             renda: data.renda,
             nascimento: data.nascimento.toDate(),
             foto: data.foto,
-            // caminhoParaFoto: data.caminhoParaFoto,
+            nomeDaFoto: data.nomeDaFoto,
         }
     }
 };

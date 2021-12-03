@@ -50,13 +50,21 @@ export class ClientesAddEditPage implements OnInit {
   }
 
   async uploadFile() {
-    console.log('this.obterNomeDoArquivo() ' + this.obterNomeDoArquivo());
     const storage: FirebaseStorage = getStorage(this._fireStore.app, this._fireStore.app.options.storageBucket);
     const storageReference = storageRef(storage, "fotosClientes/" + this.obterNomeDoArquivo());
 
     await uploadBytes(storageReference, await this.photoService.lerComoBlob(this.caminhoParaFoto));
 
     return await getDownloadURL(storageReference);
+  }
+
+  async removerFotoLocal() {
+    if (this.photoService.caminhoParaFoto != '') {
+      await Filesystem.deleteFile({
+        path: this.obterNomeDoArquivo(),
+        directory: Directory.Data,
+      });
+    }
   }
 
   obterNomeDoArquivo() {
@@ -121,7 +129,7 @@ export class ClientesAddEditPage implements OnInit {
     } else {
       this.cliente = {
         clienteid: '', nome: '', email: '', telefone: '', renda: 0.00, nascimento: new Date(),
-        foto: this.caminhoParaFoto
+        foto: this.caminhoParaFoto, nomeDaFoto: this.obterNomeDoArquivo()
       };
       this.modoDeEdicao = true;
     }
@@ -134,6 +142,7 @@ export class ClientesAddEditPage implements OnInit {
       renda: [this.cliente.renda, Validators.required],
       nascimento: [this.cliente.nascimento.toISOString(), Validators.required],
       foto: [this.cliente.foto],
+      nomeDaFoto: [this.obterNomeDoArquivo()],
       // caminhoParaFoto: [this.cliente.caminhoParaFoto]
     });
   }
@@ -155,9 +164,11 @@ export class ClientesAddEditPage implements OnInit {
 
 
     const urlArquivoEnviado = await this.uploadFile();
+    await this.removerFotoLocal();
 
     if (this.photoService.caminhoParaFoto != '') {
-      this.clientesForm.controls.foto.setValue(this.photoService.caminhoParaFoto);
+      this.clientesForm.controls.foto.setValue(urlArquivoEnviado);
+      this.clientesForm.controls.nomeDaFoto.setValue(this.obterNomeDoArquivo());
     } else {
       this.clientesForm.controls.foto.setValue('');
     }

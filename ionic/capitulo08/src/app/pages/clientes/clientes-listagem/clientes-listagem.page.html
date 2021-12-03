@@ -13,7 +13,7 @@
     <ion-item-sliding *ngFor="let cliente of clientes">
       <ion-item routerDirection="forward" [routerLink]="['/', 'clientes-add-edit', cliente.clienteid]">
         <ion-thumbnail slot="start">
-          <ion-img [src]="caminhoFotoParaListagem(cliente.foto)"></ion-img>
+          <ion-img [src]="cliente.foto"></ion-img>
         </ion-thumbnail>
         <ion-grid>
           <ion-row>

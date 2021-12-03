@@ -1,9 +1,8 @@
 import { ChangeDetectorRef, Injectable } from '@angular/core';
 import { Cliente, clienteConverter } from '../models/cliente.model';
 import { Firestore, collection, getDocs, setDoc, doc, query, QuerySnapshot, onSnapshot, Query, orderBy, getDoc, deleteDoc } from '@angular/fire/firestore';
-import { getDatabase, ref, set } from 'firebase/database';
-import { Subject } from 'rxjs';
-import { getStorage } from 'firebase/storage';
+import { getStorage, uploadBytes, ref as storageRef, StorageReference, getDownloadURL, FirebaseStorage, deleteObject } from 'firebase/storage';
+import { getDatabase, refFromURL } from '@firebase/database';
 
 
 @Injectable({
@@ -74,5 +73,15 @@ export class ClientesService {
 
         return clientes.filter(
             cliente => cliente.nome.toLowerCase().startsWith(nome.toLowerCase()));
+    }
+
+    async removerImagem(nomeImagem) {
+        try {
+            const storage: FirebaseStorage = getStorage(this._fireStore.app, this._fireStore.app.options.storageBucket);
+            const storageReference = storageRef(storage, "fotosClientes/" + nomeImagem);
+            await deleteObject(storageReference);
+        } catch (e) {
+            console.log(e);
+        }
     }
 }
