@@ -1,0 +1,23 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="pecas">
+      <ion-icon name="pricetags"></ion-icon>
+      <ion-label>Peças</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="clientes">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Clientes</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="atendimentos">
+      <ion-icon name="car"></ion-icon>
+      <ion-label>Atendimentos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>
+      <ion-label>Sair</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
