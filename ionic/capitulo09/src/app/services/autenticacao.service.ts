@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FirebaseApp } from '@angular/fire/app';
 import { initializeApp } from '@firebase/app';
-import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "@firebase/auth";
 import { environment } from 'src/credentials';
 
 @Injectable({
@@ -28,4 +28,20 @@ export class AutenticacaoService {
       throw new Error(error.message);
     }
   }
+
+  public isUserAuthenticated(): boolean {
+    return ((getAuth().currentUser !== null));
+  }
+
+  async registrar(value) {
+    initializeApp(environment.firebaseConfig);
+    const auth = getAuth();
+
+    try {
+      return await createUserWithEmailAndPassword(auth, value.email, value.password);
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
 }

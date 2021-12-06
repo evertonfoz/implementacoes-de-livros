@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AutenticacaoService } from '../../services/autenticacao.service';
 import { NavController } from '@ionic/angular';
-import { AutenticacaoService } from '../services/autenticacao.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-register',
+  templateUrl: './registrar.page.html',
+  styleUrls: ['./registrar.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class RegistrarPage implements OnInit {
+
   validationsForm: FormGroup;
-  errorMessage: string;
+  errorMessage: '';
+  successMessage: string;
 
   validationMessages = {
     email: [
-      { type: 'required', message: 'Informe o E-Mail' },
+      { type: 'required', message: 'Informe o e-Mail' },
       { type: 'pattern', message: 'Informe um email válido' }
     ],
     password: [
@@ -24,9 +26,9 @@ export class LoginPage implements OnInit {
   };
 
   constructor(
-    private formBuilder: FormBuilder,
+    private navCtrl: NavController,
     private autenticacaoService: AutenticacaoService,
-    private navCtrl: NavController
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
@@ -42,18 +44,18 @@ export class LoginPage implements OnInit {
     });
   }
 
-  async login(value) {
-    try {
-      await this.autenticacaoService.login(value)
-      this.errorMessage = '';
-      this.navCtrl.navigateForward('/home');
-      // this.errorMessage = 'Autenticado';
-    } catch (error) {
-      this.errorMessage = error.message;
-    }
+  registrar(value) {
+    this.autenticacaoService.registrar(value)
+      .then(res => {
+        this.errorMessage = '';
+        this.successMessage = 'Sua conta foi criada com sucesso. Se autentique.';
+      }, err => {
+        this.errorMessage = err.message;
+        this.successMessage = '';
+      });
   }
 
-  goToRegistrarPage() {
-    this.navCtrl.navigateForward('/registrar');
+  goLoginPage() {
+    this.navCtrl.navigateBack('');
   }
 }
