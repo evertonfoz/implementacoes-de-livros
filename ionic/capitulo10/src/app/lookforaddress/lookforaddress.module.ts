@@ -17,4 +17,4 @@ import { LookforaddressPage } from './lookforaddress.page';
   ],
   declarations: [LookforaddressPage]
 })
-export class LookforaddressPageModule {}
+export class LookforaddressPageModule { }

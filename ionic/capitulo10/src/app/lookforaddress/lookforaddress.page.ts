@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { CapacitorGoogleMaps } from '@capacitor-community/capacitor-googlemaps-native';
+// import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@awesome-cordova-plugins/native-geocoder/ngx';
 import { IonInput, LoadingController, Platform, ToastController } from '@ionic/angular';
 
 @Component({
@@ -10,13 +12,15 @@ import { IonInput, LoadingController, Platform, ToastController } from '@ionic/a
 export class LookforaddressPage {
 
   constructor(
-    private platform: Platform,
     public loadingCtrl: LoadingController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private nativeGeocoder: NativeGeocoder,
   ) { }
 
   loading: any;
   @ViewChild('endereco') endereco: IonInput;
+  @ViewChild('map') mapView: ElementRef;
+
 
   async localizarEndereco() {
     this.loading = await this.loadingCtrl.create({
@@ -24,14 +28,33 @@ export class LookforaddressPage {
     });
     await this.loading.present();
 
-    const results = await NativeGeocoder.forwardGeocode(
-      "1134 buchanan st, nw",
-      {
-        maxResults: 5,
-        useLocale: true
-      }
-    );
-    console.log(results);
+    let options: NativeGeocoderOptions = {
+      useLocale: true,
+      maxResults: 5
+    };
+
+
+    // this.nativeGeocoder.reverseGeocode(52.5072095, 13.1452818, options)
+    //   .then((result: NativeGeocoderResult[]) => console.log(JSON.stringify(result[0])))
+    //   .catch((error: any) => console.log(error));
+
+    this.nativeGeocoder.forwardGeocode(this.endereco.value.toString(), options)
+      .then((result: NativeGeocoderResult[]) => {
+        this.loading.dismiss();
+        this.createMap(Number(result[0].latitude), Number(result[0].longitude));
+        console.log('The coordinates are latitude=' +
+          result[0].latitude + ' and longitude=' + result[0].longitude);
+      })
+      .catch((error: any) => console.log(error));
+
+    // const results = await NativeGeocoder.forwardGeocode(
+    //   "1134 buchanan st, nw",
+    //   {
+    //     maxResults: 5,
+    //     useLocale: true
+    //   }
+    // );
+    // console.log(results);
     // Geocoder.geocode({
     //   address: this.endereco.value
     // }).then((results: GeocoderResult[]) => {
@@ -52,5 +75,33 @@ export class LookforaddressPage {
     //     this.showToast('Não encontrado');
     //   }
     // });
+  }
+
+  // ionViewDidEnter() {
+  //   this.createMap();
+  // }
+
+  async createMap(latitude: number, longitude: number) {
+    const boundingRect = this.mapView.nativeElement.getBoundingClientRect() as DOMRect;
+
+    CapacitorGoogleMaps.create({
+      width: Math.round(boundingRect.width),
+      height: Math.round(boundingRect.height),
+      x: Math.round(boundingRect.x),
+      y: Math.round(boundingRect.y),
+      latitude: latitude,// coordinates.coords.latitude,
+      longitude: longitude,//coordinates.coords.longitude,
+      zoom: 16
+    });
+
+    CapacitorGoogleMaps.addListener('onMapReady', async () => {
+      CapacitorGoogleMaps.setMapType({
+        type: "normal" // hybrid, satellite, terrain
+      });
+    });
+  }
+
+  ionViewDidLeave() {
+    CapacitorGoogleMaps.close();
   }
 }
