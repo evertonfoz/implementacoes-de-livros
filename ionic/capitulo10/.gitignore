@@ -29,4 +29,5 @@ npm-debug.log*
 /platforms
 /plugins
 /www
-/src/environments
+/src/environments/environments.ts
+/src/environments/environments.prod.ts
