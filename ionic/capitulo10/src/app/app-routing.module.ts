@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'mylocation',
+    loadChildren: () => import('./mylocation/mylocation.module').then( m => m.MylocationPageModule)
+  },
+  {
+    path: 'lookforaddress',
+    loadChildren: () => import('./lookforaddress/lookforaddress.module').then( m => m.LookforaddressPageModule)
+  },
 ];
 
 @NgModule({

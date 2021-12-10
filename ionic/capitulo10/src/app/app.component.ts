@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@capacitor/splash-screen';
-import { StatusBar, Style } from '@capacitor/status-bar';
+import { CapacitorGoogleMaps } from '@capacitor-community/capacitor-googlemaps-native';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-root',
@@ -18,19 +18,17 @@ export class AppComponent {
       titulo: 'Minha localização',
       url: '/mylocation',
       icon: 'pin'
+    },
+    {
+      titulo: 'Localizar endereço',
+      url: '/lookforaddress',
+      icon: 'navigate'
     }
   ];
 
-  constructor(
-    private platform: Platform,
-  ) {
-    this.initializeApp();
-  }
-
-  initializeApp() {
-    this.platform.ready().then(async () => {
-      await StatusBar.setStyle({ style: Style.Light });
-      await SplashScreen.hide();
+  constructor() {
+    CapacitorGoogleMaps.initialize({
+      key: environment.mapsKey
     });
   }
 }
