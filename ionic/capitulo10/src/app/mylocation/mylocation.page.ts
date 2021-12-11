@@ -17,6 +17,7 @@ export class MylocationPage {
   constructor(private loadingCtrl: LoadingController,) { }
 
   ionViewDidEnter() {
+
     this.createMap();
   }
 
@@ -63,12 +64,13 @@ export class MylocationPage {
       snippet: 'Este é o local aproximado que você está, certo?'
     });
 
-    this.loading.dismiss();
     CapacitorGoogleMaps.setCamera({
       latitude: coordinates.coords.latitude,
       longitude: coordinates.coords.longitude,
       zoom: 16,
       bearing: 0
     });
+
+    this.loading.dismiss();
   }
 }

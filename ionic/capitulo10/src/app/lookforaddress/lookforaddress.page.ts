@@ -42,10 +42,11 @@ export class LookforaddressPage {
       .then((result: NativeGeocoderResult[]) => {
         this.loading.dismiss();
         this.createMap(Number(result[0].latitude), Number(result[0].longitude));
-        console.log('The coordinates are latitude=' +
-          result[0].latitude + ' and longitude=' + result[0].longitude);
       })
-      .catch((error: any) => console.log(error));
+      .catch(async (error: any) => {
+        this.showToast('Não encontrado ' + error);
+        await this.loading.dismiss();
+      });
 
     // const results = await NativeGeocoder.forwardGeocode(
     //   "1134 buchanan st, nw",
@@ -77,6 +78,15 @@ export class LookforaddressPage {
     // });
   }
 
+  async showToast(message: string) {
+    const toast = await this.toastCtrl.create({
+      message,
+      duration: 4000,
+      position: 'middle'
+    });
+
+    toast.present();
+  }
   // ionViewDidEnter() {
   //   this.createMap();
   // }
@@ -98,7 +108,22 @@ export class LookforaddressPage {
       CapacitorGoogleMaps.setMapType({
         type: "normal" // hybrid, satellite, terrain
       });
+
+      CapacitorGoogleMaps.addMarker({
+        latitude: latitude,
+        longitude: longitude,
+        title: 'Aqui está',
+        snippet: 'Está certa a localização?'
+      });
+
+      CapacitorGoogleMaps.setCamera({
+        latitude: latitude,
+        longitude: longitude,
+        zoom: 16,
+        bearing: 0
+      });
     });
+
   }
 
   ionViewDidLeave() {
