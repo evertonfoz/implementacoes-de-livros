@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Capitulo 02</string>
+    <string name="title_activity_main">Capitulo 02</string>
+    <string name="package_name">br.com.casadocodigoionic</string>
+    <string name="custom_url_scheme">br.com.casadocodigoionic</string>
+</resources>

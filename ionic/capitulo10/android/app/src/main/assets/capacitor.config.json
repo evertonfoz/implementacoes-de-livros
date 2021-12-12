@@ -1,9 +1,0 @@
-{
-	"appId": "io.ionic.starter",
-	"appName": "capitulo10",
-	"webDir": "www",
-	"bundledWebRuntime": false,
-	"server": {
-		"url": "http://192.168.100.47:8100"
-	}
-}
