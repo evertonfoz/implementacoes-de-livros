@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registro de CLIENTES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding-top>
+  <form #form="ngForm" [formGroup]="clienteForm" (submit)="submit()">
+    <div>
+      <ng-container *ngFor="let validation of validationMessages.nome">
+        <div *ngIf="clienteForm.get('nome').hasError(validation.type)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+      <ng-container *ngFor="let validation of validationMessages.renda">
+        <div *ngIf="clienteForm.get('renda').hasError(validation.type)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item lines="none">
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input formControlName="nome" type="text"
+        [class.invalid]="!clienteForm.controls['nome'].valid && clienteForm.controls['nome'].touched"></ion-input>
+
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input formControlName="telefone" type="tel"></ion-input>
+
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="floating">Renda</ion-label>
+      <ion-input formControlName="renda" type="number"></ion-input>
+    </ion-item>
+
+    <div *ngIf="isBrowserPlatform; else showNative">
+      <ion-row>
+        <ion-col size="9" class="ion-no-padding">
+          <ion-item lines="none">
+            <ion-label position="floating">Nascimento</ion-label>
+            <ion-input [value]="dataSelecionada"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col class="ion-no-padding">
+          <ion-item lines="none">
+            <ion-button fill="clear" id="open-date-input" class="ion-no-margin;ion-no-padding">
+              <ion-icon icon="calendar"></ion-icon>
+            </ion-button>
+            <ion-popover trigger="open-date-input" show-backdrop="false" [dismissOnSelect]="true">
+              <ng-template>
+                <ion-datetime #popoverDatetime presentation="date" formControlName="nascimento"
+                  displayFormat="DD/MM/YYYY" min="1967" max="2022-12-31"
+                  (ionChange)="dataSelecionada = confirmarData()">
+                </ion-datetime>
+              </ng-template>
+            </ion-popover>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <ng-template #showNative>
+      <div (click)="selecionarData()">
+        <ion-row>
+          <ion-col size="9" class="ion-no-padding">
+            <ion-item lines="none">
+              <ion-label position="stacked">Nascimento</ion-label>
+              <ion-input formControlName="nascimento"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            <ion-item lines="none">
+              <ion-button fill="clear" class="ion-no-margin;ion-no-padding">
+                <ion-icon icon="calendar"></ion-icon>
+              </ion-button>
+
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ng-template>
+    <ion-button shape="round" color="primary" expand="block" padding type="submit">
+      Confirmar
+    </ion-button>
+  </form>
+
+  <!-- <ion-list *ngIf="hasErrors" class="errors-summary">
+    <ion-label *ngFor="let errorMessage of errorsMessage" class="errors-summary">
+      {{errorMessage}}<br />
+    </ion-label>
+  </ion-list> -->
+</ion-content>
