@@ -12,6 +12,24 @@ import { databaseName } from './services/database.statements';
 export class AppComponent {
   private initPlugin: boolean;
 
+  pages = [
+    {
+      title: 'Tipos de serviços',
+      url: '/tiposdeservicos',
+      icon: '/assets/imgs/icon_tiposservicos.png'
+    },
+    {
+      title: 'Peças',
+      url: '/pecas',
+      icon: '/assets/imgs/tab_pecas.png'
+    },
+    {
+      title: 'Atendimentos',
+      url: '/ordensdeservico-listagem',
+      icon: '/assets/imgs/icon_atendimentos.png'
+    }
+  ];
+
   constructor(
     private storage: Storage,
     private platform: Platform,

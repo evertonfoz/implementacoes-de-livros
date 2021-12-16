@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'ordensdeservico-listagem',
     loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-listagem/ordensdeservico-listagem.module').then(m => m.OrdensdeservicoListagemPageModule)
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'ordensdeservico-add-edit',
+    loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-add-edit/ordensdeservico-add-edit.module').then( m => m.OrdensdeservicoAddEditPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ordensdeservico-listagem"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ordem de Serviço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item-divider color="light">
+    <ion-grid no-padding>
+      <ion-row no-padding>
+        <ion-col col-3 align-self-center>
+          <ion-img style="width: 50px; height: 50px;" src="assets/imgs/icon_atendimentos.png"></ion-img>
+        </ion-col>
+        <ion-col col-9>
+          <ion-label style="font-size: 30px">Dados do atendimento</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item-divider>
+
+  <ng-container *ngIf="osForm">
+    <form [formGroup]="osForm">
+      <ion-item lines="none" [disabled]="!modoDeEdicao">
+        <ion-label position="floating" class="label-input-title">Cliente</ion-label>
+
+        <ion-select placeholder="Selecione um cliente" name="clienteid" formControlName="clienteid"
+          style="margin-left: 3%;" [value]="ordemDeServico.clienteid">
+          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.clienteid">
+            {{cliente.nome}}
+          </ion-select-option>
+        </ion-select>
+
+      </ion-item>
+
+      <ion-item lines="none" [disabled]="!modoDeEdicao">
+        <ion-label position="floating" class="label-input-title">Veículo</ion-label>
+        <ion-input formControlName="veiculo" type="text" style="margin-left: 3%;"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" [disabled]="!modoDeEdicao">
+        <ion-label position="floating" class="label-input-title">Data entrada</ion-label>
+        <ion-datetime style="margin-left: 3%;" formControlName="dataentrada" displayFormat="DD/MM/YYYY" min="1967"
+          max="2020-10-31"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="none" [disabled]="!modoDeEdicao">
+        <ion-label position="floating" class="label-input-title">Hora entrada</ion-label>
+        <ion-datetime style="margin-left: 3%;" formControlName="horaentrada" displayFormat="HH:mm"></ion-datetime>
+      </ion-item>
+
+      <ion-button *ngIf="!modoDeEdicao" shape="round" color="primary" expand="block" padding>
+        Alterar dados
+      </ion-button>
+      <div *ngIf="modoDeEdicao" no-padding>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              <ion-button shape="round" color="success" size="small" padding expand="block">
+                Gravar
+              </ion-button>
+            </ion-col>
+
+            <ion-col col-6>
+              <ion-button shape="round" color="warning" size="small" padding expand="block">
+                Cancelar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </form>
+  </ng-container>
+</ion-content>

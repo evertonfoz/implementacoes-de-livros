@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS ordensdeservico (
 CREATE INDEX IF NOT EXISTS ordensdeservico_index_ordemdeservicoid ON ordensdeservico (ordemdeservicoid);
 PRAGMA user_version = 1;
 `;
+
+export const databaseName: string = 'oficina09';
