@@ -33,11 +33,11 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardPageModule)
   },
   {
-    path: 'ordensdeservico-add-edit',
-    loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-add-edit/ordensdeservico-add-edit.module').then( m => m.OrdensdeservicoAddEditPageModule)
+    path: 'ordensdeservico-add-edit/:id',
+    loadChildren: () => import('./pages/ordensdeservico/ordensdeservico-add-edit/ordensdeservico-add-edit.module').then(m => m.OrdensdeservicoAddEditPageModule)
   },
 ];
 

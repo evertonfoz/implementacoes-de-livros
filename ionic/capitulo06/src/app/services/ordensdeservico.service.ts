@@ -29,4 +29,27 @@ export class OrdensDeServicoService {
 
         return ordensdeservico;
     }
+
+    public async getById(id: string): Promise<any> {
+        try {
+            const db = await this.databaseService.sqliteConnection.retrieveConnection(databaseName);
+            const sql = 'select * from ordensdeservico where ordemdeservicoid = ?';
+            try {
+                db.open();
+                const data = await db.query(sql, [id]);
+                db.close();
+                if (data.values.length > 0) {
+                    const ordemdeservico: OrdemDeServico = data.values[0];
+                    ordemdeservico.dataehoraentrada = new Date(ordemdeservico.dataehoraentrada);
+                    return ordemdeservico;
+                } else {
+                    return null;
+                }
+            } catch (e) {
+                return console.error(e);
+            }
+        } catch (e) {
+            return console.error(e);
+        }
+    }
 }

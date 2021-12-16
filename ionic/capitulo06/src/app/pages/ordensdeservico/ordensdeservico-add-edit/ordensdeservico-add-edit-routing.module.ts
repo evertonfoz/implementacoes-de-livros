@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { OrdensdeservicoAddEditPage } from './ordensdeservico-add-edit.page';
+import { OrdensDeServicoAddEditPage } from './ordensdeservico-add-edit.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: OrdensdeservicoAddEditPage
+    component: OrdensDeServicoAddEditPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class OrdensdeservicoAddEditPageRoutingModule {}
+export class OrdensdeservicoAddEditPageRoutingModule { }
