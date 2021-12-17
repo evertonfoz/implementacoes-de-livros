@@ -86,9 +86,9 @@ export class DatabaseService {
     }
 
     private async populateClientes(db: SQLiteDBConnection, clienteID: String): Promise<void> {
-        let returnQuery = await db.query("select COUNT(clienteid) as qtdeClientes from cliente;");
+        let returnQuery = await db.query("select COUNT(clienteid) as qtdeClientes from clientes;");
 
-        if (returnQuery.values[0].qtdeOS === 0) {
+        if (returnQuery.values[0].qtdeClientes === 0) {
             let sqlcmd: string =
                 "INSERT INTO clientes (clienteid, nome, email, telefone, renda) VALUES (?,?,?,?,?)";
             let values: Array<any> = [clienteID, 'Ambrózio', 'ambrozio@casadocodigo.com.br', '91234-5668', 123];

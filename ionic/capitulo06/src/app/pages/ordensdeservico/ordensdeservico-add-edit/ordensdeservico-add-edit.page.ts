@@ -6,8 +6,11 @@ import { Cliente } from 'src/app/models/cliente.model';
 import { ClientesService } from 'src/app/services/clientes.service';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { Platform } from '@ionic/angular';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OrdensDeServicoService } from 'src/app/services/ordensdeservico.service';
+import { ToastService } from 'src/app/services/toast.service';
+import { AlertService } from 'src/app/services/alert.service';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -26,6 +29,11 @@ export class OrdensDeServicoAddEditPage implements OnInit {
     private platform: Platform,
     private route: ActivatedRoute,
     private ordensDeServicoService: OrdensDeServicoService,
+    private toastService: ToastService,
+    private alertService: AlertService,
+    private router: Router,
+    private datePipe: DatePipe,
+
   ) { }
 
   async ngOnInit() {
@@ -45,7 +53,9 @@ export class OrdensDeServicoAddEditPage implements OnInit {
     } else {
       this.ordemDeServico = {
         ordemdeservicoid: Guid.createEmpty().toString(),
-        clienteid: Guid.createEmpty().toString(), veiculo: '', dataehoraentrada: new Date()
+        clienteid: Guid.createEmpty().toString(),
+        veiculo: '',
+        dataehoraentrada: new Date()
       };
       this.modoDeEdicao = true;
     }
@@ -54,24 +64,24 @@ export class OrdensDeServicoAddEditPage implements OnInit {
       ordemdeservicoid: [this.ordemDeServico.ordemdeservicoid],
       clienteid: [this.ordemDeServico.clienteid, Validators.required],
       veiculo: [this.ordemDeServico.veiculo, Validators.required],
-      dataentrada: [this.ordemDeServico.dataehoraentrada.toLocaleDateString(), Validators.required],
-      horaentrada: [this.ordemDeServico.dataehoraentrada.toLocaleDateString(), Validators.required],
-      dataehoraentrada: ['']
+      dataentrada: [{ value: this.ordemDeServico.dataehoraentrada.toLocaleDateString(), disabled: !this.modoDeEdicao }, Validators.required],
+      horaentrada: [{ value: this.ordemDeServico.dataehoraentrada.toLocaleTimeString(), disabled: !this.modoDeEdicao }, Validators.required],
+      dataehoraentrada: [this.ordemDeServico.dataehoraentrada]
     });
 
     this.ordemDeServico = this.osForm.value;
 
-    // const children = document.getElementById('divDataEntrada').children;
-    // for (var i = 0; i < children.length; i++) {
-    //   children[i].getAttribute() = true;
-    // }
   }
 
-  confirmarDataEntrada() {
-    return new Date(this.osForm.get('dataentrada').value).toLocaleDateString();
-  }
+  // confirmarDataEntrada() {
+  //   return new Date(this.osForm.get('dataentrada').value).toLocaleDateString();
+  // }
 
   selecionarDataEntrada() {
+    if (!this.modoDeEdicao) {
+      return;
+    }
+
     this.platform.ready().then(() => {
       if (this.platform.is('capacitor')) {
         this.datePicker.show({
@@ -82,38 +92,77 @@ export class OrdensDeServicoAddEditPage implements OnInit {
           cancelButtonLabel: 'Cancelar'
         })
           .then(
-            data => this.osForm.controls.dataentrada.setValue(data.toLocaleDateString())
+            data => {
+              this.osForm.controls.dataentrada.setValue(data.toLocaleDateString());
+              this.osForm.controls.dataehoraentrada.setValue(data.toISOString());
+              this.osForm.controls.horaentrada.setValue('');
+            }
           );
       } else {
         // instruções para execução no navegador
       }
     });
-  }
-
-  confirmarHoraEntrada() {
-    return new Date(this.osForm.get('horaentrada').value).toLocaleTimeString();
   }
 
   selecionarHoraEntrada() {
     if (!this.modoDeEdicao) {
       return;
     }
-
     this.platform.ready().then(() => {
       if (this.platform.is('capacitor')) {
         this.datePicker.show({
-          date: new Date(),
+          date: new Date(this.osForm.controls.dataehoraentrada.value),
           mode: 'time',
           locale: 'pt-br',
           doneButtonLabel: 'Confirmar',
           cancelButtonLabel: 'Cancelar'
         })
           .then(
-            data => this.osForm.controls.horaentrada.setValue(data.toLocaleTimeString())
+            data => {
+              const dataEHoraEntrada = new Date(this.osForm.controls.dataehoraentrada.value)
+
+              dataEHoraEntrada.setHours(data.getHours());
+              dataEHoraEntrada.setMinutes(data.getMinutes());
+
+              this.osForm.controls.horaentrada.setValue(data.toLocaleTimeString());
+              this.osForm.controls.dataehoraentrada.setValue(dataEHoraEntrada.toISOString());
+            }
           );
       } else {
         // instruções para execução no navegador
       }
     });
+  }
+
+  iniciarEdicao() {
+    this.modoDeEdicao = true;
+  }
+
+  cancelarEdicao() {
+    this.osForm.setValue(this.ordemDeServico);
+    this.modoDeEdicao = false;
+  }
+
+  async submit() {
+    // Validação dos dados informados no formulário. Já trabalhamos com isso.
+    if (this.osForm.invalid || this.osForm.pending) {
+      await this.alertService.presentAlert('Falha', 'Gravação não foi executada',
+        'Verifique os dados informados para o atendimento', ['Ok']);
+      return;
+    }
+
+    // Invocamos o serviço, enviando um objeto com os dados recebidos da visão    
+    await this.ordensDeServicoService.update(
+      {
+        ordemdeservicoid: this.osForm.controls.ordemdeservicoid.value,
+        clienteid: this.osForm.controls.clienteid.value,
+        veiculo: this.osForm.controls.veiculo.value,
+        dataehoraentrada: this.osForm.controls.dataehoraentrada.value,
+      }
+    );
+
+    // Informamos o usuário do sucesso da operação e o redirecionamos para a listagem    
+    this.toastService.presentToast('Gravação bem sucedida', 3000, 'top');
+    this.router.navigateByUrl('ordensdeservico-listagem');
   }
 }

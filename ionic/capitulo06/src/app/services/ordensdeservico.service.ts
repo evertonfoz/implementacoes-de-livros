@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Guid } from 'guid-typescript';
 import { OrdemDeServico } from '../models/ordemdeservico.model';
 import { DatabaseService } from './database.service';
 import { databaseName } from './database.statements';
@@ -50,6 +51,49 @@ export class OrdensDeServicoService {
             }
         } catch (e) {
             return console.error(e);
+        }
+    }
+
+    async update(ordemdeservico: OrdemDeServico): Promise<void> {
+        let sql: any;
+        let params: any;
+
+        if (Guid.parse(ordemdeservico.ordemdeservicoid).isEmpty()) {
+            ordemdeservico.ordemdeservicoid = Guid.create().toString();
+            sql = 'INSERT INTO ordensdeservico(ordemdeservicoid, clienteid, veiculo, dataehoraentrada) ' +
+                'values(?, ?, ?, ?)';
+            params = [ordemdeservico.ordemdeservicoid, ordemdeservico.clienteid,
+            ordemdeservico.veiculo, ordemdeservico.dataehoraentrada];
+        } else {
+            console.log(ordemdeservico.ordemdeservicoid);
+            console.log(ordemdeservico.dataehoraentrada);
+
+
+            sql = 'UPDATE ordensdeservico SET clienteid = ?, veiculo = ?, ' +
+                'dataehoraentrada = ? WHERE ordemdeservicoid = ?';
+            params = [ordemdeservico.clienteid,
+            ordemdeservico.veiculo, ordemdeservico.dataehoraentrada, ordemdeservico.ordemdeservicoid];
+        }
+
+        try {
+            const db = await this.databaseService.sqliteConnection.retrieveConnection(databaseName);
+            db.open();
+            await db.run(sql, params);
+            db.close();
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
+    async removeById(id: string): Promise<boolean | void> {
+        try {
+            const db = await this.databaseService.sqliteConnection.retrieveConnection(databaseName);
+            db.open();
+            await db.run('DELETE FROM ordensdeservico WHERE ordemdeservicoid = ?', [id]);
+            db.close();
+            return true;
+        } catch (e) {
+            console.error(e);
         }
     }
 }

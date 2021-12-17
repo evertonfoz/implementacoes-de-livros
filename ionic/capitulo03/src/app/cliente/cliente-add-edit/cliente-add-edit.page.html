@@ -42,49 +42,53 @@
     </ion-item>
 
     <div *ngIf="isBrowserPlatform; else showNative">
-      <ion-row>
-        <ion-col size="9" class="ion-no-padding">
-          <ion-item lines="none">
-            <ion-label position="floating">Nascimento</ion-label>
-            <ion-input [value]="dataSelecionada"></ion-input>
-          </ion-item>
-        </ion-col>
-        <ion-col class="ion-no-padding">
-          <ion-item lines="none">
-            <ion-button fill="clear" id="open-date-input" class="ion-no-margin;ion-no-padding">
-              <ion-icon icon="calendar"></ion-icon>
-            </ion-button>
-            <ion-popover trigger="open-date-input" show-backdrop="false" [dismissOnSelect]="true">
-              <ng-template>
-                <ion-datetime #popoverDatetime presentation="date" formControlName="nascimento"
-                  displayFormat="DD/MM/YYYY" min="1967" max="2022-12-31"
-                  (ionChange)="dataSelecionada = confirmarData()">
-                </ion-datetime>
-              </ng-template>
-            </ion-popover>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </div>
-
-    <ng-template #showNative>
-      <div (click)="selecionarData()">
+      <ion-grid>
         <ion-row>
-          <ion-col size="9" class="ion-no-padding">
+          <ion-col size="9">
             <ion-item lines="none">
-              <ion-label position="stacked">Nascimento</ion-label>
-              <ion-input formControlName="nascimento"></ion-input>
+              <ion-label position="floating">Nascimento</ion-label>
+              <ion-input [value]="dataSelecionada" [readonly]="true"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col class="ion-no-padding">
             <ion-item lines="none">
-              <ion-button fill="clear" class="ion-no-margin;ion-no-padding">
+              <ion-button fill="clear" id="open-date-input" class="ion-no-margin;ion-no-padding">
                 <ion-icon icon="calendar"></ion-icon>
               </ion-button>
-
+              <ion-popover trigger="open-date-input" show-backdrop="false" [dismissOnSelect]="true">
+                <ng-template>
+                  <ion-datetime #popoverDatetime presentation="date" formControlName="nascimento"
+                    displayFormat="DD/MM/YYYY" min="1967" max="2022-12-31"
+                    (ionChange)="dataSelecionada = confirmarData()">
+                  </ion-datetime>
+                </ng-template>
+              </ion-popover>
             </ion-item>
           </ion-col>
         </ion-row>
+      </ion-grid>
+    </div>
+
+    <ng-template #showNative>
+      <div (click)="selecionarData()">
+        <ion-grid class="ion-no-padding">
+          <ion-row>
+            <ion-col size="9">
+              <ion-item lines="none">
+                <ion-label position="stacked">Nascimento</ion-label>
+                <ion-input formControlName="nascimento"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col class="ion-no-padding">
+              <ion-item lines="none">
+                <ion-button fill="clear" class="ion-no-margin;ion-no-padding">
+                  <ion-icon icon="calendar"></ion-icon>
+                </ion-button>
+
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </div>
     </ng-template>
     <ion-button shape="round" color="primary" expand="block" padding type="submit">
