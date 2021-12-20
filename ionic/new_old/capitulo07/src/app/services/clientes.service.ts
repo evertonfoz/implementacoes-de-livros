@@ -21,6 +21,12 @@ export class ClientesService {
 
             const clientesRef = collection(this._fireStore, "clientes");
 
+            console.log('nome: ' + cliente.nome);
+            console.log('email: ' + cliente.email);
+            console.log('telefone: ' + cliente.telefone);
+            console.log('renda: ' + cliente.renda);
+            console.log('nascimento: ' + cliente.nascimento);
+            
             await setDoc(doc(clientesRef), {
                 nome: cliente.nome,
                 email: cliente.email,
