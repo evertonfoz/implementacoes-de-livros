@@ -12,11 +12,11 @@ import { ToastService } from 'src/app/services/toast.service';
 })
 export class OrdensdeservicoListagemPage implements OnInit {
 
-  public ordensDeServico: void | OrdemDeServico[] = [];
+  public ordensDeServico: OrdemDeServico[] = [];
   @ViewChild('slidingList') slidingList: IonList;
 
   constructor(
-    private ordensdeservicoService: OrdensDeServicoService,
+    private ordensDeServicoService: OrdensDeServicoService,
     private toastService: ToastService,
     private alertService: AlertService,
   ) { }
@@ -25,8 +25,21 @@ export class OrdensdeservicoListagemPage implements OnInit {
   }
 
   async ionViewWillEnter() {
-    // const oss = await this.ordensdeservicoService.getAll();
-    // this.ordensDeServico = oss;
+    this.ordensDeServico = await this.ordensDeServicoService.getAll();
+  }
+
+  async removerAtendimento(ordemDeServico: OrdemDeServico) {
+    try {
+      const successFunction = async () => {
+        await this.ordensDeServicoService.removeById(ordemDeServico.ordemdeservicoid);
+        this.toastService.presentToast('Atendimento removido com sucesso', 3000, 'top');
+        this.slidingList.closeSlidingItems();
+        this.ordensDeServico = await this.ordensDeServicoService.getAll();
+      };
+      await this.alertService.presentConfirm('Remover Atendimento', 'Confirma remoção?', successFunction);
+    } catch (e) {
+      await this.alertService.presentAlert('Falha', 'Remoção não foi executada', e, ['Ok']);
+    }
   }
 
 }
