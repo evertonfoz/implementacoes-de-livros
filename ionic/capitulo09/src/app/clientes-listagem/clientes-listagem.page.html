@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding-left padding-top>
+  <ion-list #slidingList>
+    <ion-item-sliding *ngFor="let cliente of clientes">
+      <ion-item routerDirection="forward" [routerLink]="['/', 'clientes-add-edit', cliente.clienteid]">
+        <ion-thumbnail slot="start">
+          <ion-img [src]="cliente.foto"></ion-img>
+        </ion-thumbnail>
+        <ion-grid>
+          <ion-row>
+            <ion-label>
+              <p style="font-size: larger; font-weight: bold;">{{cliente.nome}}</p>
+            </ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <ion-label>
+                <p style="font-weight: 400; text-align: right">Telefone: {{cliente.telefone}}</p>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="removerCliente(cliente)">
+          <ion-button color="danger" no-padding>
+            <ion-icon name="trash"></ion-icon>
+            Remover
+          </ion-button>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
+    <ion-fab-button routerDirection="forward" [routerLink]="['/clientes-add-edit/-1']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" color="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Localização por endereço
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="map" #map>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-9>
+          <ion-input #address id="address" type="text" placeholder="Endereço"></ion-input>
+        </ion-col>
+        <ion-col col-3>
+          <ion-button class="nopadding" shape="round" color="primary" size="small" expand="block"
+            (click)="findAddress()">
+            Localizar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

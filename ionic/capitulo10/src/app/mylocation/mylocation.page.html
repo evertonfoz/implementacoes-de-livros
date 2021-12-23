@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" color="primary">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Minha localização
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <ion-button class="nopadding" shape="round" color="primary" size="small" expand="block"
+      (click)="showCurrentPosition()">
+      Mostre minha localização
+    </ion-button>
+  </div>
+  <div id="map" #map>
+  </div>
+</ion-content>
