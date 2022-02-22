@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../drawer/drawer_route.dart';
 import '../shared_preferences/app_preferences.dart';
 import '../widgets/circular_image_widget.dart';
-import 'home_route.dart';
 import 'welcome_route.dart';
 
 class SplashScreenRoute extends StatefulWidget {
@@ -60,8 +60,8 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
 
   _whereToNavigate({required bool welcomeRead}) {
     if (welcomeRead) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const HomeRoute()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const DrawerRoute()));
     } else {
       Navigator.push(
         context,

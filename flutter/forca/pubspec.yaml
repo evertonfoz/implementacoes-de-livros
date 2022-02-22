@@ -25,3 +25,4 @@ flutter:
 
   assets:
     - assets/images/splashscreen.png
+    - assets/images/drawer/
