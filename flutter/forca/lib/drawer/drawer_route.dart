@@ -1,31 +1,36 @@
-import 'package:capitulo03_splashscreen/drawer/widgets/drawerheader_app.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/drawerbody_app.dart';
-import 'widgets/drawerbodycontent_app.dart';
+import '../widgets/circular_image_widget.dart';
+import 'widgets/drawer_controller_widget.dart';
 
-class DrawerRoute extends StatelessWidget {
+class DrawerRoute extends StatefulWidget {
   const DrawerRoute({Key? key}) : super(key: key);
 
   @override
+  State<DrawerRoute> createState() => _DrawerRouteState();
+}
+
+class _DrawerRouteState extends State<DrawerRoute> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return DrawerControllerWidget(
       appBar: AppBar(
-        title: const Text(
-          "Jogo da Forca",
-        ),
+        automaticallyImplyLeading: false,
+        title: const Text('Jogo da Forca'),
         centerTitle: true,
+        actions: const <Widget>[
+          Icon(
+            Icons.menu,
+            size: 40,
+          ),
+        ],
       ),
-      body: Container(),
-      drawer: Drawer(
-        child: Column(
-          children: const <Widget>[
-            DrawerHeaderApp(),
-            DrawerBodyApp(
-              child: DrawerBodyContentApp(),
-            ),
-          ],
-        ),
+      topBody: MediaQuery.of(context).size.height - 105,
+      leftBody: MediaQuery.of(context).size.width - 105,
+      body: const CircularImageWidget(
+        imageProvider: AssetImage('assets/images/splashscreen.png'),
+        width: 100,
+        height: 100,
       ),
     );
   }
