@@ -1,22 +1,28 @@
+import 'package:capitulo03_splashscreen/drawer/blocs/drawer_blocs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 // ignore: must_be_immutable
 class DrawerControllerWidget extends StatelessWidget {
   final AppBar? appBar;
   final Widget? body;
   final double? topBody;
-  final double? leftBody;
+//  final double? leftBody;
   final Drawer? drawer;
   final Function? callbackFunction;
+  final double? leftBodyOpen;
+  final double? leftBodyClose;
 
   DrawerControllerWidget({
     Key? key,
     this.appBar,
     this.body,
     this.topBody,
-    this.leftBody,
+//    this.leftBody,
     this.drawer,
     this.callbackFunction,
+    this.leftBodyOpen,
+    this.leftBodyClose,
   }) : super(key: key);
 
   GlobalKey<DrawerControllerState> drawerKey =
@@ -55,13 +61,18 @@ class DrawerControllerWidget extends StatelessWidget {
                       ],
                     ),
             ),
-            (topBody != null || leftBody != null)
-                ? AnimatedPositioned(
-                    duration: const Duration(seconds: 1),
-                    top: topBody,
-                    left: leftBody,
-                    child: (body == null) ? Container() : body!,
-                  )
+            (topBody != null)
+                ? BlocBuilder<DrawerBloc, bool>(
+                    builder: (context, isDrawerOpen) {
+                    double left = isDrawerOpen ? leftBodyOpen! : leftBodyClose!;
+
+                    return AnimatedPositioned(
+                      duration: const Duration(seconds: 1),
+                      top: topBody,
+                      left: left,
+                      child: (body == null) ? Container() : body!,
+                    );
+                  })
                 : body!,
             DrawerController(
               key: drawerKey,

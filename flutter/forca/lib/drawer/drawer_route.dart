@@ -1,4 +1,6 @@
+import 'package:capitulo03_splashscreen/drawer/blocs/drawer_blocs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../widgets/circular_image_widget.dart';
 import 'widgets/drawer_controller_widget.dart';
@@ -20,7 +22,7 @@ class _DrawerRouteState extends State<DrawerRoute> {
     return MediaQuery.of(context).size.height - 105;
   }
 
-  double _leftBody() {
+  /*double _leftBody() {
     if (!_drawerIsOpen) {
       return MediaQuery.of(context).size.width - 105;
     } else {
@@ -32,6 +34,22 @@ class _DrawerRouteState extends State<DrawerRoute> {
     setState(() {
       _drawerIsOpen = drawerIsOpen;
     });
+  }*/
+
+  void _drawerCallback(bool status) {
+    if (status) {
+      context.read<DrawerBloc>().add(DrawerShowPressed());
+    } else {
+      context.read<DrawerBloc>().add(DrawerHidePressed());
+    }
+  }
+
+  double _leftBodyOpen() {
+    return 5;
+  }
+
+  double _leftBodyClose() {
+    return MediaQuery.of(context).size.width - 105;
   }
 
   @override
@@ -48,9 +66,10 @@ class _DrawerRouteState extends State<DrawerRoute> {
           ),
         ],
       ),
-      topBody: _topBody(),
-      leftBody:
-          _leftBody(), // topBody: MediaQuery.of(context).size.height - 105,
+      topBody: _topBody(), leftBodyOpen: _leftBodyOpen(),
+      leftBodyClose: _leftBodyClose(),
+      //leftBody:
+      //  _leftBody(), // topBody: MediaQuery.of(context).size.height - 105,
       // leftBody: MediaQuery.of(context).size.width - 105,
       body: const CircularImageWidget(
         imageProvider: AssetImage('assets/images/splashscreen.png'),
@@ -67,7 +86,7 @@ class _DrawerRouteState extends State<DrawerRoute> {
           ],
         ),
       ),
-      callbackFunction: _handleDrawer,
+      callbackFunction: _drawerCallback,
     );
   }
 }
