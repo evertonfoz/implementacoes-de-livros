@@ -1,8 +1,8 @@
-import 'package:capitulo03_splashscreen/models/palavra_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../mixins/widgets_mixin.dart';
+import '../models/palavra_model.dart';
 import '../widgets/container_iluminado_widget.dart';
 import 'palavras/bloc/palavras_blocs.dart';
 
@@ -15,20 +15,18 @@ class PalavrasCRUDRoute extends StatefulWidget {
 
 class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
     with TextFormFieldMixin {
-  final _palavraController = TextEditingController();
-  final _ajudaController = TextEditingController();
+  final TextEditingController _palavraController = TextEditingController();
+  final TextEditingController _ajudaController = TextEditingController();
   final FocusNode _palavraFocus = FocusNode();
   final FocusNode _ajudaFocus = FocusNode();
 
-// PalavrasCrudFormBloc _palavrasCrudFormBloc;
   late BuildContext _buildContext;
 
   @override
   void initState() {
     super.initState();
-    // this._palavrasCrudFormBloc = BlocProvider.of<PalavrasCrudFormBloc>(context);
     _palavraController.addListener(_onPalavraChanged);
-    // _ajudaController.addListener(_onAjudaChanged);
+    _ajudaController.addListener(_onAjudaChanged);
   }
 
   @override
@@ -39,13 +37,12 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
   }
 
   void _onPalavraChanged() {
-    context.read<PalavraBloc>().add(PalavraChanged());
-    // _palavrasCrudFormBloc.add(PalavraChanged(palavra: this._palavraController.text));
+    context.read<PalavraBloc>().add(AjudaChanged());
   }
 
-// void _onAjudaChanged() {
-//     _palavrasCrudFormBloc.add(AjudaChanged(ajuda: this._ajudaController.text));
-// }
+  void _onAjudaChanged() {
+    context.read<PalavraBloc>().add(PalavraChanged());
+  }
 
   Widget _form() {
     return Form(
@@ -67,8 +64,8 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
           ),
           textFormField(
               maxLines: 5,
-              focusNode: this._ajudaFocus,
-              controller: this._ajudaController,
+              focusNode: _ajudaFocus,
+              controller: _ajudaController,
               labelText: 'Ajuda',
               validator: (_) {
                 // return formState.aAjudaEhValida ? null : 'Informe a ajuda';
@@ -96,14 +93,14 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
             height: 350,
             child: Padding(
               padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
-              child: BlocBuilder<PalavraBloc, PalavraModel>(
+              child: BlocBuilder<PalavraBloc, PalavraModel?>(
                   builder: (context, formState) {
-                return _form(formState);
+                return _form();
               }),
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
       ],
@@ -124,7 +121,7 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            child: Container(),
+            child: _mainColumn(),
           ),
         ),
       ),

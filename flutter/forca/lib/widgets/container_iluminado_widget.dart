@@ -17,18 +17,18 @@ class ContainerIluminadoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 16.0),
+      margin: const EdgeInsets.only(bottom: 16.0),
       child: Container(
-          height: this.height,
+          height: height,
           decoration: BoxDecoration(
-              color: this.backgroundColor,
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              color: backgroundColor,
+              borderRadius: const BorderRadius.all(Radius.circular(15)),
               boxShadow: [
                 BoxShadow(
                   blurRadius: 5,
-                  color: this.shadowColor,
+                  color: shadowColor,
                   spreadRadius: 5,
-                  offset: Offset(0.1, 0.1),
+                  offset: const Offset(0.1, 0.1),
                 )
               ]),
           child: child),

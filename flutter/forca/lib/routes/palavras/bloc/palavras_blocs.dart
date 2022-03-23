@@ -5,6 +5,8 @@ abstract class PalavraEvent {}
 
 class PalavraChanged extends PalavraEvent {}
 
+class AjudaChanged extends PalavraEvent {}
+
 class PalavraFormSuccessSubmitted extends PalavraEvent {}
 
 class PalavraFormReset extends PalavraEvent {}
@@ -12,6 +14,7 @@ class PalavraFormReset extends PalavraEvent {}
 class PalavraBloc extends Bloc<PalavraEvent, PalavraModel?> {
   PalavraBloc() : super(null) {
     on<PalavraChanged>((event, emit) => emit(state));
+    on<AjudaChanged>((event, emit) => emit(state));
     on<PalavraFormSuccessSubmitted>((event, emit) => emit(state));
     on<PalavraFormReset>((event, emit) => emit(state));
   }
