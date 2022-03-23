@@ -5,6 +5,7 @@ class ListTileAppWidget extends StatelessWidget {
   final ImageProvider? avatarImage;
   final String titleText;
   final String subtitleText;
+  final Function()? onTap;
 
   const ListTileAppWidget({
     Key? key,
@@ -13,6 +14,7 @@ class ListTileAppWidget extends StatelessWidget {
     this.avatarImage,
     required this.titleText,
     required this.subtitleText,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -20,7 +22,7 @@ class ListTileAppWidget extends StatelessWidget {
     return Padding(
       padding: contentPadding,
       child: GestureDetector(
-        onTap: () {},
+        onTap: onTap,
         child: Row(
           children: <Widget>[
             (avatarImage == null)

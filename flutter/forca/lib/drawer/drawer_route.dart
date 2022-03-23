@@ -16,7 +16,7 @@ class DrawerRoute extends StatefulWidget {
 }
 
 class _DrawerRouteState extends State<DrawerRoute> {
-  bool _drawerIsOpen = false;
+  // bool _drawerIsOpen = false;
 
   double _topBody() {
     return MediaQuery.of(context).size.height - 105;

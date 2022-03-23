@@ -1,6 +1,8 @@
+import 'package:capitulo03_splashscreen/routes/palavras/bloc/palavras_blocs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'apphelpers/app_router.dart';
 import 'drawer/blocs/drawer_blocs.dart';
 import 'routes/splash_screen_route.dart';
 
@@ -11,9 +13,17 @@ class ForcaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => DrawerBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => DrawerBloc(),
+        ),
+        BlocProvider(
+          create: (_) => PalavraBloc(),
+        ),
+      ],
       child: MaterialApp(
+        onGenerateRoute: AppRouter.generateRoute,
         debugShowCheckedModeBanner: false,
         title: 'Forca da UTFPR',
         theme: ThemeData(

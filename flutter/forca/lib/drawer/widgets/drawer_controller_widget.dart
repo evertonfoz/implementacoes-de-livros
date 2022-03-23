@@ -90,7 +90,11 @@ class DrawerControllerWidget extends StatelessWidget {
               key: drawerKey,
               alignment: DrawerAlignment.end,
               child: drawer != null ? drawer! : Container(),
-              drawerCallback: (status) => _drawerCallback(status),
+              drawerCallback: (status) {
+                if (!_isDrawerOpened) {
+                  _drawerCallback(status);
+                }
+              },
             ),
           ],
         ),
