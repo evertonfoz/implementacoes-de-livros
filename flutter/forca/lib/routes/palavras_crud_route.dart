@@ -44,7 +44,7 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
     context.read<PalavraBloc>().add(PalavraChanged());
   }
 
-  Widget _form() {
+  Widget _form({required PalavraModel? palavraModel}) {
     return Form(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -57,7 +57,9 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
                   FocusScope.of(_buildContext).requestFocus(_ajudaFocus),
               textInputAction: TextInputAction.next,
               validator: (_) {
-                // return formState.aPalavraEhValida ? null : 'Informe a palavra';
+                return palavraModel != null && palavraModel.palavra.isNotEmpty
+                    ? null
+                    : 'Informe a palavra';
               }),
           const SizedBox(
             height: 20,
@@ -68,14 +70,20 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
               controller: _ajudaController,
               labelText: 'Ajuda',
               validator: (_) {
-                // return formState.aAjudaEhValida ? null : 'Informe a ajuda';
+                return palavraModel != null && palavraModel.ajuda.isNotEmpty
+                    ? null
+                    : 'Informe a ajuda';
               }),
           const SizedBox(
             height: 20,
           ),
-          const TextButton(
-            onPressed: null, // formState.isFormValid ? _onSubmitPressed : null,
-            child: Text('Gravar'),
+          TextButton(
+            onPressed: palavraModel != null &&
+                    palavraModel.palavra.isNotEmpty &&
+                    palavraModel.ajuda.isNotEmpty
+                ? _onSubmitPressed
+                : null,
+            child: const Text('Gravar'),
           ),
         ],
       ),
@@ -94,8 +102,8 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
             child: Padding(
               padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
               child: BlocBuilder<PalavraBloc, PalavraModel?>(
-                  builder: (context, formState) {
-                return _form();
+                  builder: (context, palavraModel) {
+                return _form(palavraModel: palavraModel);
               }),
             ),
           ),
