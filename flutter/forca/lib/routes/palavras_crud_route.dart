@@ -1,10 +1,11 @@
+import 'package:capitulo03_splashscreen/models/palavra_model.dart';
+import 'package:capitulo03_splashscreen/routes/palavras/crud/bloc/palavra_crud_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../mixins/widgets_mixin.dart';
-import '../models/palavra_model.dart';
 import '../widgets/container_iluminado_widget.dart';
-import 'palavras/bloc/palavras_blocs.dart';
+import 'palavras/crud/view_models/palavra_viewmodel.dart';
 
 class PalavrasCRUDRoute extends StatefulWidget {
   const PalavrasCRUDRoute({Key? key}) : super(key: key);
@@ -16,9 +17,11 @@ class PalavrasCRUDRoute extends StatefulWidget {
 class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
     with TextFormFieldMixin {
   final TextEditingController _palavraController = TextEditingController();
-  final TextEditingController _ajudaController = TextEditingController();
+  // final TextEditingController _ajudaController = TextEditingController();
   final FocusNode _palavraFocus = FocusNode();
-  final FocusNode _ajudaFocus = FocusNode();
+  // final FocusNode _ajudaFocus = FocusNode();
+
+  final PalavraModel _palavraModel = PalavraModel.empty();
 
   late BuildContext _buildContext;
 
@@ -26,26 +29,36 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
   void initState() {
     super.initState();
     _palavraController.addListener(_onPalavraChanged);
-    _ajudaController.addListener(_onAjudaChanged);
+    // _ajudaController.addListener(_onAjudaChanged);
   }
 
   @override
   void dispose() {
     _palavraController.dispose();
-    _ajudaController.dispose();
+    // _ajudaController.dispose();
     super.dispose();
   }
 
   void _onPalavraChanged() {
-    context.read<PalavraBloc>().add(AjudaChanged());
+    context.read<PalavraBloc>().add(
+          ChangePalavra(
+            palavraModel:
+                _palavraModel.copyWith(palavra: _palavraController.text),
+          ),
+        );
   }
 
-  void _onAjudaChanged() {
-    context.read<PalavraBloc>().add(PalavraChanged());
-  }
+  // void _onAjudaChanged() {
+  //   context.read<PalavraBloc>().add(AjudaChanged());
+  // }
 
-  Widget _form({required PalavraModel? palavraModel}) {
+  // void _onSubmitPressed() {
+  //   context.read<PalavraBloc>().add(PalavraFormSuccessSubmitted());
+  // }
+
+  Widget _form() {
     return Form(
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -53,38 +66,38 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
               focusNode: _palavraFocus,
               controller: _palavraController,
               labelText: 'Palavra',
-              onFieldSubmitted: (_) =>
-                  FocusScope.of(_buildContext).requestFocus(_ajudaFocus),
+              // onFieldSubmitted: (_) =>
+              //     FocusScope.of(_buildContext).requestFocus(_ajudaFocus),
               textInputAction: TextInputAction.next,
               validator: (_) {
-                return palavraModel != null && palavraModel.palavra.isNotEmpty
+                return _palavraModel.palavra.isNotEmpty
                     ? null
                     : 'Informe a palavra';
               }),
-          const SizedBox(
-            height: 20,
-          ),
-          textFormField(
-              maxLines: 5,
-              focusNode: _ajudaFocus,
-              controller: _ajudaController,
-              labelText: 'Ajuda',
-              validator: (_) {
-                return palavraModel != null && palavraModel.ajuda.isNotEmpty
-                    ? null
-                    : 'Informe a ajuda';
-              }),
-          const SizedBox(
-            height: 20,
-          ),
-          TextButton(
-            onPressed: palavraModel != null &&
-                    palavraModel.palavra.isNotEmpty &&
-                    palavraModel.ajuda.isNotEmpty
-                ? _onSubmitPressed
-                : null,
-            child: const Text('Gravar'),
-          ),
+          // const SizedBox(
+          //   height: 20,
+          // ),
+          // textFormField(
+          //     maxLines: 5,
+          //     focusNode: _ajudaFocus,
+          //     controller: _ajudaController,
+          //     labelText: 'Ajuda',
+          //     validator: (_) {
+          //       // return palavraModel != null && palavraModel.ajuda.isNotEmpty
+          //       //     ? null
+          //       //     : 'Informe a ajuda';
+          //     }),
+          // const SizedBox(
+          //   height: 20,
+          // ),
+          // TextButton(
+          //   onPressed: palavraModel != null &&
+          //           palavraModel.palavra.isNotEmpty &&
+          //           palavraModel.ajuda.isNotEmpty
+          //       ? _onSubmitPressed
+          //       : null,
+          //   child: const Text('Gravar'),
+          // ),
         ],
       ),
     );
@@ -101,9 +114,12 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
             height: 350,
             child: Padding(
               padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
-              child: BlocBuilder<PalavraBloc, PalavraModel?>(
-                  builder: (context, palavraModel) {
-                return _form(palavraModel: palavraModel);
+              child: BlocBuilder<PalavraBloc, PalavraCRUDState>(
+                  builder: (context, state) {
+                    if (state is PalavraChanged) {
+                      _palavraModel.copyWith( (state as PalavraChanged).palavraModel;
+                    }
+                return _form();
               }),
             ),
           ),

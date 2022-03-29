@@ -1,4 +1,4 @@
-import 'package:capitulo03_splashscreen/routes/palavras/bloc/palavras_blocs.dart';
+import 'package:capitulo03_splashscreen/routes/palavras/crud/bloc/palavra_crud_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,9 +18,7 @@ class ForcaApp extends StatelessWidget {
         BlocProvider(
           create: (_) => DrawerBloc(),
         ),
-        BlocProvider(
-          create: (_) => PalavraBloc(),
-        ),
+        BlocProvider(create: (_) => PalavraBloc()),
       ],
       child: MaterialApp(
         onGenerateRoute: AppRouter.generateRoute,

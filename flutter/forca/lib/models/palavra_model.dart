@@ -25,4 +25,12 @@ class PalavraModel extends Equatable {
       ajuda: ajuda ?? this.ajuda,
     );
   }
+
+  static PalavraModel empty() {
+    return const PalavraModel(
+      palavraID: '',
+      palavra: '',
+      ajuda: '',
+    );
+  }
 }
