@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../mixins/widgets_mixin.dart';
 import '../widgets/container_iluminado_widget.dart';
-import 'palavras/crud/view_models/palavra_viewmodel.dart';
 
 class PalavrasCRUDRoute extends StatefulWidget {
   const PalavrasCRUDRoute({Key? key}) : super(key: key);
@@ -17,11 +16,11 @@ class PalavrasCRUDRoute extends StatefulWidget {
 class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
     with TextFormFieldMixin {
   final TextEditingController _palavraController = TextEditingController();
-  // final TextEditingController _ajudaController = TextEditingController();
+  final TextEditingController _ajudaController = TextEditingController();
   final FocusNode _palavraFocus = FocusNode();
-  // final FocusNode _ajudaFocus = FocusNode();
+  final FocusNode _ajudaFocus = FocusNode();
 
-  final PalavraModel _palavraModel = PalavraModel.empty();
+  PalavraModel _palavraModel = PalavraModel.empty();
 
   late BuildContext _buildContext;
 
@@ -29,13 +28,13 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
   void initState() {
     super.initState();
     _palavraController.addListener(_onPalavraChanged);
-    // _ajudaController.addListener(_onAjudaChanged);
+    _ajudaController.addListener(_onAjudaChanged);
   }
 
   @override
   void dispose() {
     _palavraController.dispose();
-    // _ajudaController.dispose();
+    _ajudaController.dispose();
     super.dispose();
   }
 
@@ -48,9 +47,13 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
         );
   }
 
-  // void _onAjudaChanged() {
-  //   context.read<PalavraBloc>().add(AjudaChanged());
-  // }
+  void _onAjudaChanged() {
+    context.read<PalavraBloc>().add(
+          ChangeAjuda(
+            palavraModel: _palavraModel.copyWith(ajuda: _ajudaController.text),
+          ),
+        );
+  }
 
   // void _onSubmitPressed() {
   //   context.read<PalavraBloc>().add(PalavraFormSuccessSubmitted());
@@ -66,27 +69,24 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
               focusNode: _palavraFocus,
               controller: _palavraController,
               labelText: 'Palavra',
-              // onFieldSubmitted: (_) =>
-              //     FocusScope.of(_buildContext).requestFocus(_ajudaFocus),
+              onFieldSubmitted: (_) =>
+                  FocusScope.of(_buildContext).requestFocus(_ajudaFocus),
               textInputAction: TextInputAction.next,
               validator: (_) {
                 return _palavraModel.palavra.isNotEmpty
                     ? null
                     : 'Informe a palavra';
               }),
-          // const SizedBox(
-          //   height: 20,
-          // ),
-          // textFormField(
-          //     maxLines: 5,
-          //     focusNode: _ajudaFocus,
-          //     controller: _ajudaController,
-          //     labelText: 'Ajuda',
-          //     validator: (_) {
-          //       // return palavraModel != null && palavraModel.ajuda.isNotEmpty
-          //       //     ? null
-          //       //     : 'Informe a ajuda';
-          //     }),
+          const SizedBox(height: 20),
+          textFormField(
+            maxLines: 5,
+            focusNode: _ajudaFocus,
+            controller: _ajudaController,
+            labelText: 'Ajuda',
+            validator: (_) {
+              return _palavraModel.ajuda.isNotEmpty ? null : 'Informe a ajuda';
+            },
+          ),
           // const SizedBox(
           //   height: 20,
           // ),
@@ -116,9 +116,13 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
               padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
               child: BlocBuilder<PalavraBloc, PalavraCRUDState>(
                   builder: (context, state) {
-                    if (state is PalavraChanged) {
-                      _palavraModel.copyWith( (state as PalavraChanged).palavraModel;
-                    }
+                if (state is PalavraChanged) {
+                  _palavraModel = _palavraModel.copyWith(
+                      palavra: state.palavraModel.palavra);
+                } else if (state is AjudaChanged) {
+                  _palavraModel =
+                      _palavraModel.copyWith(ajuda: state.palavraModel.ajuda);
+                }
                 return _form();
               }),
             ),

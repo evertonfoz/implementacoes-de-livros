@@ -15,5 +15,27 @@ class PalavraChanged extends PalavraCRUDState {
   const PalavraChanged({required this.palavraModel});
 
   @override
-  List<Object> get props => [palavraModel];
+  List<Object> get props => [palavraModel.palavra];
+}
+
+class AjudaChanged extends PalavraCRUDState {
+  final PalavraModel palavraModel;
+
+  const AjudaChanged({required this.palavraModel});
+
+  @override
+  List<Object> get props => [palavraModel.ajuda];
+}
+
+class FormIsValidated extends PalavraCRUDState {
+  final PalavraModel palavraModel;
+
+  const FormIsValidated({required this.palavraModel});
+
+  @override
+  List<Object> get props => [
+        palavraModel.palavraID,
+        palavraModel.palavra,
+        palavraModel.ajuda,
+      ];
 }

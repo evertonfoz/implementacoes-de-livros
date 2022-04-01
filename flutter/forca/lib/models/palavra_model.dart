@@ -12,7 +12,7 @@ class PalavraModel extends Equatable {
   });
 
   @override
-  List<Object> get props => [palavraID];
+  List<Object> get props => [palavraID, palavra, ajuda];
 
   PalavraModel copyWith({
     String? palavraID,

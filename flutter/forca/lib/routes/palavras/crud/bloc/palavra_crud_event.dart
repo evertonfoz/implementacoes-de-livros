@@ -13,5 +13,27 @@ class ChangePalavra extends PalavraCRUDEvent {
   const ChangePalavra({required this.palavraModel});
 
   @override
-  List<Object> get props => [palavraModel];
+  List<Object> get props => [palavraModel.palavra];
+}
+
+class ChangeAjuda extends PalavraCRUDEvent {
+  final PalavraModel palavraModel;
+
+  const ChangeAjuda({required this.palavraModel});
+
+  @override
+  List<Object> get props => [palavraModel.ajuda];
+}
+
+class ValidateForm extends PalavraCRUDEvent {
+  final PalavraModel palavraModel;
+
+  const ValidateForm({required this.palavraModel});
+
+  @override
+  List<Object> get props => [
+        palavraModel.palavraID,
+        palavraModel.palavra,
+        palavraModel.ajuda,
+      ];
 }
