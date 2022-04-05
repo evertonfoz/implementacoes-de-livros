@@ -37,3 +37,5 @@ class ValidateForm extends PalavraCRUDEvent {
         palavraModel.ajuda,
       ];
 }
+
+class SubmitForm extends PalavraCRUDEvent {}

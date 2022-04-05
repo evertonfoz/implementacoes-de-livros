@@ -21,5 +21,19 @@ class PalavraBloc extends Bloc<PalavraCRUDEvent, PalavraCRUDState> {
         ),
       },
     );
+    on<ValidateForm>(
+      (event, emit) => {
+        emit(
+          FormIsValidated(isValidated: event.palavraModel.isValid),
+        ),
+      },
+    );
+    on<SubmitForm>(
+      (event, emit) => {
+        emit(
+          FormIsSubmitted(),
+        ),
+      },
+    );
   }
 }

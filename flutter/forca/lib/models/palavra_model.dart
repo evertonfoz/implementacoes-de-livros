@@ -11,6 +11,8 @@ class PalavraModel extends Equatable {
     required this.ajuda,
   });
 
+  bool get isValid => palavra.isNotEmpty && ajuda.isNotEmpty;
+
   @override
   List<Object> get props => [palavraID, palavra, ajuda];
 

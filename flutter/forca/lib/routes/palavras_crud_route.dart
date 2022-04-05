@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../mixins/widgets_mixin.dart';
 import '../widgets/container_iluminado_widget.dart';
+import '../widgets/textbutton_with_snackbar_widget.dart';
 
 class PalavrasCRUDRoute extends StatefulWidget {
   const PalavrasCRUDRoute({Key? key}) : super(key: key);
@@ -55,9 +56,9 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
         );
   }
 
-  // void _onSubmitPressed() {
-  //   context.read<PalavraBloc>().add(PalavraFormSuccessSubmitted());
-  // }
+  void _onSubmitPressed() {
+    context.read<PalavraBloc>().add(SubmitForm());
+  }
 
   Widget _form() {
     return Form(
@@ -87,20 +88,55 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
               return _palavraModel.ajuda.isNotEmpty ? null : 'Informe a ajuda';
             },
           ),
-          // const SizedBox(
-          //   height: 20,
-          // ),
+          const SizedBox(
+            height: 20,
+          ),
+          TextButtonWithSnackbarWidget(
+            onPressedVisible: _palavraModel.isValid,
+            buttonText: 'Gravar',
+            textToSnackBar:
+                'Os dados informados foram registrados com sucesso.',
+            onButtonPressed: _onSubmitPressed,
+            onStackBarClosed: _resetForm,
+          ),
+
           // TextButton(
-          //   onPressed: palavraModel != null &&
-          //           palavraModel.palavra.isNotEmpty &&
-          //           palavraModel.ajuda.isNotEmpty
-          //       ? _onSubmitPressed
+          //   onPressed: _palavraModel.isValid
+          //       ? () async {
+          //           _onSubmitPressed();
+          //           await _successDialog();
+          //           _resetForm();
+          //         }
           //       : null,
           //   child: const Text('Gravar'),
           // ),
         ],
       ),
     );
+  }
+
+  // _successDialog() async {
+  //   await showDialog(
+  //     barrierDismissible: false,
+  //     context: context,
+  //     builder: (BuildContext context) {
+  //       return const InformationAlertDialogWidget(
+  //         title: 'Tudo certo',
+  //         message: 'Os dados informados foram registrados com sucesso.',
+  //         actions: [
+  //           ActionsFlatButtonToAlertDialogWidget(
+  //             messageButton: 'OK',
+  //             isDefaultAction: true,
+  //           ),
+  //         ],
+  //       );
+  //     },
+  //   );
+  // }
+
+  _resetForm() {
+    _palavraController.clear();
+    _ajudaController.clear();
   }
 
   Widget _mainColumn() {
@@ -122,6 +158,13 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
                 } else if (state is AjudaChanged) {
                   _palavraModel =
                       _palavraModel.copyWith(ajuda: state.palavraModel.ajuda);
+                  // } else if (state is FormIsSubmitted) {
+                  //   return SuccessDialogWidget(
+                  //     onDismissed: () {
+                  //       _palavraController.clear();
+                  //       _ajudaController.clear();
+                  //     },
+                  //   );
                 }
                 return _form();
               }),
