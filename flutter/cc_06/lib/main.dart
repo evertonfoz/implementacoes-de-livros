@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'drawer/blocs/drawer_blocs.dart';
+import 'drawer/blocs/drawer_bloc.dart';
 import 'routes/splash_screen_route.dart';
 
 void main() => runApp(const ForcaApp());

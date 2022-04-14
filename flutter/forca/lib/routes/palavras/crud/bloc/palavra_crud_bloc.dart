@@ -31,7 +31,14 @@ class PalavraBloc extends Bloc<PalavraCRUDEvent, PalavraCRUDState> {
     on<SubmitForm>(
       (event, emit) => {
         emit(
-          FormIsSubmitted(),
+          FormIsSubmitted(palavraModel: event.palavraModel),
+        ),
+      },
+    );
+    on<ResetForm>(
+      (event, emit) => {
+        emit(
+          FormIsReseted(palavraModel: event.palavraModel),
         ),
       },
     );

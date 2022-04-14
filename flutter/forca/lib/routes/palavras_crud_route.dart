@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:capitulo03_splashscreen/models/palavra_model.dart';
 import 'package:capitulo03_splashscreen/routes/palavras/crud/bloc/palavra_crud_bloc.dart';
 import 'package:flutter/material.dart';
@@ -28,8 +30,14 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
   @override
   void initState() {
     super.initState();
-    _palavraController.addListener(_onPalavraChanged);
-    _ajudaController.addListener(_onAjudaChanged);
+    _palavraController.addListener(() {
+      if (_palavraController.text.isEmpty) {
+        if (!mounted) return;
+        setState(() {});
+      }
+    });
+    // _palavraController.addListener(_onPalavraChanged);
+    // _ajudaController.addListener(_onAjudaChanged);
   }
 
   @override
@@ -39,25 +47,24 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
     super.dispose();
   }
 
-  void _onPalavraChanged() {
+  void _onPalavraChanged(String value) {
     context.read<PalavraBloc>().add(
           ChangePalavra(
-            palavraModel:
-                _palavraModel.copyWith(palavra: _palavraController.text),
+            palavraModel: _palavraModel.copyWith(palavra: value),
           ),
         );
   }
 
-  void _onAjudaChanged() {
+  void _onAjudaChanged(String value) {
     context.read<PalavraBloc>().add(
           ChangeAjuda(
-            palavraModel: _palavraModel.copyWith(ajuda: _ajudaController.text),
+            palavraModel: _palavraModel.copyWith(ajuda: value),
           ),
         );
   }
 
   void _onSubmitPressed() {
-    context.read<PalavraBloc>().add(SubmitForm());
+    context.read<PalavraBloc>().add(SubmitForm(palavraModel: _palavraModel));
   }
 
   Widget _form() {
@@ -67,19 +74,23 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           textFormField(
-              focusNode: _palavraFocus,
-              controller: _palavraController,
-              labelText: 'Palavra',
-              onFieldSubmitted: (_) =>
-                  FocusScope.of(_buildContext).requestFocus(_ajudaFocus),
-              textInputAction: TextInputAction.next,
-              validator: (_) {
-                return _palavraModel.palavra.isNotEmpty
-                    ? null
-                    : 'Informe a palavra';
-              }),
+            initialValue: _palavraModel.palavra,
+            focusNode: _palavraFocus,
+            controller: _palavraController,
+            labelText: 'Palavra',
+            onFieldSubmitted: (_) =>
+                FocusScope.of(_buildContext).requestFocus(_ajudaFocus),
+            textInputAction: TextInputAction.next,
+            validator: (_) {
+              return _palavraModel.palavra.isNotEmpty
+                  ? null
+                  : 'Informe a palavra';
+            },
+            onChanged: (value) => _onPalavraChanged(value),
+          ),
           const SizedBox(height: 20),
           textFormField(
+            initialValue: _palavraModel.ajuda,
             maxLines: 5,
             focusNode: _ajudaFocus,
             controller: _ajudaController,
@@ -87,6 +98,7 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
             validator: (_) {
               return _palavraModel.ajuda.isNotEmpty ? null : 'Informe a ajuda';
             },
+            onChanged: (value) => _onAjudaChanged(value),
           ),
           const SizedBox(
             height: 20,
@@ -97,7 +109,7 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
             textToSnackBar:
                 'Os dados informados foram registrados com sucesso.',
             onButtonPressed: _onSubmitPressed,
-            onStackBarClosed: _resetForm,
+            // onStackBarClosed: _resetForm,
           ),
 
           // TextButton(
@@ -135,8 +147,10 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
   // }
 
   _resetForm() {
+    _palavraModel = PalavraModel.empty();
+    _ajudaController.text = _palavraModel.ajuda;
     _palavraController.clear();
-    _ajudaController.clear();
+    context.read<PalavraBloc>().add(ResetForm(palavraModel: _palavraModel));
   }
 
   Widget _mainColumn() {
@@ -158,13 +172,12 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute>
                 } else if (state is AjudaChanged) {
                   _palavraModel =
                       _palavraModel.copyWith(ajuda: state.palavraModel.ajuda);
-                  // } else if (state is FormIsSubmitted) {
-                  //   return SuccessDialogWidget(
-                  //     onDismissed: () {
-                  //       _palavraController.clear();
-                  //       _ajudaController.clear();
-                  //     },
-                  //   );
+                } else if (state is FormIsSubmitted) {
+                  // _palavraModel = PalavraModel.empty();
+                  // state.palavraModel;
+                  _resetForm();
+                } else if (state is FormIsReseted) {
+                  _palavraModel = state.palavraModel;
                 }
                 return _form();
               }),

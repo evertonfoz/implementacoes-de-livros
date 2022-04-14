@@ -1,4 +1,4 @@
-import 'package:capitulo03_splashscreen/drawer/blocs/drawer_blocs.dart';
+import 'package:capitulo03_splashscreen/drawer/blocs/drawer_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,7 +16,7 @@ class DrawerRoute extends StatefulWidget {
 }
 
 class _DrawerRouteState extends State<DrawerRoute> {
-  bool _drawerIsOpen = false;
+  // bool _drawerIsOpen = false;
 
   double _topBody() {
     return MediaQuery.of(context).size.height - 105;
@@ -37,11 +37,7 @@ class _DrawerRouteState extends State<DrawerRoute> {
   }*/
 
   void _drawerCallback(bool status) {
-    if (status) {
-      context.read<DrawerBloc>().add(DrawerShowPressed());
-    } else {
-      context.read<DrawerBloc>().add(DrawerHidePressed());
-    }
+    context.read<DrawerBloc>().add(ToogleDrawer(isOpen: !status));
   }
 
   double _leftBodyOpen() {

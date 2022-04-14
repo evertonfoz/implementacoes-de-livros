@@ -9,18 +9,22 @@ mixin TextFormFieldMixin {
     textInputAction,
     onFieldSubmitted,
     required validator,
+    initialValue = '',
+    onChanged,
   }) {
     return TextFormField(
+      initialValue: initialValue,
       autocorrect: true,
       maxLines: maxLines ?? 1,
       focusNode: focusNode,
-      controller: controller,
+      // controller: controller,
       decoration: InputDecoration(
         labelText: labelText,
       ),
       textInputAction: textInputAction,
       onFieldSubmitted: onFieldSubmitted,
       validator: validator,
+      onChanged: onChanged,
     );
   }
 }
