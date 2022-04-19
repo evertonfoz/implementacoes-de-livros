@@ -7,40 +7,7 @@ part 'palavra_crud_state.dart';
 
 class PalavraBloc extends Bloc<PalavraCRUDEvent, PalavraCRUDState> {
   PalavraBloc() : super(PalavraModelInitialized()) {
-    on<ChangePalavra>(
-      (event, emit) => {
-        emit(
-          PalavraChanged(palavraModel: event.palavraModel),
-        ),
-      },
-    );
-    on<ChangeAjuda>(
-      (event, emit) => {
-        emit(
-          AjudaChanged(palavraModel: event.palavraModel),
-        ),
-      },
-    );
-    on<ValidateForm>(
-      (event, emit) => {
-        emit(
-          FormIsValidated(isValidated: event.palavraModel.isValid),
-        ),
-      },
-    );
-    on<SubmitForm>(
-      (event, emit) => {
-        emit(
-          FormIsSubmitted(palavraModel: event.palavraModel),
-        ),
-      },
-    );
-    on<ResetForm>(
-      (event, emit) => {
-        emit(
-          FormIsReseted(palavraModel: event.palavraModel),
-        ),
-      },
-    );
+    on<ChangePalavra>((event, emit) =>
+        {emit(PalavraChanged(palavraModel: event.palavraModel))});
   }
 }

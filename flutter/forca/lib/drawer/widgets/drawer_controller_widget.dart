@@ -1,4 +1,4 @@
-import 'package:capitulo03_splashscreen/drawer/blocs/drawer_blocs.dart';
+import 'package:capitulo03_splashscreen/drawer/blocs/drawer_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -73,7 +73,7 @@ class DrawerControllerWidget extends StatelessWidget {
                     ),
             ),
             (topBody != null)
-                ? BlocBuilder<DrawerBloc, bool>(
+                ? BlocBuilder<DrawerBloc, DrawerTooglePressed>(
                     builder: (context, isDrawerOpen) {
                     double left =
                         _isDrawerOpened ? leftBodyOpen! : leftBodyClose!;
@@ -90,11 +90,7 @@ class DrawerControllerWidget extends StatelessWidget {
               key: drawerKey,
               alignment: DrawerAlignment.end,
               child: drawer != null ? drawer! : Container(),
-              drawerCallback: (status) {
-                if (!_isDrawerOpened) {
-                  _drawerCallback(status);
-                }
-              },
+              drawerCallback: (status) => _drawerCallback(status),
             ),
           ],
         ),
