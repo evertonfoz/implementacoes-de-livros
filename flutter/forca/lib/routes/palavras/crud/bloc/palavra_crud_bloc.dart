@@ -9,5 +9,12 @@ class PalavraBloc extends Bloc<PalavraCRUDEvent, PalavraCRUDState> {
   PalavraBloc() : super(PalavraModelInitialized()) {
     on<ChangePalavra>((event, emit) =>
         {emit(PalavraChanged(palavraModel: event.palavraModel))});
+    on<ChangeAjuda>(
+      (event, emit) => {
+        emit(
+          AjudaChanged(palavraModel: event.palavraModel),
+        ),
+      },
+    );
   }
 }
