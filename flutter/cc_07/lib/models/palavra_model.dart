@@ -13,8 +13,13 @@ class PalavraModel extends Equatable {
 
   bool get isValid => palavra.isNotEmpty && ajuda.isNotEmpty;
 
-  @override
-  List<Object> get props => [palavraID, palavra, ajuda];
+  static PalavraModel empty() {
+    return const PalavraModel(
+      palavraID: '',
+      palavra: '',
+      ajuda: '',
+    );
+  }
 
   PalavraModel copyWith({
     String? palavraID,
@@ -28,11 +33,6 @@ class PalavraModel extends Equatable {
     );
   }
 
-  static PalavraModel empty() {
-    return const PalavraModel(
-      palavraID: '',
-      palavra: '',
-      ajuda: '',
-    );
-  }
+  @override
+  List<Object> get props => [palavraID];
 }

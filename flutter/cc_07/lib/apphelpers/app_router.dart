@@ -1,7 +1,7 @@
+import 'package:capitulo03_splashscreen/routes/palavras/crud/palavras_crud_route.dart';
 import 'package:flutter/material.dart';
 
 import '../app_constants/router_constants.dart';
-import '../routes/palavras_crud_route.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {

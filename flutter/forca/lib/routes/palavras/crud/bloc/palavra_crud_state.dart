@@ -26,3 +26,16 @@ class AjudaChanged extends PalavraCRUDState {
   @override
   List<Object> get props => [palavraModel.ajuda];
 }
+
+class FormIsValidated extends PalavraCRUDState {
+  final bool isValidated;
+
+  const FormIsValidated({required this.isValidated});
+
+  @override
+  List<Object> get props => [
+        isValidated,
+      ];
+}
+
+class FormIsSubmitted extends PalavraCRUDState {}

@@ -35,33 +35,7 @@ class ValidateForm extends PalavraCRUDEvent {
         palavraModel.palavraID,
         palavraModel.palavra,
         palavraModel.ajuda,
-        palavraModel.isValid
       ];
 }
 
-class SubmitForm extends PalavraCRUDEvent {
-  final PalavraModel palavraModel;
-
-  const SubmitForm({required this.palavraModel});
-
-  @override
-  List<Object> get props => [
-        palavraModel.palavraID,
-        palavraModel.palavra,
-        palavraModel.ajuda,
-      ];
-}
-
-class ResetForm extends PalavraCRUDEvent {
-  final PalavraModel palavraModel;
-
-  const ResetForm({required this.palavraModel});
-
-  @override
-  List<Object> get props => [
-        palavraModel.palavraID,
-        palavraModel.palavra,
-        palavraModel.ajuda,
-        "reseted"
-      ];
-}
+class SubmitForm extends PalavraCRUDEvent {}

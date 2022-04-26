@@ -38,29 +38,4 @@ class FormIsValidated extends PalavraCRUDState {
       ];
 }
 
-class FormIsSubmitted extends PalavraCRUDState {
-  final PalavraModel palavraModel;
-
-  const FormIsSubmitted({required this.palavraModel});
-
-  @override
-  List<Object> get props => [
-        palavraModel.palavraID,
-        palavraModel.palavra,
-        palavraModel.ajuda,
-      ];
-}
-
-class FormIsReseted extends PalavraCRUDState {
-  final PalavraModel palavraModel;
-
-  const FormIsReseted({required this.palavraModel});
-
-  @override
-  List<Object> get props => [
-        palavraModel.palavraID,
-        palavraModel.palavra,
-        palavraModel.ajuda,
-        "reseted"
-      ];
-}
+class FormIsSubmitted extends PalavraCRUDState {}
