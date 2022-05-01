@@ -1,8 +1,6 @@
 import 'package:capitulo03_splashscreen/drawer/widgets/container_iluminado_widget.dart';
+import 'package:capitulo03_splashscreen/local_persistence/daos/palavra_dao.dart';
 import 'package:capitulo03_splashscreen/models/palavra_model.dart';
-import 'package:capitulo03_splashscreen/widgets/dialogs/actions_flatbutton_to_alertdialog_widget.dart';
-import 'package:capitulo03_splashscreen/widgets/dialogs/information_alert_dialog_widget.dart';
-import 'package:capitulo03_splashscreen/widgets/dialogs/success_dialog_widget.dart';
 import 'package:capitulo03_splashscreen/widgets/textbutton_with_snackbar_widget.dart';
 import 'package:capitulo03_splashscreen/widgets/textformfield_forca.dart';
 import 'package:flutter/material.dart';
@@ -56,8 +54,17 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
         );
   }
 
-  void _onSubmitPressed() {
-    context.read<PalavraBloc>().add(SubmitForm());
+  void _onSubmitPressed() async {
+    PalavraDAO palavraDAO = PalavraDAO();
+    PalavraModel palavraModel = PalavraModel(
+        palavra: _palavraController.text, ajuda: _ajudaController.text);
+
+    try {
+      await palavraDAO.insert(palavraModel: palavraModel);
+      context.read<PalavraBloc>().add(SubmitForm());
+    } catch (e) {
+      rethrow;
+    }
   }
 
   @override
@@ -100,15 +107,14 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
                 } else if (formState is AjudaChanged) {
                   _palavraModel = _palavraModel.copyWith(
                       ajuda: formState.palavraModel.ajuda);
+                } else if (formState is FormIsSubmitted) {
+                  // return SuccessDialogWidget(
+                  //   onDismissed: () {
+                  //     _palavraController.clear();
+                  //     _ajudaController.clear();
+                  //   },
+                  // );
                 }
-                // else if (formState is FormIsSubmitted) {
-                //   return SuccessDialogWidget(
-                //     onDismissed: () {
-                //       _palavraController.clear();
-                //       _ajudaController.clear();
-                //     },
-                //   );
-                // }
                 return _form();
               }),
             ),
@@ -158,34 +164,35 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
           TextButtonWithSnackbarWidget(
             onPressedVisible: _palavraModel.isValid,
             buttonText: 'Gravar',
-            textToSnackBar:
+            successTextToSnackBar:
                 'Os dados informados foram registrados com sucesso.',
+            failTextToSnackBar: 'Erro na inserção',
             onButtonPressed: _onSubmitPressed,
-            onStackBarClosed: _resetForm,
+            onSnackBarClosed: _resetForm,
           ),
         ],
       ),
     );
   }
 
-  _successDialog() async {
-    await showDialog(
-      barrierDismissible: false,
-      context: context,
-      builder: (BuildContext context) {
-        return const InformationAlertDialogWidget(
-          title: 'Tudo certo',
-          message: 'Os dados informados foram registrados com sucesso.',
-          actions: [
-            ActionsFlatButtonToAlertDialogWidget(
-              messageButton: 'OK',
-              isDefaultAction: true,
-            ),
-          ],
-        );
-      },
-    );
-  }
+  // _successDialog() async {
+  //   await showDialog(
+  //     barrierDismissible: false,
+  //     context: context,
+  //     builder: (BuildContext context) {
+  //       return const InformationAlertDialogWidget(
+  //         title: 'Tudo certo',
+  //         message: 'Os dados informados foram registrados com sucesso.',
+  //         actions: [
+  //           ActionsFlatButtonToAlertDialogWidget(
+  //             messageButton: 'OK',
+  //             isDefaultAction: true,
+  //           ),
+  //         ],
+  //       );
+  //     },
+  //   );
+  // }
 
   _resetForm() {
     _palavraController.clear();

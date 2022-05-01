@@ -8,7 +8,7 @@ import 'lp_constants.dart';
 
 class SQFLiteDataBase {
   /// Objeto SQFLite para nossa base de dados
-  static late Database _database;
+  static Database? _database;
 
   /// Um construtor privado, atuando como um singleton para termos sempre a mesma
   /// conexão em toda a aplicação
@@ -17,9 +17,9 @@ class SQFLiteDataBase {
 
   /// Acesso à base de dados
   Future<Database> get database async {
-    if (_database != null) return _database;
+    if (_database != null) return _database!;
     _database = await _initDatabase();
-    return _database;
+    return _database!;
   }
 
   /// Método que inicializará a base de dados, caso ainda não exista
