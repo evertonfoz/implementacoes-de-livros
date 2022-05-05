@@ -15,6 +15,16 @@ class ForcaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // PalavraDAO palavraDAO = PalavraDAO();
+    // for (int i = 0; i < 30; i++) {
+    //   var random = Random();
+    //   var palavra = random.nextInt(1000).toString();
+    //   palavraDAO.insert(
+    //       palavraModel: PalavraModel(
+    //           palavra: 'Palavra $palavra',
+    //           ajuda: 'Ajuda para palavra $palavra'));
+    // }
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(

@@ -25,9 +25,19 @@ class PalavrasBloc extends Bloc<PalavrasEvent, PalavrasLISTState> {
       _onPalavrasFetched,
       transformer: throttleDroppable(throttleDuration),
     );
+    on<PalavrasResetFetch>(
+      (event, emit) async {
+        return emit(state.copyWith(
+          status: PalavrasStatus.success,
+          palavras: [],
+          hasReachedMax: false,
+        ));
+      },
+      transformer: throttleDroppable(throttleDuration),
+    );
   }
 
-  Future<void> _onPalavrasFetched(
+  Future _onPalavrasFetched(
       PalavrasFetched event, Emitter<PalavrasLISTState> emit) async {
     if (state.hasReachedMax) return;
     try {
@@ -39,12 +49,12 @@ class PalavrasBloc extends Bloc<PalavrasEvent, PalavrasLISTState> {
           hasReachedMax: false,
         ));
       }
-      final posts = await _fetchPalavras(state.palavras.length);
-      emit(posts.isEmpty
+      final palavras = await _fetchPalavras(startIndex: state.palavras.length);
+      emit(palavras.isEmpty
           ? state.copyWith(hasReachedMax: true)
           : state.copyWith(
               status: PalavrasStatus.success,
-              palavras: List.of(state.palavras)..addAll(posts),
+              palavras: List.of(state.palavras)..addAll(palavras),
               hasReachedMax: false,
             ));
     } catch (_) {
@@ -52,7 +62,7 @@ class PalavrasBloc extends Bloc<PalavrasEvent, PalavrasLISTState> {
     }
   }
 
-  Future<List<PalavraModel>> _fetchPalavras([int startIndex = 0]) async {
+  Future<List<PalavraModel>> _fetchPalavras({int startIndex = 0}) async {
     try {
       final List mapOfPalavras = await PalavraDAO()
           .getAll(startIndex: startIndex, limit: _palavrasLimit);

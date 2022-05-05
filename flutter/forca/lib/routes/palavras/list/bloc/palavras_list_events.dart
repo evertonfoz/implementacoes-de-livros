@@ -6,3 +6,5 @@ abstract class PalavrasEvent extends Equatable {
 }
 
 class PalavrasFetched extends PalavrasEvent {}
+
+class PalavrasResetFetch extends PalavrasEvent {}
