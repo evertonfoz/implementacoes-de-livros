@@ -1,3 +1,4 @@
+import 'package:capitulo03_splashscreen/routes/palavras/widgets/bottom_loader_widget.dart';
 import 'package:capitulo03_splashscreen/routes/palavras/widgets/palavras_listtile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -61,12 +62,16 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
           return ListView.builder(
             controller: _scrollController,
             padding: const EdgeInsets.only(top: 10),
-            itemCount: formState.palavras.length,
+            itemCount: formState.hasReachedMax
+                ? formState.palavras.length
+                : formState.palavras.length + 1,
             itemBuilder: (BuildContext context, int index) {
-              return PalavrasListTileWidget(
-                title: formState.palavras[index].palavra,
-                trailing: const Icon(Icons.keyboard_arrow_right),
-              );
+              return (index >= formState.palavras.length)
+                  ? const BottomLoaderWidget()
+                  : PalavrasListTileWidget(
+                      title: formState.palavras[index].palavra,
+                      trailing: const Icon(Icons.keyboard_arrow_right),
+                    );
             },
           );
         }
