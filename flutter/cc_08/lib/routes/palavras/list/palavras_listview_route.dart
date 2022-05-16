@@ -1,7 +1,5 @@
 import 'package:capitulo03_splashscreen/routes/palavras/widgets/bottom_loader_widget.dart';
 import 'package:capitulo03_splashscreen/routes/palavras/widgets/palavras_listtile_widget.dart';
-import 'package:dialog_information_to_specific_platform/dialog_information_to_specific_platform.dart';
-import 'package:dialog_information_to_specific_platform/flat_buttons/actions_flatbutton_to_alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -94,38 +92,5 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
     if (maxScroll - currentScroll <= scrollThreshold) {
       palavrasListViewBloc.add(PalavrasFetched());
     }
-  }
-
-  Future<String> confirmDismiss({
-    required BuildContext context,
-    required String palavra,
-    required String palavraID,
-  }) async {
-    return await showDialog(
-      barrierDismissible: false,
-      context: context,
-      builder: (BuildContext context) {
-        return InformationAlertDialog(
-          iconTitle: const Icon(
-            Icons.message,
-            color: Colors.red,
-          ),
-          title: 'Oops...Quer remover?',
-          message: 'Confirma a remoção da palavra ${palavra.toUpperCase()}',
-          buttons: [
-            ActionsFlatButtonToAlertDialog(
-              messageButton: 'Não',
-              isEnabled: true,
-            ),
-            //   InformationAlertDialog.createFlatButton(),
-            ActionsFlatButtonToAlertDialog(
-              messageButton: 'Sim',
-              isEnabled: true,
-            ),
-            //   InformationAlertDialog.createFlatButton(),
-          ],
-        );
-      },
-    );
   }
 }
