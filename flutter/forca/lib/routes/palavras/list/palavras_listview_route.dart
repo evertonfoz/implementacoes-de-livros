@@ -1,3 +1,4 @@
+import 'package:capitulo03_splashscreen/local_persistence/daos/palavra_dao.dart';
 import 'package:capitulo03_splashscreen/routes/palavras/widgets/bottom_loader_widget.dart';
 import 'package:capitulo03_splashscreen/routes/palavras/widgets/palavras_listtile_widget.dart';
 import 'package:dialog_information_to_specific_platform/dialog_information_to_specific_platform.dart';
@@ -23,6 +24,8 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
   void initState() {
     super.initState();
     _palavrasListViewBloc = BlocProvider.of<PalavrasBloc>(context);
+    // _palavrasListViewBloc.add(PalavrasResetFetch());
+    // _palavrasListViewBloc.add(PalavrasFetched());
     _scrollController.addListener(
       () => onScroll(
           palavrasListViewBloc: _palavrasListViewBloc,
@@ -70,9 +73,34 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
             itemBuilder: (BuildContext context, int index) {
               return (index >= formState.palavras.length)
                   ? const BottomLoaderWidget()
-                  : PalavrasListTileWidget(
-                      title: formState.palavras[index].palavra,
-                      trailing: const Icon(Icons.keyboard_arrow_right),
+                  : Dismissible(
+                      key: Key(formState.palavras[index].palavraID!),
+                      confirmDismiss: (direction) async {
+                        return await confirmDismiss(
+                            context: context,
+                            palavra: formState.palavras[index].palavra,
+                            palavraID: formState.palavras[index].palavraID!);
+
+                        // _palavrasListViewBloc.add(
+                        //     PalavrasConfirmDismiss(indexOfDismissible: index));
+
+                        // return true;
+                        // _palavrasListViewBloc.add(PalavrasFetched());
+                      },
+                      onDismissed: (direction) async {
+                        await dismissedComplete(
+                            context: context,
+                            palavraID: formState.palavras[index].palavraID!,
+                            palavra: formState.palavras[index].palavra);
+                        return;
+                      },
+                      background: Container(
+                        color: Colors.red,
+                      ),
+                      child: PalavrasListTileWidget(
+                        title: formState.palavras[index].palavra,
+                        trailing: const Icon(Icons.keyboard_arrow_right),
+                      ),
                     );
             },
           );
@@ -96,12 +124,12 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
     }
   }
 
-  Future<String> confirmDismiss({
+  Future<bool> confirmDismiss({
     required BuildContext context,
     required String palavra,
     required String palavraID,
   }) async {
-    return await showDialog(
+    String oQueFazer = await showDialog(
       barrierDismissible: false,
       context: context,
       builder: (BuildContext context) {
@@ -127,5 +155,56 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
         );
       },
     );
+
+    if (oQueFazer == 'Não') return false;
+
+    return await _removePalavra(palavraID, context, palavra);
+  }
+
+  Future<void> dismissedComplete(
+      {required BuildContext context,
+      required String palavraID,
+      required String palavra}) async {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.indigo,
+        content: Text(
+          'Palavra ${palavra.toUpperCase()} foi removida',
+        ),
+      ),
+    );
+  }
+
+  Future showSnackBarMessage(
+      {required BuildContext context,
+      required String message,
+      required Color backgroundColor}) async {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(
+          backgroundColor: backgroundColor,
+          content: Text(
+            message,
+          ),
+        ))
+        .closed
+        .then((_) {
+      return;
+    });
+  }
+
+  Future<bool> _removePalavra(
+      String palavraID, BuildContext context, String palavra) async {
+    try {
+      PalavraDAO palavraDAO = PalavraDAO();
+      await palavraDAO.deleteByID(palavraID);
+      return true;
+    } catch (exception) {
+      showSnackBarMessage(
+          context: context,
+          message:
+              'Erro ao remover a Palavra ${palavra.toUpperCase()}: $exception',
+          backgroundColor: Colors.red);
+      return false;
+    }
   }
 }

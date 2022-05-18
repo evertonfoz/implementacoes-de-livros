@@ -50,4 +50,17 @@ class PalavraDAO {
       rethrow;
     }
   }
+
+  Future<int> deleteByID(String palavraID) async {
+    try {
+      Database lpDatabase = await SQFLiteDataBase.instance.database;
+
+      var result = await lpDatabase.delete(kPalavrasTableName,
+          where: '$kPalavraPalavraID = ?', whereArgs: [palavraID]);
+
+      return result;
+    } catch (exception) {
+      rethrow;
+    }
+  }
 }

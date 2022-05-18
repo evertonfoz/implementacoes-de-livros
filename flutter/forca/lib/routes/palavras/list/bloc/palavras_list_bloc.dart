@@ -35,6 +35,17 @@ class PalavrasBloc extends Bloc<PalavrasEvent, PalavrasLISTState> {
       },
       transformer: throttleDroppable(throttleDuration),
     );
+    // on<PalavrasConfirmDismiss>(
+    //   (event, emit) async {
+    //     state.palavras.removeAt(event.indexOfDismissible);
+    //     return emit(state.copyWith(
+    //       status: PalavrasStatus.success,
+    //       palavras: state.palavras,
+    //       hasReachedMax: state.hasReachedMax,
+    //     ));
+    //   },
+    //   transformer: throttleDroppable(throttleDuration),
+    // );
   }
 
   Future _onPalavrasFetched(

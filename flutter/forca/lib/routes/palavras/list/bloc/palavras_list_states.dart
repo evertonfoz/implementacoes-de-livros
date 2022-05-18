@@ -31,5 +31,5 @@ class PalavrasLISTState extends Equatable {
   // }
 
   @override
-  List<Object> get props => [status, palavras, hasReachedMax];
+  List<Object> get props => [status, palavras.length, hasReachedMax];
 }

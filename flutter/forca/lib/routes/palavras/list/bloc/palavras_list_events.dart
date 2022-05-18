@@ -8,3 +8,11 @@ abstract class PalavrasEvent extends Equatable {
 class PalavrasFetched extends PalavrasEvent {}
 
 class PalavrasResetFetch extends PalavrasEvent {}
+
+// class PalavrasConfirmDismiss extends PalavrasEvent {
+//   final int indexOfDismissible;
+
+//   PalavrasConfirmDismiss({
+//     required this.indexOfDismissible,
+//   });
+// }
