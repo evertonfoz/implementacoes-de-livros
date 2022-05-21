@@ -19,7 +19,7 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      WidgetsBinding.instance?.addPostFrameCallback((_) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
         AppPreferences.getWelcomeRead().then((status) async {
           await _whereToNavigate(welcomeRead: status);
         });

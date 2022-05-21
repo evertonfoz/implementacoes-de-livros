@@ -32,8 +32,8 @@ class ForcaApp extends StatelessWidget {
         ),
         BlocProvider(create: (_) => PalavraBloc()),
         BlocProvider<PalavrasBloc>(
-          create: (BuildContext context) =>
-              PalavrasBloc(palavraDAO: PalavraDAO())..add(PalavrasFetched()),
+          create: (BuildContext context) => PalavrasBloc(
+              palavraDAO: PalavraDAO()), //..add(PalavrasFetched()),
         ),
       ],
       child: MaterialApp(

@@ -9,7 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/palavra_crud_bloc.dart';
 
 class PalavrasCRUDRoute extends StatefulWidget {
-  const PalavrasCRUDRoute({Key? key}) : super(key: key);
+  final PalavraModel? palavraModel;
+
+  const PalavrasCRUDRoute({Key? key, this.palavraModel}) : super(key: key);
 
   @override
   State<PalavrasCRUDRoute> createState() => _PalavrasCRUDRouteState();
@@ -29,6 +31,15 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
     super.initState();
     _palavraController.addListener(_onPalavraChanged);
     _ajudaController.addListener(_onAjudaChanged);
+
+    if (widget.palavraModel != null) {
+      _initializeTextControllers();
+    }
+  }
+
+  _initializeTextControllers() {
+    _palavraController.text = widget.palavraModel!.palavra;
+    _ajudaController.text = widget.palavraModel!.ajuda;
   }
 
   @override
@@ -57,10 +68,14 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
   void _onSubmitPressed() async {
     PalavraDAO palavraDAO = PalavraDAO();
     PalavraModel palavraModel = PalavraModel(
-        palavra: _palavraController.text, ajuda: _ajudaController.text);
+        palavraID: (widget.palavraModel == null)
+            ? null
+            : widget.palavraModel?.palavraID,
+        palavra: _palavraController.text,
+        ajuda: _ajudaController.text);
 
     try {
-      await palavraDAO.insert(palavraModel: palavraModel);
+      await palavraDAO.update(palavraModel: palavraModel);
       context.read<PalavraBloc>().add(SubmitForm());
     } catch (e) {
       rethrow;
@@ -74,8 +89,10 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         backgroundColor: Colors.grey[600],
-        title: const Text(
-          'Registro de Palavras',
+        title: Text(
+          widget.palavraModel == null
+              ? 'Registro de Palavras'
+              : 'Alteração de uma palavra',
         ),
       ),
       body: SafeArea(
@@ -161,15 +178,36 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
           const SizedBox(
             height: 20,
           ),
-          TextButtonWithSnackbarWidget(
-            onPressedVisible: _palavraModel.isValid,
-            buttonText: 'Gravar',
-            successTextToSnackBar:
-                'Os dados informados foram registrados com sucesso.',
-            failTextToSnackBar: 'Erro na inserção',
-            onButtonPressed: _onSubmitPressed,
-            onSnackBarClosed: _resetForm,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              TextButton(
+                onPressed: _palavraModel.isValid ? () {} : null,
+                child: const Text('Cancelar'),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              TextButtonWithSnackbarWidget(
+                onPressedVisible: _palavraModel.isValid,
+                buttonText: 'Gravar',
+                successTextToSnackBar:
+                    'Os dados informados foram registrados com sucesso.',
+                failTextToSnackBar: 'Erro na inserção',
+                onButtonPressed: _onSubmitPressed,
+                onSnackBarClosed: _resetForm,
+              ),
+            ],
           ),
+          // TextButtonWithSnackbarWidget(
+          //   onPressedVisible: _palavraModel.isValid,
+          //   buttonText: 'Gravar',
+          //   successTextToSnackBar:
+          //       'Os dados informados foram registrados com sucesso.',
+          //   failTextToSnackBar: 'Erro na inserção',
+          //   onButtonPressed: _onSubmitPressed,
+          //   onSnackBarClosed: _resetForm,
+          // ),
         ],
       ),
     );

@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:capitulo03_splashscreen/app_constants/router_constants.dart';
 import 'package:capitulo03_splashscreen/local_persistence/daos/palavra_dao.dart';
 import 'package:capitulo03_splashscreen/routes/palavras/widgets/bottom_loader_widget.dart';
 import 'package:capitulo03_splashscreen/routes/palavras/widgets/palavras_listtile_widget.dart';
@@ -19,13 +22,17 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
   final _scrollController = ScrollController();
   final _scrollThreshold = 200.0;
   late final PalavrasBloc _palavrasListViewBloc;
+  String? _palavraIDSelected;
+  String? _palavraIDOfTileToHighlight;
+  final double _listTileHeight = 70;
 
   @override
   void initState() {
     super.initState();
-    _palavrasListViewBloc = BlocProvider.of<PalavrasBloc>(context);
-    // _palavrasListViewBloc.add(PalavrasResetFetch());
-    // _palavrasListViewBloc.add(PalavrasFetched());
+    _palavrasListViewBloc = BlocProvider.of<PalavrasBloc>(context)
+      ..add(PalavrasFetched());
+    _palavrasListViewBloc.add(PalavrasResetFetch());
+    _palavrasListViewBloc.add(PalavrasFetched());
     _scrollController.addListener(
       () => onScroll(
           palavrasListViewBloc: _palavrasListViewBloc,
@@ -64,6 +71,23 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
             );
           }
 
+          Future.delayed(const Duration(milliseconds: 500)).then((onValue) {
+            if (_scrollController.hasClients) {
+              for (int i = 0; i < formState.palavras.length; i++) {
+                if (_palavraIDSelected != null &&
+                    formState.palavras[i].palavraID == _palavraIDSelected) {
+                  _scrollController.animateTo(i * _listTileHeight,
+                      duration: const Duration(seconds: 2), curve: Curves.ease);
+                  setState(() {
+                    _palavraIDOfTileToHighlight = _palavraIDSelected;
+                  });
+                  _palavraIDSelected = null;
+                  break;
+                }
+              }
+            }
+          });
+
           return ListView.builder(
             controller: _scrollController,
             padding: const EdgeInsets.only(top: 10),
@@ -97,9 +121,31 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
                       background: Container(
                         color: Colors.red,
                       ),
-                      child: PalavrasListTileWidget(
-                        title: formState.palavras[index].palavra,
-                        trailing: const Icon(Icons.keyboard_arrow_right),
+                      child: InkWell(
+                        onLongPress: () async {
+                          _palavraIDSelected =
+                              formState.palavras[index].palavraID;
+
+                          await Navigator.of(context).pushNamed(
+                              kPalavrasCRUDRoute,
+                              arguments: formState.palavras[index]);
+
+                          Timer(const Duration(seconds: 1), () {
+                            _palavrasListViewBloc.add(PalavrasResetFetch());
+                            _palavrasListViewBloc.add(PalavrasFetched());
+                          });
+                        },
+                        child: PalavrasListTileWidget(
+                          title: formState.palavras[index].palavra,
+                          trailing: const Icon(
+                            Icons.keyboard_arrow_right,
+                          ),
+                          listTileHeight: _listTileHeight,
+                          color: (_palavraIDOfTileToHighlight ==
+                                  formState.palavras[index].palavraID)
+                              ? Colors.grey[300]
+                              : Colors.transparent,
+                        ),
                       ),
                     );
             },
