@@ -50,6 +50,10 @@ class DrawerBodyContentApp extends StatelessWidget {
           titleText: 'Jogar',
           subtitleText: 'Começar a diversão',
           avatarImage: const AssetImage('assets/images/drawer/jogar.png'),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed(kJogoRoute);
+          },
         ),
         _createListTile(
           contentPadding: const EdgeInsets.only(left: 6.0),
@@ -61,12 +65,12 @@ class DrawerBodyContentApp extends StatelessWidget {
     );
   }
 
-  ListTile _createListTile({
-    required EdgeInsets contentPadding,
-    ImageProvider? avatarImage,
-    required String titleText,
-    required String subtitleText,
-  }) {
+  ListTile _createListTile(
+      {required EdgeInsets contentPadding,
+      ImageProvider? avatarImage,
+      required String titleText,
+      required String subtitleText,
+      VoidCallback? onTap}) {
     return ListTile(
       contentPadding: contentPadding,
       leading: avatarImage != null
@@ -75,7 +79,7 @@ class DrawerBodyContentApp extends StatelessWidget {
       trailing: const Icon(Icons.arrow_forward),
       title: Text(titleText),
       subtitle: Text(subtitleText),
-      onTap: () {},
+      onTap: onTap,
     );
   }
 }
