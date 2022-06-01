@@ -1,14 +1,19 @@
+import 'package:capitulo03_splashscreen/routes/jogo/mobx_stores/jogo_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'apphelpers/app_router.dart';
 import 'drawer/blocs/drawer_bloc.dart';
+import 'functions/getit_function.dart';
 import 'local_persistence/daos/palavra_dao.dart';
 import 'routes/palavras/crud/bloc/palavra_crud_bloc.dart';
 import 'routes/palavras/list/bloc/palavras_list_bloc.dart';
 import 'routes/splash_screen_route.dart';
 
-void main() => runApp(const ForcaApp());
+void main() {
+  getIt.registerSingleton<JogoStore>(JogoStore());
+  runApp(const ForcaApp());
+}
 
 class ForcaApp extends StatelessWidget {
   const ForcaApp({Key? key}) : super(key: key);

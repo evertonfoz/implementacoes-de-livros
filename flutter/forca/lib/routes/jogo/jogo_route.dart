@@ -1,26 +1,78 @@
+import 'package:capitulo03_splashscreen/functions/getit_function.dart';
+import 'package:capitulo03_splashscreen/routes/jogo/widgets/teclado_jogo_widget.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+
+import 'mobx_stores/jogo_store.dart';
+import 'widgets/letra_teclado_jogo_widget.dart';
 
 class JogoRoute extends StatefulWidget {
+  const JogoRoute({Key? key}) : super(key: key);
+
   @override
   _JogoRouteState createState() => _JogoRouteState();
 }
 
 class _JogoRouteState extends State<JogoRoute> {
+  late JogoStore _jogoStore;
+  // List<ReactionDisposer>? _reactionDisposers;
+  // bool _jogoIniciado = false;
+  // String _ajudaParaPalavra = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _jogoStore = getIt.get<JogoStore>();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // _reactionDisposers ??= [
+    //   reaction<String?>(
+    //     (_) => _jogoStore.palavraParaAdivinhar,
+    //     (String? palavra) => print('nova palavra: $palavra'),
+    //   ),
+    //   reaction<String?>(
+    //     (_) => _jogoStore.ajudaPalavraParaAdivinhar,
+    //     (String? ajuda) {
+    //       print('nova ajuda: $ajuda');
+    //       setState(() {
+    //         _jogoIniciado = !_jogoIniciado;
+    //         _ajudaParaPalavra = ajuda!;
+    //       });
+    //     },
+    //   ),
+    // ];
+  }
+
+  @override
+  void dispose() {
+    // _reactionDisposers?.forEach((d) => d());
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            _titulo(),
-            _botaoParaSorteioDePalavra(),
-            _palavraParaAdivinhar(palavra: '_ _ _ _ _ _ _ _ _ _'),
-            _animacaoDaForca(animacao: 'idle'),
-            _letrasParaSelecao(letras: 'ABCDEFGHIJKLMNOPQRSTUWXYZ'),
-          ],
-        ),
+        child: Observer(builder: (context) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _titulo(),
+              _botaoParaSorteioDePalavra(),
+              _palavraParaAdivinhar(
+                  palavra: _jogoStore.palavraAdivinhadaFormatada),
+              _ajudaParaAdivinharAPalavra(
+                  ajuda: _jogoStore.ajudaPalavraParaAdivinhar),
+              _animacaoDaForca(animacao: 'idle'),
+              const TecladoJogoWidget(),
+              // _letrasParaSelecao(letras: widgetsDeLetrasDoTeclado),
+            ],
+          );
+        }),
       ),
     );
   }
@@ -55,17 +107,16 @@ class _JogoRouteState extends State<JogoRoute> {
         ],
       ),
       child: TextButton(
-        child: const Text('Pressione para sortear uma palavra'),
-        style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all(
-            Colors.black,
+          child: const Text('Pressione para sortear uma palavra'),
+          style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all(
+              Colors.black,
+            ),
+            backgroundColor: MaterialStateProperty.all(
+              Colors.blue[200],
+            ),
           ),
-          backgroundColor: MaterialStateProperty.all(
-            Colors.blue[200],
-          ),
-        ),
-        onPressed: () {},
-      ),
+          onPressed: () => _jogoStore.selecionarPalavraParaAdivinhar()),
     );
   }
 
@@ -92,16 +143,16 @@ class _JogoRouteState extends State<JogoRoute> {
     );
   }
 
-  _letrasParaSelecao({required String letras}) {
+  _letrasParaSelecao({required List<LetraTecladoJogoWidget> letras}) {
     List<Widget> textsParaLetras = [];
 
     for (int i = 0; i < letras.length; i++) {
-      textsParaLetras.add(Text(
-        letras[i],
-        style: const TextStyle(
-          fontSize: 40,
+      textsParaLetras.add(
+        InkWell(
+          child: letras[i],
+          onTap: () => print('Letra ${letras[i].letra} foi pressionada'),
         ),
-      ));
+      );
     }
 
     return Padding(
@@ -113,5 +164,17 @@ class _JogoRouteState extends State<JogoRoute> {
         children: textsParaLetras,
       ),
     );
+  }
+
+  _ajudaParaAdivinharAPalavra({String? ajuda}) {
+    return (ajuda != null)
+        ? Padding(
+            padding: const EdgeInsets.only(
+              top: 10.0,
+              bottom: 15,
+            ),
+            child: Text(ajuda),
+          )
+        : Container();
   }
 }

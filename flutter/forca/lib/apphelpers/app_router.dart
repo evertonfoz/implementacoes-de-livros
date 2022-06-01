@@ -16,7 +16,7 @@ class AppRouter {
       case kPalavrasAllRoute:
         return MaterialPageRoute(builder: (_) => const PalavrasListViewRoute());
       case kJogoRoute:
-        return MaterialPageRoute(builder: (_) => JogoRoute());
+        return MaterialPageRoute(builder: (_) => const JogoRoute());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
