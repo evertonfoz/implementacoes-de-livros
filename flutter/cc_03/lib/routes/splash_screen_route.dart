@@ -1,8 +1,5 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import '../widgets/circular_image_widget.dart';
-import 'welcome_route.dart';
 
 class SplashScreenRoute extends StatefulWidget {
   const SplashScreenRoute({super.key});
@@ -15,12 +12,6 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const WelcomeRoute()),
-      );
-    });
   }
 
   @override
