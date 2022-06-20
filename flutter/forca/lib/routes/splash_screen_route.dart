@@ -1,7 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:forca/drawer/drawer_route.dart';
+import 'package:forca/shared_preferences/app_preferences.dart';
 import '../widgets/circular_image_widget.dart';
+import 'home_route.dart';
 import 'welcome_route.dart';
 
 class SplashScreenRoute extends StatefulWidget {
@@ -16,10 +19,11 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const WelcomeRoute()),
-      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        AppPreferences.getWelcomeRead().then((status) async {
+          await _whereToNavigate(welcomeRead: status);
+        });
+      });
     });
   }
 
@@ -52,5 +56,17 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
         ),
       ],
     );
+  }
+
+  _whereToNavigate({required bool welcomeRead}) {
+    if (welcomeRead) {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const DrawerRoute()));
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const WelcomeRoute()),
+      );
+    }
   }
 }

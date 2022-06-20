@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forca/drawer/drawer_route.dart';
 import 'package:forca/shared_preferences/app_preferences.dart';
 
 import 'home_route.dart';
@@ -67,7 +68,7 @@ class _WelcomeRouteState extends State<WelcomeRoute> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const HomeRoute()),
+                          builder: (context) => const DrawerRoute()),
                     );
                   },
                   child: const Text('Começar', style: TextStyle(fontSize: 20)),

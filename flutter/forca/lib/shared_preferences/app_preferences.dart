@@ -6,4 +6,9 @@ class AppPreferences {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setBool(kWelcomeRead, status);
   }
+
+  static getWelcomeRead() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(kWelcomeRead) ?? false;
+  }
 }
