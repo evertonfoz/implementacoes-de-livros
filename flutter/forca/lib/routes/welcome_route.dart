@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:forca/shared_preferences/app_preferences.dart';
+
+import 'home_route.dart';
 
 class WelcomeRoute extends StatefulWidget {
   const WelcomeRoute({super.key});
@@ -8,6 +11,8 @@ class WelcomeRoute extends StatefulWidget {
 }
 
 class _WelcomeRouteState extends State<WelcomeRoute> {
+  bool _checkBoxIsChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,17 +47,30 @@ class _WelcomeRouteState extends State<WelcomeRoute> {
                       width: 5,
                     ),
                     Checkbox(
-                      value: true,
-                      onChanged: (bool? value) {},
+                      value: _checkBoxIsChecked,
+                      onChanged: (status) {
+                        setState(() {
+                          _checkBoxIsChecked = status ?? false;
+                        });
+                      },
                     ),
                   ],
                 ),
                 const SizedBox(
                   width: 10,
                 ),
-                const ElevatedButton(
-                  onPressed: null,
-                  child: Text('Começar', style: TextStyle(fontSize: 20)),
+                ElevatedButton(
+                  onPressed: () async {
+                    await AppPreferences.setWelcomeRead(
+                        status: _checkBoxIsChecked);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeRoute()),
+                    );
+                  },
+                  child: const Text('Começar', style: TextStyle(fontSize: 20)),
                 )
               ],
             ),
