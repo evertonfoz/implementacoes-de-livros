@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/drawerheader_app.dart';
+
 class DrawerRoute extends StatelessWidget {
   const DrawerRoute({Key? key}) : super(key: key);
 
@@ -13,7 +15,13 @@ class DrawerRoute extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(),
-      drawer: const Drawer(),
+      drawer: Drawer(
+        child: Column(
+          children: const <Widget>[
+            DrawerHeaderApp(),
+          ],
+        ),
+      ),
     );
   }
 }
