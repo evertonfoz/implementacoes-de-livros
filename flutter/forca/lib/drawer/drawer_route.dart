@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/drawerbody_app.dart';
+import 'widgets/drawerbodycontent_app.dart';
 import 'widgets/drawerheader_app.dart';
 
 class DrawerRoute extends StatelessWidget {
@@ -19,6 +21,9 @@ class DrawerRoute extends StatelessWidget {
         child: Column(
           children: const <Widget>[
             DrawerHeaderApp(),
+            DrawerBodyApp(
+              child: DrawerBodyContentApp(),
+            ),
           ],
         ),
       ),
