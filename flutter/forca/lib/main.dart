@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'drawer/blocs/drawer_bloc.dart';
 import 'routes/splash_screen_route.dart';
 
 void main() => runApp(const ForcaApp());
@@ -9,13 +11,17 @@ class ForcaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Forca da UTFPR',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        backgroundColor: Colors.green,
+    return BlocProvider(
+      create: (_) => DrawerBloc(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Forca da UTFPR',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          backgroundColor: Colors.green,
+        ),
+        home: const ForcaHomePage(),
       ),
-      home: const ForcaHomePage(),
     );
   }
 }

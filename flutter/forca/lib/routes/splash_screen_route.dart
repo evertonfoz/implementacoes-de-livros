@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:forca/drawer/drawer_route.dart';
 import 'package:forca/shared_preferences/app_preferences.dart';
 import '../widgets/circular_image_widget.dart';
-import 'home_route.dart';
 import 'welcome_route.dart';
 
 class SplashScreenRoute extends StatefulWidget {
   const SplashScreenRoute({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenRouteState createState() => _SplashScreenRouteState();
 }
 

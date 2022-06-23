@@ -62,7 +62,7 @@ class DrawerBodyContentApp extends StatelessWidget {
       leading: avatarImage != null
           ? CircleAvatar(backgroundImage: avatarImage)
           : null,
-      trailing: Icon(Icons.arrow_forward),
+      trailing: const Icon(Icons.arrow_forward),
       title: Text(titleText),
       subtitle: Text(subtitleText),
       onTap: () {},

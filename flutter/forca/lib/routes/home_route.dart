@@ -4,6 +4,7 @@ class HomeRoute extends StatefulWidget {
   const HomeRoute({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomeRouteState createState() => _HomeRouteState();
 }
 

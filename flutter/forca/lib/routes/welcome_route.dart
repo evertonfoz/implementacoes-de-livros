@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:forca/drawer/drawer_route.dart';
 import 'package:forca/shared_preferences/app_preferences.dart';
 
-import 'home_route.dart';
-
 class WelcomeRoute extends StatefulWidget {
   const WelcomeRoute({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _WelcomeRouteState createState() => _WelcomeRouteState();
 }
 
