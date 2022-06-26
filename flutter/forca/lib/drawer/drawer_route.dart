@@ -16,6 +16,7 @@ class DrawerRoute extends StatefulWidget {
 }
 
 class _DrawerRouteState extends State<DrawerRoute> {
+  // ignore: prefer_final_fields
   bool _drawerIsOpen = false;
 
   double _topBody() {
@@ -30,11 +31,11 @@ class _DrawerRouteState extends State<DrawerRoute> {
     }
   }
 
-  _handleDrawer(bool drawerIsOpen) {
-    setState(() {
-      _drawerIsOpen = drawerIsOpen;
-    });
-  }
+  // _handleDrawer(bool drawerIsOpen) {
+  //   setState(() {
+  //     _drawerIsOpen = drawerIsOpen;
+  //   });
+  // }
 
   double _leftBodyOpen() {
     return 5;

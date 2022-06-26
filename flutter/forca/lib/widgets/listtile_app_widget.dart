@@ -5,6 +5,7 @@ class ListTileAppWidget extends StatelessWidget {
   final ImageProvider? avatarImage;
   final String titleText;
   final String subtitleText;
+  final Function()? onTap;
 
   const ListTileAppWidget({
     Key? key,
@@ -13,51 +14,52 @@ class ListTileAppWidget extends StatelessWidget {
     this.avatarImage,
     required this.titleText,
     required this.subtitleText,
+    this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: contentPadding,
-      child: Row(
-        children: <Widget>[
-          (avatarImage == null)
-              ? Container(
-                  width: 0,
-                )
-              : Container(
-                  width: 30.0,
-                  height: 30.0,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: avatarImage!,
-                      fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: contentPadding,
+        child: Row(
+          children: <Widget>[
+            (avatarImage == null)
+                ? Container(
+                    width: 0,
+                  )
+                : Container(
+                    width: 30.0,
+                    height: 30.0,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: avatarImage!,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(titleText),
-                Text(
-                  subtitleText,
-                  style: const TextStyle(
-                    fontSize: 10.0,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(titleText),
+                  Text(
+                    subtitleText,
+                    style: const TextStyle(
+                      fontSize: 10.0,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          GestureDetector(
-            child: const Icon(
+            const Icon(
               Icons.arrow_forward,
               color: Colors.black38,
-            ),
-            onTap: () {},
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
