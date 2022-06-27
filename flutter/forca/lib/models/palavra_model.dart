@@ -28,4 +28,6 @@ class PalavraModel {
       ajuda: ajuda ?? this.ajuda,
     );
   }
+
+  bool get isValid => palavra.isNotEmpty && ajuda.isNotEmpty;
 }
