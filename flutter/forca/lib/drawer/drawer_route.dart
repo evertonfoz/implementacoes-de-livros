@@ -16,20 +16,19 @@ class DrawerRoute extends StatefulWidget {
 }
 
 class _DrawerRouteState extends State<DrawerRoute> {
-  // ignore: prefer_final_fields
-  bool _drawerIsOpen = false;
+  // bool _drawerIsOpen = false;
 
   double _topBody() {
     return MediaQuery.of(context).size.height - 105;
   }
 
-  double _leftBody() {
-    if (!_drawerIsOpen) {
-      return MediaQuery.of(context).size.width - 105;
-    } else {
-      return 5;
-    }
-  }
+  // double _leftBody() {
+  //   if (!_drawerIsOpen) {
+  //     return MediaQuery.of(context).size.width - 105;
+  //   } else {
+  //     return 5;
+  //   }
+  // }
 
   // _handleDrawer(bool drawerIsOpen) {
   //   setState(() {
@@ -64,7 +63,7 @@ class _DrawerRouteState extends State<DrawerRoute> {
         ],
       ),
       topBody: _topBody(),
-      leftBody: _leftBody(),
+      // leftBody: _leftBody(),
       body: const CircularImageWidget(
         imageProvider: AssetImage('assets/images/splashscreen.png'),
         width: 100,

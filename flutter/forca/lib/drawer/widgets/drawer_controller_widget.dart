@@ -7,7 +7,7 @@ class DrawerControllerWidget extends StatelessWidget {
   final Widget? body;
 
   final double? topBody;
-  final double? leftBody;
+  // final double? leftBody;
 
   final Drawer? drawer;
 
@@ -21,7 +21,7 @@ class DrawerControllerWidget extends StatelessWidget {
     this.appBar,
     this.body,
     this.topBody,
-    this.leftBody,
+    // this.leftBody,
     this.drawer,
     this.callbackFunction,
     this.leftBodyOpen,
@@ -94,7 +94,11 @@ class DrawerControllerWidget extends StatelessWidget {
               key: drawerKey,
               alignment: DrawerAlignment.end,
               child: drawer != null ? drawer! : Container(),
-              drawerCallback: (status) => _drawerCallback(status),
+              drawerCallback: (status) {
+                if (!_isDrawerOpened) {
+                  _drawerCallback(status);
+                }
+              },
             ),
           ],
         ),
