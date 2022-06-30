@@ -1,3 +1,5 @@
+import 'package:dialog_information_to_specific_platform/dialog_information_to_specific_platform.dart';
+import 'package:dialog_information_to_specific_platform/flat_buttons/actions_flatbutton_to_alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:forca/routes/palavras/list/bloc/palavras_list_bloc.dart';
@@ -67,9 +69,29 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
             itemBuilder: (BuildContext context, int index) {
               return (index >= formState.palavras.length)
                   ? const BottomLoaderWidget()
-                  : PalavrasListTileWidget(
-                      title: formState.palavras[index].palavra,
-                      trailing: const Icon(Icons.keyboard_arrow_right),
+                  : Dismissible(
+                      key: Key(formState.palavras[index].palavraID!),
+                      confirmDismiss: (direction) async {
+                        var oQueFazer = await confirmDismiss(
+                            context: context,
+                            palavra: formState.palavras[index].palavra,
+                            palavraID: formState.palavras[index].palavraID!);
+                        return oQueFazer == 'Sim';
+                      },
+                      onDismissed: (direction) async {
+                        await dismissedComplete(
+                            context: context,
+                            palavraID: formState.palavras[index].palavraID!,
+                            palavra: formState.palavras[index].palavra);
+                        return;
+                      },
+                      background: Container(
+                        color: Colors.red,
+                      ),
+                      child: PalavrasListTileWidget(
+                        title: formState.palavras[index].palavra,
+                        trailing: const Icon(Icons.keyboard_arrow_right),
+                      ),
                     );
             },
           );
@@ -91,5 +113,52 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
     if (maxScroll - currentScroll <= scrollThreshold) {
       palavrasListViewBloc.add(PalavrasFetched());
     }
+  }
+
+  Future<String> confirmDismiss({
+    required BuildContext context,
+    required String palavra,
+    required String palavraID,
+  }) async {
+    return await showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) {
+        return InformationAlertDialog(
+          iconTitle: const Icon(
+            Icons.message,
+            color: Colors.red,
+          ),
+          title: 'Oops...Quer remover?',
+          message: 'Confirma a remoção da palavra ${palavra.toUpperCase()}',
+          buttons: [
+            ActionsFlatButtonToAlertDialog(
+              messageButton: 'Não',
+              isEnabled: true,
+            ),
+            //   InformationAlertDialog.createFlatButton(),
+            ActionsFlatButtonToAlertDialog(
+              messageButton: 'Sim',
+              isEnabled: true,
+            ),
+            //   InformationAlertDialog.createFlatButton(),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> dismissedComplete(
+      {required BuildContext context,
+      required String palavraID,
+      required String palavra}) async {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.indigo,
+        content: Text(
+          'Palavra ${palavra.toUpperCase()} foi removida',
+        ),
+      ),
+    );
   }
 }

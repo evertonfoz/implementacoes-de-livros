@@ -11,6 +11,7 @@ environment:
 dependencies:
   bloc_concurrency: ^0.2.0
   cupertino_icons: ^1.0.2
+  dialog_information_to_specific_platform: ^0.0.7
   equatable: ^2.0.3
   flutter:
     sdk: flutter
