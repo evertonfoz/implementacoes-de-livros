@@ -96,8 +96,9 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
           TextButtonWithSnackbarWidget(
             onPressedVisible: _palavraModel.isValid,
             buttonText: 'Gravar',
-            textToSnackBar:
+            successTextToSnackBar:
                 'Os dados informados foram registrados com sucesso.',
+            failTextToSnackBar: 'Erro na inserção',
             onButtonPressed: _onSubmitPressed,
             onSnackBarClosed: _resetForm,
           ),
