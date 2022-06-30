@@ -32,7 +32,7 @@ class ValidateForm extends PalavraCRUDEvent {
 
   @override
   List<Object> get props => [
-        palavraModel.palavraID,
+        palavraModel.palavraID!,
         palavraModel.palavra,
         palavraModel.ajuda,
       ];

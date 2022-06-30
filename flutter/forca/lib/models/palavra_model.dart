@@ -1,16 +1,22 @@
-class PalavraModel {
-  final String palavraID;
+import 'package:equatable/equatable.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+part 'palavra_model.g.dart';
+
+@JsonSerializable()
+class PalavraModel extends Equatable {
+  String? palavraID;
   final String palavra;
   final String ajuda;
 
-  const PalavraModel({
-    required this.palavraID,
+  PalavraModel({
+    this.palavraID,
     required this.palavra,
     required this.ajuda,
   });
 
   static PalavraModel empty() {
-    return const PalavraModel(
+    return PalavraModel(
       palavraID: '',
       palavra: '',
       ajuda: '',
@@ -30,4 +36,11 @@ class PalavraModel {
   }
 
   bool get isValid => palavra.isNotEmpty && ajuda.isNotEmpty;
+
+  @override
+  List<Object> get props => [palavraID ?? ''];
+
+  factory PalavraModel.fromJson(Map<String, dynamic> json) =>
+      _$PalavraModelFromJson(json);
+  Map<String, dynamic> toJson() => _$PalavraModelToJson(this);
 }
