@@ -2,6 +2,7 @@ import 'package:dialog_information_to_specific_platform/dialog_information_to_sp
 import 'package:dialog_information_to_specific_platform/flat_buttons/actions_flatbutton_to_alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:forca/local_persistence/daos/palavra_dao.dart';
 import 'package:forca/routes/palavras/list/bloc/palavras_list_bloc.dart';
 import 'package:forca/routes/palavras/widgets/bottom_loader_widget.dart';
 import 'package:forca/routes/palavras/widgets/palavras_listtile_widget.dart';
@@ -160,5 +161,38 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
         ),
       ),
     );
+  }
+
+  Future<bool> _removePalavra(
+      String palavraID, BuildContext context, String palavra) async {
+    try {
+      PalavraDAO palavraDAO = PalavraDAO();
+      await palavraDAO.deleteByID(palavraID);
+      return true;
+    } catch (exception) {
+      _showSnackBarMessage(
+          context: context,
+          message:
+              'Erro ao remover a Palavra ${palavra.toUpperCase()}: $exception',
+          backgroundColor: Colors.red);
+      return false;
+    }
+  }
+
+  Future _showSnackBarMessage(
+      {required BuildContext context,
+      required String message,
+      required Color backgroundColor}) async {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(
+          backgroundColor: backgroundColor,
+          content: Text(
+            message,
+          ),
+        ))
+        .closed
+        .then((_) {
+      return;
+    });
   }
 }
