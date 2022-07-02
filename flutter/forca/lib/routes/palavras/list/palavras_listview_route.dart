@@ -77,7 +77,7 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
                             context: context,
                             palavra: formState.palavras[index].palavra,
                             palavraID: formState.palavras[index].palavraID!);
-                        return oQueFazer == 'Sim';
+                        return oQueFazer;
                       },
                       onDismissed: (direction) async {
                         await dismissedComplete(
