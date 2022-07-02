@@ -116,12 +116,12 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
     }
   }
 
-  Future<String> confirmDismiss({
+  Future<bool> confirmDismiss({
     required BuildContext context,
     required String palavra,
     required String palavraID,
   }) async {
-    return await showDialog(
+    String oQueFazer = await showDialog(
       barrierDismissible: false,
       context: context,
       builder: (BuildContext context) {
@@ -147,6 +147,10 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
         );
       },
     );
+
+    if (oQueFazer == 'Não') return false;
+
+    return await _removePalavra(palavraID, context, palavra);
   }
 
   Future<void> dismissedComplete(
