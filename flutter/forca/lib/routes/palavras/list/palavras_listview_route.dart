@@ -23,6 +23,8 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
   void initState() {
     super.initState();
     _palavrasListViewBloc = BlocProvider.of<PalavrasBloc>(context);
+    _palavrasListViewBloc.add(PalavrasResetFetch());
+    _palavrasListViewBloc.add(PalavrasFetched());
     _scrollController.addListener(
       () => _onScroll(
           palavrasListViewBloc: _palavrasListViewBloc,

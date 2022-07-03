@@ -25,6 +25,16 @@ class PalavrasBloc extends Bloc<PalavrasEvent, PalavrasLISTState> {
       _onPalavrasFetched,
       transformer: throttleDroppable(throttleDuration),
     );
+    on<PalavrasResetFetch>(
+      (event, emit) async {
+        return emit(state.copyWith(
+          status: PalavrasStatus.success,
+          palavras: [],
+          hasReachedMax: false,
+        ));
+      },
+      transformer: throttleDroppable(throttleDuration),
+    );
   }
 
   Future<List<PalavraModel>> _fetchPalavras({int startIndex = 0}) async {
