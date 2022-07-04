@@ -2,6 +2,7 @@ import 'package:dialog_information_to_specific_platform/dialog_information_to_sp
 import 'package:dialog_information_to_specific_platform/flat_buttons/actions_flatbutton_to_alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:forca/app_constants/router_constants.dart';
 import 'package:forca/local_persistence/daos/palavra_dao.dart';
 import 'package:forca/routes/palavras/list/bloc/palavras_list_bloc.dart';
 import 'package:forca/routes/palavras/widgets/bottom_loader_widget.dart';
@@ -91,9 +92,15 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
                       background: Container(
                         color: Colors.red,
                       ),
-                      child: PalavrasListTileWidget(
-                        title: formState.palavras[index].palavra,
-                        trailing: const Icon(Icons.keyboard_arrow_right),
+                      child: InkWell(
+                        onLongPress: () {
+                          Navigator.of(context).pushNamed(kPalavrasCRUDRoute,
+                              arguments: formState.palavras[index]);
+                        },
+                        child: PalavrasListTileWidget(
+                          title: formState.palavras[index].palavra,
+                          trailing: const Icon(Icons.keyboard_arrow_right),
+                        ),
                       ),
                     );
             },

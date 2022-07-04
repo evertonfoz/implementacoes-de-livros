@@ -12,7 +12,9 @@ import 'package:forca/widgets/textformfield_forca.dart';
 import 'bloc/palavra_crud_bloc.dart';
 
 class PalavrasCRUDRoute extends StatefulWidget {
-  const PalavrasCRUDRoute({Key? key}) : super(key: key);
+  final PalavraModel? palavraModel;
+
+  const PalavrasCRUDRoute({Key? key, this.palavraModel}) : super(key: key);
 
   @override
   State<PalavrasCRUDRoute> createState() => _PalavrasCRUDRouteState();
@@ -31,6 +33,10 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
     super.initState();
     _palavraController.addListener(_onPalavraChanged);
     _ajudaController.addListener(_onAjudaChanged);
+
+    if (widget.palavraModel != null) {
+      _initializeTextControllers();
+    }
   }
 
   void _onPalavraChanged() {
@@ -180,6 +186,11 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
     _ajudaController.clear();
   }
 
+  _initializeTextControllers() {
+    _palavraController.text = widget.palavraModel!.palavra;
+    _ajudaController.text = widget.palavraModel!.ajuda;
+  }
+
   @override
   Widget build(BuildContext context) {
     _buildContext = context;
@@ -187,8 +198,10 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         backgroundColor: Colors.grey[600],
-        title: const Text(
-          'Registro de Palavras',
+        title: Text(
+          widget.palavraModel == null
+              ? 'Registro de Palavras'
+              : 'Alteração de uma palavra',
         ),
       ),
       body: SafeArea(
