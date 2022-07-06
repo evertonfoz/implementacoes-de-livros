@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:dialog_information_to_specific_platform/dialog_information_to_specific_platform.dart';
 import 'package:dialog_information_to_specific_platform/flat_buttons/actions_flatbutton_to_alert_dialog.dart';
 import 'package:flutter/material.dart';
@@ -93,9 +95,15 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
                         color: Colors.red,
                       ),
                       child: InkWell(
-                        onLongPress: () {
-                          Navigator.of(context).pushNamed(kPalavrasCRUDRoute,
+                        onLongPress: () async {
+                          await Navigator.of(context).pushNamed(
+                              kPalavrasCRUDRoute,
                               arguments: formState.palavras[index]);
+
+                          Timer(const Duration(seconds: 1), () {
+                            _palavrasListViewBloc.add(PalavrasResetFetch());
+                            _palavrasListViewBloc.add(PalavrasFetched());
+                          });
                         },
                         child: PalavrasListTileWidget(
                           title: formState.palavras[index].palavra,
