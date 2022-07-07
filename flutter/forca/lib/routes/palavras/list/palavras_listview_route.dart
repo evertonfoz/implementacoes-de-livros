@@ -21,6 +21,9 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
   late final PalavrasBloc _palavrasListViewBloc;
   final _scrollController = ScrollController();
   final _scrollThreshold = 200.0;
+  String? _palavraIDSelected;
+  String? _palavraIDOfTileToHighlight;
+  final double _listTileHeight = 70;
 
   @override
   void initState() {
@@ -66,6 +69,23 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
             );
           }
 
+          Future.delayed(const Duration(milliseconds: 500)).then((onValue) {
+            if (_scrollController.hasClients) {
+              for (int i = 0; i < formState.palavras.length; i++) {
+                if (_palavraIDSelected != null &&
+                    formState.palavras[i].palavraID == _palavraIDSelected) {
+                  _scrollController.animateTo(i * _listTileHeight,
+                      duration: const Duration(seconds: 2), curve: Curves.ease);
+                  setState(() {
+                    _palavraIDOfTileToHighlight = _palavraIDSelected;
+                  });
+                  _palavraIDSelected = null;
+                  break;
+                }
+              }
+            }
+          });
+
           return ListView.builder(
             controller: _scrollController,
             padding: const EdgeInsets.only(top: 10),
@@ -96,6 +116,8 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
                       ),
                       child: InkWell(
                         onLongPress: () async {
+                          _palavraIDSelected =
+                              formState.palavras[index].palavraID;
                           await Navigator.of(context).pushNamed(
                               kPalavrasCRUDRoute,
                               arguments: formState.palavras[index]);
@@ -108,6 +130,11 @@ class _PalavrasListViewRouteState extends State<PalavrasListViewRoute> {
                         child: PalavrasListTileWidget(
                           title: formState.palavras[index].palavra,
                           trailing: const Icon(Icons.keyboard_arrow_right),
+                          listTileHeight: _listTileHeight,
+                          color: (_palavraIDOfTileToHighlight ==
+                                  formState.palavras[index].palavraID)
+                              ? Colors.grey[300]
+                              : Colors.transparent,
                         ),
                       ),
                     );

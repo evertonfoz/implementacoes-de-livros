@@ -113,14 +113,27 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
           const SizedBox(
             height: 20,
           ),
-          TextButtonWithSnackbarWidget(
-            onPressedVisible: _palavraModel.isValid,
-            buttonText: 'Gravar',
-            successTextToSnackBar:
-                'Os dados informados foram registrados com sucesso.',
-            failTextToSnackBar: 'Erro na inserção',
-            onButtonPressed: _onSubmitPressed,
-            onSnackBarClosed: _resetForm,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              TextButton(
+                onPressed:
+                    _palavraModel.isValid ? _restoreOriginalDataToTexts : null,
+                child: const Text('Cancelar'),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              TextButtonWithSnackbarWidget(
+                onPressedVisible: _palavraModel.isValid,
+                buttonText: 'Gravar',
+                successTextToSnackBar:
+                    'Os dados informados foram registrados com sucesso.',
+                failTextToSnackBar: 'Erro na inserção',
+                onButtonPressed: _onSubmitPressed,
+                onSnackBarClosed: _resetForm,
+              ),
+            ],
           ),
         ],
       ),
@@ -216,5 +229,19 @@ class _PalavrasCRUDRouteState extends State<PalavrasCRUDRoute> {
         ),
       ),
     );
+  }
+
+  _clearTexts() {
+    _palavraController.clear();
+    _ajudaController.clear();
+  }
+
+  _restoreOriginalDataToTexts() {
+    if (widget.palavraModel == null) {
+      _clearTexts();
+    } else {
+      _palavraController.text = widget.palavraModel!.palavra;
+      _ajudaController.text = widget.palavraModel!.ajuda;
+    }
   }
 }
