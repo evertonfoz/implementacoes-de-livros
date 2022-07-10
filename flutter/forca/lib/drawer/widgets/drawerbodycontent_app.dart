@@ -50,12 +50,17 @@ class DrawerBodyContentApp extends StatelessWidget {
           titleText: 'Jogar',
           subtitleText: 'Começar a diversão',
           avatarImage: const AssetImage('assets/images/drawer/jogar.png'),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed(kJogoRoute);
+          },
         ),
         _createListTile(
           contentPadding: const EdgeInsets.only(left: 6.0),
           titleText: 'Score',
           subtitleText: 'Relação dos top 10',
           avatarImage: const AssetImage('assets/images/drawer/top10.png'),
+          onTap: () {},
         ),
       ],
     );
@@ -66,6 +71,7 @@ class DrawerBodyContentApp extends StatelessWidget {
     ImageProvider? avatarImage,
     required String titleText,
     required String subtitleText,
+    required VoidCallback? onTap,
   }) {
     return ListTile(
       contentPadding: contentPadding,
@@ -75,7 +81,7 @@ class DrawerBodyContentApp extends StatelessWidget {
       trailing: const Icon(Icons.arrow_forward),
       title: Text(titleText),
       subtitle: Text(subtitleText),
-      onTap: () {},
+      onTap: onTap,
     );
   }
 }
