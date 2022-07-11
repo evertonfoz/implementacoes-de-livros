@@ -1,3 +1,4 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 class JogoRoute extends StatefulWidget {
@@ -15,8 +16,8 @@ class _JogoRouteState extends State<JogoRoute> {
           children: <Widget>[
             _titulo(),
             _botaoParaSorteioDePalavra(),
-            const Placeholder(fallbackHeight: 100, color: Colors.green),
-            const Placeholder(fallbackHeight: 350, color: Colors.yellow),
+            _palavraParaAdivinhar(palavra: '_ _ _ _ _ _ _ _ _ _'),
+            _animacaoDaForca(animacao: 'idle'),
             const Placeholder(fallbackHeight: 100, color: Colors.black),
           ],
         ),
@@ -64,6 +65,52 @@ class _JogoRouteState extends State<JogoRoute> {
         ),
         onPressed: () {},
         child: const Text('Pressione para sortear uma palavra'),
+      ),
+    );
+  }
+
+  _palavraParaAdivinhar({required String palavra}) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 20.0, bottom: 10),
+      child: Text(
+        palavra,
+        style: const TextStyle(
+          fontSize: 30,
+        ),
+      ),
+    );
+  }
+
+  _animacaoDaForca({required String animacao}) {
+    return Expanded(
+      child: FlareActor(
+        "assets/flare/forca_casa_do_codigo.flr",
+        alignment: Alignment.center,
+        fit: BoxFit.contain,
+        animation: animacao,
+      ),
+    );
+  }
+
+  _letrasParaSelecao({required String letras}) {
+    List<Widget> textsParaLetras = [];
+
+    for (int i = 0; i < letras.length; i++) {
+      textsParaLetras.add(Text(
+        letras[i],
+        style: const TextStyle(
+          fontSize: 40,
+        ),
+      ));
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10.0),
+      child: Wrap(
+        alignment: WrapAlignment.center,
+        spacing: 20,
+        runSpacing: 5,
+        children: textsParaLetras,
       ),
     );
   }
