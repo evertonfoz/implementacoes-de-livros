@@ -18,7 +18,7 @@ class _JogoRouteState extends State<JogoRoute> {
             _botaoParaSorteioDePalavra(),
             _palavraParaAdivinhar(palavra: '_ _ _ _ _ _ _ _ _ _'),
             _animacaoDaForca(animacao: 'idle'),
-            const Placeholder(fallbackHeight: 100, color: Colors.black),
+            _letrasParaSelecao(letras: 'ABCDEFGHIJKLMNOPQRSTUWXYZ'),
           ],
         ),
       ),
