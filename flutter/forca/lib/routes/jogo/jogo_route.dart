@@ -1,9 +1,12 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:forca/functions/getit_function.dart';
 import 'package:mobx/mobx.dart';
 
 import 'mobx_stores/jogo_store.dart';
+import 'widgets/teclado_jogo_widget.dart';
+import 'widgets/vitoria_widget.dart';
 
 class JogoRoute extends StatefulWidget {
   @override
@@ -53,17 +56,37 @@ class _JogoRouteState extends State<JogoRoute> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            _titulo(),
-            _botaoParaSorteioDePalavra(),
-            _palavraParaAdivinhar(palavra: '_____ _____ _ _____'),
-            _ajudaParaAdivinharAPalavra(ajuda: null),
-            _animacaoDaForca(animacao: 'idle'),
-            _letrasParaSelecao(letras: 'ABCDEFGHIJKLMNOPQRSTUWXYZ'),
-          ],
-        ),
+        child: Observer(builder: (context) {
+          if (_jogoStore.ganhou) {
+            return const VitoriaWidget();
+          }
+
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Visibility(
+                visible: _jogoStore.palavraAdivinhadaFormatada.isEmpty,
+                child: _titulo(),
+              ),
+              Visibility(
+                visible: _jogoStore.palavraAdivinhadaFormatada.isEmpty,
+                child: _botaoParaSorteioDePalavra(),
+              ),
+              Visibility(
+                visible: _jogoStore.palavraAdivinhadaFormatada.isNotEmpty,
+                child: _palavraParaAdivinhar(
+                    palavra: _jogoStore.palavraAdivinhadaFormatada),
+              ),
+              Visibility(
+                visible: _jogoStore.palavraAdivinhadaFormatada.isNotEmpty,
+                child: _ajudaParaAdivinharAPalavra(
+                    ajuda: _jogoStore.ajudaPalavraParaAdivinhar),
+              ),
+              _animacaoDaForca(animacao: _jogoStore.animacaoFlare),
+              const TecladoJogoWidget(),
+            ],
+          );
+        }),
       ),
     );
   }
@@ -106,8 +129,7 @@ class _JogoRouteState extends State<JogoRoute> {
             Colors.blue[200],
           ),
         ),
-        onPressed: () => _jogoStore.registrarPalavraParaAdivinhar(
-            palavra: 'teste', ajuda: 'ajuda para teste'),
+        onPressed: () => _jogoStore.selecionarPalavraParaAdivinhar(),
         child: const Text('Pressione para sortear uma palavra'),
       ),
     );

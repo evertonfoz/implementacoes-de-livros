@@ -9,6 +9,22 @@ part of 'jogo_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$JogoStore on _JogoStore, Store {
+  late final _$animacaoFlareAtom =
+      Atom(name: '_JogoStore.animacaoFlare', context: context);
+
+  @override
+  String get animacaoFlare {
+    _$animacaoFlareAtom.reportRead();
+    return super.animacaoFlare;
+  }
+
+  @override
+  set animacaoFlare(String value) {
+    _$animacaoFlareAtom.reportWrite(value, super.animacaoFlare, () {
+      super.animacaoFlare = value;
+    });
+  }
+
   late final _$palavraParaAdivinharAtom =
       Atom(name: '_JogoStore.palavraParaAdivinhar', context: context);
 
@@ -43,17 +59,58 @@ mixin _$JogoStore on _JogoStore, Store {
     });
   }
 
+  late final _$palavraAdivinhadaFormatadaAtom =
+      Atom(name: '_JogoStore.palavraAdivinhadaFormatada', context: context);
+
+  @override
+  String get palavraAdivinhadaFormatada {
+    _$palavraAdivinhadaFormatadaAtom.reportRead();
+    return super.palavraAdivinhadaFormatada;
+  }
+
+  @override
+  set palavraAdivinhadaFormatada(String value) {
+    _$palavraAdivinhadaFormatadaAtom
+        .reportWrite(value, super.palavraAdivinhadaFormatada, () {
+      super.palavraAdivinhadaFormatada = value;
+    });
+  }
+
   late final _$_JogoStoreActionController =
       ActionController(name: '_JogoStore', context: context);
 
   @override
-  dynamic registrarPalavraParaAdivinhar(
+  dynamic _registrarPalavraParaAdivinhar(
       {required String palavra, required String ajuda}) {
     final _$actionInfo = _$_JogoStoreActionController.startAction(
-        name: '_JogoStore.registrarPalavraParaAdivinhar');
+        name: '_JogoStore._registrarPalavraParaAdivinhar');
     try {
       return super
-          .registrarPalavraParaAdivinhar(palavra: palavra, ajuda: ajuda);
+          ._registrarPalavraParaAdivinhar(palavra: palavra, ajuda: ajuda);
+    } finally {
+      _$_JogoStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic verificarExistenciaDaLetraNaPalavraParaAdivinhar(
+      {required String letra}) {
+    final _$actionInfo = _$_JogoStoreActionController.startAction(
+        name: '_JogoStore.verificarExistenciaDaLetraNaPalavraParaAdivinhar');
+    try {
+      return super
+          .verificarExistenciaDaLetraNaPalavraParaAdivinhar(letra: letra);
+    } finally {
+      _$_JogoStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic registrarErro() {
+    final _$actionInfo = _$_JogoStoreActionController.startAction(
+        name: '_JogoStore.registrarErro');
+    try {
+      return super.registrarErro();
     } finally {
       _$_JogoStoreActionController.endAction(_$actionInfo);
     }
@@ -62,8 +119,10 @@ mixin _$JogoStore on _JogoStore, Store {
   @override
   String toString() {
     return '''
+animacaoFlare: ${animacaoFlare},
 palavraParaAdivinhar: ${palavraParaAdivinhar},
-ajudaPalavraParaAdivinhar: ${ajudaPalavraParaAdivinhar}
+ajudaPalavraParaAdivinhar: ${ajudaPalavraParaAdivinhar},
+palavraAdivinhadaFormatada: ${palavraAdivinhadaFormatada}
     ''';
   }
 }
