@@ -1,5 +1,9 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:forca/functions/getit_function.dart';
+import 'package:mobx/mobx.dart';
+
+import 'mobx_stores/jogo_store.dart';
 
 class JogoRoute extends StatefulWidget {
   @override
@@ -7,6 +11,44 @@ class JogoRoute extends StatefulWidget {
 }
 
 class _JogoRouteState extends State<JogoRoute> {
+  late JogoStore _jogoStore;
+  List<ReactionDisposer>? _reactionDisposers;
+  bool _jogoIniciado = false;
+  String _ajudaParaPalavra = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _jogoStore = getIt.get<JogoStore>();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _reactionDisposers ??= [
+      reaction<String?>(
+        (_) => _jogoStore.palavraParaAdivinhar,
+        (String? palavra) => print('nova palavra: $palavra'),
+      ),
+      reaction<String?>(
+        (_) => _jogoStore.ajudaPalavraParaAdivinhar,
+        (String? ajuda) {
+          print('nova ajuda: $ajuda');
+          setState(() {
+            _jogoIniciado = !_jogoIniciado;
+            _ajudaParaPalavra = ajuda!;
+          });
+        },
+      ),
+    ];
+  }
+
+  @override
+  void dispose() {
+    _reactionDisposers?.forEach((d) => d());
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +58,8 @@ class _JogoRouteState extends State<JogoRoute> {
           children: <Widget>[
             _titulo(),
             _botaoParaSorteioDePalavra(),
-            _palavraParaAdivinhar(palavra: '_ _ _ _ _ _ _ _ _ _'),
+            _palavraParaAdivinhar(palavra: '_____ _____ _ _____'),
+            _ajudaParaAdivinharAPalavra(ajuda: null),
             _animacaoDaForca(animacao: 'idle'),
             _letrasParaSelecao(letras: 'ABCDEFGHIJKLMNOPQRSTUWXYZ'),
           ],
@@ -63,7 +106,8 @@ class _JogoRouteState extends State<JogoRoute> {
             Colors.blue[200],
           ),
         ),
-        onPressed: () {},
+        onPressed: () => _jogoStore.registrarPalavraParaAdivinhar(
+            palavra: 'teste', ajuda: 'ajuda para teste'),
         child: const Text('Pressione para sortear uma palavra'),
       ),
     );
@@ -113,5 +157,17 @@ class _JogoRouteState extends State<JogoRoute> {
         children: textsParaLetras,
       ),
     );
+  }
+
+  _ajudaParaAdivinharAPalavra({String? ajuda}) {
+    return (ajuda != null)
+        ? Padding(
+            padding: const EdgeInsets.only(
+              top: 10.0,
+              bottom: 15,
+            ),
+            child: Text(ajuda),
+          )
+        : Container();
   }
 }
