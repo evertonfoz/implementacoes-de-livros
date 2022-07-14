@@ -6,7 +6,7 @@ import 'package:mobx/mobx.dart';
 
 import 'mobx_stores/jogo_store.dart';
 import 'widgets/teclado_jogo_widget.dart';
-import 'widgets/vitoria_widget.dart';
+import 'widgets/jogo_terminou_widget.dart';
 
 class JogoRoute extends StatefulWidget {
   @override
@@ -58,7 +58,15 @@ class _JogoRouteState extends State<JogoRoute> {
       body: SafeArea(
         child: Observer(builder: (context) {
           if (_jogoStore.ganhou) {
-            return const VitoriaWidget();
+            return const JogoTerminouWidget(
+              urlImagem: "assets/images/jogo/vitoria.jpg",
+              mensagem: 'Parabéns pela vitória. Já retornaremos ao jogo.',
+            );
+          } else if (_jogoStore.perdeu) {
+            return const JogoTerminouWidget(
+              urlImagem: "assets/images/jogo/derrota.jpg",
+              mensagem: 'Que pena, você perdeu, mas já retornaremos ao jogo.',
+            );
           }
 
           return Column(
@@ -83,7 +91,10 @@ class _JogoRouteState extends State<JogoRoute> {
                     ajuda: _jogoStore.ajudaPalavraParaAdivinhar),
               ),
               _animacaoDaForca(animacao: _jogoStore.animacaoFlare),
-              const TecladoJogoWidget(),
+              Visibility(
+                visible: _jogoStore.palavraAdivinhadaFormatada.isNotEmpty,
+                child: const TecladoJogoWidget(),
+              ),
             ],
           );
         }),

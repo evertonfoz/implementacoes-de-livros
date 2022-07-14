@@ -21,6 +21,9 @@ abstract class _JogoStore with Store {
   bool ganhou = false;
 
   @observable
+  bool perdeu = false;
+
+  @observable
   String? palavraParaAdivinhar;
 
   @observable
@@ -122,6 +125,9 @@ abstract class _JogoStore with Store {
       animacaoFlare = 'balanco';
     } else if (quantidadeErros == 5) {
       animacaoFlare = 'enforcamento';
+      Future.delayed(const Duration(seconds: 5)).then((_) {
+        perdeu = true;
+      });
     }
   }
 }

@@ -25,6 +25,36 @@ mixin _$JogoStore on _JogoStore, Store {
     });
   }
 
+  late final _$ganhouAtom = Atom(name: '_JogoStore.ganhou', context: context);
+
+  @override
+  bool get ganhou {
+    _$ganhouAtom.reportRead();
+    return super.ganhou;
+  }
+
+  @override
+  set ganhou(bool value) {
+    _$ganhouAtom.reportWrite(value, super.ganhou, () {
+      super.ganhou = value;
+    });
+  }
+
+  late final _$perdeuAtom = Atom(name: '_JogoStore.perdeu', context: context);
+
+  @override
+  bool get perdeu {
+    _$perdeuAtom.reportRead();
+    return super.perdeu;
+  }
+
+  @override
+  set perdeu(bool value) {
+    _$perdeuAtom.reportWrite(value, super.perdeu, () {
+      super.perdeu = value;
+    });
+  }
+
   late final _$palavraParaAdivinharAtom =
       Atom(name: '_JogoStore.palavraParaAdivinhar', context: context);
 
@@ -120,6 +150,8 @@ mixin _$JogoStore on _JogoStore, Store {
   String toString() {
     return '''
 animacaoFlare: ${animacaoFlare},
+ganhou: ${ganhou},
+perdeu: ${perdeu},
 palavraParaAdivinhar: ${palavraParaAdivinhar},
 ajudaPalavraParaAdivinhar: ${ajudaPalavraParaAdivinhar},
 palavraAdivinhadaFormatada: ${palavraAdivinhadaFormatada}

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:forca/app_constants/router_constants.dart';
+import 'package:forca/local_persistence/daos/palavra_dao.dart';
 import 'package:forca/local_persistence/lp_constants.dart';
 import 'package:forca/widgets/listtile_app_widget.dart';
+import 'package:giff_dialog/giff_dialog.dart';
 
 class DrawerBodyContentApp extends StatelessWidget {
   const DrawerBodyContentApp({Key? key}) : super(key: key);
@@ -50,9 +52,42 @@ class DrawerBodyContentApp extends StatelessWidget {
           titleText: 'Jogar',
           subtitleText: 'Começar a diversão',
           avatarImage: const AssetImage('assets/images/drawer/jogar.png'),
-          onTap: () {
-            Navigator.of(context).pop();
-            Navigator.of(context).pushNamed(kJogoRoute);
+          onTap: () async {
+            try {
+              PalavraDAO palavraDAO = PalavraDAO();
+              final List data = await palavraDAO.getAll();
+              if (data.isEmpty) {
+                await showDialog(
+                  context: context,
+                  builder: (_) => AssetGiffDialog(
+                    image: Image.asset(
+                      "assets/gifs/error.gif",
+                      fit: BoxFit.cover,
+                    ),
+                    title: const Text(
+                      'Não existem palavras registradas',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 22.0, fontWeight: FontWeight.w600),
+                    ),
+                    description: const Text(
+                      'Para você poder jogar a forca, você precisa antes registrar algumas palavras',
+                      textAlign: TextAlign.center,
+                    ),
+                    buttonOkText:
+                        const Text('Ok', style: TextStyle(color: Colors.white)),
+                    onlyOkButton: true,
+                    entryAnimation: EntryAnimation.bottomRight,
+                    onOkButtonPressed: () => Navigator.of(context).pop(),
+                  ),
+                );
+              } else {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed(kJogoRoute);
+              }
+            } catch (exception) {
+              rethrow;
+            }
           },
         ),
         _createListTile(
