@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:forca/app_helpers/app_router.dart';
 import 'package:forca/routes/palavras/crud/bloc/palavra_crud_bloc.dart';
@@ -11,6 +12,9 @@ import 'routes/palavras/list/bloc/palavras_list_bloc.dart';
 import 'routes/splash_screen_route.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
   getIt.registerSingleton<JogoStore>(JogoStore());
   runApp(const ForcaApp());
 }
