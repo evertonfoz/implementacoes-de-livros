@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/presentation/theme.dart';
+import 'features/produtos/presentation/pages/crud.dart';
 
 void main() {
   runApp(const ECDeliveryApp());
@@ -14,11 +15,7 @@ class ECDeliveryApp extends StatelessWidget {
     return MaterialApp(
       title: 'EC Delivery',
       theme: theme(),
-      home: const Scaffold(
-        body: Center(
-          child: Text('EC Delivery App'),
-        ),
-      ),
+      home: ProdutosCRUDPage(),
     );
   }
 }
