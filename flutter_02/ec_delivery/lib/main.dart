@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'core/presentation/theme.dart';
-import 'features/produtos/presentation/pages/crud.dart';
+import 'features/produtos/presentation/boasvindas/presentation/pages/boasvindas.dart';
 
 void main() {
   runApp(const ECDeliveryApp());
@@ -26,7 +26,7 @@ class ECDeliveryApp extends StatelessWidget {
         ],
         backgroundColor: Colors.indigo.shade600,
       ),
-      home: ProdutosCRUDPage(),
+      home: const BoasVindasPage(),
     );
   }
 }
