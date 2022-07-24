@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const kTextColor = Colors.white;
+
 ThemeData theme() {
   return ThemeData(
     useMaterial3: true,
@@ -12,5 +14,12 @@ ThemeData theme() {
     primaryColor: Colors.white,
     appBarTheme: AppBarTheme(backgroundColor: Colors.indigo.shade900),
     scaffoldBackgroundColor: Colors.indigo.shade600,
+    textTheme: textTheme(),
+  );
+}
+
+TextTheme textTheme() {
+  return const TextTheme(
+    bodyText2: TextStyle(color: kTextColor),
   );
 }

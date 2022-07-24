@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'core/presentation/theme.dart';
 import 'features/produtos/presentation/boasvindas/presentation/pages/boasvindas.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
   runApp(const ECDeliveryApp());
 }
 
@@ -14,6 +18,7 @@ class ECDeliveryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'EC Delivery',
       theme: theme(),
       builder: (context, widget) => ResponsiveWrapper.builder(
