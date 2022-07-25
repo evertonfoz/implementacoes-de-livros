@@ -5,8 +5,8 @@ class BrandImageWidget extends StatelessWidget {
   final double height;
 
   const BrandImageWidget({
-    this.width: 90,
-    this.height: 50,
+    this.width = 90,
+    this.height = 50,
   });
 
   @override
@@ -15,7 +15,7 @@ class BrandImageWidget extends StatelessWidget {
       'assets/images/brand/320x253.png',
       width: width,
       height: height,
-      fit: BoxFit.fitWidth,
+      fit: BoxFit.contain,
     );
   }
 }

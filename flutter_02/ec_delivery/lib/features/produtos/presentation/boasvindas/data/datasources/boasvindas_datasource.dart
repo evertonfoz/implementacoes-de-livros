@@ -5,13 +5,27 @@ const String kDontShowAgainKey = 'dontShowAgain';
 class BoasVindasDataSource {
   final SharedPreferences sharedPreferences;
 
-  BoasVindasDataSource({required this.sharedPreferences});
+  BoasVindasDataSource._({required this.sharedPreferences});
 
-  registerDontShowAgain({required bool value}) async {
+  _registerDontShowAgain({required bool value}) async {
     await sharedPreferences.setBool(kDontShowAgainKey, value);
   }
 
-  bool getDontShowAgain() {
+  bool _getDontShowAgain() {
     return sharedPreferences.getBool(kDontShowAgainKey) ?? false;
+  }
+
+  static registerDontShowAgain({required bool value}) async {
+    var sp = await SharedPreferences.getInstance();
+    var ds = BoasVindasDataSource._(sharedPreferences: sp);
+
+    await ds._registerDontShowAgain(value: value);
+  }
+
+  static Future<bool> getDontShowAgain() async {
+    var sp = await SharedPreferences.getInstance();
+    var ds = BoasVindasDataSource._(sharedPreferences: sp);
+
+    return ds._getDontShowAgain();
   }
 }

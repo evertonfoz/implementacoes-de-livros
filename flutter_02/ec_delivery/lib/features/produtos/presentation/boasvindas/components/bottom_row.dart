@@ -1,4 +1,5 @@
 import 'package:ec_delivery/features/produtos/presentation/boasvindas/data/datasources/boasvindas_datasource.dart';
+import 'package:ec_delivery/features/produtos/presentation/pages/crud.dart';
 import 'package:ec_delivery/shared/presentation/components/buttons/default_text_button.dart';
 import 'package:ec_delivery/shared/presentation/components/checkbox/checkbox.dart';
 import 'package:flutter/material.dart';
@@ -26,10 +27,8 @@ class BottomRowBoasVindasWidget extends StatelessWidget {
           onPressed: () async {
             final navigator = Navigator.of(context);
 
-            var sp = await SharedPreferences.getInstance();
-            var ds = BoasVindasDataSource(sharedPreferences: sp);
-
-            await ds.registerDontShowAgain(value: _checkedBoxValue);
+            await BoasVindasDataSource.registerDontShowAgain(
+                value: _checkedBoxValue);
 
             navigator.pushReplacement(
               MaterialPageRoute(
