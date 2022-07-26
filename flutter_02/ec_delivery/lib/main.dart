@@ -1,11 +1,11 @@
-import 'package:ec_delivery/features/produtos/presentation/boasvindas/data/datasources/boasvindas_datasource.dart';
+import 'package:ec_delivery/features/boasvindas/data/datasources/boasvindas_datasource.dart';
+import 'package:ec_delivery/features/boasvindas/presentation/pages/boasvindas.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
+import 'core/presentation/constants/responsiveness.dart';
 import 'core/presentation/theme.dart';
-import 'features/produtos/presentation/boasvindas/presentation/pages/boasvindas.dart';
 import 'features/produtos/presentation/pages/crud.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class ECDeliveryApp extends StatelessWidget {
         breakpoints: const [
           ResponsiveBreakpoint.resize(410, name: MOBILE),
           ResponsiveBreakpoint.autoScale(560, name: TABLET),
-          ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+          ResponsiveBreakpoint.resize(kDesktopBreakpoint, name: DESKTOP),
         ],
         backgroundColor: Colors.indigo.shade600,
       ),
