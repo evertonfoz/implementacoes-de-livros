@@ -12,8 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  path: ^1.8.2
   responsive_framework: ^0.2.0
   shared_preferences: ^2.0.15
+  sqflite: ^2.0.3
 
 dev_dependencies:
   flutter_lints: ^2.0.0
