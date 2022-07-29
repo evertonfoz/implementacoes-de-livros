@@ -1,7 +1,9 @@
 import 'package:ec_delivery/features/boasvindas/data/datasources/boasvindas_datasource.dart';
 import 'package:ec_delivery/features/boasvindas/presentation/pages/boasvindas.dart';
+import 'package:ec_delivery/features/produtos/presentation/mobx_stores/produto_store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get_it/get_it.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'core/presentation/constants/responsiveness.dart';
@@ -12,6 +14,9 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
+
+  GetIt.I.registerSingleton<ProdutoStore>(ProdutoStore());
+
   runApp(const ECDeliveryApp());
 }
 
