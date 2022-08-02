@@ -5,6 +5,7 @@ class TextFormFieldPEF extends StatefulWidget {
   final TextInputType textInputType;
   final TextInputAction textInputAction;
   final Function(String?)? onChanged;
+  final TextEditingController? controller;
 
   const TextFormFieldPEF({
     super.key,
@@ -12,6 +13,7 @@ class TextFormFieldPEF extends StatefulWidget {
     this.textInputType = TextInputType.text,
     this.textInputAction = TextInputAction.done,
     this.onChanged,
+    this.controller,
   });
 
   @override
@@ -19,6 +21,21 @@ class TextFormFieldPEF extends StatefulWidget {
 }
 
 class _TextFormFieldPEFState extends State<TextFormFieldPEF> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = widget.controller ?? TextEditingController();
+
+    _controller.addListener(() {
+      if (_controller.text.isEmpty) {
+        if (!mounted) return;
+        setState(() {});
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,6 +50,7 @@ class _TextFormFieldPEFState extends State<TextFormFieldPEF> {
         ),
         const SizedBox(height: 10),
         TextFormField(
+          controller: widget.controller,
           textInputAction: widget.textInputAction,
           keyboardType: widget.textInputType,
           textAlign: TextAlign.left,

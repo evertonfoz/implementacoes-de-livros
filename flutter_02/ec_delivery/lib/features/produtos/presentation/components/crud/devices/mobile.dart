@@ -10,10 +10,10 @@ class MobileForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(flex: 4, child: FormTextFields()),
+        const Expanded(flex: 4, child: FormTextFields()),
         const Expanded(flex: 4, child: PhotoProdutoWidget()),
         const SizedBox(height: 10),
-        const Expanded(flex: 1, child: GravarProdutoButton()),
+        Expanded(flex: 1, child: GravarProdutoButton()),
       ],
     );
   }

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
 part 'produto_store.g.dart';
@@ -23,6 +24,9 @@ abstract class _ProdutoStore with Store {
   @computed
   double get valor => _valor ?? 0;
 
+  @computed
+  bool get formOK => (nome.isNotEmpty && descricao.isNotEmpty && valor > 0);
+
   @action
   atualizarNome(String nome) {
     _nome = nome;
@@ -36,5 +40,19 @@ abstract class _ProdutoStore with Store {
   @action
   atualizarValor(String valor) {
     _valor = double.tryParse(valor);
+  }
+
+  final TextEditingController nomeController = TextEditingController();
+  final TextEditingController descricaoController = TextEditingController();
+  final TextEditingController valorController = TextEditingController();
+
+  resetForm() {
+    nomeController.text = '';
+    descricaoController.text = '';
+    valorController.text = '';
+
+    atualizarNome('');
+    atualizarDescricao('');
+    atualizarValor('');
   }
 }

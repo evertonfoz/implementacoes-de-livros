@@ -1,3 +1,4 @@
+import 'package:ec_delivery/features/produtos/data/models/produto_model.dart';
 import 'package:ec_delivery/features/produtos/domain/entities/produto.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -27,7 +28,7 @@ class ProdutosSQLiteDatasource {
     );
   }
 
-  Future create(Produto produto) async {
+  Future create(ProdutoModel produto) async {
     try {
       final Database db = await _getDatabase();
 
@@ -42,6 +43,26 @@ class ProdutosSQLiteDatasource {
           ''');
     } catch (ex) {
       return;
+    }
+  }
+
+  Future<List<ProdutoModel>> getAll() async {
+    try {
+      final Database db = await _getDatabase();
+
+      final List<Map<String, dynamic>> produtosMap = await db
+          .query(PRODUTOS_TABLE_NAME, orderBy: '$PRODUTOS_COLUMN_NOME ASC');
+
+      return List.generate(
+        produtosMap.length,
+        (index) {
+          return ProdutoModel.fromMap(
+            produtosMap[index],
+          );
+        },
+      );
+    } catch (ex) {
+      return List.empty();
     }
   }
 }

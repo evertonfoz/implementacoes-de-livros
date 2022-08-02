@@ -28,6 +28,12 @@ mixin _$ProdutoStore on _ProdutoStore, Store {
   double get valor => (_$valorComputed ??=
           Computed<double>(() => super.valor, name: '_ProdutoStore.valor'))
       .value;
+  Computed<bool>? _$formOKComputed;
+
+  @override
+  bool get formOK => (_$formOKComputed ??=
+          Computed<bool>(() => super.formOK, name: '_ProdutoStore.formOK'))
+      .value;
 
   late final _$_nomeAtom = Atom(name: '_ProdutoStore._nome', context: context);
 
@@ -117,7 +123,8 @@ mixin _$ProdutoStore on _ProdutoStore, Store {
     return '''
 nome: ${nome},
 descricao: ${descricao},
-valor: ${valor}
+valor: ${valor},
+formOK: ${formOK}
     ''';
   }
 }

@@ -9,6 +9,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'core/presentation/constants/responsiveness.dart';
 import 'core/presentation/theme.dart';
 import 'features/produtos/presentation/pages/crud.dart';
+import 'features/produtos/presentation/pages/listagem.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -55,7 +56,7 @@ class ECDeliveryApp extends StatelessWidget {
 
   Future<Widget> _buildHome() async {
     if (await BoasVindasDataSource.getDontShowAgain()) {
-      return const ProdutosCRUDPage();
+      return const ProdutosListPage();
     }
 
     return const BoasVindasPage();

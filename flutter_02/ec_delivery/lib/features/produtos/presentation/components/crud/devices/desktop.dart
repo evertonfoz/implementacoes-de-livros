@@ -12,13 +12,13 @@ class DesktopForm extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Row(
-          children: [
+          children: const [
             Expanded(flex: 2, child: FormTextFields()),
-            const Expanded(child: PhotoProdutoWidget()),
+            Expanded(child: PhotoProdutoWidget()),
           ],
         ),
         const SizedBox(height: 20),
-        const GravarProdutoButton(),
+        GravarProdutoButton(),
       ],
     );
   }
