@@ -1,10 +1,10 @@
 import 'package:ec_delivery/features/boasvindas/data/datasources/boasvindas_datasource.dart';
-import 'package:ec_delivery/features/produtos/presentation/pages/crud.dart';
 import 'package:ec_delivery/features/produtos/presentation/pages/listagem.dart';
 import 'package:ec_delivery/shared/presentation/components/buttons/default_text_button.dart';
 import 'package:ec_delivery/shared/presentation/components/checkbox/checkbox.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class BottomRowBoasVindasWidget extends StatelessWidget {
   bool _checkedBoxValue = false;
 

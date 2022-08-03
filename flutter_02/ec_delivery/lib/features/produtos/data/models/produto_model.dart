@@ -20,4 +20,13 @@ class ProdutoModel extends Produto {
         descricao: map['descricao'] as String,
         valor: (map['valor'] as num).toDouble());
   }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'produtoID': produtoID,
+      'nome': nome,
+      'descricao': descricao,
+      'valor': valor,
+    };
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:ec_delivery/features/produtos/data/models/produto_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
@@ -27,6 +28,17 @@ abstract class _ProdutoStore with Store {
   @computed
   bool get formOK => (nome.isNotEmpty && descricao.isNotEmpty && valor > 0);
 
+  @observable
+  int? _produtoID;
+
+  @computed
+  int? get produtoID => _produtoID;
+
+  @action
+  atualizarProdutoID(int? produtoID) {
+    _produtoID = produtoID;
+  }
+
   @action
   atualizarNome(String nome) {
     _nome = nome;
@@ -50,9 +62,21 @@ abstract class _ProdutoStore with Store {
     nomeController.text = '';
     descricaoController.text = '';
     valorController.text = '';
+    atualizarProdutoID(null);
 
     atualizarNome('');
     atualizarDescricao('');
     atualizarValor('');
+  }
+
+  inicializarForm(ProdutoModel produto) {
+    nomeController.text = produto.nome;
+    descricaoController.text = produto.descricao;
+    valorController.text = produto.valor.toString();
+
+    atualizarNome(produto.nome);
+    atualizarDescricao(produto.descricao);
+    atualizarValor(produto.valor.toString());
+    atualizarProdutoID(produto.produtoID);
   }
 }

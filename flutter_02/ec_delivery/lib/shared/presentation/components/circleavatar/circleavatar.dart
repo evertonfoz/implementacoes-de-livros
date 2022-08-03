@@ -6,12 +6,13 @@ class CircleAvatarPEF extends StatelessWidget {
   final Color backgroundColor;
   final String imageURL;
 
-  CircleAvatarPEF({
+  const CircleAvatarPEF({
+    Key? key,
     this.radius = 32,
     this.borderColor = Colors.white38,
     this.backgroundColor = Colors.indigo,
     required this.imageURL,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

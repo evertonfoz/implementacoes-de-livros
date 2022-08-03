@@ -4,11 +4,11 @@ import 'package:ec_delivery/features/produtos/presentation/mobx_stores/produto_s
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
+import 'package:intl/intl.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'core/presentation/constants/responsiveness.dart';
 import 'core/presentation/theme.dart';
-import 'features/produtos/presentation/pages/crud.dart';
 import 'features/produtos/presentation/pages/listagem.dart';
 
 void main() {
@@ -17,6 +17,8 @@ void main() {
   );
 
   GetIt.I.registerSingleton<ProdutoStore>(ProdutoStore());
+
+  Intl.defaultLocale = 'pt_BR';
 
   runApp(const ECDeliveryApp());
 }

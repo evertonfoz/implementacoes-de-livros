@@ -34,6 +34,13 @@ mixin _$ProdutoStore on _ProdutoStore, Store {
   bool get formOK => (_$formOKComputed ??=
           Computed<bool>(() => super.formOK, name: '_ProdutoStore.formOK'))
       .value;
+  Computed<int?>? _$produtoIDComputed;
+
+  @override
+  int? get produtoID =>
+      (_$produtoIDComputed ??= Computed<int?>(() => super.produtoID,
+              name: '_ProdutoStore.produtoID'))
+          .value;
 
   late final _$_nomeAtom = Atom(name: '_ProdutoStore._nome', context: context);
 
@@ -82,8 +89,35 @@ mixin _$ProdutoStore on _ProdutoStore, Store {
     });
   }
 
+  late final _$_produtoIDAtom =
+      Atom(name: '_ProdutoStore._produtoID', context: context);
+
+  @override
+  int? get _produtoID {
+    _$_produtoIDAtom.reportRead();
+    return super._produtoID;
+  }
+
+  @override
+  set _produtoID(int? value) {
+    _$_produtoIDAtom.reportWrite(value, super._produtoID, () {
+      super._produtoID = value;
+    });
+  }
+
   late final _$_ProdutoStoreActionController =
       ActionController(name: '_ProdutoStore', context: context);
+
+  @override
+  dynamic atualizarProdutoID(int? produtoID) {
+    final _$actionInfo = _$_ProdutoStoreActionController.startAction(
+        name: '_ProdutoStore.atualizarProdutoID');
+    try {
+      return super.atualizarProdutoID(produtoID);
+    } finally {
+      _$_ProdutoStoreActionController.endAction(_$actionInfo);
+    }
+  }
 
   @override
   dynamic atualizarNome(String nome) {
@@ -124,7 +158,8 @@ mixin _$ProdutoStore on _ProdutoStore, Store {
 nome: ${nome},
 descricao: ${descricao},
 valor: ${valor},
-formOK: ${formOK}
+formOK: ${formOK},
+produtoID: ${produtoID}
     ''';
   }
 }

@@ -16,6 +16,7 @@ dependencies:
   flash: ^2.0.3+3
   flutter_mobx: ^2.0.6+1
   get_it: ^7.2.0
+  intl: ^0.17.0
   mobx: ^2.0.7+5
   path: ^1.8.2
   responsive_framework: ^0.2.0

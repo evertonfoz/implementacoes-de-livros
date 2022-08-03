@@ -7,9 +7,9 @@ import 'constants.dart';
 
 class ProdutosSQLiteDatasource {
   Future<Database> _getDatabase() async {
-    await deleteDatabase(
-      join(await getDatabasesPath(), DATABASE_NAME),
-    );
+    // await deleteDatabase(
+    //   join(await getDatabasesPath(), DATABASE_NAME),
+    // );
 
     return openDatabase(
       join(await getDatabasesPath(), DATABASE_NAME),
@@ -28,7 +28,7 @@ class ProdutosSQLiteDatasource {
     );
   }
 
-  Future create(ProdutoModel produto) async {
+  Future _create(ProdutoModel produto) async {
     try {
       final Database db = await _getDatabase();
 
@@ -63,6 +63,29 @@ class ProdutosSQLiteDatasource {
       );
     } catch (ex) {
       return List.empty();
+    }
+  }
+
+  Future _update(ProdutoModel produto) async {
+    try {
+      final Database db = await _getDatabase();
+
+      await db.update(
+        PRODUTOS_TABLE_NAME,
+        produto.toMap(),
+        where: '$PRODUTOS_COLUMN_PRODUTOID = ?',
+        whereArgs: [produto.produtoID],
+      );
+    } catch (ex) {
+      return;
+    }
+  }
+
+  Future save(ProdutoModel produto) async {
+    if (produto.produtoID == null) {
+      await _create(produto);
+    } else {
+      await _update(produto);
     }
   }
 }

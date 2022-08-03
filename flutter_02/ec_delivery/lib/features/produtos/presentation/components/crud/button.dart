@@ -39,11 +39,12 @@ class GravarProdutoButton extends StatelessWidget {
 
   _onPressed() async {
     var produto = ProdutoModel(
+        produtoID: GetIt.I.get<ProdutoStore>().produtoID,
         nome: GetIt.I.get<ProdutoStore>().nome,
         descricao: GetIt.I.get<ProdutoStore>().descricao,
         valor: GetIt.I.get<ProdutoStore>().valor);
 
-    await ProdutosSQLiteDatasource().create(produto);
+    await ProdutosSQLiteDatasource().save(produto);
 
     showBottomSnackBar(
       context: _context,
