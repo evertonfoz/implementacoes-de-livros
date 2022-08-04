@@ -49,7 +49,8 @@ class GravarProdutoButton extends StatelessWidget {
     showBottomSnackBar(
       context: _context,
       title: 'Sucesso',
-      content: 'O produto ${produto.nome.toUpperCase()} foi registrado',
+      content:
+          'Os dados do produto ${produto.nome.toUpperCase()} foram registrados',
     );
 
     GetIt.I.get<ProdutoStore>().resetForm();

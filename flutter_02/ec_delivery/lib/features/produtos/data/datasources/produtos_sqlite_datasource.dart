@@ -32,15 +32,10 @@ class ProdutosSQLiteDatasource {
     try {
       final Database db = await _getDatabase();
 
-      produto.produtoID =
-          await db.rawInsert('''insert into $PRODUTOS_TABLE_NAME(
-                $PRODUTOS_COLUMN_NOME, $PRODUTOS_COLUMN_DESCRICAO,
-                $PRODUTOS_COLUMN_VALOR) 
-              VALUES(
-                '${produto.nome}', '${produto.descricao}', 
-                '${produto.valor}'
-              )
-          ''');
+      produto.produtoID = await db.insert(
+        PRODUTOS_TABLE_NAME,
+        produto.toMap(),
+      );
     } catch (ex) {
       return;
     }
@@ -86,6 +81,19 @@ class ProdutosSQLiteDatasource {
       await _create(produto);
     } else {
       await _update(produto);
+    }
+  }
+
+  Future delete(int produtoID) async {
+    try {
+      final Database db = await _getDatabase();
+      await db.delete(
+        PRODUTOS_TABLE_NAME,
+        where: "produtoID = ?",
+        whereArgs: [produtoID],
+      );
+    } catch (ex) {
+      return;
     }
   }
 }

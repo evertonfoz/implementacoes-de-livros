@@ -1,7 +1,9 @@
 import 'package:ec_delivery/features/boasvindas/data/datasources/boasvindas_datasource.dart';
 import 'package:ec_delivery/features/produtos/presentation/components/crud/form.dart';
+import 'package:ec_delivery/features/produtos/presentation/mobx_stores/produto_store.dart';
 import 'package:ec_delivery/shared/functions/alertdialog.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class ProdutosCRUDPage extends StatelessWidget {
   const ProdutosCRUDPage({Key? key}) : super(key: key);
@@ -10,6 +12,10 @@ class ProdutosCRUDPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: InkWell(
+          child: const Icon(Icons.arrow_back),
+          onTap: () => Navigator.of(context).pop(),
+        ),
         title: InkWell(
           child: const Text('Dados do Produto'),
           onLongPress: () async {

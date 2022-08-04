@@ -1,6 +1,8 @@
 import 'package:ec_delivery/core/presentation/constants/urls.dart';
 import 'package:ec_delivery/features/produtos/presentation/mobx_stores/produto_store.dart';
 import 'package:ec_delivery/shared/presentation/components/circleavatar/circleavatar.dart';
+import 'package:ec_delivery/shared/presentation/components/dismissible/dismissible.dart';
+import 'package:ec_delivery/shared/presentation/components/snackbar/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:intl/intl.dart';
@@ -9,9 +11,14 @@ import '../../data/datasources/produtos_sqlite_datasource.dart';
 import '../../data/models/produto_model.dart';
 import 'crud.dart';
 
-class ProdutosListPage extends StatelessWidget {
+class ProdutosListPage extends StatefulWidget {
   const ProdutosListPage({Key? key}) : super(key: key);
 
+  @override
+  State<ProdutosListPage> createState() => _ProdutosListPageState();
+}
+
+class _ProdutosListPageState extends State<ProdutosListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +39,21 @@ class ProdutosListPage extends StatelessWidget {
               return _listView(snapshot.data as List<ProdutoModel>);
             }),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(
+          Icons.add,
+        ),
+        onPressed: () async {
+          GetIt.I.get<ProdutoStore>().resetForm();
+          await Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ProdutosCRUDPage(),
+            ),
+          );
+          setState(() {});
+        },
+      ),
     );
   }
 
@@ -43,21 +65,40 @@ class ProdutosListPage extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.only(left: 8.0, right: 4.0),
           child: InkWell(
-            onTap: () {
+            onTap: () async {
               GetIt.I.get<ProdutoStore>().inicializarForm(produtos[index]);
 
-              Navigator.push(
+              await Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const ProdutosCRUDPage(),
                 ),
               );
+
+              setState(() {});
             },
             child: Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
-              child: _listTile(
-                context,
-                produtos[index],
+              child: DismissiblePEF(
+                titulo: 'Remover',
+                icone: Icons.delete,
+                child: _listTile(
+                  context,
+                  produtos[index],
+                ),
+                tituloConfirmacao: 'Confirmação',
+                conteudoConfirmacao:
+                    'Toque OK para remover o produto ${produtos[index].nome.toUpperCase()}',
+                onDismissed: () async {
+                  await ProdutosSQLiteDatasource()
+                      .delete(produtos[index].produtoID!);
+                  showBottomSnackBar(
+                    context: context,
+                    title: 'Sucesso',
+                    content:
+                        'O produto ${produtos[index].nome.toUpperCase()} foi removido',
+                  );
+                },
               ),
             ),
           ),
