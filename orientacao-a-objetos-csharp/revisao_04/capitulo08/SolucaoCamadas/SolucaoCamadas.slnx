@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Apresentacao/Apresentacao.csproj" />
+  <Project Path="Modelo/Modelo.csproj" />
+  <Project Path="Persistencia/Persistencia.csproj" />
+  <Project Path="Servico/Servico.csproj" />
+</Solution>

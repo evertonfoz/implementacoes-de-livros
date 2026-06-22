@@ -1,8 +1,9 @@
-﻿for (int i = 0; i < args.Length; i++)
+// Demonstração de argumentos de linha de comando
+// Execute com: dotnet run -- Casa do Código
+for (int i = 0; i < args.Length; i++)
 {
     System.Console.WriteLine(args[i]);
 }
-
 
 Instituicao instituicao = new Instituicao();
 Console.Write("Informe o nome da instituição: ");
